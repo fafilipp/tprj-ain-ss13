@@ -14,17 +14,17 @@
 //     }
 // }
 
-// connection ArrowConnection {
-//     placing {
-//         position (offset=1.0)
-//         polygon {
-//             point (x=-10, y=-5)
-//             point (x=0, y=0)
-//             point (x=-10, y=5)
-//             style (background-color=black)
-//         }
-//     }
-// }
+ connection ArrowConnection {
+     placing {
+         position (offset=1.0)
+         polygon {
+             point (x=-10, y=-5)
+             point (x=0, y=0)
+             point (x=-10, y=5)
+             style (background-color=black)
+         }
+     }
+ }
 
 shape PlaceShape {
 	ellipse {
@@ -33,22 +33,12 @@ shape PlaceShape {
 			layout = fixed
 		)
 		size (width=40, height=40)
-		text {
-			position (x=0, y=-5)
-			size (width=40, height=25)
-			id = placeText
-		}
 	}
 }
 
 shape TransitionShape {
 	rectangle {
 		size (width=40, height=40)
-		text {
-			position (x=0, y=-5)
-			size (width=40, height=25)
-			id = transitionText
-		}
 	}
 }
 
