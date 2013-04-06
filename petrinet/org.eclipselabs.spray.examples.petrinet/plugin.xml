@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
         <?eclipse version="3.0"?>
         <!--
-         Generated on Tue Apr 02 16:53:53 CEST 2013 by Spray Plugin.xtend
+         Generated on Tue Apr 02 16:59:52 CEST 2013 by Spray Plugin.xtend
          This file will be generated oinly once if it need to be regenerated, remove this file.
          
         -->
@@ -75,6 +75,39 @@
                   </propertyTab>
               </propertyTabs>
           </extension>
+        <extension
+            point="org.eclipse.ui.views.properties.tabbed.propertySections">
+            <propertySections contributorId="petrinet.PropertyContributor">
+          <propertySection tab="petrinet.main.tab"
+           class="org.eclipselabs.spray.examples.petrinet.internal.ExecutableExtensionFactory:org.eclipselabs.spray.examples.petrinet.property.PlaceNameSection"
+           filter="org.eclipselabs.spray.examples.petrinet.property.PlaceFilter"
+           id="petrinet.main.tab.Place.name">
+          </propertySection>
+            </propertySections>
+        </extension>
+        
+        <extension
+            point="org.eclipse.ui.views.properties.tabbed.propertySections">
+            <propertySections contributorId="petrinet.PropertyContributor">
+          <propertySection tab="petrinet.main.tab"
+           class="org.eclipselabs.spray.examples.petrinet.internal.ExecutableExtensionFactory:org.eclipselabs.spray.examples.petrinet.property.TransitionNameSection"
+           filter="org.eclipselabs.spray.examples.petrinet.property.TransitionFilter"
+           id="petrinet.main.tab.Transition.name">
+          </propertySection>
+            </propertySections>
+        </extension>
+        
+        <extension
+            point="org.eclipse.ui.views.properties.tabbed.propertySections">
+            <propertySections contributorId="petrinet.PropertyContributor">
+          <propertySection tab="petrinet.main.tab"
+           class="org.eclipselabs.spray.examples.petrinet.internal.ExecutableExtensionFactory:org.eclipselabs.spray.examples.petrinet.property.TokenNameSection"
+           filter="org.eclipselabs.spray.examples.petrinet.property.TokenFilter"
+           id="petrinet.main.tab.Token.name">
+          </propertySection>
+            </propertySections>
+        </extension>
+        
     
     
             <extension

@@ -33,12 +33,22 @@ shape PlaceShape {
 			layout = fixed
 		)
 		size (width=40, height=40)
+		text {
+			position (x=0, y=-5)
+			size (width=40, height=25)
+			id = placeText
+		}
 	}
 }
 
 shape TransitionShape {
 	rectangle {
 		size (width=40, height=40)
+		text {
+			position (x=0, y=-5)
+			size (width=40, height=25)
+			id = transitionText
+		}
 	}
 }
 
