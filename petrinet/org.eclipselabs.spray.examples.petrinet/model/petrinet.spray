@@ -36,24 +36,26 @@ diagram petrinet for Petrinet style PetrinetDefaultStyle
 
 class Place {
 	shape PlaceShape {
+		name into placeText
 		reference tokens into tokensCompartment
 	}
-	
 	references {
-		targetTransitions : connection ArrowConnection
+		targetTransitions : connection
 	}
 	behavior {
-		create into places palette "Shapes"
+		create into places palette "Shapes" askFor name
 	}
 }
 
 class Transition {
-	shape TransitionShape
+	shape TransitionShape {
+		name into transitionText
+	}
 	references {
-		targetPlaces : connection ArrowConnection
+		targetPlaces : connection
 	}
 	behavior {
-		create into transitions palette "Shapes"
+		create into transitions palette "Shapes" askFor name
 	}
 }
 
