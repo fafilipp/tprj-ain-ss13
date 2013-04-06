@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.eclipselabs.spray.examples.petrinet.domain/src"
+    modelPluginID="org.eclipselabs.spray.examples.petrinet.domain" modelName="Petrinet"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="7.0" copyrightFields="false">
+  <foreignModel>Petrinet.ecore</foreignModel>
+  <genPackages prefix="PetrinetDSL" disposableProviderFactory="true" ecorePackage="Petrinet.ecore#/">
+    <genClasses ecoreClass="Petrinet.ecore#//Token"/>
+    <genClasses ecoreClass="Petrinet.ecore#//Transition">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Petrinet.ecore#//Transition/targetPlaces"/>
+    </genClasses>
+    <genClasses ecoreClass="Petrinet.ecore#//Place">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Petrinet.ecore#//Place/tokens"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Petrinet.ecore#//Place/targetTransitions"/>
+    </genClasses>
+    <genClasses ecoreClass="Petrinet.ecore#//Petrinet">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Petrinet.ecore#//Petrinet/places"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Petrinet.ecore#//Petrinet/transitions"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="Petrinet.ecore#//NamedElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Petrinet.ecore#//NamedElement/name"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
