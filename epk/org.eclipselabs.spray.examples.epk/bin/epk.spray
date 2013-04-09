@@ -1,0 +1,97 @@
+/*************************************************************************************
+ *
+ * Spray diagram definition
+ * 
+ * This file contains the definition of a graphical editor using the Spray Language.
+ * Refer to http://code.google.com/a/eclipselabs.org/p/spray/ for documentation.
+ *
+ * See also epk.properties to configure generator properties.
+ *************************************************************************************/
+// Add import statements here
+import EpkDSL.*
+
+diagram epk for Epk style EpkDefaultStyle
+
+
+// Add class mappings here. Refer to EClasses here. Don't forget to configure a
+// dependency to the plugin defining the EMF metamodel in META-INF/MANIFEST.MF.
+// It is required to have a genmodel for the metamodel.
+//
+// Example class mapping:
+//   class BusinessClass icon "ecore/EClass.gif" {
+//     shape RectangleShape
+//     behavior {
+//       // Enable create feature for this class and add it to the palette "Shapes"
+//       create into types palette "Shapes";
+//     }
+//   }
+//
+// Example association mapping:
+//   class Association icon "connection16.gif" {
+//     connection ArrowConnection {
+//       from source;
+//       to target;
+//     }
+//   }
+
+class Event {
+	shape EventShape {
+		name into eventText
+	}
+	behavior {
+		create into events palette "Objects"
+	}
+}
+
+class Function {
+	shape FunctionShape {
+		name into functionText
+	}
+	behavior {
+		create into functions palette "Objects"
+	}
+}
+
+class EConnector {
+	shape ConnectorShape
+	behavior {
+		create into econnectors palette "Connectors"
+	}
+}
+
+class FConnector {
+	shape ConnectorShape
+	behavior {
+		create into fconnectors palette "Connectors"
+	}
+}
+
+class FEConnection {
+	shape ArrowShape	
+	behavior {
+		create palette "Connections"
+	}
+}
+
+class FCConnection {
+	shape ArrowShape 
+	behavior {
+		create palette "Connections"
+	}
+}
+
+
+//connection AssociationConnection  { 
+//       name into assocText
+//    }
+//    {
+//    	from source
+//        to target
+//    }
+//    
+//    behavior {  	
+//        create into associations palette "Connections" askFor name 
+//    }
+//	references {
+//		targetTransitions : connection
+//	}
