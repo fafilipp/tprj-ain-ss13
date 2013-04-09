@@ -68,6 +68,18 @@ public class PetrinetDSLAdapterFactory extends AdapterFactoryImpl {
 	protected PetrinetDSLSwitch<Adapter> modelSwitch =
 		new PetrinetDSLSwitch<Adapter>() {
 			@Override
+			public Adapter casePetrinet(Petrinet object) {
+				return createPetrinetAdapter();
+			}
+			@Override
+			public Adapter caseNode(Node object) {
+				return createNodeAdapter();
+			}
+			@Override
+			public Adapter caseEdge(Edge object) {
+				return createEdgeAdapter();
+			}
+			@Override
 			public Adapter caseToken(Token object) {
 				return createTokenAdapter();
 			}
@@ -80,12 +92,8 @@ public class PetrinetDSLAdapterFactory extends AdapterFactoryImpl {
 				return createPlaceAdapter();
 			}
 			@Override
-			public Adapter casePetrinet(Petrinet object) {
-				return createPetrinetAdapter();
-			}
-			@Override
-			public Adapter caseNamedElement(NamedElement object) {
-				return createNamedElementAdapter();
+			public Adapter casePTEdge(PTEdge object) {
+				return createPTEdgeAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -106,6 +114,48 @@ public class PetrinetDSLAdapterFactory extends AdapterFactoryImpl {
 		return modelSwitch.doSwitch((EObject)target);
 	}
 
+
+	/**
+	 * Creates a new adapter for an object of class '{@link PetrinetDSL.Petrinet <em>Petrinet</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see PetrinetDSL.Petrinet
+	 * @generated
+	 */
+	public Adapter createPetrinetAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link PetrinetDSL.Node <em>Node</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see PetrinetDSL.Node
+	 * @generated
+	 */
+	public Adapter createNodeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link PetrinetDSL.Edge <em>Edge</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see PetrinetDSL.Edge
+	 * @generated
+	 */
+	public Adapter createEdgeAdapter() {
+		return null;
+	}
 
 	/**
 	 * Creates a new adapter for an object of class '{@link PetrinetDSL.Token <em>Token</em>}'.
@@ -150,30 +200,16 @@ public class PetrinetDSLAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link PetrinetDSL.Petrinet <em>Petrinet</em>}'.
+	 * Creates a new adapter for an object of class '{@link PetrinetDSL.PTEdge <em>PT Edge</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see PetrinetDSL.Petrinet
+	 * @see PetrinetDSL.PTEdge
 	 * @generated
 	 */
-	public Adapter createPetrinetAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link PetrinetDSL.NamedElement <em>Named Element</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see PetrinetDSL.NamedElement
-	 * @generated
-	 */
-	public Adapter createNamedElementAdapter() {
+	public Adapter createPTEdgeAdapter() {
 		return null;
 	}
 

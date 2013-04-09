@@ -22,6 +22,33 @@ public interface PetrinetDSLFactory extends EFactory {
 	PetrinetDSLFactory eINSTANCE = PetrinetDSL.impl.PetrinetDSLFactoryImpl.init();
 
 	/**
+	 * Returns a new object of class '<em>Petrinet</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Petrinet</em>'.
+	 * @generated
+	 */
+	Petrinet createPetrinet();
+
+	/**
+	 * Returns a new object of class '<em>Node</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Node</em>'.
+	 * @generated
+	 */
+	Node createNode();
+
+	/**
+	 * Returns a new object of class '<em>Edge</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Edge</em>'.
+	 * @generated
+	 */
+	Edge createEdge();
+
+	/**
 	 * Returns a new object of class '<em>Token</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -49,13 +76,13 @@ public interface PetrinetDSLFactory extends EFactory {
 	Place createPlace();
 
 	/**
-	 * Returns a new object of class '<em>Petrinet</em>'.
+	 * Returns a new object of class '<em>PT Edge</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Petrinet</em>'.
+	 * @return a new object of class '<em>PT Edge</em>'.
 	 * @generated
 	 */
-	Petrinet createPetrinet();
+	PTEdge createPTEdge();
 
 	/**
 	 * Returns the package supported by this factory.

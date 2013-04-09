@@ -16,7 +16,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class TokenImpl extends NamedElementImpl implements Token {
+public class TokenImpl extends NodeImpl implements Token {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

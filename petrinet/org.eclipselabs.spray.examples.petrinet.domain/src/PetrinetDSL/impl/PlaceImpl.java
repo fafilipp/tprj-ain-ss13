@@ -5,7 +5,6 @@ package PetrinetDSL.impl;
 import PetrinetDSL.PetrinetDSLPackage;
 import PetrinetDSL.Place;
 import PetrinetDSL.Token;
-import PetrinetDSL.Transition;
 
 import java.util.Collection;
 
@@ -17,8 +16,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
-import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
@@ -29,13 +26,12 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * <ul>
  *   <li>{@link PetrinetDSL.impl.PlaceImpl#getTokens <em>Tokens</em>}</li>
- *   <li>{@link PetrinetDSL.impl.PlaceImpl#getTargetTransitions <em>Target Transitions</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class PlaceImpl extends NamedElementImpl implements Place {
+public class PlaceImpl extends NodeImpl implements Place {
 	/**
 	 * The cached value of the '{@link #getTokens() <em>Tokens</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -45,16 +41,6 @@ public class PlaceImpl extends NamedElementImpl implements Place {
 	 * @ordered
 	 */
 	protected EList<Token> tokens;
-
-	/**
-	 * The cached value of the '{@link #getTargetTransitions() <em>Target Transitions</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTargetTransitions()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Transition> targetTransitions;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -92,18 +78,6 @@ public class PlaceImpl extends NamedElementImpl implements Place {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Transition> getTargetTransitions() {
-		if (targetTransitions == null) {
-			targetTransitions = new EObjectResolvingEList<Transition>(Transition.class, this, PetrinetDSLPackage.PLACE__TARGET_TRANSITIONS);
-		}
-		return targetTransitions;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -123,8 +97,6 @@ public class PlaceImpl extends NamedElementImpl implements Place {
 		switch (featureID) {
 			case PetrinetDSLPackage.PLACE__TOKENS:
 				return getTokens();
-			case PetrinetDSLPackage.PLACE__TARGET_TRANSITIONS:
-				return getTargetTransitions();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -142,10 +114,6 @@ public class PlaceImpl extends NamedElementImpl implements Place {
 				getTokens().clear();
 				getTokens().addAll((Collection<? extends Token>)newValue);
 				return;
-			case PetrinetDSLPackage.PLACE__TARGET_TRANSITIONS:
-				getTargetTransitions().clear();
-				getTargetTransitions().addAll((Collection<? extends Transition>)newValue);
-				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -161,9 +129,6 @@ public class PlaceImpl extends NamedElementImpl implements Place {
 			case PetrinetDSLPackage.PLACE__TOKENS:
 				getTokens().clear();
 				return;
-			case PetrinetDSLPackage.PLACE__TARGET_TRANSITIONS:
-				getTargetTransitions().clear();
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -178,8 +143,6 @@ public class PlaceImpl extends NamedElementImpl implements Place {
 		switch (featureID) {
 			case PetrinetDSLPackage.PLACE__TOKENS:
 				return tokens != null && !tokens.isEmpty();
-			case PetrinetDSLPackage.PLACE__TARGET_TRANSITIONS:
-				return targetTransitions != null && !targetTransitions.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

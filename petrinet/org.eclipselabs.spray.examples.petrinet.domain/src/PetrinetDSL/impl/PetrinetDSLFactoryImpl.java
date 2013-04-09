@@ -56,13 +56,46 @@ public class PetrinetDSLFactoryImpl extends EFactoryImpl implements PetrinetDSLF
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
+			case PetrinetDSLPackage.PETRINET: return createPetrinet();
+			case PetrinetDSLPackage.NODE: return createNode();
+			case PetrinetDSLPackage.EDGE: return createEdge();
 			case PetrinetDSLPackage.TOKEN: return createToken();
 			case PetrinetDSLPackage.TRANSITION: return createTransition();
 			case PetrinetDSLPackage.PLACE: return createPlace();
-			case PetrinetDSLPackage.PETRINET: return createPetrinet();
+			case PetrinetDSLPackage.PT_EDGE: return createPTEdge();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Petrinet createPetrinet() {
+		PetrinetImpl petrinet = new PetrinetImpl();
+		return petrinet;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Node createNode() {
+		NodeImpl node = new NodeImpl();
+		return node;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Edge createEdge() {
+		EdgeImpl edge = new EdgeImpl();
+		return edge;
 	}
 
 	/**
@@ -100,9 +133,9 @@ public class PetrinetDSLFactoryImpl extends EFactoryImpl implements PetrinetDSLF
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Petrinet createPetrinet() {
-		PetrinetImpl petrinet = new PetrinetImpl();
-		return petrinet;
+	public PTEdge createPTEdge() {
+		PTEdgeImpl ptEdge = new PTEdgeImpl();
+		return ptEdge;
 	}
 
 	/**

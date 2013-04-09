@@ -7,43 +7,17 @@
  *
  * See also petrinet.properties to configure generator properties.
  *************************************************************************************/
-// Add import statements here
 import PetrinetDSL.*
-
-diagram petrinet for Petrinet style PetrinetDefaultStyle
-
-
-// Add class mappings here. Refer to EClasses here. Don't forget to configure a
-// dependency to the plugin defining the EMF metamodel in META-INF/MANIFEST.MF.
-// It is required to have a genmodel for the metamodel.
-//
-// Example class mapping:
-//   class BusinessClass icon "ecore/EClass.gif" {
-//     shape RectangleShape
-//     behavior {
-//       // Enable create feature for this class and add it to the palette "Shapes"
-//       create into types palette "Shapes";
-//     }
-//   }
-//
-// Example association mapping:
-//   class Association icon "connection16.gif" {
-//     connection ArrowConnection {
-//       from source;
-//       to target;
-//     }
-//   }
+ 
+diagram petrinet for Petrinet style PetrinetDefaultStyle 
 
 class Place {
 	shape PlaceShape {
 		name into placeText
 		reference tokens into tokensCompartment
 	}
-	references {
-		targetTransitions : connection
-	}
 	behavior {
-		create into places palette "Shapes" askFor name
+		create into models palette "Shapes"
 	}
 }
 
@@ -51,11 +25,8 @@ class Transition {
 	shape TransitionShape {
 		name into transitionText
 	}
-	references {
-		targetPlaces : connection
-	}
 	behavior {
-		create into transitions palette "Shapes" askFor name
+		create into models palette "Shapes"
 	}
 }
 
@@ -63,5 +34,15 @@ class Token {
 	shape TokenShape
 	behavior {
 		create palette "Shapes"
+	}
+}
+
+class PTEdge { 
+	connection ArrowConnection {
+		from fromPlace
+		to toTransition
+	}
+	behavior {
+		create into models palette "Edges" 
 	}
 }

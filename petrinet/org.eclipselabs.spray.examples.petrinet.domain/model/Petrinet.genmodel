@@ -6,19 +6,19 @@
   <foreignModel>Petrinet.ecore</foreignModel>
   <genPackages prefix="PetrinetDSL" disposableProviderFactory="true" ecorePackage="Petrinet.ecore#/">
     <genClasses ecoreClass="Petrinet.ecore#//Token"/>
-    <genClasses ecoreClass="Petrinet.ecore#//Transition">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Petrinet.ecore#//Transition/targetPlaces"/>
-    </genClasses>
+    <genClasses ecoreClass="Petrinet.ecore#//Transition"/>
     <genClasses ecoreClass="Petrinet.ecore#//Place">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Petrinet.ecore#//Place/tokens"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Petrinet.ecore#//Place/targetTransitions"/>
     </genClasses>
-    <genClasses ecoreClass="Petrinet.ecore#//Petrinet">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Petrinet.ecore#//Petrinet/places"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Petrinet.ecore#//Petrinet/transitions"/>
-    </genClasses>
+    <genClasses ecoreClass="Petrinet.ecore#//Petrinet"/>
     <genClasses image="false" ecoreClass="Petrinet.ecore#//NamedElement">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Petrinet.ecore#//NamedElement/name"/>
     </genClasses>
+    <genClasses ecoreClass="Petrinet.ecore#//Edge"/>
+    <genClasses ecoreClass="Petrinet.ecore#//TestEdge">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Petrinet.ecore#//TestEdge/fromPlace"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Petrinet.ecore#//TestEdge/toTransition"/>
+    </genClasses>
+    <genClasses ecoreClass="Petrinet.ecore#//Node"/>
   </genPackages>
 </genmodel:GenModel>

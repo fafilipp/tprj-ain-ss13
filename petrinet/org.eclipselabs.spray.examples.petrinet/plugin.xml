@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
         <?eclipse version="3.0"?>
         <!--
-         Generated on Sun Apr 07 09:21:54 CEST 2013 by Spray Plugin.xtend
+         Generated on Tue Apr 09 11:36:17 CEST 2013 by Spray Plugin.xtend
          This file will be generated oinly once if it need to be regenerated, remove this file.
          
         -->
@@ -83,6 +83,12 @@
            filter="org.eclipselabs.spray.examples.petrinet.property.PlaceFilter"
            id="petrinet.main.tab.Place.name">
           </propertySection>
+          <propertySection tab="petrinet.main.tab"
+           class="org.eclipselabs.spray.examples.petrinet.internal.ExecutableExtensionFactory:org.eclipselabs.spray.examples.petrinet.property.PlaceDescriptionSection"
+           filter="org.eclipselabs.spray.examples.petrinet.property.PlaceFilter"
+           afterSection="petrinet.main.tab.Place.name"
+           id="petrinet.main.tab.Place.description">
+          </propertySection>
             </propertySections>
         </extension>
         
@@ -93,6 +99,12 @@
            class="org.eclipselabs.spray.examples.petrinet.internal.ExecutableExtensionFactory:org.eclipselabs.spray.examples.petrinet.property.TransitionNameSection"
            filter="org.eclipselabs.spray.examples.petrinet.property.TransitionFilter"
            id="petrinet.main.tab.Transition.name">
+          </propertySection>
+          <propertySection tab="petrinet.main.tab"
+           class="org.eclipselabs.spray.examples.petrinet.internal.ExecutableExtensionFactory:org.eclipselabs.spray.examples.petrinet.property.TransitionDescriptionSection"
+           filter="org.eclipselabs.spray.examples.petrinet.property.TransitionFilter"
+           afterSection="petrinet.main.tab.Transition.name"
+           id="petrinet.main.tab.Transition.description">
           </propertySection>
             </propertySections>
         </extension>
@@ -105,6 +117,12 @@
            filter="org.eclipselabs.spray.examples.petrinet.property.TokenFilter"
            id="petrinet.main.tab.Token.name">
           </propertySection>
+          <propertySection tab="petrinet.main.tab"
+           class="org.eclipselabs.spray.examples.petrinet.internal.ExecutableExtensionFactory:org.eclipselabs.spray.examples.petrinet.property.TokenDescriptionSection"
+           filter="org.eclipselabs.spray.examples.petrinet.property.TokenFilter"
+           afterSection="petrinet.main.tab.Token.name"
+           id="petrinet.main.tab.Token.description">
+          </propertySection>
             </propertySections>
         </extension>
         
@@ -112,9 +130,15 @@
             point="org.eclipse.ui.views.properties.tabbed.propertySections">
             <propertySections contributorId="petrinet.PropertyContributor">
           <propertySection tab="petrinet.main.tab"
-           class="org.eclipselabs.spray.examples.petrinet.internal.ExecutableExtensionFactory:org.eclipselabs.spray.examples.petrinet.property.AssocNameSection"
-           filter="org.eclipselabs.spray.examples.petrinet.property.AssocFilter"
-           id="petrinet.main.tab.Assoc.name">
+           class="org.eclipselabs.spray.examples.petrinet.internal.ExecutableExtensionFactory:org.eclipselabs.spray.examples.petrinet.property.PTEdgeNameSection"
+           filter="org.eclipselabs.spray.examples.petrinet.property.PTEdgeFilter"
+           id="petrinet.main.tab.PTEdge.name">
+          </propertySection>
+          <propertySection tab="petrinet.main.tab"
+           class="org.eclipselabs.spray.examples.petrinet.internal.ExecutableExtensionFactory:org.eclipselabs.spray.examples.petrinet.property.PTEdgeDescriptionSection"
+           filter="org.eclipselabs.spray.examples.petrinet.property.PTEdgeFilter"
+           afterSection="petrinet.main.tab.PTEdge.name"
+           id="petrinet.main.tab.PTEdge.description">
           </propertySection>
             </propertySections>
         </extension>

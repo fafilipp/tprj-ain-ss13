@@ -2,7 +2,9 @@
  */
 package PetrinetDSL.impl;
 
-import PetrinetDSL.NamedElement;
+import PetrinetDSL.Edge;
+import PetrinetDSL.Node;
+import PetrinetDSL.PTEdge;
 import PetrinetDSL.Petrinet;
 import PetrinetDSL.PetrinetDSLFactory;
 import PetrinetDSL.PetrinetDSLPackage;
@@ -29,6 +31,27 @@ public class PetrinetDSLPackageImpl extends EPackageImpl implements PetrinetDSLP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass petrinetEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass nodeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass edgeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass tokenEClass = null;
 
 	/**
@@ -50,14 +73,7 @@ public class PetrinetDSLPackageImpl extends EPackageImpl implements PetrinetDSLP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass petrinetEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass namedElementEClass = null;
+	private EClass ptEdgeEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -125,6 +141,60 @@ public class PetrinetDSLPackageImpl extends EPackageImpl implements PetrinetDSLP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getPetrinet() {
+		return petrinetEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getPetrinet_Name() {
+		return (EAttribute)petrinetEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getPetrinet_Description() {
+		return (EAttribute)petrinetEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getPetrinet_Models() {
+		return (EReference)petrinetEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getNode() {
+		return nodeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getEdge() {
+		return edgeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getToken() {
 		return tokenEClass;
 	}
@@ -136,15 +206,6 @@ public class PetrinetDSLPackageImpl extends EPackageImpl implements PetrinetDSLP
 	 */
 	public EClass getTransition() {
 		return transitionEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getTransition_TargetPlaces() {
-		return (EReference)transitionEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -170,8 +231,8 @@ public class PetrinetDSLPackageImpl extends EPackageImpl implements PetrinetDSLP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getPlace_TargetTransitions() {
-		return (EReference)placeEClass.getEStructuralFeatures().get(1);
+	public EClass getPTEdge() {
+		return ptEdgeEClass;
 	}
 
 	/**
@@ -179,8 +240,8 @@ public class PetrinetDSLPackageImpl extends EPackageImpl implements PetrinetDSLP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getPetrinet() {
-		return petrinetEClass;
+	public EReference getPTEdge_FromPlace() {
+		return (EReference)ptEdgeEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -188,35 +249,8 @@ public class PetrinetDSLPackageImpl extends EPackageImpl implements PetrinetDSLP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getPetrinet_Places() {
-		return (EReference)petrinetEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getPetrinet_Transitions() {
-		return (EReference)petrinetEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getNamedElement() {
-		return namedElementEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getNamedElement_Name() {
-		return (EAttribute)namedElementEClass.getEStructuralFeatures().get(0);
+	public EReference getPTEdge_ToTransition() {
+		return (EReference)ptEdgeEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -247,21 +281,25 @@ public class PetrinetDSLPackageImpl extends EPackageImpl implements PetrinetDSLP
 		isCreated = true;
 
 		// Create classes and their features
+		petrinetEClass = createEClass(PETRINET);
+		createEAttribute(petrinetEClass, PETRINET__NAME);
+		createEAttribute(petrinetEClass, PETRINET__DESCRIPTION);
+		createEReference(petrinetEClass, PETRINET__MODELS);
+
+		nodeEClass = createEClass(NODE);
+
+		edgeEClass = createEClass(EDGE);
+
 		tokenEClass = createEClass(TOKEN);
 
 		transitionEClass = createEClass(TRANSITION);
-		createEReference(transitionEClass, TRANSITION__TARGET_PLACES);
 
 		placeEClass = createEClass(PLACE);
 		createEReference(placeEClass, PLACE__TOKENS);
-		createEReference(placeEClass, PLACE__TARGET_TRANSITIONS);
 
-		petrinetEClass = createEClass(PETRINET);
-		createEReference(petrinetEClass, PETRINET__PLACES);
-		createEReference(petrinetEClass, PETRINET__TRANSITIONS);
-
-		namedElementEClass = createEClass(NAMED_ELEMENT);
-		createEAttribute(namedElementEClass, NAMED_ELEMENT__NAME);
+		ptEdgeEClass = createEClass(PT_EDGE);
+		createEReference(ptEdgeEClass, PT_EDGE__FROM_PLACE);
+		createEReference(ptEdgeEClass, PT_EDGE__TO_TRANSITION);
 	}
 
 	/**
@@ -292,27 +330,33 @@ public class PetrinetDSLPackageImpl extends EPackageImpl implements PetrinetDSLP
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		tokenEClass.getESuperTypes().add(this.getNamedElement());
-		transitionEClass.getESuperTypes().add(this.getNamedElement());
-		placeEClass.getESuperTypes().add(this.getNamedElement());
-		petrinetEClass.getESuperTypes().add(this.getNamedElement());
+		nodeEClass.getESuperTypes().add(this.getPetrinet());
+		edgeEClass.getESuperTypes().add(this.getPetrinet());
+		tokenEClass.getESuperTypes().add(this.getNode());
+		transitionEClass.getESuperTypes().add(this.getNode());
+		placeEClass.getESuperTypes().add(this.getNode());
+		ptEdgeEClass.getESuperTypes().add(this.getEdge());
 
 		// Initialize classes and features; add operations and parameters
+		initEClass(petrinetEClass, Petrinet.class, "Petrinet", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getPetrinet_Name(), ecorePackage.getEString(), "name", null, 0, 1, Petrinet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPetrinet_Description(), ecorePackage.getEString(), "description", null, 0, 1, Petrinet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPetrinet_Models(), this.getPetrinet(), null, "models", null, 0, -1, Petrinet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(nodeEClass, Node.class, "Node", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(edgeEClass, Edge.class, "Edge", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
 		initEClass(tokenEClass, Token.class, "Token", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(transitionEClass, Transition.class, "Transition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getTransition_TargetPlaces(), this.getPlace(), null, "targetPlaces", null, 0, -1, Transition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(placeEClass, Place.class, "Place", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getPlace_Tokens(), this.getToken(), null, "tokens", null, 0, -1, Place.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getPlace_TargetTransitions(), this.getTransition(), null, "targetTransitions", null, 0, -1, Place.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(petrinetEClass, Petrinet.class, "Petrinet", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getPetrinet_Places(), this.getPlace(), null, "places", null, 0, -1, Petrinet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getPetrinet_Transitions(), this.getTransition(), null, "transitions", null, 0, -1, Petrinet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(namedElementEClass, NamedElement.class, "NamedElement", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getNamedElement_Name(), ecorePackage.getEString(), "name", null, 1, 1, NamedElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(ptEdgeEClass, PTEdge.class, "PTEdge", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getPTEdge_FromPlace(), this.getNode(), null, "fromPlace", null, 0, 1, PTEdge.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPTEdge_ToTransition(), this.getNode(), null, "toTransition", null, 0, 1, PTEdge.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

@@ -56,14 +56,14 @@ public interface PetrinetDSLPackage extends EPackage {
 	PetrinetDSLPackage eINSTANCE = PetrinetDSL.impl.PetrinetDSLPackageImpl.init();
 
 	/**
-	 * The meta object id for the '{@link PetrinetDSL.impl.NamedElementImpl <em>Named Element</em>}' class.
+	 * The meta object id for the '{@link PetrinetDSL.impl.PetrinetImpl <em>Petrinet</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see PetrinetDSL.impl.NamedElementImpl
-	 * @see PetrinetDSL.impl.PetrinetDSLPackageImpl#getNamedElement()
+	 * @see PetrinetDSL.impl.PetrinetImpl
+	 * @see PetrinetDSL.impl.PetrinetDSLPackageImpl#getPetrinet()
 	 * @generated
 	 */
-	int NAMED_ELEMENT = 4;
+	int PETRINET = 0;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -72,16 +72,126 @@ public interface PetrinetDSLPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NAMED_ELEMENT__NAME = 0;
+	int PETRINET__NAME = 0;
 
 	/**
-	 * The number of structural features of the '<em>Named Element</em>' class.
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int NAMED_ELEMENT_FEATURE_COUNT = 1;
+	int PETRINET__DESCRIPTION = 1;
+
+	/**
+	 * The feature id for the '<em><b>Models</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PETRINET__MODELS = 2;
+
+	/**
+	 * The number of structural features of the '<em>Petrinet</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PETRINET_FEATURE_COUNT = 3;
+
+	/**
+	 * The meta object id for the '{@link PetrinetDSL.impl.NodeImpl <em>Node</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see PetrinetDSL.impl.NodeImpl
+	 * @see PetrinetDSL.impl.PetrinetDSLPackageImpl#getNode()
+	 * @generated
+	 */
+	int NODE = 1;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE__NAME = PETRINET__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE__DESCRIPTION = PETRINET__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Models</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE__MODELS = PETRINET__MODELS;
+
+	/**
+	 * The number of structural features of the '<em>Node</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE_FEATURE_COUNT = PETRINET_FEATURE_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link PetrinetDSL.impl.EdgeImpl <em>Edge</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see PetrinetDSL.impl.EdgeImpl
+	 * @see PetrinetDSL.impl.PetrinetDSLPackageImpl#getEdge()
+	 * @generated
+	 */
+	int EDGE = 2;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EDGE__NAME = PETRINET__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EDGE__DESCRIPTION = PETRINET__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Models</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EDGE__MODELS = PETRINET__MODELS;
+
+	/**
+	 * The number of structural features of the '<em>Edge</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EDGE_FEATURE_COUNT = PETRINET_FEATURE_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link PetrinetDSL.impl.TokenImpl <em>Token</em>}' class.
@@ -91,7 +201,7 @@ public interface PetrinetDSLPackage extends EPackage {
 	 * @see PetrinetDSL.impl.PetrinetDSLPackageImpl#getToken()
 	 * @generated
 	 */
-	int TOKEN = 0;
+	int TOKEN = 3;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -100,7 +210,25 @@ public interface PetrinetDSLPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOKEN__NAME = NAMED_ELEMENT__NAME;
+	int TOKEN__NAME = NODE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOKEN__DESCRIPTION = NODE__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Models</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOKEN__MODELS = NODE__MODELS;
 
 	/**
 	 * The number of structural features of the '<em>Token</em>' class.
@@ -109,7 +237,7 @@ public interface PetrinetDSLPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TOKEN_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 0;
+	int TOKEN_FEATURE_COUNT = NODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link PetrinetDSL.impl.TransitionImpl <em>Transition</em>}' class.
@@ -119,7 +247,7 @@ public interface PetrinetDSLPackage extends EPackage {
 	 * @see PetrinetDSL.impl.PetrinetDSLPackageImpl#getTransition()
 	 * @generated
 	 */
-	int TRANSITION = 1;
+	int TRANSITION = 4;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -128,16 +256,25 @@ public interface PetrinetDSLPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRANSITION__NAME = NAMED_ELEMENT__NAME;
+	int TRANSITION__NAME = NODE__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Target Places</b></em>' reference list.
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TRANSITION__TARGET_PLACES = NAMED_ELEMENT_FEATURE_COUNT + 0;
+	int TRANSITION__DESCRIPTION = NODE__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Models</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRANSITION__MODELS = NODE__MODELS;
 
 	/**
 	 * The number of structural features of the '<em>Transition</em>' class.
@@ -146,7 +283,7 @@ public interface PetrinetDSLPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRANSITION_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 1;
+	int TRANSITION_FEATURE_COUNT = NODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link PetrinetDSL.impl.PlaceImpl <em>Place</em>}' class.
@@ -156,7 +293,7 @@ public interface PetrinetDSLPackage extends EPackage {
 	 * @see PetrinetDSL.impl.PetrinetDSLPackageImpl#getPlace()
 	 * @generated
 	 */
-	int PLACE = 2;
+	int PLACE = 5;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -165,7 +302,25 @@ public interface PetrinetDSLPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PLACE__NAME = NAMED_ELEMENT__NAME;
+	int PLACE__NAME = NODE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PLACE__DESCRIPTION = NODE__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Models</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PLACE__MODELS = NODE__MODELS;
 
 	/**
 	 * The feature id for the '<em><b>Tokens</b></em>' containment reference list.
@@ -174,16 +329,7 @@ public interface PetrinetDSLPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PLACE__TOKENS = NAMED_ELEMENT_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Target Transitions</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PLACE__TARGET_TRANSITIONS = NAMED_ELEMENT_FEATURE_COUNT + 1;
+	int PLACE__TOKENS = NODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Place</em>' class.
@@ -192,17 +338,17 @@ public interface PetrinetDSLPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PLACE_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 2;
+	int PLACE_FEATURE_COUNT = NODE_FEATURE_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link PetrinetDSL.impl.PetrinetImpl <em>Petrinet</em>}' class.
+	 * The meta object id for the '{@link PetrinetDSL.impl.PTEdgeImpl <em>PT Edge</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see PetrinetDSL.impl.PetrinetImpl
-	 * @see PetrinetDSL.impl.PetrinetDSLPackageImpl#getPetrinet()
+	 * @see PetrinetDSL.impl.PTEdgeImpl
+	 * @see PetrinetDSL.impl.PetrinetDSLPackageImpl#getPTEdge()
 	 * @generated
 	 */
-	int PETRINET = 3;
+	int PT_EDGE = 6;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -211,35 +357,116 @@ public interface PetrinetDSLPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PETRINET__NAME = NAMED_ELEMENT__NAME;
+	int PT_EDGE__NAME = EDGE__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Places</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PETRINET__PLACES = NAMED_ELEMENT_FEATURE_COUNT + 0;
+	int PT_EDGE__DESCRIPTION = EDGE__DESCRIPTION;
 
 	/**
-	 * The feature id for the '<em><b>Transitions</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Models</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PETRINET__TRANSITIONS = NAMED_ELEMENT_FEATURE_COUNT + 1;
+	int PT_EDGE__MODELS = EDGE__MODELS;
 
 	/**
-	 * The number of structural features of the '<em>Petrinet</em>' class.
+	 * The feature id for the '<em><b>From Place</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PETRINET_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 2;
+	int PT_EDGE__FROM_PLACE = EDGE_FEATURE_COUNT + 0;
 
+	/**
+	 * The feature id for the '<em><b>To Transition</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PT_EDGE__TO_TRANSITION = EDGE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>PT Edge</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PT_EDGE_FEATURE_COUNT = EDGE_FEATURE_COUNT + 2;
+
+
+	/**
+	 * Returns the meta object for class '{@link PetrinetDSL.Petrinet <em>Petrinet</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Petrinet</em>'.
+	 * @see PetrinetDSL.Petrinet
+	 * @generated
+	 */
+	EClass getPetrinet();
+
+	/**
+	 * Returns the meta object for the attribute '{@link PetrinetDSL.Petrinet#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see PetrinetDSL.Petrinet#getName()
+	 * @see #getPetrinet()
+	 * @generated
+	 */
+	EAttribute getPetrinet_Name();
+
+	/**
+	 * Returns the meta object for the attribute '{@link PetrinetDSL.Petrinet#getDescription <em>Description</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Description</em>'.
+	 * @see PetrinetDSL.Petrinet#getDescription()
+	 * @see #getPetrinet()
+	 * @generated
+	 */
+	EAttribute getPetrinet_Description();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link PetrinetDSL.Petrinet#getModels <em>Models</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Models</em>'.
+	 * @see PetrinetDSL.Petrinet#getModels()
+	 * @see #getPetrinet()
+	 * @generated
+	 */
+	EReference getPetrinet_Models();
+
+	/**
+	 * Returns the meta object for class '{@link PetrinetDSL.Node <em>Node</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Node</em>'.
+	 * @see PetrinetDSL.Node
+	 * @generated
+	 */
+	EClass getNode();
+
+	/**
+	 * Returns the meta object for class '{@link PetrinetDSL.Edge <em>Edge</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Edge</em>'.
+	 * @see PetrinetDSL.Edge
+	 * @generated
+	 */
+	EClass getEdge();
 
 	/**
 	 * Returns the meta object for class '{@link PetrinetDSL.Token <em>Token</em>}'.
@@ -260,17 +487,6 @@ public interface PetrinetDSLPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getTransition();
-
-	/**
-	 * Returns the meta object for the reference list '{@link PetrinetDSL.Transition#getTargetPlaces <em>Target Places</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Target Places</em>'.
-	 * @see PetrinetDSL.Transition#getTargetPlaces()
-	 * @see #getTransition()
-	 * @generated
-	 */
-	EReference getTransition_TargetPlaces();
 
 	/**
 	 * Returns the meta object for class '{@link PetrinetDSL.Place <em>Place</em>}'.
@@ -294,68 +510,36 @@ public interface PetrinetDSLPackage extends EPackage {
 	EReference getPlace_Tokens();
 
 	/**
-	 * Returns the meta object for the reference list '{@link PetrinetDSL.Place#getTargetTransitions <em>Target Transitions</em>}'.
+	 * Returns the meta object for class '{@link PetrinetDSL.PTEdge <em>PT Edge</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Target Transitions</em>'.
-	 * @see PetrinetDSL.Place#getTargetTransitions()
-	 * @see #getPlace()
+	 * @return the meta object for class '<em>PT Edge</em>'.
+	 * @see PetrinetDSL.PTEdge
 	 * @generated
 	 */
-	EReference getPlace_TargetTransitions();
+	EClass getPTEdge();
 
 	/**
-	 * Returns the meta object for class '{@link PetrinetDSL.Petrinet <em>Petrinet</em>}'.
+	 * Returns the meta object for the reference '{@link PetrinetDSL.PTEdge#getFromPlace <em>From Place</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Petrinet</em>'.
-	 * @see PetrinetDSL.Petrinet
+	 * @return the meta object for the reference '<em>From Place</em>'.
+	 * @see PetrinetDSL.PTEdge#getFromPlace()
+	 * @see #getPTEdge()
 	 * @generated
 	 */
-	EClass getPetrinet();
+	EReference getPTEdge_FromPlace();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link PetrinetDSL.Petrinet#getPlaces <em>Places</em>}'.
+	 * Returns the meta object for the reference '{@link PetrinetDSL.PTEdge#getToTransition <em>To Transition</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Places</em>'.
-	 * @see PetrinetDSL.Petrinet#getPlaces()
-	 * @see #getPetrinet()
+	 * @return the meta object for the reference '<em>To Transition</em>'.
+	 * @see PetrinetDSL.PTEdge#getToTransition()
+	 * @see #getPTEdge()
 	 * @generated
 	 */
-	EReference getPetrinet_Places();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link PetrinetDSL.Petrinet#getTransitions <em>Transitions</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Transitions</em>'.
-	 * @see PetrinetDSL.Petrinet#getTransitions()
-	 * @see #getPetrinet()
-	 * @generated
-	 */
-	EReference getPetrinet_Transitions();
-
-	/**
-	 * Returns the meta object for class '{@link PetrinetDSL.NamedElement <em>Named Element</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Named Element</em>'.
-	 * @see PetrinetDSL.NamedElement
-	 * @generated
-	 */
-	EClass getNamedElement();
-
-	/**
-	 * Returns the meta object for the attribute '{@link PetrinetDSL.NamedElement#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see PetrinetDSL.NamedElement#getName()
-	 * @see #getNamedElement()
-	 * @generated
-	 */
-	EAttribute getNamedElement_Name();
+	EReference getPTEdge_ToTransition();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -380,6 +564,60 @@ public interface PetrinetDSLPackage extends EPackage {
 	 */
 	interface Literals {
 		/**
+		 * The meta object literal for the '{@link PetrinetDSL.impl.PetrinetImpl <em>Petrinet</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see PetrinetDSL.impl.PetrinetImpl
+		 * @see PetrinetDSL.impl.PetrinetDSLPackageImpl#getPetrinet()
+		 * @generated
+		 */
+		EClass PETRINET = eINSTANCE.getPetrinet();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PETRINET__NAME = eINSTANCE.getPetrinet_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PETRINET__DESCRIPTION = eINSTANCE.getPetrinet_Description();
+
+		/**
+		 * The meta object literal for the '<em><b>Models</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PETRINET__MODELS = eINSTANCE.getPetrinet_Models();
+
+		/**
+		 * The meta object literal for the '{@link PetrinetDSL.impl.NodeImpl <em>Node</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see PetrinetDSL.impl.NodeImpl
+		 * @see PetrinetDSL.impl.PetrinetDSLPackageImpl#getNode()
+		 * @generated
+		 */
+		EClass NODE = eINSTANCE.getNode();
+
+		/**
+		 * The meta object literal for the '{@link PetrinetDSL.impl.EdgeImpl <em>Edge</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see PetrinetDSL.impl.EdgeImpl
+		 * @see PetrinetDSL.impl.PetrinetDSLPackageImpl#getEdge()
+		 * @generated
+		 */
+		EClass EDGE = eINSTANCE.getEdge();
+
+		/**
 		 * The meta object literal for the '{@link PetrinetDSL.impl.TokenImpl <em>Token</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -400,14 +638,6 @@ public interface PetrinetDSLPackage extends EPackage {
 		EClass TRANSITION = eINSTANCE.getTransition();
 
 		/**
-		 * The meta object literal for the '<em><b>Target Places</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference TRANSITION__TARGET_PLACES = eINSTANCE.getTransition_TargetPlaces();
-
-		/**
 		 * The meta object literal for the '{@link PetrinetDSL.impl.PlaceImpl <em>Place</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -426,56 +656,30 @@ public interface PetrinetDSLPackage extends EPackage {
 		EReference PLACE__TOKENS = eINSTANCE.getPlace_Tokens();
 
 		/**
-		 * The meta object literal for the '<em><b>Target Transitions</b></em>' reference list feature.
+		 * The meta object literal for the '{@link PetrinetDSL.impl.PTEdgeImpl <em>PT Edge</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
+		 * @see PetrinetDSL.impl.PTEdgeImpl
+		 * @see PetrinetDSL.impl.PetrinetDSLPackageImpl#getPTEdge()
 		 * @generated
 		 */
-		EReference PLACE__TARGET_TRANSITIONS = eINSTANCE.getPlace_TargetTransitions();
+		EClass PT_EDGE = eINSTANCE.getPTEdge();
 
 		/**
-		 * The meta object literal for the '{@link PetrinetDSL.impl.PetrinetImpl <em>Petrinet</em>}' class.
+		 * The meta object literal for the '<em><b>From Place</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see PetrinetDSL.impl.PetrinetImpl
-		 * @see PetrinetDSL.impl.PetrinetDSLPackageImpl#getPetrinet()
 		 * @generated
 		 */
-		EClass PETRINET = eINSTANCE.getPetrinet();
+		EReference PT_EDGE__FROM_PLACE = eINSTANCE.getPTEdge_FromPlace();
 
 		/**
-		 * The meta object literal for the '<em><b>Places</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>To Transition</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference PETRINET__PLACES = eINSTANCE.getPetrinet_Places();
-
-		/**
-		 * The meta object literal for the '<em><b>Transitions</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference PETRINET__TRANSITIONS = eINSTANCE.getPetrinet_Transitions();
-
-		/**
-		 * The meta object literal for the '{@link PetrinetDSL.impl.NamedElementImpl <em>Named Element</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see PetrinetDSL.impl.NamedElementImpl
-		 * @see PetrinetDSL.impl.PetrinetDSLPackageImpl#getNamedElement()
-		 * @generated
-		 */
-		EClass NAMED_ELEMENT = eINSTANCE.getNamedElement();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute NAMED_ELEMENT__NAME = eINSTANCE.getNamedElement_Name();
+		EReference PT_EDGE__TO_TRANSITION = eINSTANCE.getPTEdge_ToTransition();
 
 	}
 

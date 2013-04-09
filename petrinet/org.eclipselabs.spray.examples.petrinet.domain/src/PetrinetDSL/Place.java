@@ -13,7 +13,6 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * <ul>
  *   <li>{@link PetrinetDSL.Place#getTokens <em>Tokens</em>}</li>
- *   <li>{@link PetrinetDSL.Place#getTargetTransitions <em>Target Transitions</em>}</li>
  * </ul>
  * </p>
  *
@@ -21,7 +20,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface Place extends NamedElement {
+public interface Place extends Node {
 	/**
 	 * Returns the value of the '<em><b>Tokens</b></em>' containment reference list.
 	 * The list contents are of type {@link PetrinetDSL.Token}.
@@ -37,21 +36,5 @@ public interface Place extends NamedElement {
 	 * @generated
 	 */
 	EList<Token> getTokens();
-
-	/**
-	 * Returns the value of the '<em><b>Target Transitions</b></em>' reference list.
-	 * The list contents are of type {@link PetrinetDSL.Transition}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Target Transitions</em>' reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Target Transitions</em>' reference list.
-	 * @see PetrinetDSL.PetrinetDSLPackage#getPlace_TargetTransitions()
-	 * @model
-	 * @generated
-	 */
-	EList<Transition> getTargetTransitions();
 
 } // Place

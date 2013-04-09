@@ -13,5 +13,5 @@ package PetrinetDSL;
  * @model
  * @generated
  */
-public interface Token extends NamedElement {
+public interface Token extends Node {
 } // Token
