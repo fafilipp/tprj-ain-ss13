@@ -9,44 +9,16 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Epk.ecore#//NamedElement/name"/>
     </genClasses>
     <genClasses ecoreClass="Epk.ecore#//Epk">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Epk.ecore#//Epk/events"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Epk.ecore#//Epk/functions"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Epk.ecore#//Epk/fconnectors"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Epk.ecore#//Epk/econnectors"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Epk.ecore#//Epk/nodes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Epk.ecore#//Epk/edges"/>
     </genClasses>
-    <genClasses ecoreClass="Epk.ecore#//Event">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Epk.ecore#//Event/incomingConnection"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Epk.ecore#//Event/outgoingConnection"/>
-    </genClasses>
-    <genClasses ecoreClass="Epk.ecore#//Function">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Epk.ecore#//Function/incomingConnection"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Epk.ecore#//Function/outgoingConnection"/>
-    </genClasses>
-    <genClasses ecoreClass="Epk.ecore#//FEConnection">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Epk.ecore#//FEConnection/source"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Epk.ecore#//FEConnection/target"/>
-    </genClasses>
-    <genClasses ecoreClass="Epk.ecore#//EFConnection">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Epk.ecore#//EFConnection/source"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Epk.ecore#//EFConnection/target"/>
-    </genClasses>
-    <genClasses ecoreClass="Epk.ecore#//FCConnection">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Epk.ecore#//FCConnection/source"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Epk.ecore#//FCConnection/target"/>
-    </genClasses>
-    <genClasses ecoreClass="Epk.ecore#//ECConnection">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Epk.ecore#//ECConnection/source"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Epk.ecore#//ECConnection/target"/>
-    </genClasses>
-    <genClasses image="false" ecoreClass="Epk.ecore#//EConnections"/>
-    <genClasses image="false" ecoreClass="Epk.ecore#//FConnections"/>
-    <genClasses ecoreClass="Epk.ecore#//EConnector">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Epk.ecore#//EConnector/incomingConnections"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Epk.ecore#//EConnector/outgoingConnections"/>
-    </genClasses>
-    <genClasses ecoreClass="Epk.ecore#//FConnector">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Epk.ecore#//FConnector/incomingConnections"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Epk.ecore#//FConnector/outgoingConnections"/>
-    </genClasses>
+    <genClasses ecoreClass="Epk.ecore#//Edge"/>
+    <genClasses ecoreClass="Epk.ecore#//Node"/>
+    <genClasses ecoreClass="Epk.ecore#//Event"/>
+    <genClasses ecoreClass="Epk.ecore#//Function"/>
+    <genClasses ecoreClass="Epk.ecore#//InOutput"/>
+    <genClasses ecoreClass="Epk.ecore#//OrgUnit"/>
+    <genClasses ecoreClass="Epk.ecore#//ProcPath"/>
+    <genClasses ecoreClass="Epk.ecore#//Connector"/>
   </genPackages>
 </genmodel:GenModel>

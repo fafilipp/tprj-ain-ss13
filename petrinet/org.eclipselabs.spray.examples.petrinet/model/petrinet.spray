@@ -8,7 +8,7 @@
  * See also petrinet.properties to configure generator properties.
  *************************************************************************************/
 import PetrinetDSL.*
- 
+
 diagram petrinet for Petrinet style PetrinetDefaultStyle 
 
 class Place {

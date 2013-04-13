@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
         <?eclipse version="3.0"?>
         <!--
-         Generated on Tue Apr 09 11:01:09 CEST 2013 by Spray Plugin.xtend
+         Generated on Sat Apr 13 10:38:58 CEST 2013 by Spray Plugin.xtend
          This file will be generated oinly once if it need to be regenerated, remove this file.
          
         -->
         <plugin>
+		   <!-- AUTOGEN START -->
            <!-- Potentially redefine the EDITOR EXTENSION TO ALLOW FOR OUR OWN EDITOR SUBCLASS TO BE USED. 
            <extension
                  point="org.eclipse.ui.editors">
@@ -101,9 +102,9 @@
             point="org.eclipse.ui.views.properties.tabbed.propertySections">
             <propertySections contributorId="epk.PropertyContributor">
           <propertySection tab="epk.main.tab"
-           class="org.eclipselabs.spray.examples.epk.internal.ExecutableExtensionFactory:org.eclipselabs.spray.examples.epk.property.EConnectorNameSection"
-           filter="org.eclipselabs.spray.examples.epk.property.EConnectorFilter"
-           id="epk.main.tab.EConnector.name">
+           class="org.eclipselabs.spray.examples.epk.internal.ExecutableExtensionFactory:org.eclipselabs.spray.examples.epk.property.ConnectorNameSection"
+           filter="org.eclipselabs.spray.examples.epk.property.ConnectorFilter"
+           id="epk.main.tab.Connector.name">
           </propertySection>
             </propertySections>
         </extension>
@@ -112,9 +113,9 @@
             point="org.eclipse.ui.views.properties.tabbed.propertySections">
             <propertySections contributorId="epk.PropertyContributor">
           <propertySection tab="epk.main.tab"
-           class="org.eclipselabs.spray.examples.epk.internal.ExecutableExtensionFactory:org.eclipselabs.spray.examples.epk.property.FConnectorNameSection"
-           filter="org.eclipselabs.spray.examples.epk.property.FConnectorFilter"
-           id="epk.main.tab.FConnector.name">
+           class="org.eclipselabs.spray.examples.epk.internal.ExecutableExtensionFactory:org.eclipselabs.spray.examples.epk.property.ConnectorNameSection"
+           filter="org.eclipselabs.spray.examples.epk.property.ConnectorFilter"
+           id="epk.main.tab.Connector.name">
           </propertySection>
             </propertySections>
         </extension>
@@ -122,12 +123,55 @@
         <extension
             point="org.eclipse.ui.views.properties.tabbed.propertySections">
             <propertySections contributorId="epk.PropertyContributor">
+          <propertySection tab="epk.main.tab"
+           class="org.eclipselabs.spray.examples.epk.internal.ExecutableExtensionFactory:org.eclipselabs.spray.examples.epk.property.ConnectorNameSection"
+           filter="org.eclipselabs.spray.examples.epk.property.ConnectorFilter"
+           id="epk.main.tab.Connector.name">
+          </propertySection>
             </propertySections>
         </extension>
         
         <extension
             point="org.eclipse.ui.views.properties.tabbed.propertySections">
             <propertySections contributorId="epk.PropertyContributor">
+          <propertySection tab="epk.main.tab"
+           class="org.eclipselabs.spray.examples.epk.internal.ExecutableExtensionFactory:org.eclipselabs.spray.examples.epk.property.OrgUnitNameSection"
+           filter="org.eclipselabs.spray.examples.epk.property.OrgUnitFilter"
+           id="epk.main.tab.OrgUnit.name">
+          </propertySection>
+            </propertySections>
+        </extension>
+        
+        <extension
+            point="org.eclipse.ui.views.properties.tabbed.propertySections">
+            <propertySections contributorId="epk.PropertyContributor">
+          <propertySection tab="epk.main.tab"
+           class="org.eclipselabs.spray.examples.epk.internal.ExecutableExtensionFactory:org.eclipselabs.spray.examples.epk.property.InOutputNameSection"
+           filter="org.eclipselabs.spray.examples.epk.property.InOutputFilter"
+           id="epk.main.tab.InOutput.name">
+          </propertySection>
+            </propertySections>
+        </extension>
+        
+        <extension
+            point="org.eclipse.ui.views.properties.tabbed.propertySections">
+            <propertySections contributorId="epk.PropertyContributor">
+          <propertySection tab="epk.main.tab"
+           class="org.eclipselabs.spray.examples.epk.internal.ExecutableExtensionFactory:org.eclipselabs.spray.examples.epk.property.InOutputNameSection"
+           filter="org.eclipselabs.spray.examples.epk.property.InOutputFilter"
+           id="epk.main.tab.InOutput.name">
+          </propertySection>
+            </propertySections>
+        </extension>
+        
+        <extension
+            point="org.eclipse.ui.views.properties.tabbed.propertySections">
+            <propertySections contributorId="epk.PropertyContributor">
+          <propertySection tab="epk.main.tab"
+           class="org.eclipselabs.spray.examples.epk.internal.ExecutableExtensionFactory:org.eclipselabs.spray.examples.epk.property.ProcPathNameSection"
+           filter="org.eclipselabs.spray.examples.epk.property.ProcPathFilter"
+           id="epk.main.tab.ProcPath.name">
+          </propertySection>
             </propertySections>
         </extension>
         
@@ -150,4 +194,5 @@
                      project="false">
                </wizard>
             </extension>
+            <!-- AUTOGEN END -->
         </plugin>

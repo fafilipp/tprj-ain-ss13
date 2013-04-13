@@ -7,39 +7,16 @@
  *
  * See also epk.properties to configure generator properties.
  *************************************************************************************/
-// Add import statements here
 import EpkDSL.*
 
 diagram epk for Epk style EpkDefaultStyle
-
-
-// Add class mappings here. Refer to EClasses here. Don't forget to configure a
-// dependency to the plugin defining the EMF metamodel in META-INF/MANIFEST.MF.
-// It is required to have a genmodel for the metamodel.
-//
-// Example class mapping:
-//   class BusinessClass icon "ecore/EClass.gif" {
-//     shape RectangleShape
-//     behavior {
-//       // Enable create feature for this class and add it to the palette "Shapes"
-//       create into types palette "Shapes";
-//     }
-//   }
-//
-// Example association mapping:
-//   class Association icon "connection16.gif" {
-//     connection ArrowConnection {
-//       from source;
-//       to target;
-//     }
-//   }
 
 class Event {
 	shape EventShape {
 		name into eventText
 	}
-	behavior {
-		create into events palette "Objects"
+	behavior { 
+		create into nodes palette "Nodes"
 	}
 }
 
@@ -48,50 +25,63 @@ class Function {
 		name into functionText
 	}
 	behavior {
-		create into functions palette "Objects"
+		create into nodes palette "Nodes"
 	}
 }
 
-class EConnector {
-	shape ConnectorShape
+class Connector alias AndConnector {
+	shape AndConnectorShape
+		behavior {
+	    create into nodes palette "Connectors" 
+	}
+}
+
+class Connector alias OrConnector {
+	shape OrConnectorShape
+		behavior {
+	    create into nodes palette "Connectors" 
+	}
+}
+
+class Connector alias XORConnector {
+	shape XOrConnectorShape
 	behavior {
-		create into econnectors palette "Connectors"
+	    create into nodes palette "Connectors" 
 	}
 }
 
-class FConnector {
-	shape ConnectorShape
+class OrgUnit alias OrganizationalUnit {
+	shape OrganizationUnitShape {
+		name into orgunitText
+	}
 	behavior {
-		create into fconnectors palette "Connectors"
+	    create into nodes palette "Nodes"
 	}
 }
 
-class FEConnection {
-	shape ArrowShape	
+class InOutput alias Input {
+	shape InputOutputShape {
+		name into inoutText
+	}
 	behavior {
-		create palette "Connections"
-	}
+	    create into nodes palette "Nodes"
+	}	
 }
 
-class FCConnection {
-	shape ArrowShape 
+class InOutput alias Output {
+	shape InputOutputShape {
+		name into inoutText
+	}
 	behavior {
-		create palette "Connections"
-	}
+	    create into nodes palette "Nodes"
+	}	
 }
 
-
-//connection AssociationConnection  { 
-//       name into assocText
-//    }
-//    {
-//    	from source
-//        to target
-//    }
-//    
-//    behavior {  	
-//        create into associations palette "Connections" askFor name 
-//    }
-//	references {
-//		targetTransitions : connection
-//	}
+class ProcPath alias ProcessPath {
+	shape ProcessPathShape {
+		name into procpathText 
+	}
+	behavior {
+	    create into nodes palette "Nodes"
+	}
+}

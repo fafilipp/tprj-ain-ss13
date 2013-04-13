@@ -5,61 +5,17 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Epk" eSuperTypes="#//NamedElement">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="events" upperBound="-1"
-        eType="#//Event" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="functions" upperBound="-1"
-        eType="#//Function" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="fconnectors" upperBound="-1"
-        eType="#//FConnector" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="econnectors" upperBound="-1"
-        eType="#//EConnector" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="nodes" upperBound="-1"
+        eType="#//Node" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="edges" upperBound="-1"
+        eType="#//Edge" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Event" eSuperTypes="#//NamedElement">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="incomingConnection" eType="#//FConnections"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="outgoingConnection" eType="#//EConnections"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Function" eSuperTypes="#//NamedElement">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="incomingConnection" lowerBound="1"
-        eType="#//EConnections"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="outgoingConnection" lowerBound="1"
-        eType="#//FConnections"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="FEConnection" eSuperTypes="#//FConnections">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1"
-        eType="#//Function"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1"
-        eType="#//Event"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="EFConnection" eSuperTypes="#//EConnections">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1"
-        eType="#//Event"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1"
-        eType="#//Function"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="FCConnection" eSuperTypes="#//FConnections">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1"
-        eType="#//Function"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1"
-        eType="#//FConnector"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ECConnection" eSuperTypes="#//EConnections">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1"
-        eType="#//Event"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1"
-        eType="#//EConnector"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="EConnections" abstract="true" interface="true"/>
-  <eClassifiers xsi:type="ecore:EClass" name="FConnections" abstract="true"/>
-  <eClassifiers xsi:type="ecore:EClass" name="EConnector" eSuperTypes="#//NamedElement">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="incomingConnections" lowerBound="1"
-        upperBound="-1" eType="#//EConnections"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="outgoingConnections" lowerBound="1"
-        upperBound="-1" eType="#//FConnections"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="FConnector" eSuperTypes="#//NamedElement">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="incomingConnections" lowerBound="1"
-        upperBound="-1" eType="#//FConnections"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="outgoingConnections" lowerBound="1"
-        upperBound="-1" eType="#//EConnections"/>
-  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Edge" eSuperTypes="#//Epk"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Node" eSuperTypes="#//Epk"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Event" eSuperTypes="#//Node"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Function" eSuperTypes="#//Node"/>
+  <eClassifiers xsi:type="ecore:EClass" name="InOutput" eSuperTypes="#//Node"/>
+  <eClassifiers xsi:type="ecore:EClass" name="OrgUnit" eSuperTypes="#//Node"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ProcPath" eSuperTypes="#//Node"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Connector" eSuperTypes="#//Node"/>
 </ecore:EPackage>

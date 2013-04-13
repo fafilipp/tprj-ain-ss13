@@ -3,7 +3,7 @@
  * Spray styles definition
  * 
  * This file contains the definition of style classes using the Styles Language.
- * Refer to http://code.google.com/a/eclipselabs.org/p/spray/ for documentation.
+ * Refer to http://code.google.com/a/eclipselabs.org/p/spray/  for documentation.
  *************************************************************************************/
 
 // Add definition of styles here.
@@ -19,3 +19,29 @@ style EpkDefaultStyle {
     font-size = 12
     // font-bold = yes
 }
+
+//style EpkEventStyle {//extends EpkDefaultStyle {
+//	background-color = RGB(255,150,150)
+//}
+//
+//style EpkFunctionStyle {//extends EpkDefaultStyle {
+//	background-color = RGB(150,255,150)
+//}
+//
+//style EpkConnectorStyle {
+//	background-color = light-gray
+//	font-size = 8
+//}
+//
+//style EpkOrganizationUnitStyle {//xtends EpkDefaultStyle {
+//	background-color = RGB(240,240,60)
+//}
+//
+//style EpkInputOutputStyle {//extends EpkDefaultStyle {
+//	background-color = RGB(30,30,240)
+//}
+//
+//style EpkProcessPathStyle {
+//	background-color = light-gray
+//	transparency = 0.0
+//}
