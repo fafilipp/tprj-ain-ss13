@@ -5,20 +5,21 @@
     importerID="org.eclipse.emf.importer.ecore" complianceLevel="7.0" copyrightFields="false">
   <foreignModel>Petrinet.ecore</foreignModel>
   <genPackages prefix="PetrinetDSL" disposableProviderFactory="true" ecorePackage="Petrinet.ecore#/">
+    <genClasses ecoreClass="Petrinet.ecore#//Petrinet">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Petrinet.ecore#//Petrinet/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Petrinet.ecore#//Petrinet/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Petrinet.ecore#//Petrinet/models"/>
+    </genClasses>
+    <genClasses ecoreClass="Petrinet.ecore#//Node"/>
+    <genClasses ecoreClass="Petrinet.ecore#//Edge"/>
     <genClasses ecoreClass="Petrinet.ecore#//Token"/>
     <genClasses ecoreClass="Petrinet.ecore#//Transition"/>
     <genClasses ecoreClass="Petrinet.ecore#//Place">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Petrinet.ecore#//Place/tokens"/>
     </genClasses>
-    <genClasses ecoreClass="Petrinet.ecore#//Petrinet"/>
-    <genClasses image="false" ecoreClass="Petrinet.ecore#//NamedElement">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Petrinet.ecore#//NamedElement/name"/>
+    <genClasses ecoreClass="Petrinet.ecore#//PTEdge">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Petrinet.ecore#//PTEdge/fromPlace"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Petrinet.ecore#//PTEdge/toTransition"/>
     </genClasses>
-    <genClasses ecoreClass="Petrinet.ecore#//Edge"/>
-    <genClasses ecoreClass="Petrinet.ecore#//TestEdge">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Petrinet.ecore#//TestEdge/fromPlace"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Petrinet.ecore#//TestEdge/toTransition"/>
-    </genClasses>
-    <genClasses ecoreClass="Petrinet.ecore#//Node"/>
   </genPackages>
 </genmodel:GenModel>
