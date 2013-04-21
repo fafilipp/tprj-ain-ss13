@@ -196,22 +196,13 @@ public interface MindmapPackage extends EPackage {
 	int ELEMENT__NAME = MAP_ELEMENTS__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Children</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ELEMENT__CHILDREN = MAP_ELEMENTS_FEATURE_COUNT + 0;
-
-	/**
 	 * The feature id for the '<em><b>Parent</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ELEMENT__PARENT = MAP_ELEMENTS_FEATURE_COUNT + 1;
+	int ELEMENT__PARENT = MAP_ELEMENTS_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Element</em>' class.
@@ -220,7 +211,7 @@ public interface MindmapPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ELEMENT_FEATURE_COUNT = MAP_ELEMENTS_FEATURE_COUNT + 2;
+	int ELEMENT_FEATURE_COUNT = MAP_ELEMENTS_FEATURE_COUNT + 1;
 
 
 	/**
@@ -294,17 +285,6 @@ public interface MindmapPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getElement();
-
-	/**
-	 * Returns the meta object for the reference list '{@link MindmapDSL.Element#getChildren <em>Children</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Children</em>'.
-	 * @see MindmapDSL.Element#getChildren()
-	 * @see #getElement()
-	 * @generated
-	 */
-	EReference getElement_Children();
 
 	/**
 	 * Returns the meta object for the reference '{@link MindmapDSL.Element#getParent <em>Parent</em>}'.
@@ -404,14 +384,6 @@ public interface MindmapPackage extends EPackage {
 		 * @generated
 		 */
 		EClass ELEMENT = eINSTANCE.getElement();
-
-		/**
-		 * The meta object literal for the '<em><b>Children</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ELEMENT__CHILDREN = eINSTANCE.getElement_Children();
 
 		/**
 		 * The meta object literal for the '<em><b>Parent</b></em>' reference feature.

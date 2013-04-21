@@ -188,17 +188,8 @@ public class MindmapPackageImpl extends EPackageImpl implements MindmapPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getElement_Children() {
-		return (EReference)elementEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getElement_Parent() {
-		return (EReference)elementEClass.getEStructuralFeatures().get(1);
+		return (EReference)elementEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -240,7 +231,6 @@ public class MindmapPackageImpl extends EPackageImpl implements MindmapPackage {
 		startElementEClass = createEClass(START_ELEMENT);
 
 		elementEClass = createEClass(ELEMENT);
-		createEReference(elementEClass, ELEMENT__CHILDREN);
 		createEReference(elementEClass, ELEMENT__PARENT);
 	}
 
@@ -289,7 +279,6 @@ public class MindmapPackageImpl extends EPackageImpl implements MindmapPackage {
 		initEClass(startElementEClass, StartElement.class, "StartElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(elementEClass, Element.class, "Element", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getElement_Children(), this.getElement(), null, "children", null, 0, -1, Element.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getElement_Parent(), this.getMapElements(), null, "parent", null, 1, 1, Element.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource

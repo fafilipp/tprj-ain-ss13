@@ -12,7 +12,6 @@ import org.eclipse.emf.common.util.EList;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link MindmapDSL.Element#getChildren <em>Children</em>}</li>
  *   <li>{@link MindmapDSL.Element#getParent <em>Parent</em>}</li>
  * </ul>
  * </p>
@@ -22,22 +21,6 @@ import org.eclipse.emf.common.util.EList;
  * @generated
  */
 public interface Element extends MapElements {
-	/**
-	 * Returns the value of the '<em><b>Children</b></em>' reference list.
-	 * The list contents are of type {@link MindmapDSL.Element}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Children</em>' reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Children</em>' reference list.
-	 * @see MindmapDSL.MindmapPackage#getElement_Children()
-	 * @model
-	 * @generated
-	 */
-	EList<Element> getChildren();
-
 	/**
 	 * Returns the value of the '<em><b>Parent</b></em>' reference.
 	 * <!-- begin-user-doc -->

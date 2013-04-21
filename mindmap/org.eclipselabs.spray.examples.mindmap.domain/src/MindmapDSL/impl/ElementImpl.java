@@ -26,7 +26,6 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link MindmapDSL.impl.ElementImpl#getChildren <em>Children</em>}</li>
  *   <li>{@link MindmapDSL.impl.ElementImpl#getParent <em>Parent</em>}</li>
  * </ul>
  * </p>
@@ -34,16 +33,6 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  * @generated
  */
 public class ElementImpl extends MapElementsImpl implements Element {
-	/**
-	 * The cached value of the '{@link #getChildren() <em>Children</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getChildren()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Element> children;
-
 	/**
 	 * The cached value of the '{@link #getParent() <em>Parent</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -71,18 +60,6 @@ public class ElementImpl extends MapElementsImpl implements Element {
 	@Override
 	protected EClass eStaticClass() {
 		return MindmapPackage.Literals.ELEMENT;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<Element> getChildren() {
-		if (children == null) {
-			children = new EObjectResolvingEList<Element>(Element.class, this, MindmapPackage.ELEMENT__CHILDREN);
-		}
-		return children;
 	}
 
 	/**
@@ -131,8 +108,6 @@ public class ElementImpl extends MapElementsImpl implements Element {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case MindmapPackage.ELEMENT__CHILDREN:
-				return getChildren();
 			case MindmapPackage.ELEMENT__PARENT:
 				if (resolve) return getParent();
 				return basicGetParent();
@@ -149,10 +124,6 @@ public class ElementImpl extends MapElementsImpl implements Element {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case MindmapPackage.ELEMENT__CHILDREN:
-				getChildren().clear();
-				getChildren().addAll((Collection<? extends Element>)newValue);
-				return;
 			case MindmapPackage.ELEMENT__PARENT:
 				setParent((MapElements)newValue);
 				return;
@@ -168,9 +139,6 @@ public class ElementImpl extends MapElementsImpl implements Element {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case MindmapPackage.ELEMENT__CHILDREN:
-				getChildren().clear();
-				return;
 			case MindmapPackage.ELEMENT__PARENT:
 				setParent((MapElements)null);
 				return;
@@ -186,8 +154,6 @@ public class ElementImpl extends MapElementsImpl implements Element {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case MindmapPackage.ELEMENT__CHILDREN:
-				return children != null && !children.isEmpty();
 			case MindmapPackage.ELEMENT__PARENT:
 				return parent != null;
 		}
