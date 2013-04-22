@@ -1,0 +1,95 @@
+/*************************************************************************************
+ *
+ * Spray shapes definition
+ * 
+ * This file contains the definition of graphical figures using the Shapes Language.
+ * Refer to http://code.google.com/a/eclipselabs.org/p/spray/ for documentation.
+ *************************************************************************************/
+
+// Add definition of shapes here.
+// shape RectangleShape {
+//     rectangle {
+//         position(x=0,y=0)
+//         size(width=100,height=100)
+//     }
+// }
+
+// connection ArrowConnection {
+//     placing {
+//         position (offset=1.0)
+//         polygon {
+//             point (x=-10, y=-5)
+//             point (x=0, y=0)
+//             point (x=-10, y=5)
+//             style (background-color=black)
+//         }
+//     }
+// }
+
+shape EntityShape {
+	rectangle {
+		size(width=150, height=80)
+	}
+	text {
+		size(width=110,height=20)
+		position(x=10,y=25)
+		id=EntityText
+	}
+}
+
+shape RelationshipShape {
+	polygon {
+		point(x=50,y=0)	
+		point(x=100,y=50)
+		point(x=50,y=100)
+		point(x=0,y=50)	
+	}
+	text {
+		size(width=60,height=20)
+		position(x=13,y=33)
+		id=RelationshipText
+	}
+	text {
+		size(width=100,height=20)
+		position(x=0, y=100)
+		id=RelationshipDescription
+	}
+}
+
+shape AttributeShape {
+	ellipse {
+		size(width=150, height=80)
+	}
+	text {
+		size(width=110,height=20)
+		position(x=10,y=25)
+		id=AttributeText
+	}
+}
+
+shape MultiValAttributeShape {
+	ellipse {
+		size(width=150, height=80)
+	}
+	ellipse {
+		position(x=5,y=3)
+		size(width=140, height=74)
+	}
+	text {
+		size(width=110,height=18)
+		position(x=10,y=25)
+		id=AttributeText
+	}
+}
+
+shape KeyAttributeShape {
+	ellipse {
+		size(width=150, height=80)
+	}
+	text {
+		style(line-style=dash)
+		size(width=110,height=20)
+		position(x=10,y=25)
+		id=AttributeText
+	}
+}

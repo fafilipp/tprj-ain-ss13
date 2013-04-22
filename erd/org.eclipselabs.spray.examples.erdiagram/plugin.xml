@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+        <?eclipse version="3.0"?>
+        <!--
+         Generated on Mon Apr 22 16:39:47 CEST 2013 by Spray Plugin.xtend
+         This file will be generated oinly once if it need to be regenerated, remove this file.
+         
+        -->
+        <plugin>
+		   <!-- AUTOGEN START -->
+           <!-- Potentially redefine the EDITOR EXTENSION TO ALLOW FOR OUR OWN EDITOR SUBCLASS TO BE USED. 
+           <extension
+                 point="org.eclipse.ui.editors">
+              <editor
+                  class="org.eclipselabs.spray.examples.erdiagram.internal.ExecutableExtensionFactory:org.eclipselabs.spray.examples.erdiagram.diagram.MyerdiagramDiagramEditor"
+                  contributorClass="org.eclipse.graphiti.ui.editor.DiagramEditorActionBarContributor"
+                  default="true"
+                  extensions="diagram"
+                  icon="icons/diagram.gif"
+                  id="org.eclipselabs.spray.examples.erdiagram.diagram.MyerdiagramDiagramEditor"
+                  matchingStrategy="org.eclipse.graphiti.ui.editor.DiagramEditorFactory$DiagramEditorMatchingStrategy"
+                  name="%_diagram_editor_name">
+               <contentTypeBinding
+                     contentTypeId="org.eclipse.graphiti.content.diagram">
+               </contentTypeBinding>
+              </editor>
+           </extension>
+           -->
+        
+          <extension
+              point="org.eclipse.graphiti.ui.diagramTypes">
+            <diagramType
+              description="This is the diagram type for the Myerdiagram diagram type"
+              id="org.eclipselabs.spray.examples.erdiagram.diagram.MyerdiagramDiagramType"
+              name="Myerdiagram Graphiti Diagram Type"
+              type="Myerdiagram">
+            </diagramType>
+          </extension>
+        
+          <extension
+              point="org.eclipse.graphiti.ui.diagramTypeProviders">
+            <diagramTypeProvider
+              class="org.eclipselabs.spray.examples.erdiagram.internal.ExecutableExtensionFactory:org.eclipselabs.spray.examples.erdiagram.diagram.MyerdiagramDiagramTypeProvider"
+              description="This is my editor for the Myerdiagram diagram type"
+              id="org.eclipselabs.spray.examples.erdiagram.diagram.MyerdiagramDiagramTypeProvider"
+              name="Myerdiagram editor">
+              <diagramType
+                    id="org.eclipselabs.spray.examples.erdiagram.diagram.MyerdiagramDiagramType">
+              </diagramType>
+                <imageProvider
+                       id="org.eclipselabs.spray.examples.erdiagram.diagram.MyerdiagramImageProvider">
+                 </imageProvider>
+            </diagramTypeProvider>
+          </extension>
+        
+           <extension
+                 point="org.eclipse.graphiti.ui.imageProviders">
+              <imageProvider
+                    class="org.eclipselabs.spray.examples.erdiagram.internal.ExecutableExtensionFactory:org.eclipselabs.spray.examples.erdiagram.diagram.MyerdiagramImageProvider"
+                       id="org.eclipselabs.spray.examples.erdiagram.diagram.MyerdiagramImageProvider">
+              </imageProvider>
+           </extension>
+        
+          <extension
+              point="org.eclipse.ui.views.properties.tabbed.propertyContributor">
+              <propertyContributor contributorId="Myerdiagram.PropertyContributor">
+                  <propertyCategory category="MyerdiagramCategory">
+                  </propertyCategory>
+              </propertyContributor>
+          </extension>
+        
+          <extension
+              point="org.eclipse.ui.views.properties.tabbed.propertyTabs">
+              <propertyTabs contributorId="Myerdiagram.PropertyContributor">
+                  <propertyTab label="Main" category="MyerdiagramCategory"
+                      id="Myerdiagram.main.tab">
+                  </propertyTab>
+              </propertyTabs>
+          </extension>
+    
+    
+            <extension
+                  point="org.eclipse.ui.newWizards">
+                  <category
+                     name="Myerdiagram"
+                     id="org.eclipselabs.spray.Myerdiagram">
+                     </category>
+               <wizard
+                     category="org.eclipselabs.spray.Myerdiagram"
+                     class="org.eclipselabs.spray.examples.erdiagram.internal.ExecutableExtensionFactory:org.eclipselabs.spray.runtime.graphiti.wizard.NewDiagramWizard"
+                     descriptionImage="icons/Myerdiagram-32.png"
+                     icon="icons/Myerdiagram-16.png"
+                     id="org.eclipselabs.spray.Myerdiagram.NewDiagramWizard"
+                     name="New Myerdiagram Diagram"
+                     preferredPerspectives="org.eclipse.graphiti.examples.common.perspective.GFPerspective"
+                     project="false">
+               </wizard>
+            </extension>
+            <!-- AUTOGEN END -->
+        </plugin>
