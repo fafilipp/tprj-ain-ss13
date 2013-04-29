@@ -118,6 +118,14 @@ public class PetrinetDSLSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case PetrinetDSLPackage.TP_EDGE: {
+				TPEdge tpEdge = (TPEdge)theEObject;
+				T result = caseTPEdge(tpEdge);
+				if (result == null) result = caseEdge(tpEdge);
+				if (result == null) result = casePetrinet(tpEdge);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -224,6 +232,21 @@ public class PetrinetDSLSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T casePTEdge(PTEdge object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>TP Edge</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>TP Edge</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTPEdge(TPEdge object) {
 		return null;
 	}
 

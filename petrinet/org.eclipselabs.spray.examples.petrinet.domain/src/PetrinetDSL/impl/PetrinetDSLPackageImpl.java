@@ -9,6 +9,7 @@ import PetrinetDSL.Petrinet;
 import PetrinetDSL.PetrinetDSLFactory;
 import PetrinetDSL.PetrinetDSLPackage;
 import PetrinetDSL.Place;
+import PetrinetDSL.TPEdge;
 import PetrinetDSL.Token;
 import PetrinetDSL.Transition;
 
@@ -74,6 +75,13 @@ public class PetrinetDSLPackageImpl extends EPackageImpl implements PetrinetDSLP
 	 * @generated
 	 */
 	private EClass ptEdgeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass tpEdgeEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -258,6 +266,33 @@ public class PetrinetDSLPackageImpl extends EPackageImpl implements PetrinetDSLP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getTPEdge() {
+		return tpEdgeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTPEdge_FromTransition() {
+		return (EReference)tpEdgeEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTPEdge_ToPlace() {
+		return (EReference)tpEdgeEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public PetrinetDSLFactory getPetrinetDSLFactory() {
 		return (PetrinetDSLFactory)getEFactoryInstance();
 	}
@@ -300,6 +335,10 @@ public class PetrinetDSLPackageImpl extends EPackageImpl implements PetrinetDSLP
 		ptEdgeEClass = createEClass(PT_EDGE);
 		createEReference(ptEdgeEClass, PT_EDGE__FROM_PLACE);
 		createEReference(ptEdgeEClass, PT_EDGE__TO_TRANSITION);
+
+		tpEdgeEClass = createEClass(TP_EDGE);
+		createEReference(tpEdgeEClass, TP_EDGE__FROM_TRANSITION);
+		createEReference(tpEdgeEClass, TP_EDGE__TO_PLACE);
 	}
 
 	/**
@@ -336,6 +375,7 @@ public class PetrinetDSLPackageImpl extends EPackageImpl implements PetrinetDSLP
 		transitionEClass.getESuperTypes().add(this.getNode());
 		placeEClass.getESuperTypes().add(this.getNode());
 		ptEdgeEClass.getESuperTypes().add(this.getEdge());
+		tpEdgeEClass.getESuperTypes().add(this.getEdge());
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(petrinetEClass, Petrinet.class, "Petrinet", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -355,8 +395,12 @@ public class PetrinetDSLPackageImpl extends EPackageImpl implements PetrinetDSLP
 		initEReference(getPlace_Tokens(), this.getToken(), null, "tokens", null, 0, -1, Place.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(ptEdgeEClass, PTEdge.class, "PTEdge", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getPTEdge_FromPlace(), this.getNode(), null, "fromPlace", null, 0, 1, PTEdge.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getPTEdge_ToTransition(), this.getNode(), null, "toTransition", null, 0, 1, PTEdge.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPTEdge_FromPlace(), this.getPlace(), null, "fromPlace", null, 0, 1, PTEdge.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPTEdge_ToTransition(), this.getTransition(), null, "toTransition", null, 0, 1, PTEdge.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(tpEdgeEClass, TPEdge.class, "TPEdge", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getTPEdge_FromTransition(), this.getTransition(), null, "fromTransition", null, 0, 1, TPEdge.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTPEdge_ToPlace(), this.getPlace(), null, "toPlace", null, 0, 1, TPEdge.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

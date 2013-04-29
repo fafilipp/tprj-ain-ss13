@@ -30,12 +30,12 @@ public interface PTEdge extends Edge {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>From Place</em>' reference.
-	 * @see #setFromPlace(Node)
+	 * @see #setFromPlace(Place)
 	 * @see PetrinetDSL.PetrinetDSLPackage#getPTEdge_FromPlace()
 	 * @model
 	 * @generated
 	 */
-	Node getFromPlace();
+	Place getFromPlace();
 
 	/**
 	 * Sets the value of the '{@link PetrinetDSL.PTEdge#getFromPlace <em>From Place</em>}' reference.
@@ -45,7 +45,7 @@ public interface PTEdge extends Edge {
 	 * @see #getFromPlace()
 	 * @generated
 	 */
-	void setFromPlace(Node value);
+	void setFromPlace(Place value);
 
 	/**
 	 * Returns the value of the '<em><b>To Transition</b></em>' reference.
@@ -56,12 +56,12 @@ public interface PTEdge extends Edge {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>To Transition</em>' reference.
-	 * @see #setToTransition(Node)
+	 * @see #setToTransition(Transition)
 	 * @see PetrinetDSL.PetrinetDSLPackage#getPTEdge_ToTransition()
 	 * @model
 	 * @generated
 	 */
-	Node getToTransition();
+	Transition getToTransition();
 
 	/**
 	 * Sets the value of the '{@link PetrinetDSL.PTEdge#getToTransition <em>To Transition</em>}' reference.
@@ -71,6 +71,6 @@ public interface PTEdge extends Edge {
 	 * @see #getToTransition()
 	 * @generated
 	 */
-	void setToTransition(Node value);
+	void setToTransition(Transition value);
 
 } // PTEdge

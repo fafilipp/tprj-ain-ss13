@@ -17,7 +17,11 @@
         eType="#//Token" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PTEdge" eSuperTypes="#//Edge">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="fromPlace" eType="#//Node"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="toTransition" eType="#//Node"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fromPlace" eType="#//Place"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="toTransition" eType="#//Transition"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TPEdge" eSuperTypes="#//Edge">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fromTransition" eType="#//Transition"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="toPlace" eType="#//Place"/>
   </eClassifiers>
 </ecore:EPackage>

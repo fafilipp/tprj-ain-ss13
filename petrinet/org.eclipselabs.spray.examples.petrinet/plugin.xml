@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
         <?eclipse version="3.0"?>
         <!--
-         Generated on Tue Apr 09 11:36:17 CEST 2013 by Spray Plugin.xtend
+         Generated on Mon Apr 29 11:25:35 CEST 2013 by Spray Plugin.xtend
          This file will be generated oinly once if it need to be regenerated, remove this file.
          
         -->
         <plugin>
+		   <!-- AUTOGEN START -->
            <!-- Potentially redefine the EDITOR EXTENSION TO ALLOW FOR OUR OWN EDITOR SUBCLASS TO BE USED. 
            <extension
                  point="org.eclipse.ui.editors">
@@ -143,6 +144,23 @@
             </propertySections>
         </extension>
         
+        <extension
+            point="org.eclipse.ui.views.properties.tabbed.propertySections">
+            <propertySections contributorId="petrinet.PropertyContributor">
+          <propertySection tab="petrinet.main.tab"
+           class="org.eclipselabs.spray.examples.petrinet.internal.ExecutableExtensionFactory:org.eclipselabs.spray.examples.petrinet.property.TPEdgeNameSection"
+           filter="org.eclipselabs.spray.examples.petrinet.property.TPEdgeFilter"
+           id="petrinet.main.tab.TPEdge.name">
+          </propertySection>
+          <propertySection tab="petrinet.main.tab"
+           class="org.eclipselabs.spray.examples.petrinet.internal.ExecutableExtensionFactory:org.eclipselabs.spray.examples.petrinet.property.TPEdgeDescriptionSection"
+           filter="org.eclipselabs.spray.examples.petrinet.property.TPEdgeFilter"
+           afterSection="petrinet.main.tab.TPEdge.name"
+           id="petrinet.main.tab.TPEdge.description">
+          </propertySection>
+            </propertySections>
+        </extension>
+        
     
     
             <extension
@@ -162,4 +180,5 @@
                      project="false">
                </wizard>
             </extension>
+            <!-- AUTOGEN END -->
         </plugin>

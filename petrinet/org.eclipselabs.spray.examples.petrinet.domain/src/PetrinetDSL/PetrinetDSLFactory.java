@@ -85,6 +85,15 @@ public interface PetrinetDSLFactory extends EFactory {
 	PTEdge createPTEdge();
 
 	/**
+	 * Returns a new object of class '<em>TP Edge</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>TP Edge</em>'.
+	 * @generated
+	 */
+	TPEdge createTPEdge();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

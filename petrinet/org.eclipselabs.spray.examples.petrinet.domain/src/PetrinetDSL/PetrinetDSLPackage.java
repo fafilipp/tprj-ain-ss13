@@ -404,6 +404,70 @@ public interface PetrinetDSLPackage extends EPackage {
 	 */
 	int PT_EDGE_FEATURE_COUNT = EDGE_FEATURE_COUNT + 2;
 
+	/**
+	 * The meta object id for the '{@link PetrinetDSL.impl.TPEdgeImpl <em>TP Edge</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see PetrinetDSL.impl.TPEdgeImpl
+	 * @see PetrinetDSL.impl.PetrinetDSLPackageImpl#getTPEdge()
+	 * @generated
+	 */
+	int TP_EDGE = 7;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TP_EDGE__NAME = EDGE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TP_EDGE__DESCRIPTION = EDGE__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Models</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TP_EDGE__MODELS = EDGE__MODELS;
+
+	/**
+	 * The feature id for the '<em><b>From Transition</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TP_EDGE__FROM_TRANSITION = EDGE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>To Place</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TP_EDGE__TO_PLACE = EDGE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>TP Edge</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TP_EDGE_FEATURE_COUNT = EDGE_FEATURE_COUNT + 2;
+
 
 	/**
 	 * Returns the meta object for class '{@link PetrinetDSL.Petrinet <em>Petrinet</em>}'.
@@ -540,6 +604,38 @@ public interface PetrinetDSLPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getPTEdge_ToTransition();
+
+	/**
+	 * Returns the meta object for class '{@link PetrinetDSL.TPEdge <em>TP Edge</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>TP Edge</em>'.
+	 * @see PetrinetDSL.TPEdge
+	 * @generated
+	 */
+	EClass getTPEdge();
+
+	/**
+	 * Returns the meta object for the reference '{@link PetrinetDSL.TPEdge#getFromTransition <em>From Transition</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>From Transition</em>'.
+	 * @see PetrinetDSL.TPEdge#getFromTransition()
+	 * @see #getTPEdge()
+	 * @generated
+	 */
+	EReference getTPEdge_FromTransition();
+
+	/**
+	 * Returns the meta object for the reference '{@link PetrinetDSL.TPEdge#getToPlace <em>To Place</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>To Place</em>'.
+	 * @see PetrinetDSL.TPEdge#getToPlace()
+	 * @see #getTPEdge()
+	 * @generated
+	 */
+	EReference getTPEdge_ToPlace();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -680,6 +776,32 @@ public interface PetrinetDSLPackage extends EPackage {
 		 * @generated
 		 */
 		EReference PT_EDGE__TO_TRANSITION = eINSTANCE.getPTEdge_ToTransition();
+
+		/**
+		 * The meta object literal for the '{@link PetrinetDSL.impl.TPEdgeImpl <em>TP Edge</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see PetrinetDSL.impl.TPEdgeImpl
+		 * @see PetrinetDSL.impl.PetrinetDSLPackageImpl#getTPEdge()
+		 * @generated
+		 */
+		EClass TP_EDGE = eINSTANCE.getTPEdge();
+
+		/**
+		 * The meta object literal for the '<em><b>From Transition</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TP_EDGE__FROM_TRANSITION = eINSTANCE.getTPEdge_FromTransition();
+
+		/**
+		 * The meta object literal for the '<em><b>To Place</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TP_EDGE__TO_PLACE = eINSTANCE.getTPEdge_ToPlace();
 
 	}
 

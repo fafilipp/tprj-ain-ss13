@@ -46,3 +46,13 @@ class PTEdge {
 		create into models palette "Edges" 
 	}
 }
+
+class TPEdge {
+	connection ArrowConnection {
+		from fromTransition
+		to toPlace
+	}
+	behavior {
+		create into models palette "Edges"
+	}
+}

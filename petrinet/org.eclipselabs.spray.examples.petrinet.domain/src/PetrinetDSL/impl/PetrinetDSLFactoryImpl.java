@@ -63,6 +63,7 @@ public class PetrinetDSLFactoryImpl extends EFactoryImpl implements PetrinetDSLF
 			case PetrinetDSLPackage.TRANSITION: return createTransition();
 			case PetrinetDSLPackage.PLACE: return createPlace();
 			case PetrinetDSLPackage.PT_EDGE: return createPTEdge();
+			case PetrinetDSLPackage.TP_EDGE: return createTPEdge();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -136,6 +137,16 @@ public class PetrinetDSLFactoryImpl extends EFactoryImpl implements PetrinetDSLF
 	public PTEdge createPTEdge() {
 		PTEdgeImpl ptEdge = new PTEdgeImpl();
 		return ptEdge;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TPEdge createTPEdge() {
+		TPEdgeImpl tpEdge = new TPEdgeImpl();
+		return tpEdge;
 	}
 
 	/**

@@ -48,7 +48,7 @@ shape TokenShape {
 	}
 }
 
-connection ArrowConnection {
+connection ArrowConnection { 
     placing {
         position (offset=1.0)
         polygon {

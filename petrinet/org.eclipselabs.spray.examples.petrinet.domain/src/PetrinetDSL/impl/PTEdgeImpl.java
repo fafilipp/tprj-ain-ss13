@@ -2,9 +2,10 @@
  */
 package PetrinetDSL.impl;
 
-import PetrinetDSL.Node;
 import PetrinetDSL.PTEdge;
 import PetrinetDSL.PetrinetDSLPackage;
+import PetrinetDSL.Place;
+import PetrinetDSL.Transition;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -36,7 +37,7 @@ public class PTEdgeImpl extends EdgeImpl implements PTEdge {
 	 * @generated
 	 * @ordered
 	 */
-	protected Node fromPlace;
+	protected Place fromPlace;
 
 	/**
 	 * The cached value of the '{@link #getToTransition() <em>To Transition</em>}' reference.
@@ -46,7 +47,7 @@ public class PTEdgeImpl extends EdgeImpl implements PTEdge {
 	 * @generated
 	 * @ordered
 	 */
-	protected Node toTransition;
+	protected Transition toTransition;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -72,10 +73,10 @@ public class PTEdgeImpl extends EdgeImpl implements PTEdge {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Node getFromPlace() {
+	public Place getFromPlace() {
 		if (fromPlace != null && fromPlace.eIsProxy()) {
 			InternalEObject oldFromPlace = (InternalEObject)fromPlace;
-			fromPlace = (Node)eResolveProxy(oldFromPlace);
+			fromPlace = (Place)eResolveProxy(oldFromPlace);
 			if (fromPlace != oldFromPlace) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, PetrinetDSLPackage.PT_EDGE__FROM_PLACE, oldFromPlace, fromPlace));
@@ -89,7 +90,7 @@ public class PTEdgeImpl extends EdgeImpl implements PTEdge {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Node basicGetFromPlace() {
+	public Place basicGetFromPlace() {
 		return fromPlace;
 	}
 
@@ -98,8 +99,8 @@ public class PTEdgeImpl extends EdgeImpl implements PTEdge {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setFromPlace(Node newFromPlace) {
-		Node oldFromPlace = fromPlace;
+	public void setFromPlace(Place newFromPlace) {
+		Place oldFromPlace = fromPlace;
 		fromPlace = newFromPlace;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, PetrinetDSLPackage.PT_EDGE__FROM_PLACE, oldFromPlace, fromPlace));
@@ -110,10 +111,10 @@ public class PTEdgeImpl extends EdgeImpl implements PTEdge {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Node getToTransition() {
+	public Transition getToTransition() {
 		if (toTransition != null && toTransition.eIsProxy()) {
 			InternalEObject oldToTransition = (InternalEObject)toTransition;
-			toTransition = (Node)eResolveProxy(oldToTransition);
+			toTransition = (Transition)eResolveProxy(oldToTransition);
 			if (toTransition != oldToTransition) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, PetrinetDSLPackage.PT_EDGE__TO_TRANSITION, oldToTransition, toTransition));
@@ -127,7 +128,7 @@ public class PTEdgeImpl extends EdgeImpl implements PTEdge {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Node basicGetToTransition() {
+	public Transition basicGetToTransition() {
 		return toTransition;
 	}
 
@@ -136,8 +137,8 @@ public class PTEdgeImpl extends EdgeImpl implements PTEdge {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setToTransition(Node newToTransition) {
-		Node oldToTransition = toTransition;
+	public void setToTransition(Transition newToTransition) {
+		Transition oldToTransition = toTransition;
 		toTransition = newToTransition;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, PetrinetDSLPackage.PT_EDGE__TO_TRANSITION, oldToTransition, toTransition));
@@ -170,10 +171,10 @@ public class PTEdgeImpl extends EdgeImpl implements PTEdge {
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case PetrinetDSLPackage.PT_EDGE__FROM_PLACE:
-				setFromPlace((Node)newValue);
+				setFromPlace((Place)newValue);
 				return;
 			case PetrinetDSLPackage.PT_EDGE__TO_TRANSITION:
-				setToTransition((Node)newValue);
+				setToTransition((Transition)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -188,10 +189,10 @@ public class PTEdgeImpl extends EdgeImpl implements PTEdge {
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case PetrinetDSLPackage.PT_EDGE__FROM_PLACE:
-				setFromPlace((Node)null);
+				setFromPlace((Place)null);
 				return;
 			case PetrinetDSLPackage.PT_EDGE__TO_TRANSITION:
-				setToTransition((Node)null);
+				setToTransition((Transition)null);
 				return;
 		}
 		super.eUnset(featureID);
