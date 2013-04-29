@@ -112,6 +112,123 @@ public interface EpkDSLFactory extends EFactory {
 	Connector createConnector();
 
 	/**
+	 * Returns a new object of class '<em>EConnector</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>EConnector</em>'.
+	 * @generated
+	 */
+	EConnector createEConnector();
+
+	/**
+	 * Returns a new object of class '<em>FConnector</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>FConnector</em>'.
+	 * @generated
+	 */
+	FConnector createFConnector();
+
+	/**
+	 * Returns a new object of class '<em>Connection</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Connection</em>'.
+	 * @generated
+	 */
+	Connection createConnection();
+
+	/**
+	 * Returns a new object of class '<em>Ev To Fu Connection</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Ev To Fu Connection</em>'.
+	 * @generated
+	 */
+	EvToFuConnection createEvToFuConnection();
+
+	/**
+	 * Returns a new object of class '<em>Fu To Ev Connection</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Fu To Ev Connection</em>'.
+	 * @generated
+	 */
+	FuToEvConnection createFuToEvConnection();
+
+	/**
+	 * Returns a new object of class '<em>Ev To ECon Connection</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Ev To ECon Connection</em>'.
+	 * @generated
+	 */
+	EvToEConConnection createEvToEConConnection();
+
+	/**
+	 * Returns a new object of class '<em>ECon To Fu Connection</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>ECon To Fu Connection</em>'.
+	 * @generated
+	 */
+	EConToFuConnection createEConToFuConnection();
+
+	/**
+	 * Returns a new object of class '<em>Fu To FCon Connection</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Fu To FCon Connection</em>'.
+	 * @generated
+	 */
+	FuToFConConnection createFuToFConConnection();
+
+	/**
+	 * Returns a new object of class '<em>FCon To Ev Connection</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>FCon To Ev Connection</em>'.
+	 * @generated
+	 */
+	FConToEvConnection createFConToEvConnection();
+
+	/**
+	 * Returns a new object of class '<em>Ou To Fu Connection</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Ou To Fu Connection</em>'.
+	 * @generated
+	 */
+	OuToFuConnection createOuToFuConnection();
+
+	/**
+	 * Returns a new object of class '<em>Io To Fu Connection</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Io To Fu Connection</em>'.
+	 * @generated
+	 */
+	IoToFuConnection createIoToFuConnection();
+
+	/**
+	 * Returns a new object of class '<em>Node To Pp Connection</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Node To Pp Connection</em>'.
+	 * @generated
+	 */
+	NodeToPpConnection createNodeToPpConnection();
+
+	/**
+	 * Returns a new object of class '<em>Pp To Node Connection</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Pp To Node Connection</em>'.
+	 * @generated
+	 */
+	PpToNodeConnection createPpToNodeConnection();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

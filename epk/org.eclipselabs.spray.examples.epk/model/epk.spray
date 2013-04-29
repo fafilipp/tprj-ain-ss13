@@ -7,7 +7,7 @@
  *
  * See also epk.properties to configure generator properties.
  *************************************************************************************/
-import EpkDSL.*
+import EpkDSL.* 
 
 diagram epk for Epk style EpkDefaultStyle
 
@@ -29,21 +29,42 @@ class Function {
 	}
 }
 
-class Connector alias AndConnector {
+class EConnector alias EvAndConnector {
 	shape AndConnectorShape
 		behavior {
 	    create into nodes palette "Connectors" 
 	}
 }
 
-class Connector alias OrConnector {
+class EConnector alias EvOrConnector {
 	shape OrConnectorShape
 		behavior {
 	    create into nodes palette "Connectors" 
 	}
 }
 
-class Connector alias XORConnector {
+class EConnector alias EvXORConnector {
+	shape XOrConnectorShape
+	behavior {
+	    create into nodes palette "Connectors" 
+	}
+}
+
+class FConnector alias FuAndConnector {
+	shape AndConnectorShape
+		behavior {
+	    create into nodes palette "Connectors" 
+	}
+}
+
+class FConnector alias FuOrConnector {
+	shape OrConnectorShape
+		behavior {
+	    create into nodes palette "Connectors" 
+	}
+}
+
+class FConnector alias FuXORConnector {
 	shape XOrConnectorShape
 	behavior {
 	    create into nodes palette "Connectors" 
@@ -83,5 +104,105 @@ class ProcPath alias ProcessPath {
 	}
 	behavior {
 	    create into nodes palette "Nodes"
+	}
+}
+
+class EvToFuConnection {
+	connection ArrowConnection {
+		from start
+		to end
+	}
+	behavior {
+		create into connections palette "Connections"
+	}
+}
+
+class FuToEvConnection {
+	connection ArrowConnection {
+		from start
+		to end
+	}
+	behavior {
+		create into connections palette "Connections"
+	}
+}
+
+class EvToEConConnection {
+	connection ArrowConnection {
+		from start
+		to end
+	}
+	behavior {
+		create into connections palette "Connections"
+	}
+}
+
+class EConToFuConnection {
+	connection ArrowConnection {
+		from start
+		to end
+	}
+	behavior {
+		create into connections palette "Connections"
+	}
+}
+
+class FuToFConConnection {
+	connection ArrowConnection {
+		from start
+		to end
+	}
+	behavior {
+		create into connections palette "Connections"
+	}
+}
+
+class FConToEvConnection {
+	connection ArrowConnection {
+		from start
+		to end
+	}
+	behavior {
+		create into connections palette "Connections"
+	}
+}
+
+class OuToFuConnection {
+	connection ArrowConnection {
+		from start
+		to end
+	}
+	behavior {
+		create into connections palette "Connections"
+	}
+}
+
+class IoToFuConnection {
+	connection ArrowConnection {
+		from start
+		to end
+	}
+	behavior {
+		create into connections palette "Connections"
+	}
+}
+
+class NodeToPpConnection {
+	connection ArrowConnection {
+		from start
+		to end
+	}
+	behavior {
+		create into connections palette "Connections"
+	}
+}
+
+class PpToNodeConnection {
+	connection ArrowConnection {
+		from start
+		to end
+	}
+	behavior {
+		create into connections palette "Connections"
 	}
 }

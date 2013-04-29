@@ -2,6 +2,7 @@
  */
 package EpkDSL.impl;
 
+import EpkDSL.Connection;
 import EpkDSL.Edge;
 import EpkDSL.Epk;
 import EpkDSL.EpkDSLPackage;
@@ -28,6 +29,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link EpkDSL.impl.EpkImpl#getNodes <em>Nodes</em>}</li>
  *   <li>{@link EpkDSL.impl.EpkImpl#getEdges <em>Edges</em>}</li>
+ *   <li>{@link EpkDSL.impl.EpkImpl#getConnections <em>Connections</em>}</li>
  * </ul>
  * </p>
  *
@@ -53,6 +55,16 @@ public class EpkImpl extends NamedElementImpl implements Epk {
 	 * @ordered
 	 */
 	protected EList<Edge> edges;
+
+	/**
+	 * The cached value of the '{@link #getConnections() <em>Connections</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getConnections()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Connection> connections;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -102,6 +114,18 @@ public class EpkImpl extends NamedElementImpl implements Epk {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<Connection> getConnections() {
+		if (connections == null) {
+			connections = new EObjectContainmentEList<Connection>(Connection.class, this, EpkDSLPackage.EPK__CONNECTIONS);
+		}
+		return connections;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -109,6 +133,8 @@ public class EpkImpl extends NamedElementImpl implements Epk {
 				return ((InternalEList<?>)getNodes()).basicRemove(otherEnd, msgs);
 			case EpkDSLPackage.EPK__EDGES:
 				return ((InternalEList<?>)getEdges()).basicRemove(otherEnd, msgs);
+			case EpkDSLPackage.EPK__CONNECTIONS:
+				return ((InternalEList<?>)getConnections()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -125,6 +151,8 @@ public class EpkImpl extends NamedElementImpl implements Epk {
 				return getNodes();
 			case EpkDSLPackage.EPK__EDGES:
 				return getEdges();
+			case EpkDSLPackage.EPK__CONNECTIONS:
+				return getConnections();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -146,6 +174,10 @@ public class EpkImpl extends NamedElementImpl implements Epk {
 				getEdges().clear();
 				getEdges().addAll((Collection<? extends Edge>)newValue);
 				return;
+			case EpkDSLPackage.EPK__CONNECTIONS:
+				getConnections().clear();
+				getConnections().addAll((Collection<? extends Connection>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -164,6 +196,9 @@ public class EpkImpl extends NamedElementImpl implements Epk {
 			case EpkDSLPackage.EPK__EDGES:
 				getEdges().clear();
 				return;
+			case EpkDSLPackage.EPK__CONNECTIONS:
+				getConnections().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -180,6 +215,8 @@ public class EpkImpl extends NamedElementImpl implements Epk {
 				return nodes != null && !nodes.isEmpty();
 			case EpkDSLPackage.EPK__EDGES:
 				return edges != null && !edges.isEmpty();
+			case EpkDSLPackage.EPK__CONNECTIONS:
+				return connections != null && !connections.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

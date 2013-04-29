@@ -2,17 +2,30 @@
  */
 package EpkDSL.impl;
 
+import EpkDSL.Connection;
 import EpkDSL.Connector;
+import EpkDSL.EConToFuConnection;
+import EpkDSL.EConnector;
 import EpkDSL.Edge;
 import EpkDSL.Epk;
 import EpkDSL.EpkDSLFactory;
 import EpkDSL.EpkDSLPackage;
+import EpkDSL.EvToEConConnection;
+import EpkDSL.EvToFuConnection;
 import EpkDSL.Event;
+import EpkDSL.FConToEvConnection;
+import EpkDSL.FConnector;
+import EpkDSL.FuToEvConnection;
+import EpkDSL.FuToFConConnection;
 import EpkDSL.Function;
 import EpkDSL.InOutput;
+import EpkDSL.IoToFuConnection;
 import EpkDSL.NamedElement;
 import EpkDSL.Node;
+import EpkDSL.NodeToPpConnection;
 import EpkDSL.OrgUnit;
+import EpkDSL.OuToFuConnection;
+import EpkDSL.PpToNodeConnection;
 import EpkDSL.ProcPath;
 
 import org.eclipse.emf.ecore.EAttribute;
@@ -98,6 +111,97 @@ public class EpkDSLPackageImpl extends EPackageImpl implements EpkDSLPackage {
 	 * @generated
 	 */
 	private EClass connectorEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass eConnectorEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass fConnectorEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass connectionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass evToFuConnectionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass fuToEvConnectionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass evToEConConnectionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass eConToFuConnectionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass fuToFConConnectionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass fConToEvConnectionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass ouToFuConnectionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass ioToFuConnectionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass nodeToPpConnectionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass ppToNodeConnectionEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -210,6 +314,15 @@ public class EpkDSLPackageImpl extends EPackageImpl implements EpkDSLPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getEpk_Connections() {
+		return (EReference)epkEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getEdge() {
 		return edgeEClass;
 	}
@@ -282,6 +395,303 @@ public class EpkDSLPackageImpl extends EPackageImpl implements EpkDSLPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getEConnector() {
+		return eConnectorEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getFConnector() {
+		return fConnectorEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getConnection() {
+		return connectionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getEvToFuConnection() {
+		return evToFuConnectionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getEvToFuConnection_Start() {
+		return (EReference)evToFuConnectionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getEvToFuConnection_End() {
+		return (EReference)evToFuConnectionEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getFuToEvConnection() {
+		return fuToEvConnectionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getFuToEvConnection_Start() {
+		return (EReference)fuToEvConnectionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getFuToEvConnection_End() {
+		return (EReference)fuToEvConnectionEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getEvToEConConnection() {
+		return evToEConConnectionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getEvToEConConnection_Start() {
+		return (EReference)evToEConConnectionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getEvToEConConnection_End() {
+		return (EReference)evToEConConnectionEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getEConToFuConnection() {
+		return eConToFuConnectionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getEConToFuConnection_Start() {
+		return (EReference)eConToFuConnectionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getEConToFuConnection_End() {
+		return (EReference)eConToFuConnectionEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getFuToFConConnection() {
+		return fuToFConConnectionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getFuToFConConnection_Start() {
+		return (EReference)fuToFConConnectionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getFuToFConConnection_End() {
+		return (EReference)fuToFConConnectionEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getFConToEvConnection() {
+		return fConToEvConnectionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getFConToEvConnection_Start() {
+		return (EReference)fConToEvConnectionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getFConToEvConnection_End() {
+		return (EReference)fConToEvConnectionEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getOuToFuConnection() {
+		return ouToFuConnectionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getOuToFuConnection_Start() {
+		return (EReference)ouToFuConnectionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getOuToFuConnection_End() {
+		return (EReference)ouToFuConnectionEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getIoToFuConnection() {
+		return ioToFuConnectionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getIoToFuConnection_Start() {
+		return (EReference)ioToFuConnectionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getIoToFuConnection_End() {
+		return (EReference)ioToFuConnectionEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getNodeToPpConnection() {
+		return nodeToPpConnectionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getNodeToPpConnection_Start() {
+		return (EReference)nodeToPpConnectionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getNodeToPpConnection_End() {
+		return (EReference)nodeToPpConnectionEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getPpToNodeConnection() {
+		return ppToNodeConnectionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getPpToNodeConnection_Start() {
+		return (EReference)ppToNodeConnectionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getPpToNodeConnection_End() {
+		return (EReference)ppToNodeConnectionEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EpkDSLFactory getEpkDSLFactory() {
 		return (EpkDSLFactory)getEFactoryInstance();
 	}
@@ -311,6 +721,7 @@ public class EpkDSLPackageImpl extends EPackageImpl implements EpkDSLPackage {
 		epkEClass = createEClass(EPK);
 		createEReference(epkEClass, EPK__NODES);
 		createEReference(epkEClass, EPK__EDGES);
+		createEReference(epkEClass, EPK__CONNECTIONS);
 
 		edgeEClass = createEClass(EDGE);
 
@@ -327,6 +738,52 @@ public class EpkDSLPackageImpl extends EPackageImpl implements EpkDSLPackage {
 		procPathEClass = createEClass(PROC_PATH);
 
 		connectorEClass = createEClass(CONNECTOR);
+
+		eConnectorEClass = createEClass(ECONNECTOR);
+
+		fConnectorEClass = createEClass(FCONNECTOR);
+
+		connectionEClass = createEClass(CONNECTION);
+
+		evToFuConnectionEClass = createEClass(EV_TO_FU_CONNECTION);
+		createEReference(evToFuConnectionEClass, EV_TO_FU_CONNECTION__START);
+		createEReference(evToFuConnectionEClass, EV_TO_FU_CONNECTION__END);
+
+		fuToEvConnectionEClass = createEClass(FU_TO_EV_CONNECTION);
+		createEReference(fuToEvConnectionEClass, FU_TO_EV_CONNECTION__START);
+		createEReference(fuToEvConnectionEClass, FU_TO_EV_CONNECTION__END);
+
+		evToEConConnectionEClass = createEClass(EV_TO_ECON_CONNECTION);
+		createEReference(evToEConConnectionEClass, EV_TO_ECON_CONNECTION__START);
+		createEReference(evToEConConnectionEClass, EV_TO_ECON_CONNECTION__END);
+
+		eConToFuConnectionEClass = createEClass(ECON_TO_FU_CONNECTION);
+		createEReference(eConToFuConnectionEClass, ECON_TO_FU_CONNECTION__START);
+		createEReference(eConToFuConnectionEClass, ECON_TO_FU_CONNECTION__END);
+
+		fuToFConConnectionEClass = createEClass(FU_TO_FCON_CONNECTION);
+		createEReference(fuToFConConnectionEClass, FU_TO_FCON_CONNECTION__START);
+		createEReference(fuToFConConnectionEClass, FU_TO_FCON_CONNECTION__END);
+
+		fConToEvConnectionEClass = createEClass(FCON_TO_EV_CONNECTION);
+		createEReference(fConToEvConnectionEClass, FCON_TO_EV_CONNECTION__START);
+		createEReference(fConToEvConnectionEClass, FCON_TO_EV_CONNECTION__END);
+
+		ouToFuConnectionEClass = createEClass(OU_TO_FU_CONNECTION);
+		createEReference(ouToFuConnectionEClass, OU_TO_FU_CONNECTION__START);
+		createEReference(ouToFuConnectionEClass, OU_TO_FU_CONNECTION__END);
+
+		ioToFuConnectionEClass = createEClass(IO_TO_FU_CONNECTION);
+		createEReference(ioToFuConnectionEClass, IO_TO_FU_CONNECTION__START);
+		createEReference(ioToFuConnectionEClass, IO_TO_FU_CONNECTION__END);
+
+		nodeToPpConnectionEClass = createEClass(NODE_TO_PP_CONNECTION);
+		createEReference(nodeToPpConnectionEClass, NODE_TO_PP_CONNECTION__START);
+		createEReference(nodeToPpConnectionEClass, NODE_TO_PP_CONNECTION__END);
+
+		ppToNodeConnectionEClass = createEClass(PP_TO_NODE_CONNECTION);
+		createEReference(ppToNodeConnectionEClass, PP_TO_NODE_CONNECTION__START);
+		createEReference(ppToNodeConnectionEClass, PP_TO_NODE_CONNECTION__END);
 	}
 
 	/**
@@ -366,6 +823,18 @@ public class EpkDSLPackageImpl extends EPackageImpl implements EpkDSLPackage {
 		orgUnitEClass.getESuperTypes().add(this.getNode());
 		procPathEClass.getESuperTypes().add(this.getNode());
 		connectorEClass.getESuperTypes().add(this.getNode());
+		eConnectorEClass.getESuperTypes().add(this.getConnector());
+		fConnectorEClass.getESuperTypes().add(this.getConnector());
+		evToFuConnectionEClass.getESuperTypes().add(this.getConnection());
+		fuToEvConnectionEClass.getESuperTypes().add(this.getConnection());
+		evToEConConnectionEClass.getESuperTypes().add(this.getConnection());
+		eConToFuConnectionEClass.getESuperTypes().add(this.getConnection());
+		fuToFConConnectionEClass.getESuperTypes().add(this.getConnection());
+		fConToEvConnectionEClass.getESuperTypes().add(this.getConnection());
+		ouToFuConnectionEClass.getESuperTypes().add(this.getConnection());
+		ioToFuConnectionEClass.getESuperTypes().add(this.getConnection());
+		nodeToPpConnectionEClass.getESuperTypes().add(this.getConnection());
+		ppToNodeConnectionEClass.getESuperTypes().add(this.getConnection());
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(namedElementEClass, NamedElement.class, "NamedElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -374,6 +843,7 @@ public class EpkDSLPackageImpl extends EPackageImpl implements EpkDSLPackage {
 		initEClass(epkEClass, Epk.class, "Epk", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getEpk_Nodes(), this.getNode(), null, "nodes", null, 0, -1, Epk.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getEpk_Edges(), this.getEdge(), null, "edges", null, 0, -1, Epk.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getEpk_Connections(), this.getConnection(), null, "connections", null, 0, -1, Epk.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(edgeEClass, Edge.class, "Edge", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -390,6 +860,52 @@ public class EpkDSLPackageImpl extends EPackageImpl implements EpkDSLPackage {
 		initEClass(procPathEClass, ProcPath.class, "ProcPath", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(connectorEClass, Connector.class, "Connector", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(eConnectorEClass, EConnector.class, "EConnector", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(fConnectorEClass, FConnector.class, "FConnector", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(connectionEClass, Connection.class, "Connection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(evToFuConnectionEClass, EvToFuConnection.class, "EvToFuConnection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getEvToFuConnection_Start(), this.getEvent(), null, "start", null, 1, 1, EvToFuConnection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getEvToFuConnection_End(), this.getFunction(), null, "end", null, 1, 1, EvToFuConnection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(fuToEvConnectionEClass, FuToEvConnection.class, "FuToEvConnection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getFuToEvConnection_Start(), this.getFunction(), null, "start", null, 1, 1, FuToEvConnection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getFuToEvConnection_End(), this.getEvent(), null, "end", null, 1, 1, FuToEvConnection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(evToEConConnectionEClass, EvToEConConnection.class, "EvToEConConnection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getEvToEConConnection_Start(), this.getEvent(), null, "start", null, 1, 1, EvToEConConnection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getEvToEConConnection_End(), this.getEConnector(), null, "end", null, 1, 1, EvToEConConnection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(eConToFuConnectionEClass, EConToFuConnection.class, "EConToFuConnection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getEConToFuConnection_Start(), this.getEConnector(), null, "start", null, 1, 1, EConToFuConnection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getEConToFuConnection_End(), this.getFunction(), null, "end", null, 1, 1, EConToFuConnection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(fuToFConConnectionEClass, FuToFConConnection.class, "FuToFConConnection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getFuToFConConnection_Start(), this.getFunction(), null, "start", null, 1, 1, FuToFConConnection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getFuToFConConnection_End(), this.getFConnector(), null, "end", null, 1, 1, FuToFConConnection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(fConToEvConnectionEClass, FConToEvConnection.class, "FConToEvConnection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getFConToEvConnection_Start(), this.getFConnector(), null, "start", null, 1, 1, FConToEvConnection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getFConToEvConnection_End(), this.getEvent(), null, "end", null, 1, 1, FConToEvConnection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(ouToFuConnectionEClass, OuToFuConnection.class, "OuToFuConnection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getOuToFuConnection_Start(), this.getOrgUnit(), null, "start", null, 1, 1, OuToFuConnection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getOuToFuConnection_End(), this.getFunction(), null, "end", null, 1, 1, OuToFuConnection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(ioToFuConnectionEClass, IoToFuConnection.class, "IoToFuConnection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getIoToFuConnection_Start(), this.getInOutput(), null, "start", null, 1, 1, IoToFuConnection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getIoToFuConnection_End(), this.getFunction(), null, "end", null, 1, 1, IoToFuConnection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(nodeToPpConnectionEClass, NodeToPpConnection.class, "NodeToPpConnection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getNodeToPpConnection_Start(), this.getNode(), null, "start", null, 1, 1, NodeToPpConnection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getNodeToPpConnection_End(), this.getProcPath(), null, "end", null, 1, 1, NodeToPpConnection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(ppToNodeConnectionEClass, PpToNodeConnection.class, "PpToNodeConnection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getPpToNodeConnection_Start(), this.getProcPath(), null, "start", null, 1, 1, PpToNodeConnection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPpToNodeConnection_End(), this.getNode(), null, "end", null, 1, 1, PpToNodeConnection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

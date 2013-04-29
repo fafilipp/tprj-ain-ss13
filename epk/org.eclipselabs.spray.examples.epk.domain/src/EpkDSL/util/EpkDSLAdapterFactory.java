@@ -108,6 +108,58 @@ public class EpkDSLAdapterFactory extends AdapterFactoryImpl {
 				return createConnectorAdapter();
 			}
 			@Override
+			public Adapter caseEConnector(EConnector object) {
+				return createEConnectorAdapter();
+			}
+			@Override
+			public Adapter caseFConnector(FConnector object) {
+				return createFConnectorAdapter();
+			}
+			@Override
+			public Adapter caseConnection(Connection object) {
+				return createConnectionAdapter();
+			}
+			@Override
+			public Adapter caseEvToFuConnection(EvToFuConnection object) {
+				return createEvToFuConnectionAdapter();
+			}
+			@Override
+			public Adapter caseFuToEvConnection(FuToEvConnection object) {
+				return createFuToEvConnectionAdapter();
+			}
+			@Override
+			public Adapter caseEvToEConConnection(EvToEConConnection object) {
+				return createEvToEConConnectionAdapter();
+			}
+			@Override
+			public Adapter caseEConToFuConnection(EConToFuConnection object) {
+				return createEConToFuConnectionAdapter();
+			}
+			@Override
+			public Adapter caseFuToFConConnection(FuToFConConnection object) {
+				return createFuToFConConnectionAdapter();
+			}
+			@Override
+			public Adapter caseFConToEvConnection(FConToEvConnection object) {
+				return createFConToEvConnectionAdapter();
+			}
+			@Override
+			public Adapter caseOuToFuConnection(OuToFuConnection object) {
+				return createOuToFuConnectionAdapter();
+			}
+			@Override
+			public Adapter caseIoToFuConnection(IoToFuConnection object) {
+				return createIoToFuConnectionAdapter();
+			}
+			@Override
+			public Adapter caseNodeToPpConnection(NodeToPpConnection object) {
+				return createNodeToPpConnectionAdapter();
+			}
+			@Override
+			public Adapter casePpToNodeConnection(PpToNodeConnection object) {
+				return createPpToNodeConnectionAdapter();
+			}
+			@Override
 			public Adapter defaultCase(EObject object) {
 				return createEObjectAdapter();
 			}
@@ -264,6 +316,188 @@ public class EpkDSLAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createConnectorAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link EpkDSL.EConnector <em>EConnector</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see EpkDSL.EConnector
+	 * @generated
+	 */
+	public Adapter createEConnectorAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link EpkDSL.FConnector <em>FConnector</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see EpkDSL.FConnector
+	 * @generated
+	 */
+	public Adapter createFConnectorAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link EpkDSL.Connection <em>Connection</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see EpkDSL.Connection
+	 * @generated
+	 */
+	public Adapter createConnectionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link EpkDSL.EvToFuConnection <em>Ev To Fu Connection</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see EpkDSL.EvToFuConnection
+	 * @generated
+	 */
+	public Adapter createEvToFuConnectionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link EpkDSL.FuToEvConnection <em>Fu To Ev Connection</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see EpkDSL.FuToEvConnection
+	 * @generated
+	 */
+	public Adapter createFuToEvConnectionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link EpkDSL.EvToEConConnection <em>Ev To ECon Connection</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see EpkDSL.EvToEConConnection
+	 * @generated
+	 */
+	public Adapter createEvToEConConnectionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link EpkDSL.EConToFuConnection <em>ECon To Fu Connection</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see EpkDSL.EConToFuConnection
+	 * @generated
+	 */
+	public Adapter createEConToFuConnectionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link EpkDSL.FuToFConConnection <em>Fu To FCon Connection</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see EpkDSL.FuToFConConnection
+	 * @generated
+	 */
+	public Adapter createFuToFConConnectionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link EpkDSL.FConToEvConnection <em>FCon To Ev Connection</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see EpkDSL.FConToEvConnection
+	 * @generated
+	 */
+	public Adapter createFConToEvConnectionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link EpkDSL.OuToFuConnection <em>Ou To Fu Connection</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see EpkDSL.OuToFuConnection
+	 * @generated
+	 */
+	public Adapter createOuToFuConnectionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link EpkDSL.IoToFuConnection <em>Io To Fu Connection</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see EpkDSL.IoToFuConnection
+	 * @generated
+	 */
+	public Adapter createIoToFuConnectionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link EpkDSL.NodeToPpConnection <em>Node To Pp Connection</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see EpkDSL.NodeToPpConnection
+	 * @generated
+	 */
+	public Adapter createNodeToPpConnectionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link EpkDSL.PpToNodeConnection <em>Pp To Node Connection</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see EpkDSL.PpToNodeConnection
+	 * @generated
+	 */
+	public Adapter createPpToNodeConnectionAdapter() {
 		return null;
 	}
 

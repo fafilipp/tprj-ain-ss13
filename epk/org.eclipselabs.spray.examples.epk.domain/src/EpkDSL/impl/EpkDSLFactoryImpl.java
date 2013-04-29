@@ -66,6 +66,19 @@ public class EpkDSLFactoryImpl extends EFactoryImpl implements EpkDSLFactory {
 			case EpkDSLPackage.ORG_UNIT: return createOrgUnit();
 			case EpkDSLPackage.PROC_PATH: return createProcPath();
 			case EpkDSLPackage.CONNECTOR: return createConnector();
+			case EpkDSLPackage.ECONNECTOR: return createEConnector();
+			case EpkDSLPackage.FCONNECTOR: return createFConnector();
+			case EpkDSLPackage.CONNECTION: return createConnection();
+			case EpkDSLPackage.EV_TO_FU_CONNECTION: return createEvToFuConnection();
+			case EpkDSLPackage.FU_TO_EV_CONNECTION: return createFuToEvConnection();
+			case EpkDSLPackage.EV_TO_ECON_CONNECTION: return createEvToEConConnection();
+			case EpkDSLPackage.ECON_TO_FU_CONNECTION: return createEConToFuConnection();
+			case EpkDSLPackage.FU_TO_FCON_CONNECTION: return createFuToFConConnection();
+			case EpkDSLPackage.FCON_TO_EV_CONNECTION: return createFConToEvConnection();
+			case EpkDSLPackage.OU_TO_FU_CONNECTION: return createOuToFuConnection();
+			case EpkDSLPackage.IO_TO_FU_CONNECTION: return createIoToFuConnection();
+			case EpkDSLPackage.NODE_TO_PP_CONNECTION: return createNodeToPpConnection();
+			case EpkDSLPackage.PP_TO_NODE_CONNECTION: return createPpToNodeConnection();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -169,6 +182,136 @@ public class EpkDSLFactoryImpl extends EFactoryImpl implements EpkDSLFactory {
 	public Connector createConnector() {
 		ConnectorImpl connector = new ConnectorImpl();
 		return connector;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EConnector createEConnector() {
+		EConnectorImpl eConnector = new EConnectorImpl();
+		return eConnector;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public FConnector createFConnector() {
+		FConnectorImpl fConnector = new FConnectorImpl();
+		return fConnector;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Connection createConnection() {
+		ConnectionImpl connection = new ConnectionImpl();
+		return connection;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EvToFuConnection createEvToFuConnection() {
+		EvToFuConnectionImpl evToFuConnection = new EvToFuConnectionImpl();
+		return evToFuConnection;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public FuToEvConnection createFuToEvConnection() {
+		FuToEvConnectionImpl fuToEvConnection = new FuToEvConnectionImpl();
+		return fuToEvConnection;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EvToEConConnection createEvToEConConnection() {
+		EvToEConConnectionImpl evToEConConnection = new EvToEConConnectionImpl();
+		return evToEConConnection;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EConToFuConnection createEConToFuConnection() {
+		EConToFuConnectionImpl eConToFuConnection = new EConToFuConnectionImpl();
+		return eConToFuConnection;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public FuToFConConnection createFuToFConConnection() {
+		FuToFConConnectionImpl fuToFConConnection = new FuToFConConnectionImpl();
+		return fuToFConConnection;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public FConToEvConnection createFConToEvConnection() {
+		FConToEvConnectionImpl fConToEvConnection = new FConToEvConnectionImpl();
+		return fConToEvConnection;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public OuToFuConnection createOuToFuConnection() {
+		OuToFuConnectionImpl ouToFuConnection = new OuToFuConnectionImpl();
+		return ouToFuConnection;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public IoToFuConnection createIoToFuConnection() {
+		IoToFuConnectionImpl ioToFuConnection = new IoToFuConnectionImpl();
+		return ioToFuConnection;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NodeToPpConnection createNodeToPpConnection() {
+		NodeToPpConnectionImpl nodeToPpConnection = new NodeToPpConnectionImpl();
+		return nodeToPpConnection;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public PpToNodeConnection createPpToNodeConnection() {
+		PpToNodeConnectionImpl ppToNodeConnection = new PpToNodeConnectionImpl();
+		return ppToNodeConnection;
 	}
 
 	/**

@@ -14,6 +14,7 @@ import org.eclipse.emf.common.util.EList;
  * <ul>
  *   <li>{@link EpkDSL.Epk#getNodes <em>Nodes</em>}</li>
  *   <li>{@link EpkDSL.Epk#getEdges <em>Edges</em>}</li>
+ *   <li>{@link EpkDSL.Epk#getConnections <em>Connections</em>}</li>
  * </ul>
  * </p>
  *
@@ -53,5 +54,21 @@ public interface Epk extends NamedElement {
 	 * @generated
 	 */
 	EList<Edge> getEdges();
+
+	/**
+	 * Returns the value of the '<em><b>Connections</b></em>' containment reference list.
+	 * The list contents are of type {@link EpkDSL.Connection}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Connections</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Connections</em>' containment reference list.
+	 * @see EpkDSL.EpkDSLPackage#getEpk_Connections()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Connection> getConnections();
 
 } // Epk
