@@ -6,28 +6,21 @@
  * Refer to http://code.google.com/a/eclipselabs.org/p/spray/ for documentation.
  *************************************************************************************/
 
-// Add definition of shapes here.
-// shape RectangleShape {
-//     rectangle {
-//         position(x=0,y=0)
-//         size(width=100,height=100)
-//     }
-// }
-
-// connection ArrowConnection {
-//     placing {
-//         position (offset=1.0)
-//         polygon {
-//             point (x=-10, y=-5)
-//             point (x=0, y=0)
-//             point (x=-10, y=5)
-//             style (background-color=black)
-//         }
-//     }
-// }
-
 shape ElementShape {
 	ellipse {
+		size(width=150, height=80)
+	}
+	text {
+		position(x=15,y=35)
+		size(width=80,height=15)
+		align(horizontal=center,vertical=middle)
+		id = elementText
+	}
+}
+
+shape StartElementShape {
+	ellipse {
+		style (line-width=3)
 		size(width=150, height=80)
 	}
 	text {

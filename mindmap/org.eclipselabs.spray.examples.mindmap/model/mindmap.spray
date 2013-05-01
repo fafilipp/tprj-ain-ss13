@@ -10,10 +10,11 @@
 // Add import statements here
 import MindmapDSL.*
 
+
 diagram Mymindmap for Mindmap style MindmapDefaultStyle
 
 class StartElement {
-	shape ElementShape {
+	shape StartElementShape {
 		name into elementText
 	}
 	behavior {
