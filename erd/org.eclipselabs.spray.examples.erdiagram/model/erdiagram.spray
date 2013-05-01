@@ -61,7 +61,7 @@ class Attribute {
 		parent : connection 
 	}
 	behavior {
-		create into attributes palette "Attributes"
+		create into elements palette "Attributes"
 	}
 }
 
@@ -69,11 +69,11 @@ class Attribute alias MultivalAttribute {
 	shape MultiValAttributeShape {
 		name into AttributeText
 	}
-		references {
-		parent : connection
-	}
+//		references {
+//		parent : connection
+//	}
 	behavior {
-		create into attributes palette "Attributes"
+		create into elements palette "Attributes"
 	}
 }
 
@@ -81,10 +81,20 @@ class Attribute alias KeyAttribute {
 	shape KeyAttributeShape {
 		name into AttributeText
 	}
-		references {
-		parent : connection
+//		references {
+//		parent : connection
+//	}
+	behavior {
+		create into elements palette "Attributes"
+	}
+}
+
+class ERConnection {
+	connection ERConnectionShape {
+		from fromEntity to toRelationship
 	}
 	behavior {
-		create into attributes palette "Attributes"
+	    create into connections palette "Connections" 
 	}
+	
 }

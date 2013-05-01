@@ -75,22 +75,13 @@ public interface ErdiagramDSLPackage extends EPackage {
 	int ERDIAGRAM__ELEMENTS = 0;
 
 	/**
-	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ERDIAGRAM__ATTRIBUTES = 1;
-
-	/**
 	 * The feature id for the '<em><b>Connections</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ERDIAGRAM__CONNECTIONS = 2;
+	int ERDIAGRAM__CONNECTIONS = 1;
 
 	/**
 	 * The number of structural features of the '<em>Erdiagram</em>' class.
@@ -99,7 +90,7 @@ public interface ErdiagramDSLPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ERDIAGRAM_FEATURE_COUNT = 3;
+	int ERDIAGRAM_FEATURE_COUNT = 2;
 
 	/**
 	 * The meta object id for the '{@link ErdiagramDSL.impl.ElementImpl <em>Element</em>}' class.
@@ -211,7 +202,7 @@ public interface ErdiagramDSLPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ATTRIBUTE__NAME = 0;
+	int ATTRIBUTE__NAME = ELEMENT__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Parent</b></em>' reference.
@@ -220,7 +211,7 @@ public interface ErdiagramDSLPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ATTRIBUTE__PARENT = 1;
+	int ATTRIBUTE__PARENT = ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Attribute</em>' class.
@@ -229,7 +220,7 @@ public interface ErdiagramDSLPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ATTRIBUTE_FEATURE_COUNT = 2;
+	int ATTRIBUTE_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link ErdiagramDSL.impl.ERConnectionImpl <em>ER Connection</em>}' class.
@@ -298,17 +289,6 @@ public interface ErdiagramDSLPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getErdiagram_Elements();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link ErdiagramDSL.Erdiagram#getAttributes <em>Attributes</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Attributes</em>'.
-	 * @see ErdiagramDSL.Erdiagram#getAttributes()
-	 * @see #getErdiagram()
-	 * @generated
-	 */
-	EReference getErdiagram_Attributes();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link ErdiagramDSL.Erdiagram#getConnections <em>Connections</em>}'.
@@ -382,17 +362,6 @@ public interface ErdiagramDSLPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getAttribute();
-
-	/**
-	 * Returns the meta object for the attribute '{@link ErdiagramDSL.Attribute#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see ErdiagramDSL.Attribute#getName()
-	 * @see #getAttribute()
-	 * @generated
-	 */
-	EAttribute getAttribute_Name();
 
 	/**
 	 * Returns the meta object for the reference '{@link ErdiagramDSL.Attribute#getParent <em>Parent</em>}'.
@@ -489,14 +458,6 @@ public interface ErdiagramDSLPackage extends EPackage {
 		EReference ERDIAGRAM__ELEMENTS = eINSTANCE.getErdiagram_Elements();
 
 		/**
-		 * The meta object literal for the '<em><b>Attributes</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ERDIAGRAM__ATTRIBUTES = eINSTANCE.getErdiagram_Attributes();
-
-		/**
 		 * The meta object literal for the '<em><b>Connections</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -559,14 +520,6 @@ public interface ErdiagramDSLPackage extends EPackage {
 		 * @generated
 		 */
 		EClass ATTRIBUTE = eINSTANCE.getAttribute();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ATTRIBUTE__NAME = eINSTANCE.getAttribute_Name();
 
 		/**
 		 * The meta object literal for the '<em><b>Parent</b></em>' reference feature.

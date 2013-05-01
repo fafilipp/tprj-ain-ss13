@@ -5,7 +5,10 @@
     importerID="org.eclipse.emf.importer.ecore" complianceLevel="7.0" copyrightFields="false">
   <foreignModel>Erdiagram.ecore</foreignModel>
   <genPackages prefix="ErdiagramDSL" disposableProviderFactory="true" ecorePackage="Erdiagram.ecore#/">
-    <genClasses ecoreClass="Erdiagram.ecore#//Erdiagram"/>
+    <genClasses ecoreClass="Erdiagram.ecore#//Erdiagram">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Erdiagram.ecore#//Erdiagram/elements"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Erdiagram.ecore#//Erdiagram/connections"/>
+    </genClasses>
     <genClasses ecoreClass="Erdiagram.ecore#//Element">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Erdiagram.ecore#//Element/name"/>
     </genClasses>
@@ -14,7 +17,6 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Erdiagram.ecore#//Relationship/description"/>
     </genClasses>
     <genClasses ecoreClass="Erdiagram.ecore#//Attribute">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Erdiagram.ecore#//Attribute/name"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Erdiagram.ecore#//Attribute/parent"/>
     </genClasses>
     <genClasses ecoreClass="Erdiagram.ecore#//ERConnection">

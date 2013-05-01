@@ -95,6 +95,7 @@ public class ErdiagramDSLSwitch<T> extends Switch<T> {
 			case ErdiagramDSLPackage.ATTRIBUTE: {
 				Attribute attribute = (Attribute)theEObject;
 				T result = caseAttribute(attribute);
+				if (result == null) result = caseElement(attribute);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

@@ -151,17 +151,8 @@ public class ErdiagramDSLPackageImpl extends EPackageImpl implements ErdiagramDS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getErdiagram_Attributes() {
-		return (EReference)erdiagramEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getErdiagram_Connections() {
-		return (EReference)erdiagramEClass.getEStructuralFeatures().get(2);
+		return (EReference)erdiagramEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -223,17 +214,8 @@ public class ErdiagramDSLPackageImpl extends EPackageImpl implements ErdiagramDS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getAttribute_Name() {
-		return (EAttribute)attributeEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getAttribute_Parent() {
-		return (EReference)attributeEClass.getEStructuralFeatures().get(1);
+		return (EReference)attributeEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -302,7 +284,6 @@ public class ErdiagramDSLPackageImpl extends EPackageImpl implements ErdiagramDS
 		// Create classes and their features
 		erdiagramEClass = createEClass(ERDIAGRAM);
 		createEReference(erdiagramEClass, ERDIAGRAM__ELEMENTS);
-		createEReference(erdiagramEClass, ERDIAGRAM__ATTRIBUTES);
 		createEReference(erdiagramEClass, ERDIAGRAM__CONNECTIONS);
 
 		elementEClass = createEClass(ELEMENT);
@@ -314,7 +295,6 @@ public class ErdiagramDSLPackageImpl extends EPackageImpl implements ErdiagramDS
 		createEAttribute(relationshipEClass, RELATIONSHIP__DESCRIPTION);
 
 		attributeEClass = createEClass(ATTRIBUTE);
-		createEAttribute(attributeEClass, ATTRIBUTE__NAME);
 		createEReference(attributeEClass, ATTRIBUTE__PARENT);
 
 		erConnectionEClass = createEClass(ER_CONNECTION);
@@ -353,11 +333,11 @@ public class ErdiagramDSLPackageImpl extends EPackageImpl implements ErdiagramDS
 		// Add supertypes to classes
 		entityEClass.getESuperTypes().add(this.getElement());
 		relationshipEClass.getESuperTypes().add(this.getElement());
+		attributeEClass.getESuperTypes().add(this.getElement());
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(erdiagramEClass, Erdiagram.class, "Erdiagram", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getErdiagram_Elements(), this.getElement(), null, "elements", null, 0, -1, Erdiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getErdiagram_Attributes(), this.getAttribute(), null, "attributes", null, 0, -1, Erdiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getErdiagram_Connections(), this.getERConnection(), null, "connections", null, 0, -1, Erdiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(elementEClass, Element.class, "Element", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -369,7 +349,6 @@ public class ErdiagramDSLPackageImpl extends EPackageImpl implements ErdiagramDS
 		initEAttribute(getRelationship_Description(), ecorePackage.getEString(), "description", null, 0, 1, Relationship.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(attributeEClass, Attribute.class, "Attribute", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getAttribute_Name(), ecorePackage.getEString(), "name", null, 0, 1, Attribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getAttribute_Parent(), this.getElement(), null, "parent", null, 1, 1, Attribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(erConnectionEClass, ERConnection.class, "ERConnection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

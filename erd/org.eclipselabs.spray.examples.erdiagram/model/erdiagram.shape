@@ -93,3 +93,13 @@ shape KeyAttributeShape {
 		id=AttributeText
 	}
 }
+
+connection ERConnectionShape {
+	placing {
+		position (offset=0.0)
+		text {
+			size (width=20, height=20)
+			id = connectionText
+		}
+	}
+}

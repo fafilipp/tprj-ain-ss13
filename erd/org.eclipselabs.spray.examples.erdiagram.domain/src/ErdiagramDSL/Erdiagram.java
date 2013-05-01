@@ -14,7 +14,6 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * <ul>
  *   <li>{@link ErdiagramDSL.Erdiagram#getElements <em>Elements</em>}</li>
- *   <li>{@link ErdiagramDSL.Erdiagram#getAttributes <em>Attributes</em>}</li>
  *   <li>{@link ErdiagramDSL.Erdiagram#getConnections <em>Connections</em>}</li>
  * </ul>
  * </p>
@@ -40,22 +39,6 @@ public interface Erdiagram extends EObject {
 	 * @generated
 	 */
 	EList<Element> getElements();
-
-	/**
-	 * Returns the value of the '<em><b>Attributes</b></em>' containment reference list.
-	 * The list contents are of type {@link ErdiagramDSL.Attribute}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Attributes</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Attributes</em>' containment reference list.
-	 * @see ErdiagramDSL.ErdiagramDSLPackage#getErdiagram_Attributes()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<Attribute> getAttributes();
 
 	/**
 	 * Returns the value of the '<em><b>Connections</b></em>' containment reference list.
