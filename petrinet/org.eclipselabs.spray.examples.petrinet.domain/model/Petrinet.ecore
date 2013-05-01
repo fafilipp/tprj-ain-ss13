@@ -24,4 +24,20 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="fromTransition" eType="#//Transition"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="toPlace" eType="#//Place"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="StartElement" eSuperTypes="#//Node">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tokens" upperBound="-1"
+        eType="#//Token" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EndElement" eSuperTypes="#//Node">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tokens" upperBound="-1"
+        eType="#//Token" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="StartEdge" eSuperTypes="#//Edge">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fromStart" eType="#//StartElement"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="toTransition" eType="#//Transition"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EndEdge" eSuperTypes="#//Edge">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fromTransition" eType="#//Transition"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="toEnd" eType="#//EndElement"/>
+  </eClassifiers>
 </ecore:EPackage>

@@ -3,12 +3,16 @@
 package PetrinetDSL.impl;
 
 import PetrinetDSL.Edge;
+import PetrinetDSL.EndEdge;
+import PetrinetDSL.EndElement;
 import PetrinetDSL.Node;
 import PetrinetDSL.PTEdge;
 import PetrinetDSL.Petrinet;
 import PetrinetDSL.PetrinetDSLFactory;
 import PetrinetDSL.PetrinetDSLPackage;
 import PetrinetDSL.Place;
+import PetrinetDSL.StartEdge;
+import PetrinetDSL.StartElement;
 import PetrinetDSL.TPEdge;
 import PetrinetDSL.Token;
 import PetrinetDSL.Transition;
@@ -82,6 +86,34 @@ public class PetrinetDSLPackageImpl extends EPackageImpl implements PetrinetDSLP
 	 * @generated
 	 */
 	private EClass tpEdgeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass startElementEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass endElementEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass startEdgeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass endEdgeEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -293,6 +325,96 @@ public class PetrinetDSLPackageImpl extends EPackageImpl implements PetrinetDSLP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getStartElement() {
+		return startElementEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getStartElement_Tokens() {
+		return (EReference)startElementEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getEndElement() {
+		return endElementEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getEndElement_Tokens() {
+		return (EReference)endElementEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getStartEdge() {
+		return startEdgeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getStartEdge_FromStart() {
+		return (EReference)startEdgeEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getStartEdge_ToTransition() {
+		return (EReference)startEdgeEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getEndEdge() {
+		return endEdgeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getEndEdge_FromTransition() {
+		return (EReference)endEdgeEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getEndEdge_ToEnd() {
+		return (EReference)endEdgeEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public PetrinetDSLFactory getPetrinetDSLFactory() {
 		return (PetrinetDSLFactory)getEFactoryInstance();
 	}
@@ -339,6 +461,20 @@ public class PetrinetDSLPackageImpl extends EPackageImpl implements PetrinetDSLP
 		tpEdgeEClass = createEClass(TP_EDGE);
 		createEReference(tpEdgeEClass, TP_EDGE__FROM_TRANSITION);
 		createEReference(tpEdgeEClass, TP_EDGE__TO_PLACE);
+
+		startElementEClass = createEClass(START_ELEMENT);
+		createEReference(startElementEClass, START_ELEMENT__TOKENS);
+
+		endElementEClass = createEClass(END_ELEMENT);
+		createEReference(endElementEClass, END_ELEMENT__TOKENS);
+
+		startEdgeEClass = createEClass(START_EDGE);
+		createEReference(startEdgeEClass, START_EDGE__FROM_START);
+		createEReference(startEdgeEClass, START_EDGE__TO_TRANSITION);
+
+		endEdgeEClass = createEClass(END_EDGE);
+		createEReference(endEdgeEClass, END_EDGE__FROM_TRANSITION);
+		createEReference(endEdgeEClass, END_EDGE__TO_END);
 	}
 
 	/**
@@ -376,6 +512,10 @@ public class PetrinetDSLPackageImpl extends EPackageImpl implements PetrinetDSLP
 		placeEClass.getESuperTypes().add(this.getNode());
 		ptEdgeEClass.getESuperTypes().add(this.getEdge());
 		tpEdgeEClass.getESuperTypes().add(this.getEdge());
+		startElementEClass.getESuperTypes().add(this.getNode());
+		endElementEClass.getESuperTypes().add(this.getNode());
+		startEdgeEClass.getESuperTypes().add(this.getEdge());
+		endEdgeEClass.getESuperTypes().add(this.getEdge());
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(petrinetEClass, Petrinet.class, "Petrinet", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -401,6 +541,20 @@ public class PetrinetDSLPackageImpl extends EPackageImpl implements PetrinetDSLP
 		initEClass(tpEdgeEClass, TPEdge.class, "TPEdge", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getTPEdge_FromTransition(), this.getTransition(), null, "fromTransition", null, 0, 1, TPEdge.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTPEdge_ToPlace(), this.getPlace(), null, "toPlace", null, 0, 1, TPEdge.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(startElementEClass, StartElement.class, "StartElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getStartElement_Tokens(), this.getToken(), null, "tokens", null, 0, -1, StartElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(endElementEClass, EndElement.class, "EndElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getEndElement_Tokens(), this.getToken(), null, "tokens", null, 0, -1, EndElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(startEdgeEClass, StartEdge.class, "StartEdge", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getStartEdge_FromStart(), this.getStartElement(), null, "fromStart", null, 0, 1, StartEdge.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getStartEdge_ToTransition(), this.getTransition(), null, "toTransition", null, 0, 1, StartEdge.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(endEdgeEClass, EndEdge.class, "EndEdge", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getEndEdge_FromTransition(), this.getTransition(), null, "fromTransition", null, 0, 1, EndEdge.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getEndEdge_ToEnd(), this.getEndElement(), null, "toEnd", null, 0, 1, EndEdge.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

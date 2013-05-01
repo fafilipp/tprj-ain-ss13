@@ -94,6 +94,42 @@ public interface PetrinetDSLFactory extends EFactory {
 	TPEdge createTPEdge();
 
 	/**
+	 * Returns a new object of class '<em>Start Element</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Start Element</em>'.
+	 * @generated
+	 */
+	StartElement createStartElement();
+
+	/**
+	 * Returns a new object of class '<em>End Element</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>End Element</em>'.
+	 * @generated
+	 */
+	EndElement createEndElement();
+
+	/**
+	 * Returns a new object of class '<em>Start Edge</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Start Edge</em>'.
+	 * @generated
+	 */
+	StartEdge createStartEdge();
+
+	/**
+	 * Returns a new object of class '<em>End Edge</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>End Edge</em>'.
+	 * @generated
+	 */
+	EndEdge createEndEdge();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
