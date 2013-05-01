@@ -10,9 +10,17 @@
         eType="#//MapElements" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MapElements" eSuperTypes="#//NamedElement"/>
-  <eClassifiers xsi:type="ecore:EClass" name="StartElement" eSuperTypes="#//MapElements"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Element" eSuperTypes="#//MapElements">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
-        eType="#//MapElements"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Element" eSuperTypes="#//MapElements"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ArrowConnection" eSuperTypes="#//MapElements">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fromElement" eType="#//Element"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="toElement" eType="#//Element"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DoubleArrowConnection" eSuperTypes="#//MapElements">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fromElement" eType="#//Element"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="toElement" eType="#//Element"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Connection" eSuperTypes="#//MapElements">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fromElement" eType="#//Element"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="toElement" eType="#//Element"/>
   </eClassifiers>
 </ecore:EPackage>

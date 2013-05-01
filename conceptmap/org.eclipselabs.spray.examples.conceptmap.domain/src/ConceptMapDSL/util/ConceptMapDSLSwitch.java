@@ -86,19 +86,35 @@ public class ConceptMapDSLSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ConceptMapDSLPackage.START_ELEMENT: {
-				StartElement startElement = (StartElement)theEObject;
-				T result = caseStartElement(startElement);
-				if (result == null) result = caseMapElements(startElement);
-				if (result == null) result = caseNamedElement(startElement);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case ConceptMapDSLPackage.ELEMENT: {
 				Element element = (Element)theEObject;
 				T result = caseElement(element);
 				if (result == null) result = caseMapElements(element);
 				if (result == null) result = caseNamedElement(element);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ConceptMapDSLPackage.ARROW_CONNECTION: {
+				ArrowConnection arrowConnection = (ArrowConnection)theEObject;
+				T result = caseArrowConnection(arrowConnection);
+				if (result == null) result = caseMapElements(arrowConnection);
+				if (result == null) result = caseNamedElement(arrowConnection);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ConceptMapDSLPackage.DOUBLE_ARROW_CONNECTION: {
+				DoubleArrowConnection doubleArrowConnection = (DoubleArrowConnection)theEObject;
+				T result = caseDoubleArrowConnection(doubleArrowConnection);
+				if (result == null) result = caseMapElements(doubleArrowConnection);
+				if (result == null) result = caseNamedElement(doubleArrowConnection);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ConceptMapDSLPackage.CONNECTION: {
+				Connection connection = (Connection)theEObject;
+				T result = caseConnection(connection);
+				if (result == null) result = caseMapElements(connection);
+				if (result == null) result = caseNamedElement(connection);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -152,21 +168,6 @@ public class ConceptMapDSLSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Start Element</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Start Element</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseStartElement(StartElement object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Element</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -178,6 +179,51 @@ public class ConceptMapDSLSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseElement(Element object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Arrow Connection</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Arrow Connection</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseArrowConnection(ArrowConnection object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Double Arrow Connection</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Double Arrow Connection</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDoubleArrowConnection(DoubleArrowConnection object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Connection</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Connection</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseConnection(Connection object) {
 		return null;
 	}
 

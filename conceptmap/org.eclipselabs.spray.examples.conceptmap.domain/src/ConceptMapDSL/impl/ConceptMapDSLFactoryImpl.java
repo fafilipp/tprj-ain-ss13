@@ -59,8 +59,10 @@ public class ConceptMapDSLFactoryImpl extends EFactoryImpl implements ConceptMap
 			case ConceptMapDSLPackage.NAMED_ELEMENT: return createNamedElement();
 			case ConceptMapDSLPackage.CONCEPT_MAP: return createConceptMap();
 			case ConceptMapDSLPackage.MAP_ELEMENTS: return createMapElements();
-			case ConceptMapDSLPackage.START_ELEMENT: return createStartElement();
 			case ConceptMapDSLPackage.ELEMENT: return createElement();
+			case ConceptMapDSLPackage.ARROW_CONNECTION: return createArrowConnection();
+			case ConceptMapDSLPackage.DOUBLE_ARROW_CONNECTION: return createDoubleArrowConnection();
+			case ConceptMapDSLPackage.CONNECTION: return createConnection();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -101,9 +103,9 @@ public class ConceptMapDSLFactoryImpl extends EFactoryImpl implements ConceptMap
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public StartElement createStartElement() {
-		StartElementImpl startElement = new StartElementImpl();
-		return startElement;
+	public Element createElement() {
+		ElementImpl element = new ElementImpl();
+		return element;
 	}
 
 	/**
@@ -111,9 +113,29 @@ public class ConceptMapDSLFactoryImpl extends EFactoryImpl implements ConceptMap
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Element createElement() {
-		ElementImpl element = new ElementImpl();
-		return element;
+	public ArrowConnection createArrowConnection() {
+		ArrowConnectionImpl arrowConnection = new ArrowConnectionImpl();
+		return arrowConnection;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public DoubleArrowConnection createDoubleArrowConnection() {
+		DoubleArrowConnectionImpl doubleArrowConnection = new DoubleArrowConnectionImpl();
+		return doubleArrowConnection;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Connection createConnection() {
+		ConnectionImpl connection = new ConnectionImpl();
+		return connection;
 	}
 
 	/**

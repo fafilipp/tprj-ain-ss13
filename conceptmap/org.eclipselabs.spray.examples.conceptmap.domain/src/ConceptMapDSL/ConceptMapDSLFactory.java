@@ -49,15 +49,6 @@ public interface ConceptMapDSLFactory extends EFactory {
 	MapElements createMapElements();
 
 	/**
-	 * Returns a new object of class '<em>Start Element</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Start Element</em>'.
-	 * @generated
-	 */
-	StartElement createStartElement();
-
-	/**
 	 * Returns a new object of class '<em>Element</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -65,6 +56,33 @@ public interface ConceptMapDSLFactory extends EFactory {
 	 * @generated
 	 */
 	Element createElement();
+
+	/**
+	 * Returns a new object of class '<em>Arrow Connection</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Arrow Connection</em>'.
+	 * @generated
+	 */
+	ArrowConnection createArrowConnection();
+
+	/**
+	 * Returns a new object of class '<em>Double Arrow Connection</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Double Arrow Connection</em>'.
+	 * @generated
+	 */
+	DoubleArrowConnection createDoubleArrowConnection();
+
+	/**
+	 * Returns a new object of class '<em>Connection</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Connection</em>'.
+	 * @generated
+	 */
+	Connection createConnection();
 
 	/**
 	 * Returns the package supported by this factory.

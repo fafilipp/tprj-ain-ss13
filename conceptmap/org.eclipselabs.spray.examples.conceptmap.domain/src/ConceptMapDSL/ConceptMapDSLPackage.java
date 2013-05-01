@@ -149,34 +149,6 @@ public interface ConceptMapDSLPackage extends EPackage {
 	int MAP_ELEMENTS_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link ConceptMapDSL.impl.StartElementImpl <em>Start Element</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see ConceptMapDSL.impl.StartElementImpl
-	 * @see ConceptMapDSL.impl.ConceptMapDSLPackageImpl#getStartElement()
-	 * @generated
-	 */
-	int START_ELEMENT = 3;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int START_ELEMENT__NAME = MAP_ELEMENTS__NAME;
-
-	/**
-	 * The number of structural features of the '<em>Start Element</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int START_ELEMENT_FEATURE_COUNT = MAP_ELEMENTS_FEATURE_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link ConceptMapDSL.impl.ElementImpl <em>Element</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -184,7 +156,7 @@ public interface ConceptMapDSLPackage extends EPackage {
 	 * @see ConceptMapDSL.impl.ConceptMapDSLPackageImpl#getElement()
 	 * @generated
 	 */
-	int ELEMENT = 4;
+	int ELEMENT = 3;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -196,22 +168,152 @@ public interface ConceptMapDSLPackage extends EPackage {
 	int ELEMENT__NAME = MAP_ELEMENTS__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Parent</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ELEMENT__PARENT = MAP_ELEMENTS_FEATURE_COUNT + 0;
-
-	/**
 	 * The number of structural features of the '<em>Element</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ELEMENT_FEATURE_COUNT = MAP_ELEMENTS_FEATURE_COUNT + 1;
+	int ELEMENT_FEATURE_COUNT = MAP_ELEMENTS_FEATURE_COUNT + 0;
+
+
+	/**
+	 * The meta object id for the '{@link ConceptMapDSL.impl.ArrowConnectionImpl <em>Arrow Connection</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ConceptMapDSL.impl.ArrowConnectionImpl
+	 * @see ConceptMapDSL.impl.ConceptMapDSLPackageImpl#getArrowConnection()
+	 * @generated
+	 */
+	int ARROW_CONNECTION = 4;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARROW_CONNECTION__NAME = MAP_ELEMENTS__NAME;
+
+	/**
+	 * The feature id for the '<em><b>From Element</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARROW_CONNECTION__FROM_ELEMENT = MAP_ELEMENTS_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>To Element</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARROW_CONNECTION__TO_ELEMENT = MAP_ELEMENTS_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Arrow Connection</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARROW_CONNECTION_FEATURE_COUNT = MAP_ELEMENTS_FEATURE_COUNT + 2;
+
+	/**
+	 * The meta object id for the '{@link ConceptMapDSL.impl.DoubleArrowConnectionImpl <em>Double Arrow Connection</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ConceptMapDSL.impl.DoubleArrowConnectionImpl
+	 * @see ConceptMapDSL.impl.ConceptMapDSLPackageImpl#getDoubleArrowConnection()
+	 * @generated
+	 */
+	int DOUBLE_ARROW_CONNECTION = 5;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOUBLE_ARROW_CONNECTION__NAME = MAP_ELEMENTS__NAME;
+
+	/**
+	 * The feature id for the '<em><b>From Element</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOUBLE_ARROW_CONNECTION__FROM_ELEMENT = MAP_ELEMENTS_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>To Element</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOUBLE_ARROW_CONNECTION__TO_ELEMENT = MAP_ELEMENTS_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Double Arrow Connection</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOUBLE_ARROW_CONNECTION_FEATURE_COUNT = MAP_ELEMENTS_FEATURE_COUNT + 2;
+
+	/**
+	 * The meta object id for the '{@link ConceptMapDSL.impl.ConnectionImpl <em>Connection</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ConceptMapDSL.impl.ConnectionImpl
+	 * @see ConceptMapDSL.impl.ConceptMapDSLPackageImpl#getConnection()
+	 * @generated
+	 */
+	int CONNECTION = 6;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONNECTION__NAME = MAP_ELEMENTS__NAME;
+
+	/**
+	 * The feature id for the '<em><b>From Element</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONNECTION__FROM_ELEMENT = MAP_ELEMENTS_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>To Element</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONNECTION__TO_ELEMENT = MAP_ELEMENTS_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Connection</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONNECTION_FEATURE_COUNT = MAP_ELEMENTS_FEATURE_COUNT + 2;
 
 
 	/**
@@ -267,16 +369,6 @@ public interface ConceptMapDSLPackage extends EPackage {
 	EClass getMapElements();
 
 	/**
-	 * Returns the meta object for class '{@link ConceptMapDSL.StartElement <em>Start Element</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Start Element</em>'.
-	 * @see ConceptMapDSL.StartElement
-	 * @generated
-	 */
-	EClass getStartElement();
-
-	/**
 	 * Returns the meta object for class '{@link ConceptMapDSL.Element <em>Element</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -287,15 +379,100 @@ public interface ConceptMapDSLPackage extends EPackage {
 	EClass getElement();
 
 	/**
-	 * Returns the meta object for the reference '{@link ConceptMapDSL.Element#getParent <em>Parent</em>}'.
+	 * Returns the meta object for class '{@link ConceptMapDSL.ArrowConnection <em>Arrow Connection</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Parent</em>'.
-	 * @see ConceptMapDSL.Element#getParent()
-	 * @see #getElement()
+	 * @return the meta object for class '<em>Arrow Connection</em>'.
+	 * @see ConceptMapDSL.ArrowConnection
 	 * @generated
 	 */
-	EReference getElement_Parent();
+	EClass getArrowConnection();
+
+	/**
+	 * Returns the meta object for the reference '{@link ConceptMapDSL.ArrowConnection#getFromElement <em>From Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>From Element</em>'.
+	 * @see ConceptMapDSL.ArrowConnection#getFromElement()
+	 * @see #getArrowConnection()
+	 * @generated
+	 */
+	EReference getArrowConnection_FromElement();
+
+	/**
+	 * Returns the meta object for the reference '{@link ConceptMapDSL.ArrowConnection#getToElement <em>To Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>To Element</em>'.
+	 * @see ConceptMapDSL.ArrowConnection#getToElement()
+	 * @see #getArrowConnection()
+	 * @generated
+	 */
+	EReference getArrowConnection_ToElement();
+
+	/**
+	 * Returns the meta object for class '{@link ConceptMapDSL.DoubleArrowConnection <em>Double Arrow Connection</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Double Arrow Connection</em>'.
+	 * @see ConceptMapDSL.DoubleArrowConnection
+	 * @generated
+	 */
+	EClass getDoubleArrowConnection();
+
+	/**
+	 * Returns the meta object for the reference '{@link ConceptMapDSL.DoubleArrowConnection#getFromElement <em>From Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>From Element</em>'.
+	 * @see ConceptMapDSL.DoubleArrowConnection#getFromElement()
+	 * @see #getDoubleArrowConnection()
+	 * @generated
+	 */
+	EReference getDoubleArrowConnection_FromElement();
+
+	/**
+	 * Returns the meta object for the reference '{@link ConceptMapDSL.DoubleArrowConnection#getToElement <em>To Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>To Element</em>'.
+	 * @see ConceptMapDSL.DoubleArrowConnection#getToElement()
+	 * @see #getDoubleArrowConnection()
+	 * @generated
+	 */
+	EReference getDoubleArrowConnection_ToElement();
+
+	/**
+	 * Returns the meta object for class '{@link ConceptMapDSL.Connection <em>Connection</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Connection</em>'.
+	 * @see ConceptMapDSL.Connection
+	 * @generated
+	 */
+	EClass getConnection();
+
+	/**
+	 * Returns the meta object for the reference '{@link ConceptMapDSL.Connection#getFromElement <em>From Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>From Element</em>'.
+	 * @see ConceptMapDSL.Connection#getFromElement()
+	 * @see #getConnection()
+	 * @generated
+	 */
+	EReference getConnection_FromElement();
+
+	/**
+	 * Returns the meta object for the reference '{@link ConceptMapDSL.Connection#getToElement <em>To Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>To Element</em>'.
+	 * @see ConceptMapDSL.Connection#getToElement()
+	 * @see #getConnection()
+	 * @generated
+	 */
+	EReference getConnection_ToElement();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -366,16 +543,6 @@ public interface ConceptMapDSLPackage extends EPackage {
 		EClass MAP_ELEMENTS = eINSTANCE.getMapElements();
 
 		/**
-		 * The meta object literal for the '{@link ConceptMapDSL.impl.StartElementImpl <em>Start Element</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see ConceptMapDSL.impl.StartElementImpl
-		 * @see ConceptMapDSL.impl.ConceptMapDSLPackageImpl#getStartElement()
-		 * @generated
-		 */
-		EClass START_ELEMENT = eINSTANCE.getStartElement();
-
-		/**
 		 * The meta object literal for the '{@link ConceptMapDSL.impl.ElementImpl <em>Element</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -386,12 +553,82 @@ public interface ConceptMapDSLPackage extends EPackage {
 		EClass ELEMENT = eINSTANCE.getElement();
 
 		/**
-		 * The meta object literal for the '<em><b>Parent</b></em>' reference feature.
+		 * The meta object literal for the '{@link ConceptMapDSL.impl.ArrowConnectionImpl <em>Arrow Connection</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see ConceptMapDSL.impl.ArrowConnectionImpl
+		 * @see ConceptMapDSL.impl.ConceptMapDSLPackageImpl#getArrowConnection()
+		 * @generated
+		 */
+		EClass ARROW_CONNECTION = eINSTANCE.getArrowConnection();
+
+		/**
+		 * The meta object literal for the '<em><b>From Element</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ELEMENT__PARENT = eINSTANCE.getElement_Parent();
+		EReference ARROW_CONNECTION__FROM_ELEMENT = eINSTANCE.getArrowConnection_FromElement();
+
+		/**
+		 * The meta object literal for the '<em><b>To Element</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ARROW_CONNECTION__TO_ELEMENT = eINSTANCE.getArrowConnection_ToElement();
+
+		/**
+		 * The meta object literal for the '{@link ConceptMapDSL.impl.DoubleArrowConnectionImpl <em>Double Arrow Connection</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see ConceptMapDSL.impl.DoubleArrowConnectionImpl
+		 * @see ConceptMapDSL.impl.ConceptMapDSLPackageImpl#getDoubleArrowConnection()
+		 * @generated
+		 */
+		EClass DOUBLE_ARROW_CONNECTION = eINSTANCE.getDoubleArrowConnection();
+
+		/**
+		 * The meta object literal for the '<em><b>From Element</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DOUBLE_ARROW_CONNECTION__FROM_ELEMENT = eINSTANCE.getDoubleArrowConnection_FromElement();
+
+		/**
+		 * The meta object literal for the '<em><b>To Element</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DOUBLE_ARROW_CONNECTION__TO_ELEMENT = eINSTANCE.getDoubleArrowConnection_ToElement();
+
+		/**
+		 * The meta object literal for the '{@link ConceptMapDSL.impl.ConnectionImpl <em>Connection</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see ConceptMapDSL.impl.ConnectionImpl
+		 * @see ConceptMapDSL.impl.ConceptMapDSLPackageImpl#getConnection()
+		 * @generated
+		 */
+		EClass CONNECTION = eINSTANCE.getConnection();
+
+		/**
+		 * The meta object literal for the '<em><b>From Element</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CONNECTION__FROM_ELEMENT = eINSTANCE.getConnection_FromElement();
+
+		/**
+		 * The meta object literal for the '<em><b>To Element</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CONNECTION__TO_ELEMENT = eINSTANCE.getConnection_ToElement();
 
 	}
 

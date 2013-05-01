@@ -12,26 +12,39 @@ import ConceptMapDSL.*
 
 diagram Myconceptmap for ConceptMap style ConceptmapDefaultStyle
 
+class Element {
+	shape ElementShape {
+		name into ElementText
+	}
+	behavior {
+	    create into mapelements palette "Elements" askFor name
+	}	
+}
 
-// Add class mappings here. Refer to EClasses here. Don't forget to configure a
-// dependency to the plugin defining the EMF metamodel in META-INF/MANIFEST.MF.
-// It is required to have a genmodel for the metamodel.
-//
-// Example class mapping:
-//   class BusinessClass icon "ecore/EClass.gif" {
-//     shape RectangleShape
-//     behavior {
-//       // Enable create feature for this class and add it to the palette "Shapes"
-//       create into types palette "Shapes";
-//     }
-//   }
-//
-// Example association mapping:
-//   class Association icon "connection16.gif" {
-//     connection ArrowConnection {
-//       from source;
-//       to target;
-//     }
-//   }
+class Connection {
+	connection Connection {
+		from fromElement to toElement
+	}
+	behavior {
+	    create into mapelements palette "Connections"
+	}	
+}
 
+class ArrowConnection {
+	connection ArrowConnection {
+		from fromElement to toElement
+	}
+	behavior {
+	    create into mapelements palette "Connections"
+	}	
+}
+
+class DoubleArrowConnection {
+	connection DoubleArrowConnection {
+		from fromElement to toElement
+	}
+	behavior {
+	    create into mapelements palette "Connections"
+	}
+}
 

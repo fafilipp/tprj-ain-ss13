@@ -80,12 +80,20 @@ public class ConceptMapDSLAdapterFactory extends AdapterFactoryImpl {
 				return createMapElementsAdapter();
 			}
 			@Override
-			public Adapter caseStartElement(StartElement object) {
-				return createStartElementAdapter();
-			}
-			@Override
 			public Adapter caseElement(Element object) {
 				return createElementAdapter();
+			}
+			@Override
+			public Adapter caseArrowConnection(ArrowConnection object) {
+				return createArrowConnectionAdapter();
+			}
+			@Override
+			public Adapter caseDoubleArrowConnection(DoubleArrowConnection object) {
+				return createDoubleArrowConnectionAdapter();
+			}
+			@Override
+			public Adapter caseConnection(Connection object) {
+				return createConnectionAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -150,20 +158,6 @@ public class ConceptMapDSLAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ConceptMapDSL.StartElement <em>Start Element</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see ConceptMapDSL.StartElement
-	 * @generated
-	 */
-	public Adapter createStartElementAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link ConceptMapDSL.Element <em>Element</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -174,6 +168,48 @@ public class ConceptMapDSLAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createElementAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ConceptMapDSL.ArrowConnection <em>Arrow Connection</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ConceptMapDSL.ArrowConnection
+	 * @generated
+	 */
+	public Adapter createArrowConnectionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ConceptMapDSL.DoubleArrowConnection <em>Double Arrow Connection</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ConceptMapDSL.DoubleArrowConnection
+	 * @generated
+	 */
+	public Adapter createDoubleArrowConnectionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ConceptMapDSL.Connection <em>Connection</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ConceptMapDSL.Connection
+	 * @generated
+	 */
+	public Adapter createConnectionAdapter() {
 		return null;
 	}
 

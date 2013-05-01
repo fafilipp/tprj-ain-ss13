@@ -6,22 +6,74 @@
  * Refer to http://code.google.com/a/eclipselabs.org/p/spray/ for documentation.
  *************************************************************************************/
 
-// Add definition of shapes here.
-// shape RectangleShape {
-//     rectangle {
-//         position(x=0,y=0)
-//         size(width=100,height=100)
-//     }
-// }
+shape ElementShape {
+	rounded-rectangle {
+		style (background-color=light-green)
+		curve (width=15, height=15)
+		position (x=0,y=0)
+		size(width=100, height=50)
+	}
+	text {
+		style (background-color=light-green)
+		position (x=10, y=25)
+		size (width=80, height=20)
+		id = ElementText
+	}
+}
 
-// connection ArrowConnection {
-//     placing {
-//         position (offset=1.0)
-//         polygon {
-//             point (x=-10, y=-5)
-//             point (x=0, y=0)
-//             point (x=-10, y=5)
-//             style (background-color=black)
-//         }
-//     }
-// }
+connection Connection {
+	placing {
+    	position (offset=0.5)
+    	text {
+    		size (width=40, height=20)
+    		id = ConnectionText
+    	}
+    }	
+}
+
+connection ArrowConnection {
+    placing {
+        position (offset=1.0)
+        polygon {
+            point (x=-10, y=-5)
+            point (x=0, y=0)
+            point (x=-10, y=5)
+            style (background-color=black)
+        }
+    }
+    placing {
+    	position (offset=0.5)
+    	text {
+    		size (width=40, height=20)
+    		id = ArrowText
+    	}
+    }
+}
+
+connection DoubleArrowConnection {
+    placing {
+        position (offset=1.0)
+        polygon {
+            point (x=-10, y=-5)
+            point (x=0, y=0)
+            point (x=-10, y=5)
+            style (background-color=black)
+        }
+    }
+    placing {
+    	position (offset=0.0)
+    	polygon {
+    		point (x=10, y=5)
+            point (x=0, y=0)
+            point (x=10, y=-5)
+            style (background-color=black)
+    	}
+    }
+    placing {
+    	position (offset=0.5)
+    	text {
+    		size (width=40, height=20)
+    		id = DoubleArrowText
+    	}
+    }	
+}
