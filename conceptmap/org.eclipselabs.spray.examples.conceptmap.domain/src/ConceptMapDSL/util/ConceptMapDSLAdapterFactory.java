@@ -92,8 +92,8 @@ public class ConceptMapDSLAdapterFactory extends AdapterFactoryImpl {
 				return createDoubleArrowConnectionAdapter();
 			}
 			@Override
-			public Adapter caseConnection(Connection object) {
-				return createConnectionAdapter();
+			public Adapter caseDefaultConnection(DefaultConnection object) {
+				return createDefaultConnectionAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -200,16 +200,16 @@ public class ConceptMapDSLAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ConceptMapDSL.Connection <em>Connection</em>}'.
+	 * Creates a new adapter for an object of class '{@link ConceptMapDSL.DefaultConnection <em>Default Connection</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ConceptMapDSL.Connection
+	 * @see ConceptMapDSL.DefaultConnection
 	 * @generated
 	 */
-	public Adapter createConnectionAdapter() {
+	public Adapter createDefaultConnectionAdapter() {
 		return null;
 	}
 

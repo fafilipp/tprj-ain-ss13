@@ -62,7 +62,7 @@ public class ConceptMapDSLFactoryImpl extends EFactoryImpl implements ConceptMap
 			case ConceptMapDSLPackage.ELEMENT: return createElement();
 			case ConceptMapDSLPackage.ARROW_CONNECTION: return createArrowConnection();
 			case ConceptMapDSLPackage.DOUBLE_ARROW_CONNECTION: return createDoubleArrowConnection();
-			case ConceptMapDSLPackage.CONNECTION: return createConnection();
+			case ConceptMapDSLPackage.DEFAULT_CONNECTION: return createDefaultConnection();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -133,9 +133,9 @@ public class ConceptMapDSLFactoryImpl extends EFactoryImpl implements ConceptMap
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Connection createConnection() {
-		ConnectionImpl connection = new ConnectionImpl();
-		return connection;
+	public DefaultConnection createDefaultConnection() {
+		DefaultConnectionImpl defaultConnection = new DefaultConnectionImpl();
+		return defaultConnection;
 	}
 
 	/**

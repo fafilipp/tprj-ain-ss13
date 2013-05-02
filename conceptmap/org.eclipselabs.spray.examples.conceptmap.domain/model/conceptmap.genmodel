@@ -12,9 +12,18 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference conceptmap.ecore#//ConceptMap/mapelements"/>
     </genClasses>
     <genClasses ecoreClass="conceptmap.ecore#//MapElements"/>
-    <genClasses ecoreClass="conceptmap.ecore#//StartElement"/>
-    <genClasses ecoreClass="conceptmap.ecore#//Element">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference conceptmap.ecore#//Element/parent"/>
+    <genClasses ecoreClass="conceptmap.ecore#//Element"/>
+    <genClasses ecoreClass="conceptmap.ecore#//ArrowConnection">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference conceptmap.ecore#//ArrowConnection/fromElement"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference conceptmap.ecore#//ArrowConnection/toElement"/>
+    </genClasses>
+    <genClasses ecoreClass="conceptmap.ecore#//DoubleArrowConnection">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference conceptmap.ecore#//DoubleArrowConnection/fromElement"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference conceptmap.ecore#//DoubleArrowConnection/toElement"/>
+    </genClasses>
+    <genClasses ecoreClass="conceptmap.ecore#//DefaultConnection">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference conceptmap.ecore#//DefaultConnection/fromElement"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference conceptmap.ecore#//DefaultConnection/toElement"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

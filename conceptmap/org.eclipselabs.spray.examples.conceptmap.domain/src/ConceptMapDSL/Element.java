@@ -14,5 +14,4 @@ package ConceptMapDSL;
  * @generated
  */
 public interface Element extends MapElements {
-
 } // Element

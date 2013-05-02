@@ -76,13 +76,13 @@ public interface ConceptMapDSLFactory extends EFactory {
 	DoubleArrowConnection createDoubleArrowConnection();
 
 	/**
-	 * Returns a new object of class '<em>Connection</em>'.
+	 * Returns a new object of class '<em>Default Connection</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Connection</em>'.
+	 * @return a new object of class '<em>Default Connection</em>'.
 	 * @generated
 	 */
-	Connection createConnection();
+	DefaultConnection createDefaultConnection();
 
 	/**
 	 * Returns the package supported by this factory.

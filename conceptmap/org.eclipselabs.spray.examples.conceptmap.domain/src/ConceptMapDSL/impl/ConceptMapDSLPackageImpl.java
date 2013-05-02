@@ -6,12 +6,11 @@ import ConceptMapDSL.ArrowConnection;
 import ConceptMapDSL.ConceptMap;
 import ConceptMapDSL.ConceptMapDSLFactory;
 import ConceptMapDSL.ConceptMapDSLPackage;
-import ConceptMapDSL.Connection;
+import ConceptMapDSL.DefaultConnection;
 import ConceptMapDSL.DoubleArrowConnection;
 import ConceptMapDSL.Element;
 import ConceptMapDSL.MapElements;
 import ConceptMapDSL.NamedElement;
-import ConceptMapDSL.StartElement;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -74,7 +73,7 @@ public class ConceptMapDSLPackageImpl extends EPackageImpl implements ConceptMap
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass connectionEClass = null;
+	private EClass defaultConnectionEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -250,8 +249,8 @@ public class ConceptMapDSLPackageImpl extends EPackageImpl implements ConceptMap
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getConnection() {
-		return connectionEClass;
+	public EClass getDefaultConnection() {
+		return defaultConnectionEClass;
 	}
 
 	/**
@@ -259,8 +258,8 @@ public class ConceptMapDSLPackageImpl extends EPackageImpl implements ConceptMap
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getConnection_FromElement() {
-		return (EReference)connectionEClass.getEStructuralFeatures().get(0);
+	public EReference getDefaultConnection_FromElement() {
+		return (EReference)defaultConnectionEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -268,8 +267,8 @@ public class ConceptMapDSLPackageImpl extends EPackageImpl implements ConceptMap
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getConnection_ToElement() {
-		return (EReference)connectionEClass.getEStructuralFeatures().get(1);
+	public EReference getDefaultConnection_ToElement() {
+		return (EReference)defaultConnectionEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -318,9 +317,9 @@ public class ConceptMapDSLPackageImpl extends EPackageImpl implements ConceptMap
 		createEReference(doubleArrowConnectionEClass, DOUBLE_ARROW_CONNECTION__FROM_ELEMENT);
 		createEReference(doubleArrowConnectionEClass, DOUBLE_ARROW_CONNECTION__TO_ELEMENT);
 
-		connectionEClass = createEClass(CONNECTION);
-		createEReference(connectionEClass, CONNECTION__FROM_ELEMENT);
-		createEReference(connectionEClass, CONNECTION__TO_ELEMENT);
+		defaultConnectionEClass = createEClass(DEFAULT_CONNECTION);
+		createEReference(defaultConnectionEClass, DEFAULT_CONNECTION__FROM_ELEMENT);
+		createEReference(defaultConnectionEClass, DEFAULT_CONNECTION__TO_ELEMENT);
 	}
 
 	/**
@@ -356,7 +355,7 @@ public class ConceptMapDSLPackageImpl extends EPackageImpl implements ConceptMap
 		elementEClass.getESuperTypes().add(this.getMapElements());
 		arrowConnectionEClass.getESuperTypes().add(this.getMapElements());
 		doubleArrowConnectionEClass.getESuperTypes().add(this.getMapElements());
-		connectionEClass.getESuperTypes().add(this.getMapElements());
+		defaultConnectionEClass.getESuperTypes().add(this.getMapElements());
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(namedElementEClass, NamedElement.class, "NamedElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -377,9 +376,9 @@ public class ConceptMapDSLPackageImpl extends EPackageImpl implements ConceptMap
 		initEReference(getDoubleArrowConnection_FromElement(), this.getElement(), null, "fromElement", null, 0, 1, DoubleArrowConnection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDoubleArrowConnection_ToElement(), this.getElement(), null, "toElement", null, 0, 1, DoubleArrowConnection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(connectionEClass, Connection.class, "Connection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getConnection_FromElement(), this.getElement(), null, "fromElement", null, 0, 1, Connection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getConnection_ToElement(), this.getElement(), null, "toElement", null, 0, 1, Connection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(defaultConnectionEClass, DefaultConnection.class, "DefaultConnection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getDefaultConnection_FromElement(), this.getElement(), null, "fromElement", null, 0, 1, DefaultConnection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDefaultConnection_ToElement(), this.getElement(), null, "toElement", null, 0, 1, DefaultConnection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);
