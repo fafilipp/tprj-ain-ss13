@@ -2,25 +2,24 @@
  */
 package ErdiagramDSL;
 
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Attribute</b></em>'.
+ * A representation of the model object '<em><b>Chen Weak Attribute</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link ErdiagramDSL.Attribute#getParent <em>Parent</em>}</li>
+ *   <li>{@link ErdiagramDSL.ChenWeakAttribute#getParent <em>Parent</em>}</li>
  * </ul>
  * </p>
  *
- * @see ErdiagramDSL.ErdiagramDSLPackage#getAttribute()
+ * @see ErdiagramDSL.ErdiagramDSLPackage#getChenWeakAttribute()
  * @model
  * @generated
  */
-public interface Attribute extends Element {
+public interface ChenWeakAttribute extends ChenWeakElement {
 	/**
 	 * Returns the value of the '<em><b>Parent</b></em>' reference.
 	 * <!-- begin-user-doc -->
@@ -30,21 +29,21 @@ public interface Attribute extends Element {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Parent</em>' reference.
-	 * @see #setParent(Element)
-	 * @see ErdiagramDSL.ErdiagramDSLPackage#getAttribute_Parent()
+	 * @see #setParent(ChenWeakElement)
+	 * @see ErdiagramDSL.ErdiagramDSLPackage#getChenWeakAttribute_Parent()
 	 * @model required="true"
 	 * @generated
 	 */
-	Element getParent();
+	ChenWeakElement getParent();
 
 	/**
-	 * Sets the value of the '{@link ErdiagramDSL.Attribute#getParent <em>Parent</em>}' reference.
+	 * Sets the value of the '{@link ErdiagramDSL.ChenWeakAttribute#getParent <em>Parent</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Parent</em>' reference.
 	 * @see #getParent()
 	 * @generated
 	 */
-	void setParent(Element value);
+	void setParent(ChenWeakElement value);
 
-} // Attribute
+} // ChenWeakAttribute

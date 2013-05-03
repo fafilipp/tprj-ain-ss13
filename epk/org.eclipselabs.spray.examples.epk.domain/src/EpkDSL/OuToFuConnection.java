@@ -20,7 +20,7 @@ package EpkDSL;
  * @model
  * @generated
  */
-public interface OuToFuConnection extends Connection {
+public interface OuToFuConnection extends DefaultConnection {
 	/**
 	 * Returns the value of the '<em><b>Start</b></em>' reference.
 	 * <!-- begin-user-doc -->

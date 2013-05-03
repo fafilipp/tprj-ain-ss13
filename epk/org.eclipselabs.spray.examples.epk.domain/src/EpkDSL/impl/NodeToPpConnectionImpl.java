@@ -28,7 +28,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class NodeToPpConnectionImpl extends ConnectionImpl implements NodeToPpConnection {
+public class NodeToPpConnectionImpl extends DefaultConnectionImpl implements NodeToPpConnection {
 	/**
 	 * The cached value of the '{@link #getStart() <em>Start</em>}' reference.
 	 * <!-- begin-user-doc -->

@@ -31,49 +31,112 @@ public interface ErdiagramDSLFactory extends EFactory {
 	Erdiagram createErdiagram();
 
 	/**
-	 * Returns a new object of class '<em>Element</em>'.
+	 * Returns a new object of class '<em>Diagram Element</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Element</em>'.
+	 * @return a new object of class '<em>Diagram Element</em>'.
 	 * @generated
 	 */
-	Element createElement();
+	DiagramElement createDiagramElement();
 
 	/**
-	 * Returns a new object of class '<em>Entity</em>'.
+	 * Returns a new object of class '<em>Chen Element</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Entity</em>'.
+	 * @return a new object of class '<em>Chen Element</em>'.
 	 * @generated
 	 */
-	Entity createEntity();
+	ChenElement createChenElement();
 
 	/**
-	 * Returns a new object of class '<em>Relationship</em>'.
+	 * Returns a new object of class '<em>Chen Entity</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Relationship</em>'.
+	 * @return a new object of class '<em>Chen Entity</em>'.
 	 * @generated
 	 */
-	Relationship createRelationship();
+	ChenEntity createChenEntity();
 
 	/**
-	 * Returns a new object of class '<em>Attribute</em>'.
+	 * Returns a new object of class '<em>Chen Relationship</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Attribute</em>'.
+	 * @return a new object of class '<em>Chen Relationship</em>'.
 	 * @generated
 	 */
-	Attribute createAttribute();
+	ChenRelationship createChenRelationship();
 
 	/**
-	 * Returns a new object of class '<em>ER Connection</em>'.
+	 * Returns a new object of class '<em>Chen Attribute</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>ER Connection</em>'.
+	 * @return a new object of class '<em>Chen Attribute</em>'.
 	 * @generated
 	 */
-	ERConnection createERConnection();
+	ChenAttribute createChenAttribute();
+
+	/**
+	 * Returns a new object of class '<em>Chen Connection</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Chen Connection</em>'.
+	 * @generated
+	 */
+	ChenConnection createChenConnection();
+
+	/**
+	 * Returns a new object of class '<em>Chen Normal To Weak Connection</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Chen Normal To Weak Connection</em>'.
+	 * @generated
+	 */
+	ChenNormalToWeakConnection createChenNormalToWeakConnection();
+
+	/**
+	 * Returns a new object of class '<em>Chen Weak Element</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Chen Weak Element</em>'.
+	 * @generated
+	 */
+	ChenWeakElement createChenWeakElement();
+
+	/**
+	 * Returns a new object of class '<em>Chen Weak Entity</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Chen Weak Entity</em>'.
+	 * @generated
+	 */
+	ChenWeakEntity createChenWeakEntity();
+
+	/**
+	 * Returns a new object of class '<em>Chen Weak Relationship</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Chen Weak Relationship</em>'.
+	 * @generated
+	 */
+	ChenWeakRelationship createChenWeakRelationship();
+
+	/**
+	 * Returns a new object of class '<em>Chen Weak Attribute</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Chen Weak Attribute</em>'.
+	 * @generated
+	 */
+	ChenWeakAttribute createChenWeakAttribute();
+
+	/**
+	 * Returns a new object of class '<em>Chen Weak Connection</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Chen Weak Connection</em>'.
+	 * @generated
+	 */
+	ChenWeakConnection createChenWeakConnection();
 
 	/**
 	 * Returns the package supported by this factory.

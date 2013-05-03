@@ -2,10 +2,10 @@
  */
 package ErdiagramDSL.impl;
 
-import ErdiagramDSL.ERConnection;
-import ErdiagramDSL.Entity;
+import ErdiagramDSL.ChenConnection;
+import ErdiagramDSL.ChenEntity;
+import ErdiagramDSL.ChenRelationship;
 import ErdiagramDSL.ErdiagramDSLPackage;
-import ErdiagramDSL.Relationship;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -13,24 +13,23 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>ER Connection</b></em>'.
+ * An implementation of the model object '<em><b>Chen Connection</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link ErdiagramDSL.impl.ERConnectionImpl#getFromEntity <em>From Entity</em>}</li>
- *   <li>{@link ErdiagramDSL.impl.ERConnectionImpl#getToRelationship <em>To Relationship</em>}</li>
- *   <li>{@link ErdiagramDSL.impl.ERConnectionImpl#getValue <em>Value</em>}</li>
+ *   <li>{@link ErdiagramDSL.impl.ChenConnectionImpl#getFromEntity <em>From Entity</em>}</li>
+ *   <li>{@link ErdiagramDSL.impl.ChenConnectionImpl#getToRelationship <em>To Relationship</em>}</li>
+ *   <li>{@link ErdiagramDSL.impl.ChenConnectionImpl#getValue <em>Value</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class ERConnectionImpl extends EObjectImpl implements ERConnection {
+public class ChenConnectionImpl extends DiagramElementImpl implements ChenConnection {
 	/**
 	 * The cached value of the '{@link #getFromEntity() <em>From Entity</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -39,7 +38,7 @@ public class ERConnectionImpl extends EObjectImpl implements ERConnection {
 	 * @generated
 	 * @ordered
 	 */
-	protected Entity fromEntity;
+	protected ChenEntity fromEntity;
 
 	/**
 	 * The cached value of the '{@link #getToRelationship() <em>To Relationship</em>}' reference.
@@ -49,7 +48,7 @@ public class ERConnectionImpl extends EObjectImpl implements ERConnection {
 	 * @generated
 	 * @ordered
 	 */
-	protected Relationship toRelationship;
+	protected ChenRelationship toRelationship;
 
 	/**
 	 * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
@@ -76,7 +75,7 @@ public class ERConnectionImpl extends EObjectImpl implements ERConnection {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ERConnectionImpl() {
+	protected ChenConnectionImpl() {
 		super();
 	}
 
@@ -87,7 +86,7 @@ public class ERConnectionImpl extends EObjectImpl implements ERConnection {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ErdiagramDSLPackage.Literals.ER_CONNECTION;
+		return ErdiagramDSLPackage.Literals.CHEN_CONNECTION;
 	}
 
 	/**
@@ -95,13 +94,13 @@ public class ERConnectionImpl extends EObjectImpl implements ERConnection {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Entity getFromEntity() {
+	public ChenEntity getFromEntity() {
 		if (fromEntity != null && fromEntity.eIsProxy()) {
 			InternalEObject oldFromEntity = (InternalEObject)fromEntity;
-			fromEntity = (Entity)eResolveProxy(oldFromEntity);
+			fromEntity = (ChenEntity)eResolveProxy(oldFromEntity);
 			if (fromEntity != oldFromEntity) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ErdiagramDSLPackage.ER_CONNECTION__FROM_ENTITY, oldFromEntity, fromEntity));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ErdiagramDSLPackage.CHEN_CONNECTION__FROM_ENTITY, oldFromEntity, fromEntity));
 			}
 		}
 		return fromEntity;
@@ -112,7 +111,7 @@ public class ERConnectionImpl extends EObjectImpl implements ERConnection {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Entity basicGetFromEntity() {
+	public ChenEntity basicGetFromEntity() {
 		return fromEntity;
 	}
 
@@ -121,11 +120,11 @@ public class ERConnectionImpl extends EObjectImpl implements ERConnection {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setFromEntity(Entity newFromEntity) {
-		Entity oldFromEntity = fromEntity;
+	public void setFromEntity(ChenEntity newFromEntity) {
+		ChenEntity oldFromEntity = fromEntity;
 		fromEntity = newFromEntity;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ErdiagramDSLPackage.ER_CONNECTION__FROM_ENTITY, oldFromEntity, fromEntity));
+			eNotify(new ENotificationImpl(this, Notification.SET, ErdiagramDSLPackage.CHEN_CONNECTION__FROM_ENTITY, oldFromEntity, fromEntity));
 	}
 
 	/**
@@ -133,13 +132,13 @@ public class ERConnectionImpl extends EObjectImpl implements ERConnection {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Relationship getToRelationship() {
+	public ChenRelationship getToRelationship() {
 		if (toRelationship != null && toRelationship.eIsProxy()) {
 			InternalEObject oldToRelationship = (InternalEObject)toRelationship;
-			toRelationship = (Relationship)eResolveProxy(oldToRelationship);
+			toRelationship = (ChenRelationship)eResolveProxy(oldToRelationship);
 			if (toRelationship != oldToRelationship) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ErdiagramDSLPackage.ER_CONNECTION__TO_RELATIONSHIP, oldToRelationship, toRelationship));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ErdiagramDSLPackage.CHEN_CONNECTION__TO_RELATIONSHIP, oldToRelationship, toRelationship));
 			}
 		}
 		return toRelationship;
@@ -150,7 +149,7 @@ public class ERConnectionImpl extends EObjectImpl implements ERConnection {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Relationship basicGetToRelationship() {
+	public ChenRelationship basicGetToRelationship() {
 		return toRelationship;
 	}
 
@@ -159,11 +158,11 @@ public class ERConnectionImpl extends EObjectImpl implements ERConnection {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setToRelationship(Relationship newToRelationship) {
-		Relationship oldToRelationship = toRelationship;
+	public void setToRelationship(ChenRelationship newToRelationship) {
+		ChenRelationship oldToRelationship = toRelationship;
 		toRelationship = newToRelationship;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ErdiagramDSLPackage.ER_CONNECTION__TO_RELATIONSHIP, oldToRelationship, toRelationship));
+			eNotify(new ENotificationImpl(this, Notification.SET, ErdiagramDSLPackage.CHEN_CONNECTION__TO_RELATIONSHIP, oldToRelationship, toRelationship));
 	}
 
 	/**
@@ -184,7 +183,7 @@ public class ERConnectionImpl extends EObjectImpl implements ERConnection {
 		String oldValue = value;
 		value = newValue;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ErdiagramDSLPackage.ER_CONNECTION__VALUE, oldValue, value));
+			eNotify(new ENotificationImpl(this, Notification.SET, ErdiagramDSLPackage.CHEN_CONNECTION__VALUE, oldValue, value));
 	}
 
 	/**
@@ -195,13 +194,13 @@ public class ERConnectionImpl extends EObjectImpl implements ERConnection {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ErdiagramDSLPackage.ER_CONNECTION__FROM_ENTITY:
+			case ErdiagramDSLPackage.CHEN_CONNECTION__FROM_ENTITY:
 				if (resolve) return getFromEntity();
 				return basicGetFromEntity();
-			case ErdiagramDSLPackage.ER_CONNECTION__TO_RELATIONSHIP:
+			case ErdiagramDSLPackage.CHEN_CONNECTION__TO_RELATIONSHIP:
 				if (resolve) return getToRelationship();
 				return basicGetToRelationship();
-			case ErdiagramDSLPackage.ER_CONNECTION__VALUE:
+			case ErdiagramDSLPackage.CHEN_CONNECTION__VALUE:
 				return getValue();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -215,13 +214,13 @@ public class ERConnectionImpl extends EObjectImpl implements ERConnection {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ErdiagramDSLPackage.ER_CONNECTION__FROM_ENTITY:
-				setFromEntity((Entity)newValue);
+			case ErdiagramDSLPackage.CHEN_CONNECTION__FROM_ENTITY:
+				setFromEntity((ChenEntity)newValue);
 				return;
-			case ErdiagramDSLPackage.ER_CONNECTION__TO_RELATIONSHIP:
-				setToRelationship((Relationship)newValue);
+			case ErdiagramDSLPackage.CHEN_CONNECTION__TO_RELATIONSHIP:
+				setToRelationship((ChenRelationship)newValue);
 				return;
-			case ErdiagramDSLPackage.ER_CONNECTION__VALUE:
+			case ErdiagramDSLPackage.CHEN_CONNECTION__VALUE:
 				setValue((String)newValue);
 				return;
 		}
@@ -236,13 +235,13 @@ public class ERConnectionImpl extends EObjectImpl implements ERConnection {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ErdiagramDSLPackage.ER_CONNECTION__FROM_ENTITY:
-				setFromEntity((Entity)null);
+			case ErdiagramDSLPackage.CHEN_CONNECTION__FROM_ENTITY:
+				setFromEntity((ChenEntity)null);
 				return;
-			case ErdiagramDSLPackage.ER_CONNECTION__TO_RELATIONSHIP:
-				setToRelationship((Relationship)null);
+			case ErdiagramDSLPackage.CHEN_CONNECTION__TO_RELATIONSHIP:
+				setToRelationship((ChenRelationship)null);
 				return;
-			case ErdiagramDSLPackage.ER_CONNECTION__VALUE:
+			case ErdiagramDSLPackage.CHEN_CONNECTION__VALUE:
 				setValue(VALUE_EDEFAULT);
 				return;
 		}
@@ -257,11 +256,11 @@ public class ERConnectionImpl extends EObjectImpl implements ERConnection {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ErdiagramDSLPackage.ER_CONNECTION__FROM_ENTITY:
+			case ErdiagramDSLPackage.CHEN_CONNECTION__FROM_ENTITY:
 				return fromEntity != null;
-			case ErdiagramDSLPackage.ER_CONNECTION__TO_RELATIONSHIP:
+			case ErdiagramDSLPackage.CHEN_CONNECTION__TO_RELATIONSHIP:
 				return toRelationship != null;
-			case ErdiagramDSLPackage.ER_CONNECTION__VALUE:
+			case ErdiagramDSLPackage.CHEN_CONNECTION__VALUE:
 				return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
 		}
 		return super.eIsSet(featureID);
@@ -283,4 +282,4 @@ public class ERConnectionImpl extends EObjectImpl implements ERConnection {
 		return result.toString();
 	}
 
-} //ERConnectionImpl
+} //ChenConnectionImpl

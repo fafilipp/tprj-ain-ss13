@@ -2,19 +2,21 @@
  */
 package ErdiagramDSL.impl;
 
-import ErdiagramDSL.Attribute;
-import ErdiagramDSL.ERConnection;
-import ErdiagramDSL.Element;
+import ErdiagramDSL.DiagramElement;
 import ErdiagramDSL.Erdiagram;
 import ErdiagramDSL.ErdiagramDSLPackage;
 
 import java.util.Collection;
-import org.eclipse.emf.common.notify.NotificationChain;
-import org.eclipse.emf.common.util.EList;
-import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.EObjectImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -26,7 +28,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * <ul>
  *   <li>{@link ErdiagramDSL.impl.ErdiagramImpl#getElements <em>Elements</em>}</li>
- *   <li>{@link ErdiagramDSL.impl.ErdiagramImpl#getConnections <em>Connections</em>}</li>
  * </ul>
  * </p>
  *
@@ -41,16 +42,7 @@ public class ErdiagramImpl extends EObjectImpl implements Erdiagram {
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Element> elements;
-	/**
-	 * The cached value of the '{@link #getConnections() <em>Connections</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getConnections()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<ERConnection> connections;
+	protected EList<DiagramElement> elements;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -76,23 +68,11 @@ public class ErdiagramImpl extends EObjectImpl implements Erdiagram {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Element> getElements() {
+	public EList<DiagramElement> getElements() {
 		if (elements == null) {
-			elements = new EObjectContainmentEList<Element>(Element.class, this, ErdiagramDSLPackage.ERDIAGRAM__ELEMENTS);
+			elements = new EObjectContainmentEList<DiagramElement>(DiagramElement.class, this, ErdiagramDSLPackage.ERDIAGRAM__ELEMENTS);
 		}
 		return elements;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<ERConnection> getConnections() {
-		if (connections == null) {
-			connections = new EObjectContainmentEList<ERConnection>(ERConnection.class, this, ErdiagramDSLPackage.ERDIAGRAM__CONNECTIONS);
-		}
-		return connections;
 	}
 
 	/**
@@ -105,8 +85,6 @@ public class ErdiagramImpl extends EObjectImpl implements Erdiagram {
 		switch (featureID) {
 			case ErdiagramDSLPackage.ERDIAGRAM__ELEMENTS:
 				return ((InternalEList<?>)getElements()).basicRemove(otherEnd, msgs);
-			case ErdiagramDSLPackage.ERDIAGRAM__CONNECTIONS:
-				return ((InternalEList<?>)getConnections()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -121,8 +99,6 @@ public class ErdiagramImpl extends EObjectImpl implements Erdiagram {
 		switch (featureID) {
 			case ErdiagramDSLPackage.ERDIAGRAM__ELEMENTS:
 				return getElements();
-			case ErdiagramDSLPackage.ERDIAGRAM__CONNECTIONS:
-				return getConnections();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -138,11 +114,7 @@ public class ErdiagramImpl extends EObjectImpl implements Erdiagram {
 		switch (featureID) {
 			case ErdiagramDSLPackage.ERDIAGRAM__ELEMENTS:
 				getElements().clear();
-				getElements().addAll((Collection<? extends Element>)newValue);
-				return;
-			case ErdiagramDSLPackage.ERDIAGRAM__CONNECTIONS:
-				getConnections().clear();
-				getConnections().addAll((Collection<? extends ERConnection>)newValue);
+				getElements().addAll((Collection<? extends DiagramElement>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -159,9 +131,6 @@ public class ErdiagramImpl extends EObjectImpl implements Erdiagram {
 			case ErdiagramDSLPackage.ERDIAGRAM__ELEMENTS:
 				getElements().clear();
 				return;
-			case ErdiagramDSLPackage.ERDIAGRAM__CONNECTIONS:
-				getConnections().clear();
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -176,8 +145,6 @@ public class ErdiagramImpl extends EObjectImpl implements Erdiagram {
 		switch (featureID) {
 			case ErdiagramDSLPackage.ERDIAGRAM__ELEMENTS:
 				return elements != null && !elements.isEmpty();
-			case ErdiagramDSLPackage.ERDIAGRAM__CONNECTIONS:
-				return connections != null && !connections.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

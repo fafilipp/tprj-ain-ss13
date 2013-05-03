@@ -28,7 +28,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class EConToFuConnectionImpl extends ConnectionImpl implements EConToFuConnection {
+public class EConToFuConnectionImpl extends DefaultConnectionImpl implements EConToFuConnection {
 	/**
 	 * The cached value of the '{@link #getStart() <em>Start</em>}' reference.
 	 * <!-- begin-user-doc -->

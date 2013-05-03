@@ -7,7 +7,7 @@
  *************************************************************************************/
 
 // Add definition of styles here.
-style ErdiagramDefaultStyle {
+style ErdiagramDefaultStyle { 
     description = "The default style of the erdiagram diagram type."
     // transparency = 0.95
     // background-color = black

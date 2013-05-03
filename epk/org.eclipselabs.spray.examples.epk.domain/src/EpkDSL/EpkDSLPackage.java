@@ -578,7 +578,6 @@ public interface EpkDSLPackage extends EPackage {
 	 */
 	int CONNECTOR_FEATURE_COUNT = NODE_FEATURE_COUNT + 0;
 
-
 	/**
 	 * The meta object id for the '{@link EpkDSL.impl.EConnectorImpl <em>EConnector</em>}' class.
 	 * <!-- begin-user-doc -->
@@ -690,23 +689,23 @@ public interface EpkDSLPackage extends EPackage {
 	int FCONNECTOR_FEATURE_COUNT = CONNECTOR_FEATURE_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link EpkDSL.impl.ConnectionImpl <em>Connection</em>}' class.
+	 * The meta object id for the '{@link EpkDSL.impl.DefaultConnectionImpl <em>Default Connection</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see EpkDSL.impl.ConnectionImpl
-	 * @see EpkDSL.impl.EpkDSLPackageImpl#getConnection()
+	 * @see EpkDSL.impl.DefaultConnectionImpl
+	 * @see EpkDSL.impl.EpkDSLPackageImpl#getDefaultConnection()
 	 * @generated
 	 */
-	int CONNECTION = 12;
+	int DEFAULT_CONNECTION = 12;
 
 	/**
-	 * The number of structural features of the '<em>Connection</em>' class.
+	 * The number of structural features of the '<em>Default Connection</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION_FEATURE_COUNT = 0;
+	int DEFAULT_CONNECTION_FEATURE_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link EpkDSL.impl.EvToFuConnectionImpl <em>Ev To Fu Connection</em>}' class.
@@ -725,7 +724,7 @@ public interface EpkDSLPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EV_TO_FU_CONNECTION__START = CONNECTION_FEATURE_COUNT + 0;
+	int EV_TO_FU_CONNECTION__START = DEFAULT_CONNECTION_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>End</b></em>' reference.
@@ -734,7 +733,7 @@ public interface EpkDSLPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EV_TO_FU_CONNECTION__END = CONNECTION_FEATURE_COUNT + 1;
+	int EV_TO_FU_CONNECTION__END = DEFAULT_CONNECTION_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Ev To Fu Connection</em>' class.
@@ -743,7 +742,7 @@ public interface EpkDSLPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EV_TO_FU_CONNECTION_FEATURE_COUNT = CONNECTION_FEATURE_COUNT + 2;
+	int EV_TO_FU_CONNECTION_FEATURE_COUNT = DEFAULT_CONNECTION_FEATURE_COUNT + 2;
 
 	/**
 	 * The meta object id for the '{@link EpkDSL.impl.FuToEvConnectionImpl <em>Fu To Ev Connection</em>}' class.
@@ -762,7 +761,7 @@ public interface EpkDSLPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FU_TO_EV_CONNECTION__START = CONNECTION_FEATURE_COUNT + 0;
+	int FU_TO_EV_CONNECTION__START = DEFAULT_CONNECTION_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>End</b></em>' reference.
@@ -771,7 +770,7 @@ public interface EpkDSLPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FU_TO_EV_CONNECTION__END = CONNECTION_FEATURE_COUNT + 1;
+	int FU_TO_EV_CONNECTION__END = DEFAULT_CONNECTION_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Fu To Ev Connection</em>' class.
@@ -780,7 +779,7 @@ public interface EpkDSLPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FU_TO_EV_CONNECTION_FEATURE_COUNT = CONNECTION_FEATURE_COUNT + 2;
+	int FU_TO_EV_CONNECTION_FEATURE_COUNT = DEFAULT_CONNECTION_FEATURE_COUNT + 2;
 
 	/**
 	 * The meta object id for the '{@link EpkDSL.impl.EvToEConConnectionImpl <em>Ev To ECon Connection</em>}' class.
@@ -799,7 +798,7 @@ public interface EpkDSLPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EV_TO_ECON_CONNECTION__START = CONNECTION_FEATURE_COUNT + 0;
+	int EV_TO_ECON_CONNECTION__START = DEFAULT_CONNECTION_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>End</b></em>' reference.
@@ -808,7 +807,7 @@ public interface EpkDSLPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EV_TO_ECON_CONNECTION__END = CONNECTION_FEATURE_COUNT + 1;
+	int EV_TO_ECON_CONNECTION__END = DEFAULT_CONNECTION_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Ev To ECon Connection</em>' class.
@@ -817,7 +816,7 @@ public interface EpkDSLPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EV_TO_ECON_CONNECTION_FEATURE_COUNT = CONNECTION_FEATURE_COUNT + 2;
+	int EV_TO_ECON_CONNECTION_FEATURE_COUNT = DEFAULT_CONNECTION_FEATURE_COUNT + 2;
 
 	/**
 	 * The meta object id for the '{@link EpkDSL.impl.EConToFuConnectionImpl <em>ECon To Fu Connection</em>}' class.
@@ -836,7 +835,7 @@ public interface EpkDSLPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ECON_TO_FU_CONNECTION__START = CONNECTION_FEATURE_COUNT + 0;
+	int ECON_TO_FU_CONNECTION__START = DEFAULT_CONNECTION_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>End</b></em>' reference.
@@ -845,7 +844,7 @@ public interface EpkDSLPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ECON_TO_FU_CONNECTION__END = CONNECTION_FEATURE_COUNT + 1;
+	int ECON_TO_FU_CONNECTION__END = DEFAULT_CONNECTION_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>ECon To Fu Connection</em>' class.
@@ -854,7 +853,7 @@ public interface EpkDSLPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ECON_TO_FU_CONNECTION_FEATURE_COUNT = CONNECTION_FEATURE_COUNT + 2;
+	int ECON_TO_FU_CONNECTION_FEATURE_COUNT = DEFAULT_CONNECTION_FEATURE_COUNT + 2;
 
 	/**
 	 * The meta object id for the '{@link EpkDSL.impl.FuToFConConnectionImpl <em>Fu To FCon Connection</em>}' class.
@@ -873,7 +872,7 @@ public interface EpkDSLPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FU_TO_FCON_CONNECTION__START = CONNECTION_FEATURE_COUNT + 0;
+	int FU_TO_FCON_CONNECTION__START = DEFAULT_CONNECTION_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>End</b></em>' reference.
@@ -882,7 +881,7 @@ public interface EpkDSLPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FU_TO_FCON_CONNECTION__END = CONNECTION_FEATURE_COUNT + 1;
+	int FU_TO_FCON_CONNECTION__END = DEFAULT_CONNECTION_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Fu To FCon Connection</em>' class.
@@ -891,7 +890,7 @@ public interface EpkDSLPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FU_TO_FCON_CONNECTION_FEATURE_COUNT = CONNECTION_FEATURE_COUNT + 2;
+	int FU_TO_FCON_CONNECTION_FEATURE_COUNT = DEFAULT_CONNECTION_FEATURE_COUNT + 2;
 
 	/**
 	 * The meta object id for the '{@link EpkDSL.impl.FConToEvConnectionImpl <em>FCon To Ev Connection</em>}' class.
@@ -910,7 +909,7 @@ public interface EpkDSLPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FCON_TO_EV_CONNECTION__START = CONNECTION_FEATURE_COUNT + 0;
+	int FCON_TO_EV_CONNECTION__START = DEFAULT_CONNECTION_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>End</b></em>' reference.
@@ -919,7 +918,7 @@ public interface EpkDSLPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FCON_TO_EV_CONNECTION__END = CONNECTION_FEATURE_COUNT + 1;
+	int FCON_TO_EV_CONNECTION__END = DEFAULT_CONNECTION_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>FCon To Ev Connection</em>' class.
@@ -928,7 +927,7 @@ public interface EpkDSLPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FCON_TO_EV_CONNECTION_FEATURE_COUNT = CONNECTION_FEATURE_COUNT + 2;
+	int FCON_TO_EV_CONNECTION_FEATURE_COUNT = DEFAULT_CONNECTION_FEATURE_COUNT + 2;
 
 	/**
 	 * The meta object id for the '{@link EpkDSL.impl.OuToFuConnectionImpl <em>Ou To Fu Connection</em>}' class.
@@ -947,7 +946,7 @@ public interface EpkDSLPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OU_TO_FU_CONNECTION__START = CONNECTION_FEATURE_COUNT + 0;
+	int OU_TO_FU_CONNECTION__START = DEFAULT_CONNECTION_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>End</b></em>' reference.
@@ -956,7 +955,7 @@ public interface EpkDSLPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OU_TO_FU_CONNECTION__END = CONNECTION_FEATURE_COUNT + 1;
+	int OU_TO_FU_CONNECTION__END = DEFAULT_CONNECTION_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Ou To Fu Connection</em>' class.
@@ -965,7 +964,7 @@ public interface EpkDSLPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OU_TO_FU_CONNECTION_FEATURE_COUNT = CONNECTION_FEATURE_COUNT + 2;
+	int OU_TO_FU_CONNECTION_FEATURE_COUNT = DEFAULT_CONNECTION_FEATURE_COUNT + 2;
 
 	/**
 	 * The meta object id for the '{@link EpkDSL.impl.IoToFuConnectionImpl <em>Io To Fu Connection</em>}' class.
@@ -984,7 +983,7 @@ public interface EpkDSLPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IO_TO_FU_CONNECTION__START = CONNECTION_FEATURE_COUNT + 0;
+	int IO_TO_FU_CONNECTION__START = DEFAULT_CONNECTION_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>End</b></em>' reference.
@@ -993,7 +992,7 @@ public interface EpkDSLPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IO_TO_FU_CONNECTION__END = CONNECTION_FEATURE_COUNT + 1;
+	int IO_TO_FU_CONNECTION__END = DEFAULT_CONNECTION_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Io To Fu Connection</em>' class.
@@ -1002,7 +1001,7 @@ public interface EpkDSLPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IO_TO_FU_CONNECTION_FEATURE_COUNT = CONNECTION_FEATURE_COUNT + 2;
+	int IO_TO_FU_CONNECTION_FEATURE_COUNT = DEFAULT_CONNECTION_FEATURE_COUNT + 2;
 
 	/**
 	 * The meta object id for the '{@link EpkDSL.impl.NodeToPpConnectionImpl <em>Node To Pp Connection</em>}' class.
@@ -1021,7 +1020,7 @@ public interface EpkDSLPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NODE_TO_PP_CONNECTION__START = CONNECTION_FEATURE_COUNT + 0;
+	int NODE_TO_PP_CONNECTION__START = DEFAULT_CONNECTION_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>End</b></em>' reference.
@@ -1030,7 +1029,7 @@ public interface EpkDSLPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NODE_TO_PP_CONNECTION__END = CONNECTION_FEATURE_COUNT + 1;
+	int NODE_TO_PP_CONNECTION__END = DEFAULT_CONNECTION_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Node To Pp Connection</em>' class.
@@ -1039,7 +1038,7 @@ public interface EpkDSLPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NODE_TO_PP_CONNECTION_FEATURE_COUNT = CONNECTION_FEATURE_COUNT + 2;
+	int NODE_TO_PP_CONNECTION_FEATURE_COUNT = DEFAULT_CONNECTION_FEATURE_COUNT + 2;
 
 	/**
 	 * The meta object id for the '{@link EpkDSL.impl.PpToNodeConnectionImpl <em>Pp To Node Connection</em>}' class.
@@ -1058,7 +1057,7 @@ public interface EpkDSLPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PP_TO_NODE_CONNECTION__START = CONNECTION_FEATURE_COUNT + 0;
+	int PP_TO_NODE_CONNECTION__START = DEFAULT_CONNECTION_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>End</b></em>' reference.
@@ -1067,7 +1066,7 @@ public interface EpkDSLPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PP_TO_NODE_CONNECTION__END = CONNECTION_FEATURE_COUNT + 1;
+	int PP_TO_NODE_CONNECTION__END = DEFAULT_CONNECTION_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Pp To Node Connection</em>' class.
@@ -1076,7 +1075,7 @@ public interface EpkDSLPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PP_TO_NODE_CONNECTION_FEATURE_COUNT = CONNECTION_FEATURE_COUNT + 2;
+	int PP_TO_NODE_CONNECTION_FEATURE_COUNT = DEFAULT_CONNECTION_FEATURE_COUNT + 2;
 
 
 	/**
@@ -1244,14 +1243,14 @@ public interface EpkDSLPackage extends EPackage {
 	EClass getFConnector();
 
 	/**
-	 * Returns the meta object for class '{@link EpkDSL.Connection <em>Connection</em>}'.
+	 * Returns the meta object for class '{@link EpkDSL.DefaultConnection <em>Default Connection</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Connection</em>'.
-	 * @see EpkDSL.Connection
+	 * @return the meta object for class '<em>Default Connection</em>'.
+	 * @see EpkDSL.DefaultConnection
 	 * @generated
 	 */
-	EClass getConnection();
+	EClass getDefaultConnection();
 
 	/**
 	 * Returns the meta object for class '{@link EpkDSL.EvToFuConnection <em>Ev To Fu Connection</em>}'.
@@ -1748,14 +1747,14 @@ public interface EpkDSLPackage extends EPackage {
 		EClass FCONNECTOR = eINSTANCE.getFConnector();
 
 		/**
-		 * The meta object literal for the '{@link EpkDSL.impl.ConnectionImpl <em>Connection</em>}' class.
+		 * The meta object literal for the '{@link EpkDSL.impl.DefaultConnectionImpl <em>Default Connection</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see EpkDSL.impl.ConnectionImpl
-		 * @see EpkDSL.impl.EpkDSLPackageImpl#getConnection()
+		 * @see EpkDSL.impl.DefaultConnectionImpl
+		 * @see EpkDSL.impl.EpkDSLPackageImpl#getDefaultConnection()
 		 * @generated
 		 */
-		EClass CONNECTION = eINSTANCE.getConnection();
+		EClass DEFAULT_CONNECTION = eINSTANCE.getDefaultConnection();
 
 		/**
 		 * The meta object literal for the '{@link EpkDSL.impl.EvToFuConnectionImpl <em>Ev To Fu Connection</em>}' class.

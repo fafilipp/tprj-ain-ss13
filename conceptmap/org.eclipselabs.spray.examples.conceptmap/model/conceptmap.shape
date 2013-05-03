@@ -14,9 +14,10 @@ shape ElementShape {
 		size(width=100, height=50)
 	}
 	text {
+		align(horizontal=center,vertical=middle)
 		style (background-color=light-green)
-		position (x=10, y=25)
-		size (width=80, height=20)
+		position (x=5, y=16)
+		size (width=80, height=12)
 		id = ElementText
 	}
 }
@@ -51,6 +52,10 @@ connection ArrowConnectionShape {
 }
 
 connection DoubleArrowConnectionShape {
+	style(
+		line-color=black
+		line-style=solid
+	)
     placing {
         position (offset=1.0)
         polygon {
@@ -61,13 +66,13 @@ connection DoubleArrowConnectionShape {
         }
     }
     placing {
-    	position (offset=0.0)
-    	polygon {
-    		point (x=10, y=5)
+        position (offset=0.0)
+        polygon {
+            point (x=-10, y=-5)
             point (x=0, y=0)
-            point (x=10, y=-5)
+            point (x=-10, y=5)
             style (background-color=black)
-    	}
+        }
     }
     placing {
     	position (offset=0.5)

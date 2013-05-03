@@ -2,27 +2,26 @@
  */
 package ErdiagramDSL;
 
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>ER Connection</b></em>'.
+ * A representation of the model object '<em><b>Chen Normal To Weak Connection</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link ErdiagramDSL.ERConnection#getFromEntity <em>From Entity</em>}</li>
- *   <li>{@link ErdiagramDSL.ERConnection#getToRelationship <em>To Relationship</em>}</li>
- *   <li>{@link ErdiagramDSL.ERConnection#getValue <em>Value</em>}</li>
+ *   <li>{@link ErdiagramDSL.ChenNormalToWeakConnection#getFromEntity <em>From Entity</em>}</li>
+ *   <li>{@link ErdiagramDSL.ChenNormalToWeakConnection#getToRelationship <em>To Relationship</em>}</li>
+ *   <li>{@link ErdiagramDSL.ChenNormalToWeakConnection#getValue <em>Value</em>}</li>
  * </ul>
  * </p>
  *
- * @see ErdiagramDSL.ErdiagramDSLPackage#getERConnection()
+ * @see ErdiagramDSL.ErdiagramDSLPackage#getChenNormalToWeakConnection()
  * @model
  * @generated
  */
-public interface ERConnection extends EObject {
+public interface ChenNormalToWeakConnection extends DiagramElement {
 	/**
 	 * Returns the value of the '<em><b>From Entity</b></em>' reference.
 	 * <!-- begin-user-doc -->
@@ -32,22 +31,22 @@ public interface ERConnection extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>From Entity</em>' reference.
-	 * @see #setFromEntity(Entity)
-	 * @see ErdiagramDSL.ErdiagramDSLPackage#getERConnection_FromEntity()
+	 * @see #setFromEntity(ChenEntity)
+	 * @see ErdiagramDSL.ErdiagramDSLPackage#getChenNormalToWeakConnection_FromEntity()
 	 * @model required="true"
 	 * @generated
 	 */
-	Entity getFromEntity();
+	ChenEntity getFromEntity();
 
 	/**
-	 * Sets the value of the '{@link ErdiagramDSL.ERConnection#getFromEntity <em>From Entity</em>}' reference.
+	 * Sets the value of the '{@link ErdiagramDSL.ChenNormalToWeakConnection#getFromEntity <em>From Entity</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>From Entity</em>' reference.
 	 * @see #getFromEntity()
 	 * @generated
 	 */
-	void setFromEntity(Entity value);
+	void setFromEntity(ChenEntity value);
 
 	/**
 	 * Returns the value of the '<em><b>To Relationship</b></em>' reference.
@@ -58,22 +57,22 @@ public interface ERConnection extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>To Relationship</em>' reference.
-	 * @see #setToRelationship(Relationship)
-	 * @see ErdiagramDSL.ErdiagramDSLPackage#getERConnection_ToRelationship()
+	 * @see #setToRelationship(ChenWeakRelationship)
+	 * @see ErdiagramDSL.ErdiagramDSLPackage#getChenNormalToWeakConnection_ToRelationship()
 	 * @model required="true"
 	 * @generated
 	 */
-	Relationship getToRelationship();
+	ChenWeakRelationship getToRelationship();
 
 	/**
-	 * Sets the value of the '{@link ErdiagramDSL.ERConnection#getToRelationship <em>To Relationship</em>}' reference.
+	 * Sets the value of the '{@link ErdiagramDSL.ChenNormalToWeakConnection#getToRelationship <em>To Relationship</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>To Relationship</em>' reference.
 	 * @see #getToRelationship()
 	 * @generated
 	 */
-	void setToRelationship(Relationship value);
+	void setToRelationship(ChenWeakRelationship value);
 
 	/**
 	 * Returns the value of the '<em><b>Value</b></em>' attribute.
@@ -85,14 +84,14 @@ public interface ERConnection extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Value</em>' attribute.
 	 * @see #setValue(String)
-	 * @see ErdiagramDSL.ErdiagramDSLPackage#getERConnection_Value()
+	 * @see ErdiagramDSL.ErdiagramDSLPackage#getChenNormalToWeakConnection_Value()
 	 * @model
 	 * @generated
 	 */
 	String getValue();
 
 	/**
-	 * Sets the value of the '{@link ErdiagramDSL.ERConnection#getValue <em>Value</em>}' attribute.
+	 * Sets the value of the '{@link ErdiagramDSL.ChenNormalToWeakConnection#getValue <em>Value</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Value</em>' attribute.
@@ -101,4 +100,4 @@ public interface ERConnection extends EObject {
 	 */
 	void setValue(String value);
 
-} // ERConnection
+} // ChenNormalToWeakConnection

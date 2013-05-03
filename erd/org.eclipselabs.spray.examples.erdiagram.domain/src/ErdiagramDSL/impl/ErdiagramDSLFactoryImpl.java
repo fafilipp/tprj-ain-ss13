@@ -57,11 +57,18 @@ public class ErdiagramDSLFactoryImpl extends EFactoryImpl implements ErdiagramDS
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 			case ErdiagramDSLPackage.ERDIAGRAM: return createErdiagram();
-			case ErdiagramDSLPackage.ELEMENT: return createElement();
-			case ErdiagramDSLPackage.ENTITY: return createEntity();
-			case ErdiagramDSLPackage.RELATIONSHIP: return createRelationship();
-			case ErdiagramDSLPackage.ATTRIBUTE: return createAttribute();
-			case ErdiagramDSLPackage.ER_CONNECTION: return createERConnection();
+			case ErdiagramDSLPackage.DIAGRAM_ELEMENT: return createDiagramElement();
+			case ErdiagramDSLPackage.CHEN_ELEMENT: return createChenElement();
+			case ErdiagramDSLPackage.CHEN_ENTITY: return createChenEntity();
+			case ErdiagramDSLPackage.CHEN_RELATIONSHIP: return createChenRelationship();
+			case ErdiagramDSLPackage.CHEN_ATTRIBUTE: return createChenAttribute();
+			case ErdiagramDSLPackage.CHEN_CONNECTION: return createChenConnection();
+			case ErdiagramDSLPackage.CHEN_NORMAL_TO_WEAK_CONNECTION: return createChenNormalToWeakConnection();
+			case ErdiagramDSLPackage.CHEN_WEAK_ELEMENT: return createChenWeakElement();
+			case ErdiagramDSLPackage.CHEN_WEAK_ENTITY: return createChenWeakEntity();
+			case ErdiagramDSLPackage.CHEN_WEAK_RELATIONSHIP: return createChenWeakRelationship();
+			case ErdiagramDSLPackage.CHEN_WEAK_ATTRIBUTE: return createChenWeakAttribute();
+			case ErdiagramDSLPackage.CHEN_WEAK_CONNECTION: return createChenWeakConnection();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -82,9 +89,9 @@ public class ErdiagramDSLFactoryImpl extends EFactoryImpl implements ErdiagramDS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Element createElement() {
-		ElementImpl element = new ElementImpl();
-		return element;
+	public DiagramElement createDiagramElement() {
+		DiagramElementImpl diagramElement = new DiagramElementImpl();
+		return diagramElement;
 	}
 
 	/**
@@ -92,9 +99,9 @@ public class ErdiagramDSLFactoryImpl extends EFactoryImpl implements ErdiagramDS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Entity createEntity() {
-		EntityImpl entity = new EntityImpl();
-		return entity;
+	public ChenElement createChenElement() {
+		ChenElementImpl chenElement = new ChenElementImpl();
+		return chenElement;
 	}
 
 	/**
@@ -102,9 +109,9 @@ public class ErdiagramDSLFactoryImpl extends EFactoryImpl implements ErdiagramDS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Relationship createRelationship() {
-		RelationshipImpl relationship = new RelationshipImpl();
-		return relationship;
+	public ChenEntity createChenEntity() {
+		ChenEntityImpl chenEntity = new ChenEntityImpl();
+		return chenEntity;
 	}
 
 	/**
@@ -112,9 +119,9 @@ public class ErdiagramDSLFactoryImpl extends EFactoryImpl implements ErdiagramDS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Attribute createAttribute() {
-		AttributeImpl attribute = new AttributeImpl();
-		return attribute;
+	public ChenRelationship createChenRelationship() {
+		ChenRelationshipImpl chenRelationship = new ChenRelationshipImpl();
+		return chenRelationship;
 	}
 
 	/**
@@ -122,9 +129,79 @@ public class ErdiagramDSLFactoryImpl extends EFactoryImpl implements ErdiagramDS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ERConnection createERConnection() {
-		ERConnectionImpl erConnection = new ERConnectionImpl();
-		return erConnection;
+	public ChenAttribute createChenAttribute() {
+		ChenAttributeImpl chenAttribute = new ChenAttributeImpl();
+		return chenAttribute;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ChenConnection createChenConnection() {
+		ChenConnectionImpl chenConnection = new ChenConnectionImpl();
+		return chenConnection;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ChenNormalToWeakConnection createChenNormalToWeakConnection() {
+		ChenNormalToWeakConnectionImpl chenNormalToWeakConnection = new ChenNormalToWeakConnectionImpl();
+		return chenNormalToWeakConnection;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ChenWeakElement createChenWeakElement() {
+		ChenWeakElementImpl chenWeakElement = new ChenWeakElementImpl();
+		return chenWeakElement;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ChenWeakEntity createChenWeakEntity() {
+		ChenWeakEntityImpl chenWeakEntity = new ChenWeakEntityImpl();
+		return chenWeakEntity;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ChenWeakRelationship createChenWeakRelationship() {
+		ChenWeakRelationshipImpl chenWeakRelationship = new ChenWeakRelationshipImpl();
+		return chenWeakRelationship;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ChenWeakAttribute createChenWeakAttribute() {
+		ChenWeakAttributeImpl chenWeakAttribute = new ChenWeakAttributeImpl();
+		return chenWeakAttribute;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ChenWeakConnection createChenWeakConnection() {
+		ChenWeakConnectionImpl chenWeakConnection = new ChenWeakConnectionImpl();
+		return chenWeakConnection;
 	}
 
 	/**

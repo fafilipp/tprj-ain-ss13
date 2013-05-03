@@ -169,79 +169,79 @@ public class EpkDSLSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case EpkDSLPackage.CONNECTION: {
-				Connection connection = (Connection)theEObject;
-				T result = caseConnection(connection);
+			case EpkDSLPackage.DEFAULT_CONNECTION: {
+				DefaultConnection defaultConnection = (DefaultConnection)theEObject;
+				T result = caseDefaultConnection(defaultConnection);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case EpkDSLPackage.EV_TO_FU_CONNECTION: {
 				EvToFuConnection evToFuConnection = (EvToFuConnection)theEObject;
 				T result = caseEvToFuConnection(evToFuConnection);
-				if (result == null) result = caseConnection(evToFuConnection);
+				if (result == null) result = caseDefaultConnection(evToFuConnection);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case EpkDSLPackage.FU_TO_EV_CONNECTION: {
 				FuToEvConnection fuToEvConnection = (FuToEvConnection)theEObject;
 				T result = caseFuToEvConnection(fuToEvConnection);
-				if (result == null) result = caseConnection(fuToEvConnection);
+				if (result == null) result = caseDefaultConnection(fuToEvConnection);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case EpkDSLPackage.EV_TO_ECON_CONNECTION: {
 				EvToEConConnection evToEConConnection = (EvToEConConnection)theEObject;
 				T result = caseEvToEConConnection(evToEConConnection);
-				if (result == null) result = caseConnection(evToEConConnection);
+				if (result == null) result = caseDefaultConnection(evToEConConnection);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case EpkDSLPackage.ECON_TO_FU_CONNECTION: {
 				EConToFuConnection eConToFuConnection = (EConToFuConnection)theEObject;
 				T result = caseEConToFuConnection(eConToFuConnection);
-				if (result == null) result = caseConnection(eConToFuConnection);
+				if (result == null) result = caseDefaultConnection(eConToFuConnection);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case EpkDSLPackage.FU_TO_FCON_CONNECTION: {
 				FuToFConConnection fuToFConConnection = (FuToFConConnection)theEObject;
 				T result = caseFuToFConConnection(fuToFConConnection);
-				if (result == null) result = caseConnection(fuToFConConnection);
+				if (result == null) result = caseDefaultConnection(fuToFConConnection);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case EpkDSLPackage.FCON_TO_EV_CONNECTION: {
 				FConToEvConnection fConToEvConnection = (FConToEvConnection)theEObject;
 				T result = caseFConToEvConnection(fConToEvConnection);
-				if (result == null) result = caseConnection(fConToEvConnection);
+				if (result == null) result = caseDefaultConnection(fConToEvConnection);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case EpkDSLPackage.OU_TO_FU_CONNECTION: {
 				OuToFuConnection ouToFuConnection = (OuToFuConnection)theEObject;
 				T result = caseOuToFuConnection(ouToFuConnection);
-				if (result == null) result = caseConnection(ouToFuConnection);
+				if (result == null) result = caseDefaultConnection(ouToFuConnection);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case EpkDSLPackage.IO_TO_FU_CONNECTION: {
 				IoToFuConnection ioToFuConnection = (IoToFuConnection)theEObject;
 				T result = caseIoToFuConnection(ioToFuConnection);
-				if (result == null) result = caseConnection(ioToFuConnection);
+				if (result == null) result = caseDefaultConnection(ioToFuConnection);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case EpkDSLPackage.NODE_TO_PP_CONNECTION: {
 				NodeToPpConnection nodeToPpConnection = (NodeToPpConnection)theEObject;
 				T result = caseNodeToPpConnection(nodeToPpConnection);
-				if (result == null) result = caseConnection(nodeToPpConnection);
+				if (result == null) result = caseDefaultConnection(nodeToPpConnection);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case EpkDSLPackage.PP_TO_NODE_CONNECTION: {
 				PpToNodeConnection ppToNodeConnection = (PpToNodeConnection)theEObject;
 				T result = casePpToNodeConnection(ppToNodeConnection);
-				if (result == null) result = caseConnection(ppToNodeConnection);
+				if (result == null) result = caseDefaultConnection(ppToNodeConnection);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -430,17 +430,17 @@ public class EpkDSLSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Connection</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Default Connection</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Connection</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Default Connection</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseConnection(Connection object) {
+	public T caseDefaultConnection(DefaultConnection object) {
 		return null;
 	}
 

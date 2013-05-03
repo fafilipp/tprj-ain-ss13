@@ -2,14 +2,21 @@
  */
 package ErdiagramDSL.impl;
 
-import ErdiagramDSL.Attribute;
-import ErdiagramDSL.ERConnection;
-import ErdiagramDSL.Element;
-import ErdiagramDSL.Entity;
+import ErdiagramDSL.ChenAttribute;
+import ErdiagramDSL.ChenConnection;
+import ErdiagramDSL.ChenElement;
+import ErdiagramDSL.ChenEntity;
+import ErdiagramDSL.ChenNormalToWeakConnection;
+import ErdiagramDSL.ChenRelationship;
+import ErdiagramDSL.ChenWeakAttribute;
+import ErdiagramDSL.ChenWeakConnection;
+import ErdiagramDSL.ChenWeakElement;
+import ErdiagramDSL.ChenWeakEntity;
+import ErdiagramDSL.ChenWeakRelationship;
+import ErdiagramDSL.DiagramElement;
 import ErdiagramDSL.Erdiagram;
 import ErdiagramDSL.ErdiagramDSLFactory;
 import ErdiagramDSL.ErdiagramDSLPackage;
-import ErdiagramDSL.Relationship;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -37,35 +44,84 @@ public class ErdiagramDSLPackageImpl extends EPackageImpl implements ErdiagramDS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass elementEClass = null;
+	private EClass diagramElementEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass entityEClass = null;
+	private EClass chenElementEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass relationshipEClass = null;
+	private EClass chenEntityEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass attributeEClass = null;
+	private EClass chenRelationshipEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass erConnectionEClass = null;
+	private EClass chenAttributeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass chenConnectionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass chenNormalToWeakConnectionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass chenWeakElementEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass chenWeakEntityEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass chenWeakRelationshipEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass chenWeakAttributeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass chenWeakConnectionEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -151,8 +207,8 @@ public class ErdiagramDSLPackageImpl extends EPackageImpl implements ErdiagramDS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getErdiagram_Connections() {
-		return (EReference)erdiagramEClass.getEStructuralFeatures().get(1);
+	public EClass getDiagramElement() {
+		return diagramElementEClass;
 	}
 
 	/**
@@ -160,8 +216,8 @@ public class ErdiagramDSLPackageImpl extends EPackageImpl implements ErdiagramDS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getElement() {
-		return elementEClass;
+	public EClass getChenElement() {
+		return chenElementEClass;
 	}
 
 	/**
@@ -169,8 +225,8 @@ public class ErdiagramDSLPackageImpl extends EPackageImpl implements ErdiagramDS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getElement_Name() {
-		return (EAttribute)elementEClass.getEStructuralFeatures().get(0);
+	public EAttribute getChenElement_Name() {
+		return (EAttribute)chenElementEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -178,8 +234,8 @@ public class ErdiagramDSLPackageImpl extends EPackageImpl implements ErdiagramDS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getEntity() {
-		return entityEClass;
+	public EClass getChenEntity() {
+		return chenEntityEClass;
 	}
 
 	/**
@@ -187,8 +243,8 @@ public class ErdiagramDSLPackageImpl extends EPackageImpl implements ErdiagramDS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getRelationship() {
-		return relationshipEClass;
+	public EClass getChenRelationship() {
+		return chenRelationshipEClass;
 	}
 
 	/**
@@ -196,8 +252,8 @@ public class ErdiagramDSLPackageImpl extends EPackageImpl implements ErdiagramDS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getRelationship_Description() {
-		return (EAttribute)relationshipEClass.getEStructuralFeatures().get(0);
+	public EAttribute getChenRelationship_Description() {
+		return (EAttribute)chenRelationshipEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -205,8 +261,8 @@ public class ErdiagramDSLPackageImpl extends EPackageImpl implements ErdiagramDS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getAttribute() {
-		return attributeEClass;
+	public EClass getChenAttribute() {
+		return chenAttributeEClass;
 	}
 
 	/**
@@ -214,8 +270,8 @@ public class ErdiagramDSLPackageImpl extends EPackageImpl implements ErdiagramDS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getAttribute_Parent() {
-		return (EReference)attributeEClass.getEStructuralFeatures().get(0);
+	public EReference getChenAttribute_Parent() {
+		return (EReference)chenAttributeEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -223,8 +279,8 @@ public class ErdiagramDSLPackageImpl extends EPackageImpl implements ErdiagramDS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getERConnection() {
-		return erConnectionEClass;
+	public EClass getChenConnection() {
+		return chenConnectionEClass;
 	}
 
 	/**
@@ -232,8 +288,8 @@ public class ErdiagramDSLPackageImpl extends EPackageImpl implements ErdiagramDS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getERConnection_FromEntity() {
-		return (EReference)erConnectionEClass.getEStructuralFeatures().get(0);
+	public EReference getChenConnection_FromEntity() {
+		return (EReference)chenConnectionEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -241,8 +297,8 @@ public class ErdiagramDSLPackageImpl extends EPackageImpl implements ErdiagramDS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getERConnection_ToRelationship() {
-		return (EReference)erConnectionEClass.getEStructuralFeatures().get(1);
+	public EReference getChenConnection_ToRelationship() {
+		return (EReference)chenConnectionEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -250,8 +306,143 @@ public class ErdiagramDSLPackageImpl extends EPackageImpl implements ErdiagramDS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getERConnection_Value() {
-		return (EAttribute)erConnectionEClass.getEStructuralFeatures().get(2);
+	public EAttribute getChenConnection_Value() {
+		return (EAttribute)chenConnectionEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getChenNormalToWeakConnection() {
+		return chenNormalToWeakConnectionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getChenNormalToWeakConnection_FromEntity() {
+		return (EReference)chenNormalToWeakConnectionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getChenNormalToWeakConnection_ToRelationship() {
+		return (EReference)chenNormalToWeakConnectionEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getChenNormalToWeakConnection_Value() {
+		return (EAttribute)chenNormalToWeakConnectionEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getChenWeakElement() {
+		return chenWeakElementEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getChenWeakElement_Name() {
+		return (EAttribute)chenWeakElementEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getChenWeakEntity() {
+		return chenWeakEntityEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getChenWeakRelationship() {
+		return chenWeakRelationshipEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getChenWeakRelationship_Description() {
+		return (EAttribute)chenWeakRelationshipEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getChenWeakAttribute() {
+		return chenWeakAttributeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getChenWeakAttribute_Parent() {
+		return (EReference)chenWeakAttributeEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getChenWeakConnection() {
+		return chenWeakConnectionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getChenWeakConnection_FromEntity() {
+		return (EReference)chenWeakConnectionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getChenWeakConnection_ToRelationship() {
+		return (EReference)chenWeakConnectionEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getChenWeakConnection_Value() {
+		return (EAttribute)chenWeakConnectionEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -284,23 +475,45 @@ public class ErdiagramDSLPackageImpl extends EPackageImpl implements ErdiagramDS
 		// Create classes and their features
 		erdiagramEClass = createEClass(ERDIAGRAM);
 		createEReference(erdiagramEClass, ERDIAGRAM__ELEMENTS);
-		createEReference(erdiagramEClass, ERDIAGRAM__CONNECTIONS);
 
-		elementEClass = createEClass(ELEMENT);
-		createEAttribute(elementEClass, ELEMENT__NAME);
+		diagramElementEClass = createEClass(DIAGRAM_ELEMENT);
 
-		entityEClass = createEClass(ENTITY);
+		chenElementEClass = createEClass(CHEN_ELEMENT);
+		createEAttribute(chenElementEClass, CHEN_ELEMENT__NAME);
 
-		relationshipEClass = createEClass(RELATIONSHIP);
-		createEAttribute(relationshipEClass, RELATIONSHIP__DESCRIPTION);
+		chenEntityEClass = createEClass(CHEN_ENTITY);
 
-		attributeEClass = createEClass(ATTRIBUTE);
-		createEReference(attributeEClass, ATTRIBUTE__PARENT);
+		chenRelationshipEClass = createEClass(CHEN_RELATIONSHIP);
+		createEAttribute(chenRelationshipEClass, CHEN_RELATIONSHIP__DESCRIPTION);
 
-		erConnectionEClass = createEClass(ER_CONNECTION);
-		createEReference(erConnectionEClass, ER_CONNECTION__FROM_ENTITY);
-		createEReference(erConnectionEClass, ER_CONNECTION__TO_RELATIONSHIP);
-		createEAttribute(erConnectionEClass, ER_CONNECTION__VALUE);
+		chenAttributeEClass = createEClass(CHEN_ATTRIBUTE);
+		createEReference(chenAttributeEClass, CHEN_ATTRIBUTE__PARENT);
+
+		chenConnectionEClass = createEClass(CHEN_CONNECTION);
+		createEReference(chenConnectionEClass, CHEN_CONNECTION__FROM_ENTITY);
+		createEReference(chenConnectionEClass, CHEN_CONNECTION__TO_RELATIONSHIP);
+		createEAttribute(chenConnectionEClass, CHEN_CONNECTION__VALUE);
+
+		chenNormalToWeakConnectionEClass = createEClass(CHEN_NORMAL_TO_WEAK_CONNECTION);
+		createEReference(chenNormalToWeakConnectionEClass, CHEN_NORMAL_TO_WEAK_CONNECTION__FROM_ENTITY);
+		createEReference(chenNormalToWeakConnectionEClass, CHEN_NORMAL_TO_WEAK_CONNECTION__TO_RELATIONSHIP);
+		createEAttribute(chenNormalToWeakConnectionEClass, CHEN_NORMAL_TO_WEAK_CONNECTION__VALUE);
+
+		chenWeakElementEClass = createEClass(CHEN_WEAK_ELEMENT);
+		createEAttribute(chenWeakElementEClass, CHEN_WEAK_ELEMENT__NAME);
+
+		chenWeakEntityEClass = createEClass(CHEN_WEAK_ENTITY);
+
+		chenWeakRelationshipEClass = createEClass(CHEN_WEAK_RELATIONSHIP);
+		createEAttribute(chenWeakRelationshipEClass, CHEN_WEAK_RELATIONSHIP__DESCRIPTION);
+
+		chenWeakAttributeEClass = createEClass(CHEN_WEAK_ATTRIBUTE);
+		createEReference(chenWeakAttributeEClass, CHEN_WEAK_ATTRIBUTE__PARENT);
+
+		chenWeakConnectionEClass = createEClass(CHEN_WEAK_CONNECTION);
+		createEReference(chenWeakConnectionEClass, CHEN_WEAK_CONNECTION__FROM_ENTITY);
+		createEReference(chenWeakConnectionEClass, CHEN_WEAK_CONNECTION__TO_RELATIONSHIP);
+		createEAttribute(chenWeakConnectionEClass, CHEN_WEAK_CONNECTION__VALUE);
 	}
 
 	/**
@@ -331,30 +544,60 @@ public class ErdiagramDSLPackageImpl extends EPackageImpl implements ErdiagramDS
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		entityEClass.getESuperTypes().add(this.getElement());
-		relationshipEClass.getESuperTypes().add(this.getElement());
-		attributeEClass.getESuperTypes().add(this.getElement());
+		chenElementEClass.getESuperTypes().add(this.getDiagramElement());
+		chenEntityEClass.getESuperTypes().add(this.getChenElement());
+		chenRelationshipEClass.getESuperTypes().add(this.getChenElement());
+		chenAttributeEClass.getESuperTypes().add(this.getChenElement());
+		chenConnectionEClass.getESuperTypes().add(this.getDiagramElement());
+		chenNormalToWeakConnectionEClass.getESuperTypes().add(this.getDiagramElement());
+		chenWeakElementEClass.getESuperTypes().add(this.getDiagramElement());
+		chenWeakEntityEClass.getESuperTypes().add(this.getChenWeakElement());
+		chenWeakRelationshipEClass.getESuperTypes().add(this.getChenWeakElement());
+		chenWeakAttributeEClass.getESuperTypes().add(this.getChenWeakElement());
+		chenWeakConnectionEClass.getESuperTypes().add(this.getDiagramElement());
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(erdiagramEClass, Erdiagram.class, "Erdiagram", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getErdiagram_Elements(), this.getElement(), null, "elements", null, 0, -1, Erdiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getErdiagram_Connections(), this.getERConnection(), null, "connections", null, 0, -1, Erdiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getErdiagram_Elements(), this.getDiagramElement(), null, "elements", null, 0, -1, Erdiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(elementEClass, Element.class, "Element", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getElement_Name(), ecorePackage.getEString(), "name", null, 1, 1, Element.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(diagramElementEClass, DiagramElement.class, "DiagramElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(entityEClass, Entity.class, "Entity", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(chenElementEClass, ChenElement.class, "ChenElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getChenElement_Name(), ecorePackage.getEString(), "name", null, 1, 1, ChenElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(relationshipEClass, Relationship.class, "Relationship", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getRelationship_Description(), ecorePackage.getEString(), "description", null, 0, 1, Relationship.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(chenEntityEClass, ChenEntity.class, "ChenEntity", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(attributeEClass, Attribute.class, "Attribute", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getAttribute_Parent(), this.getElement(), null, "parent", null, 1, 1, Attribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(chenRelationshipEClass, ChenRelationship.class, "ChenRelationship", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getChenRelationship_Description(), ecorePackage.getEString(), "description", null, 0, 1, ChenRelationship.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(erConnectionEClass, ERConnection.class, "ERConnection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getERConnection_FromEntity(), this.getEntity(), null, "fromEntity", null, 1, 1, ERConnection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getERConnection_ToRelationship(), this.getRelationship(), null, "toRelationship", null, 1, 1, ERConnection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getERConnection_Value(), ecorePackage.getEString(), "value", null, 0, 1, ERConnection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(chenAttributeEClass, ChenAttribute.class, "ChenAttribute", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getChenAttribute_Parent(), this.getChenElement(), null, "parent", null, 1, 1, ChenAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(chenConnectionEClass, ChenConnection.class, "ChenConnection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getChenConnection_FromEntity(), this.getChenEntity(), null, "fromEntity", null, 1, 1, ChenConnection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getChenConnection_ToRelationship(), this.getChenRelationship(), null, "toRelationship", null, 1, 1, ChenConnection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getChenConnection_Value(), ecorePackage.getEString(), "value", null, 0, 1, ChenConnection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(chenNormalToWeakConnectionEClass, ChenNormalToWeakConnection.class, "ChenNormalToWeakConnection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getChenNormalToWeakConnection_FromEntity(), this.getChenEntity(), null, "fromEntity", null, 1, 1, ChenNormalToWeakConnection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getChenNormalToWeakConnection_ToRelationship(), this.getChenWeakRelationship(), null, "toRelationship", null, 1, 1, ChenNormalToWeakConnection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getChenNormalToWeakConnection_Value(), ecorePackage.getEString(), "value", null, 0, 1, ChenNormalToWeakConnection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(chenWeakElementEClass, ChenWeakElement.class, "ChenWeakElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getChenWeakElement_Name(), ecorePackage.getEString(), "name", null, 1, 1, ChenWeakElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(chenWeakEntityEClass, ChenWeakEntity.class, "ChenWeakEntity", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(chenWeakRelationshipEClass, ChenWeakRelationship.class, "ChenWeakRelationship", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getChenWeakRelationship_Description(), ecorePackage.getEString(), "description", null, 0, 1, ChenWeakRelationship.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(chenWeakAttributeEClass, ChenWeakAttribute.class, "ChenWeakAttribute", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getChenWeakAttribute_Parent(), this.getChenWeakElement(), null, "parent", null, 1, 1, ChenWeakAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(chenWeakConnectionEClass, ChenWeakConnection.class, "ChenWeakConnection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getChenWeakConnection_FromEntity(), this.getChenWeakEntity(), null, "fromEntity", null, 1, 1, ChenWeakConnection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getChenWeakConnection_ToRelationship(), this.getChenWeakRelationship(), null, "toRelationship", null, 1, 1, ChenWeakConnection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getChenWeakConnection_Value(), ecorePackage.getEString(), "value", null, 0, 1, ChenWeakConnection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

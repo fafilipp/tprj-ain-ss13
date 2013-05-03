@@ -3,6 +3,7 @@
 package ErdiagramDSL;
 
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -14,7 +15,6 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * <ul>
  *   <li>{@link ErdiagramDSL.Erdiagram#getElements <em>Elements</em>}</li>
- *   <li>{@link ErdiagramDSL.Erdiagram#getConnections <em>Connections</em>}</li>
  * </ul>
  * </p>
  *
@@ -23,10 +23,9 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface Erdiagram extends EObject {
-
 	/**
 	 * Returns the value of the '<em><b>Elements</b></em>' containment reference list.
-	 * The list contents are of type {@link ErdiagramDSL.Element}.
+	 * The list contents are of type {@link ErdiagramDSL.DiagramElement}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Elements</em>' containment reference list isn't clear,
@@ -38,21 +37,6 @@ public interface Erdiagram extends EObject {
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Element> getElements();
+	EList<DiagramElement> getElements();
 
-	/**
-	 * Returns the value of the '<em><b>Connections</b></em>' containment reference list.
-	 * The list contents are of type {@link ErdiagramDSL.ERConnection}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Connections</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Connections</em>' containment reference list.
-	 * @see ErdiagramDSL.ErdiagramDSLPackage#getErdiagram_Connections()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<ERConnection> getConnections();
 } // Erdiagram

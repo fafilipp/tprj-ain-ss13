@@ -5,21 +5,21 @@ package ErdiagramDSL;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Relationship</b></em>'.
+ * A representation of the model object '<em><b>Chen Weak Relationship</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link ErdiagramDSL.Relationship#getDescription <em>Description</em>}</li>
+ *   <li>{@link ErdiagramDSL.ChenWeakRelationship#getDescription <em>Description</em>}</li>
  * </ul>
  * </p>
  *
- * @see ErdiagramDSL.ErdiagramDSLPackage#getRelationship()
+ * @see ErdiagramDSL.ErdiagramDSLPackage#getChenWeakRelationship()
  * @model
  * @generated
  */
-public interface Relationship extends Element {
+public interface ChenWeakRelationship extends ChenWeakElement {
 	/**
 	 * Returns the value of the '<em><b>Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -30,14 +30,14 @@ public interface Relationship extends Element {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Description</em>' attribute.
 	 * @see #setDescription(String)
-	 * @see ErdiagramDSL.ErdiagramDSLPackage#getRelationship_Description()
+	 * @see ErdiagramDSL.ErdiagramDSLPackage#getChenWeakRelationship_Description()
 	 * @model
 	 * @generated
 	 */
 	String getDescription();
 
 	/**
-	 * Sets the value of the '{@link ErdiagramDSL.Relationship#getDescription <em>Description</em>}' attribute.
+	 * Sets the value of the '{@link ErdiagramDSL.ChenWeakRelationship#getDescription <em>Description</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Description</em>' attribute.
@@ -46,4 +46,4 @@ public interface Relationship extends Element {
 	 */
 	void setDescription(String value);
 
-} // Relationship
+} // ChenWeakRelationship

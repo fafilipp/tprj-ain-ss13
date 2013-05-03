@@ -2,27 +2,27 @@
  */
 package ErdiagramDSL.impl;
 
-import ErdiagramDSL.Entity;
+import ErdiagramDSL.ChenWeakEntity;
 import ErdiagramDSL.ErdiagramDSLPackage;
 
 import org.eclipse.emf.ecore.EClass;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Entity</b></em>'.
+ * An implementation of the model object '<em><b>Chen Weak Entity</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * </p>
  *
  * @generated
  */
-public class EntityImpl extends ElementImpl implements Entity {
+public class ChenWeakEntityImpl extends ChenWeakElementImpl implements ChenWeakEntity {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected EntityImpl() {
+	protected ChenWeakEntityImpl() {
 		super();
 	}
 
@@ -33,7 +33,7 @@ public class EntityImpl extends ElementImpl implements Entity {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ErdiagramDSLPackage.Literals.ENTITY;
+		return ErdiagramDSLPackage.Literals.CHEN_WEAK_ENTITY;
 	}
 
-} //EntityImpl
+} //ChenWeakEntityImpl

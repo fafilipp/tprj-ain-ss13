@@ -2,8 +2,8 @@
  */
 package EpkDSL.impl;
 
-import EpkDSL.Connection;
 import EpkDSL.Connector;
+import EpkDSL.DefaultConnection;
 import EpkDSL.EConToFuConnection;
 import EpkDSL.EConnector;
 import EpkDSL.Edge;
@@ -131,7 +131,7 @@ public class EpkDSLPackageImpl extends EPackageImpl implements EpkDSLPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass connectionEClass = null;
+	private EClass defaultConnectionEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -413,8 +413,8 @@ public class EpkDSLPackageImpl extends EPackageImpl implements EpkDSLPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getConnection() {
-		return connectionEClass;
+	public EClass getDefaultConnection() {
+		return defaultConnectionEClass;
 	}
 
 	/**
@@ -743,7 +743,7 @@ public class EpkDSLPackageImpl extends EPackageImpl implements EpkDSLPackage {
 
 		fConnectorEClass = createEClass(FCONNECTOR);
 
-		connectionEClass = createEClass(CONNECTION);
+		defaultConnectionEClass = createEClass(DEFAULT_CONNECTION);
 
 		evToFuConnectionEClass = createEClass(EV_TO_FU_CONNECTION);
 		createEReference(evToFuConnectionEClass, EV_TO_FU_CONNECTION__START);
@@ -825,16 +825,16 @@ public class EpkDSLPackageImpl extends EPackageImpl implements EpkDSLPackage {
 		connectorEClass.getESuperTypes().add(this.getNode());
 		eConnectorEClass.getESuperTypes().add(this.getConnector());
 		fConnectorEClass.getESuperTypes().add(this.getConnector());
-		evToFuConnectionEClass.getESuperTypes().add(this.getConnection());
-		fuToEvConnectionEClass.getESuperTypes().add(this.getConnection());
-		evToEConConnectionEClass.getESuperTypes().add(this.getConnection());
-		eConToFuConnectionEClass.getESuperTypes().add(this.getConnection());
-		fuToFConConnectionEClass.getESuperTypes().add(this.getConnection());
-		fConToEvConnectionEClass.getESuperTypes().add(this.getConnection());
-		ouToFuConnectionEClass.getESuperTypes().add(this.getConnection());
-		ioToFuConnectionEClass.getESuperTypes().add(this.getConnection());
-		nodeToPpConnectionEClass.getESuperTypes().add(this.getConnection());
-		ppToNodeConnectionEClass.getESuperTypes().add(this.getConnection());
+		evToFuConnectionEClass.getESuperTypes().add(this.getDefaultConnection());
+		fuToEvConnectionEClass.getESuperTypes().add(this.getDefaultConnection());
+		evToEConConnectionEClass.getESuperTypes().add(this.getDefaultConnection());
+		eConToFuConnectionEClass.getESuperTypes().add(this.getDefaultConnection());
+		fuToFConConnectionEClass.getESuperTypes().add(this.getDefaultConnection());
+		fConToEvConnectionEClass.getESuperTypes().add(this.getDefaultConnection());
+		ouToFuConnectionEClass.getESuperTypes().add(this.getDefaultConnection());
+		ioToFuConnectionEClass.getESuperTypes().add(this.getDefaultConnection());
+		nodeToPpConnectionEClass.getESuperTypes().add(this.getDefaultConnection());
+		ppToNodeConnectionEClass.getESuperTypes().add(this.getDefaultConnection());
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(namedElementEClass, NamedElement.class, "NamedElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -843,7 +843,7 @@ public class EpkDSLPackageImpl extends EPackageImpl implements EpkDSLPackage {
 		initEClass(epkEClass, Epk.class, "Epk", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getEpk_Nodes(), this.getNode(), null, "nodes", null, 0, -1, Epk.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getEpk_Edges(), this.getEdge(), null, "edges", null, 0, -1, Epk.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getEpk_Connections(), this.getConnection(), null, "connections", null, 0, -1, Epk.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getEpk_Connections(), this.getDefaultConnection(), null, "connections", null, 0, -1, Epk.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(edgeEClass, Edge.class, "Edge", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -865,7 +865,7 @@ public class EpkDSLPackageImpl extends EPackageImpl implements EpkDSLPackage {
 
 		initEClass(fConnectorEClass, FConnector.class, "FConnector", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(connectionEClass, Connection.class, "Connection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(defaultConnectionEClass, DefaultConnection.class, "DefaultConnection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(evToFuConnectionEClass, EvToFuConnection.class, "EvToFuConnection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getEvToFuConnection_Start(), this.getEvent(), null, "start", null, 1, 1, EvToFuConnection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

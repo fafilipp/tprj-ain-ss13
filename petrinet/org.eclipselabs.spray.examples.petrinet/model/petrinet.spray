@@ -17,7 +17,7 @@ class Place {
 		reference tokens into tokensCompartment
 	}
 	behavior {
-		create into models palette "Shapes"
+		create into mapelements palette "Shapes"
 	}
 }
 
@@ -26,7 +26,7 @@ class Transition {
 		name into transitionText
 	}
 	behavior {
-		create into models palette "Shapes"
+		create into mapelements palette "Shapes"
 	}
 }
 
@@ -38,21 +38,21 @@ class Token {
 }
 
 class PTEdge { 
-	connection ArrowConnection {
+	connection ArrowConnectionShape {
 		from fromPlace
 		to toTransition
 	}
 	behavior {
-		create into models palette "Edges" 
+		create into mapelements palette "Edges" 
 	}
 }
 
 class TPEdge {
-	connection ArrowConnection {
+	connection ArrowConnectionShape {
 		from fromTransition
 		to toPlace
 	}
 	behavior {
-		create into models palette "Edges"
+		create into mapelements palette "Edges"
 	}
 }

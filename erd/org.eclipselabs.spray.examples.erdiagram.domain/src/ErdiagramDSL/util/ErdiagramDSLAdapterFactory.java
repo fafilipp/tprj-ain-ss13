@@ -72,24 +72,52 @@ public class ErdiagramDSLAdapterFactory extends AdapterFactoryImpl {
 				return createErdiagramAdapter();
 			}
 			@Override
-			public Adapter caseElement(Element object) {
-				return createElementAdapter();
+			public Adapter caseDiagramElement(DiagramElement object) {
+				return createDiagramElementAdapter();
 			}
 			@Override
-			public Adapter caseEntity(Entity object) {
-				return createEntityAdapter();
+			public Adapter caseChenElement(ChenElement object) {
+				return createChenElementAdapter();
 			}
 			@Override
-			public Adapter caseRelationship(Relationship object) {
-				return createRelationshipAdapter();
+			public Adapter caseChenEntity(ChenEntity object) {
+				return createChenEntityAdapter();
 			}
 			@Override
-			public Adapter caseAttribute(Attribute object) {
-				return createAttributeAdapter();
+			public Adapter caseChenRelationship(ChenRelationship object) {
+				return createChenRelationshipAdapter();
 			}
 			@Override
-			public Adapter caseERConnection(ERConnection object) {
-				return createERConnectionAdapter();
+			public Adapter caseChenAttribute(ChenAttribute object) {
+				return createChenAttributeAdapter();
+			}
+			@Override
+			public Adapter caseChenConnection(ChenConnection object) {
+				return createChenConnectionAdapter();
+			}
+			@Override
+			public Adapter caseChenNormalToWeakConnection(ChenNormalToWeakConnection object) {
+				return createChenNormalToWeakConnectionAdapter();
+			}
+			@Override
+			public Adapter caseChenWeakElement(ChenWeakElement object) {
+				return createChenWeakElementAdapter();
+			}
+			@Override
+			public Adapter caseChenWeakEntity(ChenWeakEntity object) {
+				return createChenWeakEntityAdapter();
+			}
+			@Override
+			public Adapter caseChenWeakRelationship(ChenWeakRelationship object) {
+				return createChenWeakRelationshipAdapter();
+			}
+			@Override
+			public Adapter caseChenWeakAttribute(ChenWeakAttribute object) {
+				return createChenWeakAttributeAdapter();
+			}
+			@Override
+			public Adapter caseChenWeakConnection(ChenWeakConnection object) {
+				return createChenWeakConnectionAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -126,72 +154,170 @@ public class ErdiagramDSLAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ErdiagramDSL.Element <em>Element</em>}'.
+	 * Creates a new adapter for an object of class '{@link ErdiagramDSL.DiagramElement <em>Diagram Element</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ErdiagramDSL.Element
+	 * @see ErdiagramDSL.DiagramElement
 	 * @generated
 	 */
-	public Adapter createElementAdapter() {
+	public Adapter createDiagramElementAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ErdiagramDSL.Entity <em>Entity</em>}'.
+	 * Creates a new adapter for an object of class '{@link ErdiagramDSL.ChenElement <em>Chen Element</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ErdiagramDSL.Entity
+	 * @see ErdiagramDSL.ChenElement
 	 * @generated
 	 */
-	public Adapter createEntityAdapter() {
+	public Adapter createChenElementAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ErdiagramDSL.Relationship <em>Relationship</em>}'.
+	 * Creates a new adapter for an object of class '{@link ErdiagramDSL.ChenEntity <em>Chen Entity</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ErdiagramDSL.Relationship
+	 * @see ErdiagramDSL.ChenEntity
 	 * @generated
 	 */
-	public Adapter createRelationshipAdapter() {
+	public Adapter createChenEntityAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ErdiagramDSL.Attribute <em>Attribute</em>}'.
+	 * Creates a new adapter for an object of class '{@link ErdiagramDSL.ChenRelationship <em>Chen Relationship</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ErdiagramDSL.Attribute
+	 * @see ErdiagramDSL.ChenRelationship
 	 * @generated
 	 */
-	public Adapter createAttributeAdapter() {
+	public Adapter createChenRelationshipAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link ErdiagramDSL.ERConnection <em>ER Connection</em>}'.
+	 * Creates a new adapter for an object of class '{@link ErdiagramDSL.ChenAttribute <em>Chen Attribute</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see ErdiagramDSL.ERConnection
+	 * @see ErdiagramDSL.ChenAttribute
 	 * @generated
 	 */
-	public Adapter createERConnectionAdapter() {
+	public Adapter createChenAttributeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ErdiagramDSL.ChenConnection <em>Chen Connection</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ErdiagramDSL.ChenConnection
+	 * @generated
+	 */
+	public Adapter createChenConnectionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ErdiagramDSL.ChenNormalToWeakConnection <em>Chen Normal To Weak Connection</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ErdiagramDSL.ChenNormalToWeakConnection
+	 * @generated
+	 */
+	public Adapter createChenNormalToWeakConnectionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ErdiagramDSL.ChenWeakElement <em>Chen Weak Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ErdiagramDSL.ChenWeakElement
+	 * @generated
+	 */
+	public Adapter createChenWeakElementAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ErdiagramDSL.ChenWeakEntity <em>Chen Weak Entity</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ErdiagramDSL.ChenWeakEntity
+	 * @generated
+	 */
+	public Adapter createChenWeakEntityAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ErdiagramDSL.ChenWeakRelationship <em>Chen Weak Relationship</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ErdiagramDSL.ChenWeakRelationship
+	 * @generated
+	 */
+	public Adapter createChenWeakRelationshipAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ErdiagramDSL.ChenWeakAttribute <em>Chen Weak Attribute</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ErdiagramDSL.ChenWeakAttribute
+	 * @generated
+	 */
+	public Adapter createChenWeakAttributeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ErdiagramDSL.ChenWeakConnection <em>Chen Weak Connection</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ErdiagramDSL.ChenWeakConnection
+	 * @generated
+	 */
+	public Adapter createChenWeakConnectionAdapter() {
 		return null;
 	}
 

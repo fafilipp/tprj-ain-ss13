@@ -2,56 +2,47 @@
  */
 package ErdiagramDSL.impl;
 
-import ErdiagramDSL.Element;
+import ErdiagramDSL.ChenAttribute;
+import ErdiagramDSL.ChenElement;
 import ErdiagramDSL.ErdiagramDSLPackage;
 
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Element</b></em>'.
+ * An implementation of the model object '<em><b>Chen Attribute</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link ErdiagramDSL.impl.ElementImpl#getName <em>Name</em>}</li>
+ *   <li>{@link ErdiagramDSL.impl.ChenAttributeImpl#getParent <em>Parent</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class ElementImpl extends EObjectImpl implements Element {
+public class ChenAttributeImpl extends ChenElementImpl implements ChenAttribute {
 	/**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * The cached value of the '{@link #getParent() <em>Parent</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getName()
+	 * @see #getParent()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String NAME_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected String name = NAME_EDEFAULT;
+	protected ChenElement parent;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ElementImpl() {
+	protected ChenAttributeImpl() {
 		super();
 	}
 
@@ -62,7 +53,7 @@ public class ElementImpl extends EObjectImpl implements Element {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ErdiagramDSLPackage.Literals.ELEMENT;
+		return ErdiagramDSLPackage.Literals.CHEN_ATTRIBUTE;
 	}
 
 	/**
@@ -70,8 +61,16 @@ public class ElementImpl extends EObjectImpl implements Element {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getName() {
-		return name;
+	public ChenElement getParent() {
+		if (parent != null && parent.eIsProxy()) {
+			InternalEObject oldParent = (InternalEObject)parent;
+			parent = (ChenElement)eResolveProxy(oldParent);
+			if (parent != oldParent) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ErdiagramDSLPackage.CHEN_ATTRIBUTE__PARENT, oldParent, parent));
+			}
+		}
+		return parent;
 	}
 
 	/**
@@ -79,11 +78,20 @@ public class ElementImpl extends EObjectImpl implements Element {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
+	public ChenElement basicGetParent() {
+		return parent;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setParent(ChenElement newParent) {
+		ChenElement oldParent = parent;
+		parent = newParent;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ErdiagramDSLPackage.ELEMENT__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, ErdiagramDSLPackage.CHEN_ATTRIBUTE__PARENT, oldParent, parent));
 	}
 
 	/**
@@ -94,8 +102,9 @@ public class ElementImpl extends EObjectImpl implements Element {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ErdiagramDSLPackage.ELEMENT__NAME:
-				return getName();
+			case ErdiagramDSLPackage.CHEN_ATTRIBUTE__PARENT:
+				if (resolve) return getParent();
+				return basicGetParent();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -108,8 +117,8 @@ public class ElementImpl extends EObjectImpl implements Element {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ErdiagramDSLPackage.ELEMENT__NAME:
-				setName((String)newValue);
+			case ErdiagramDSLPackage.CHEN_ATTRIBUTE__PARENT:
+				setParent((ChenElement)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -123,8 +132,8 @@ public class ElementImpl extends EObjectImpl implements Element {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ErdiagramDSLPackage.ELEMENT__NAME:
-				setName(NAME_EDEFAULT);
+			case ErdiagramDSLPackage.CHEN_ATTRIBUTE__PARENT:
+				setParent((ChenElement)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -138,26 +147,10 @@ public class ElementImpl extends EObjectImpl implements Element {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ErdiagramDSLPackage.ELEMENT__NAME:
-				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case ErdiagramDSLPackage.CHEN_ATTRIBUTE__PARENT:
+				return parent != null;
 		}
 		return super.eIsSet(featureID);
 	}
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy()) return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (name: ");
-		result.append(name);
-		result.append(')');
-		return result.toString();
-	}
-
-} //ElementImpl
+} //ChenAttributeImpl

@@ -2,7 +2,7 @@
  */
 package EpkDSL.impl;
 
-import EpkDSL.Connection;
+import EpkDSL.DefaultConnection;
 import EpkDSL.Edge;
 import EpkDSL.Epk;
 import EpkDSL.EpkDSLPackage;
@@ -64,7 +64,7 @@ public class EpkImpl extends NamedElementImpl implements Epk {
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Connection> connections;
+	protected EList<DefaultConnection> connections;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -114,9 +114,9 @@ public class EpkImpl extends NamedElementImpl implements Epk {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Connection> getConnections() {
+	public EList<DefaultConnection> getConnections() {
 		if (connections == null) {
-			connections = new EObjectContainmentEList<Connection>(Connection.class, this, EpkDSLPackage.EPK__CONNECTIONS);
+			connections = new EObjectContainmentEList<DefaultConnection>(DefaultConnection.class, this, EpkDSLPackage.EPK__CONNECTIONS);
 		}
 		return connections;
 	}
@@ -176,7 +176,7 @@ public class EpkImpl extends NamedElementImpl implements Epk {
 				return;
 			case EpkDSLPackage.EPK__CONNECTIONS:
 				getConnections().clear();
-				getConnections().addAll((Collection<? extends Connection>)newValue);
+				getConnections().addAll((Collection<? extends DefaultConnection>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);

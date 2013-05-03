@@ -28,7 +28,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class EvToEConConnectionImpl extends ConnectionImpl implements EvToEConConnection {
+public class EvToEConConnectionImpl extends DefaultConnectionImpl implements EvToEConConnection {
 	/**
 	 * The cached value of the '{@link #getStart() <em>Start</em>}' reference.
 	 * <!-- begin-user-doc -->

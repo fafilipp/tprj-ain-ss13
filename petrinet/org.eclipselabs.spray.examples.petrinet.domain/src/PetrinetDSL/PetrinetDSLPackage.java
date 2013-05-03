@@ -84,13 +84,13 @@ public interface PetrinetDSLPackage extends EPackage {
 	int PETRINET__DESCRIPTION = 1;
 
 	/**
-	 * The feature id for the '<em><b>Models</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Mapelements</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PETRINET__MODELS = 2;
+	int PETRINET__MAPELEMENTS = 2;
 
 	/**
 	 * The number of structural features of the '<em>Petrinet</em>' class.
@@ -130,13 +130,13 @@ public interface PetrinetDSLPackage extends EPackage {
 	int NODE__DESCRIPTION = PETRINET__DESCRIPTION;
 
 	/**
-	 * The feature id for the '<em><b>Models</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Mapelements</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int NODE__MODELS = PETRINET__MODELS;
+	int NODE__MAPELEMENTS = PETRINET__MAPELEMENTS;
 
 	/**
 	 * The number of structural features of the '<em>Node</em>' class.
@@ -176,13 +176,13 @@ public interface PetrinetDSLPackage extends EPackage {
 	int EDGE__DESCRIPTION = PETRINET__DESCRIPTION;
 
 	/**
-	 * The feature id for the '<em><b>Models</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Mapelements</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EDGE__MODELS = PETRINET__MODELS;
+	int EDGE__MAPELEMENTS = PETRINET__MAPELEMENTS;
 
 	/**
 	 * The number of structural features of the '<em>Edge</em>' class.
@@ -222,13 +222,13 @@ public interface PetrinetDSLPackage extends EPackage {
 	int TOKEN__DESCRIPTION = NODE__DESCRIPTION;
 
 	/**
-	 * The feature id for the '<em><b>Models</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Mapelements</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TOKEN__MODELS = NODE__MODELS;
+	int TOKEN__MAPELEMENTS = NODE__MAPELEMENTS;
 
 	/**
 	 * The number of structural features of the '<em>Token</em>' class.
@@ -268,13 +268,13 @@ public interface PetrinetDSLPackage extends EPackage {
 	int TRANSITION__DESCRIPTION = NODE__DESCRIPTION;
 
 	/**
-	 * The feature id for the '<em><b>Models</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Mapelements</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TRANSITION__MODELS = NODE__MODELS;
+	int TRANSITION__MAPELEMENTS = NODE__MAPELEMENTS;
 
 	/**
 	 * The number of structural features of the '<em>Transition</em>' class.
@@ -314,13 +314,13 @@ public interface PetrinetDSLPackage extends EPackage {
 	int PLACE__DESCRIPTION = NODE__DESCRIPTION;
 
 	/**
-	 * The feature id for the '<em><b>Models</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Mapelements</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PLACE__MODELS = NODE__MODELS;
+	int PLACE__MAPELEMENTS = NODE__MAPELEMENTS;
 
 	/**
 	 * The feature id for the '<em><b>Tokens</b></em>' containment reference list.
@@ -369,13 +369,13 @@ public interface PetrinetDSLPackage extends EPackage {
 	int PT_EDGE__DESCRIPTION = EDGE__DESCRIPTION;
 
 	/**
-	 * The feature id for the '<em><b>Models</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Mapelements</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PT_EDGE__MODELS = EDGE__MODELS;
+	int PT_EDGE__MAPELEMENTS = EDGE__MAPELEMENTS;
 
 	/**
 	 * The feature id for the '<em><b>From Place</b></em>' reference.
@@ -433,13 +433,13 @@ public interface PetrinetDSLPackage extends EPackage {
 	int TP_EDGE__DESCRIPTION = EDGE__DESCRIPTION;
 
 	/**
-	 * The feature id for the '<em><b>Models</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Mapelements</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TP_EDGE__MODELS = EDGE__MODELS;
+	int TP_EDGE__MAPELEMENTS = EDGE__MAPELEMENTS;
 
 	/**
 	 * The feature id for the '<em><b>From Transition</b></em>' reference.
@@ -467,7 +467,6 @@ public interface PetrinetDSLPackage extends EPackage {
 	 * @ordered
 	 */
 	int TP_EDGE_FEATURE_COUNT = EDGE_FEATURE_COUNT + 2;
-
 
 	/**
 	 * The meta object id for the '{@link PetrinetDSL.impl.StartElementImpl <em>Start Element</em>}' class.
@@ -498,13 +497,13 @@ public interface PetrinetDSLPackage extends EPackage {
 	int START_ELEMENT__DESCRIPTION = NODE__DESCRIPTION;
 
 	/**
-	 * The feature id for the '<em><b>Models</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Mapelements</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int START_ELEMENT__MODELS = NODE__MODELS;
+	int START_ELEMENT__MAPELEMENTS = NODE__MAPELEMENTS;
 
 	/**
 	 * The feature id for the '<em><b>Tokens</b></em>' containment reference list.
@@ -553,13 +552,13 @@ public interface PetrinetDSLPackage extends EPackage {
 	int END_ELEMENT__DESCRIPTION = NODE__DESCRIPTION;
 
 	/**
-	 * The feature id for the '<em><b>Models</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Mapelements</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int END_ELEMENT__MODELS = NODE__MODELS;
+	int END_ELEMENT__MAPELEMENTS = NODE__MAPELEMENTS;
 
 	/**
 	 * The feature id for the '<em><b>Tokens</b></em>' containment reference list.
@@ -608,13 +607,13 @@ public interface PetrinetDSLPackage extends EPackage {
 	int START_EDGE__DESCRIPTION = EDGE__DESCRIPTION;
 
 	/**
-	 * The feature id for the '<em><b>Models</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Mapelements</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int START_EDGE__MODELS = EDGE__MODELS;
+	int START_EDGE__MAPELEMENTS = EDGE__MAPELEMENTS;
 
 	/**
 	 * The feature id for the '<em><b>From Start</b></em>' reference.
@@ -672,13 +671,13 @@ public interface PetrinetDSLPackage extends EPackage {
 	int END_EDGE__DESCRIPTION = EDGE__DESCRIPTION;
 
 	/**
-	 * The feature id for the '<em><b>Models</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Mapelements</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int END_EDGE__MODELS = EDGE__MODELS;
+	int END_EDGE__MAPELEMENTS = EDGE__MAPELEMENTS;
 
 	/**
 	 * The feature id for the '<em><b>From Transition</b></em>' reference.
@@ -741,15 +740,15 @@ public interface PetrinetDSLPackage extends EPackage {
 	EAttribute getPetrinet_Description();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link PetrinetDSL.Petrinet#getModels <em>Models</em>}'.
+	 * Returns the meta object for the containment reference list '{@link PetrinetDSL.Petrinet#getMapelements <em>Mapelements</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Models</em>'.
-	 * @see PetrinetDSL.Petrinet#getModels()
+	 * @return the meta object for the containment reference list '<em>Mapelements</em>'.
+	 * @see PetrinetDSL.Petrinet#getMapelements()
 	 * @see #getPetrinet()
 	 * @generated
 	 */
-	EReference getPetrinet_Models();
+	EReference getPetrinet_Mapelements();
 
 	/**
 	 * Returns the meta object for class '{@link PetrinetDSL.Node <em>Node</em>}'.
@@ -1031,12 +1030,12 @@ public interface PetrinetDSLPackage extends EPackage {
 		EAttribute PETRINET__DESCRIPTION = eINSTANCE.getPetrinet_Description();
 
 		/**
-		 * The meta object literal for the '<em><b>Models</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Mapelements</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference PETRINET__MODELS = eINSTANCE.getPetrinet_Models();
+		EReference PETRINET__MAPELEMENTS = eINSTANCE.getPetrinet_Mapelements();
 
 		/**
 		 * The meta object literal for the '{@link PetrinetDSL.impl.NodeImpl <em>Node</em>}' class.

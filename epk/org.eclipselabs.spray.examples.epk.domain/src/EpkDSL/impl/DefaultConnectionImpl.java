@@ -2,7 +2,7 @@
  */
 package EpkDSL.impl;
 
-import EpkDSL.Connection;
+import EpkDSL.DefaultConnection;
 import EpkDSL.EpkDSLPackage;
 
 import org.eclipse.emf.ecore.EClass;
@@ -11,20 +11,20 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Connection</b></em>'.
+ * An implementation of the model object '<em><b>Default Connection</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * </p>
  *
  * @generated
  */
-public class ConnectionImpl extends EObjectImpl implements Connection {
+public class DefaultConnectionImpl extends EObjectImpl implements DefaultConnection {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ConnectionImpl() {
+	protected DefaultConnectionImpl() {
 		super();
 	}
 
@@ -35,7 +35,7 @@ public class ConnectionImpl extends EObjectImpl implements Connection {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return EpkDSLPackage.Literals.CONNECTION;
+		return EpkDSLPackage.Literals.DEFAULT_CONNECTION;
 	}
 
-} //ConnectionImpl
+} //DefaultConnectionImpl

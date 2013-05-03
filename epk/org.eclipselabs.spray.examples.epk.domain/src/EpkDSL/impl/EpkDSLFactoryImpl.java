@@ -68,7 +68,7 @@ public class EpkDSLFactoryImpl extends EFactoryImpl implements EpkDSLFactory {
 			case EpkDSLPackage.CONNECTOR: return createConnector();
 			case EpkDSLPackage.ECONNECTOR: return createEConnector();
 			case EpkDSLPackage.FCONNECTOR: return createFConnector();
-			case EpkDSLPackage.CONNECTION: return createConnection();
+			case EpkDSLPackage.DEFAULT_CONNECTION: return createDefaultConnection();
 			case EpkDSLPackage.EV_TO_FU_CONNECTION: return createEvToFuConnection();
 			case EpkDSLPackage.FU_TO_EV_CONNECTION: return createFuToEvConnection();
 			case EpkDSLPackage.EV_TO_ECON_CONNECTION: return createEvToEConConnection();
@@ -209,9 +209,9 @@ public class EpkDSLFactoryImpl extends EFactoryImpl implements EpkDSLFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Connection createConnection() {
-		ConnectionImpl connection = new ConnectionImpl();
-		return connection;
+	public DefaultConnection createDefaultConnection() {
+		DefaultConnectionImpl defaultConnection = new DefaultConnectionImpl();
+		return defaultConnection;
 	}
 
 	/**

@@ -26,7 +26,11 @@
 //     }
 // }
 
-shape EntityShape {
+////////////////////////////////////////////////////////////////
+////////////////// CHEN ////////////////////////////////////////
+////////////////////////////////////////////////////////////////
+
+shape ChenEntityShape {
 	rectangle {
 		size(width=150, height=80)
 	}
@@ -37,7 +41,7 @@ shape EntityShape {
 	}
 }
 
-shape RelationshipShape {
+shape ChenRelationshipShape {
 	polygon {
 		point(x=50,y=0)	
 		point(x=100,y=50)
@@ -56,7 +60,32 @@ shape RelationshipShape {
 	}
 }
 
-shape AttributeShape {
+shape ChenWeakRelationshipShape {
+	polygon {
+		point(x=50,y=0)	
+		point(x=100,y=50)
+		point(x=50,y=100)
+		point(x=0,y=50)	
+	}
+	polygon {
+		point(x=50,y=5)	
+		point(x=95,y=50)
+		point(x=50,y=95)
+		point(x=5,y=50)	
+	}
+	text {
+		size(width=60,height=20)
+		position(x=13,y=33)
+		id=RelationshipText
+	}
+	text {
+		size(width=100,height=20)
+		position(x=0, y=100)
+		id=RelationshipDescription
+	}
+}
+
+shape ChenAttributeShape {
 	ellipse {
 		size(width=150, height=80)
 	}
@@ -67,7 +96,7 @@ shape AttributeShape {
 	}
 }
 
-shape MultiValAttributeShape {
+shape ChenMultivalAttributeShape {
 	ellipse {
 		size(width=150, height=80)
 	}
@@ -82,19 +111,48 @@ shape MultiValAttributeShape {
 	}
 }
 
-shape KeyAttributeShape {
+shape ChenKeyAttributeShape {
 	ellipse {
 		size(width=150, height=80)
 	}
-	text {
-		style(line-style=dash)
+	text { 
+		style(line-style=solid)
 		size(width=110,height=20)
 		position(x=10,y=25)
 		id=AttributeText
 	}
 }
 
-connection ERConnectionShape {
+shape ChenWeakKeyAttributeShape {
+	ellipse {
+		size(width=150, height=80)
+	}
+	text {
+		style(line-style=dot)
+		size(width=110,height=20)
+		position(x=10,y=25)
+		id=AttributeText
+	}
+}
+
+connection ChenConnectionShape {
+	placing {
+		position (offset=0.0)
+		text {
+			size (width=20, height=20)
+			id = connectionText
+		} 
+	}
+}
+
+connection ChenWeakConnectionShape {
+	placing {
+		position(offset=0.0)
+		line{
+			point(x=0,y=2)
+			point(x=20, y=2)
+		}
+	}
 	placing {
 		position (offset=0.0)
 		text {
@@ -103,3 +161,7 @@ connection ERConnectionShape {
 		}
 	}
 }
+
+/////////////////////////////////////////////////////////////////
+/////////////////// ISO, kr‰henfuﬂ, uml, sonstiges //////////////
+/////////////////////////////////////////////////////////////////

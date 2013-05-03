@@ -10,7 +10,7 @@
 // Add import statements here
 import ErdiagramDSL.*
 
-diagram Myerdiagram for Erdiagram style ErdiagramDefaultStyle
+diagram erdiagram for Erdiagram style ErdiagramDefaultStyle
 
 
 // Add class mappings here. Refer to EClasses here. Don't forget to configure a
@@ -34,67 +34,136 @@ diagram Myerdiagram for Erdiagram style ErdiagramDefaultStyle
 //     }
 //   }
 
-class Entity {
-	shape EntityShape {
+
+////////////////////////////////////////////////////////////////
+////////////////// CHEN ////////////////////////////////////////
+//////////////////////////////////////////////////////////////// 
+
+class ChenEntity {
+	shape ChenEntityShape {
 		name into EntityText
 	}
 	behavior {
-		create into elements palette "Elements"
+		create into elements palette "ChenElements"
 	}
 }
 
-class Relationship {
-	shape RelationshipShape {
+class ChenRelationship {
+	shape ChenRelationshipShape {
 		name into RelationshipText
 		description into RelationshipDescription
 	}
 	behavior {
-		create into elements palette "Elements" askFor name
+		create into elements palette "ChenElements"
 	}
 }
 
-class Attribute {
-	shape AttributeShape {
+class ChenAttribute {
+	shape ChenAttributeShape {
 		name into AttributeText
 	}
 	references {
-		parent : connection 
+		parent : connection alias ChenAttributeConnection 
 	}
 	behavior {
-		create into elements palette "Attributes"
+		create into elements palette "ChenAttributes";
 	}
 }
 
-class Attribute alias MultivalAttribute {
-	shape MultiValAttributeShape {
+class ChenAttribute alias MultivalAttribute {
+	shape ChenMultivalAttributeShape {
 		name into AttributeText
 	}
-//		references {
-//		parent : connection
-//	}
 	behavior {
-		create into elements palette "Attributes"
+		create into elements palette "ChenAttributes"
 	}
 }
 
-class Attribute alias KeyAttribute {
-	shape KeyAttributeShape {
+class ChenAttribute alias KeyAttribute {
+	shape ChenKeyAttributeShape {
 		name into AttributeText
 	}
-//		references {
-//		parent : connection
-//	}
 	behavior {
-		create into elements palette "Attributes"
+		create into elements palette "ChenAttributes"
 	}
 }
 
-class ERConnection {
-	connection ERConnectionShape {
+class ChenConnection {
+	connection ChenConnectionShape {
 		from fromEntity to toRelationship
 	}
 	behavior {
-	    create into connections palette "Connections" 
+	    create into elements palette "ChenConnections" 
 	}
-	
 }
+
+class ChenNormalToWeakConnection {
+	connection ChenConnectionShape {
+		from fromEntity to toRelationship
+	}
+	behavior {
+		create into elements palette "ChenConnections"
+	}
+}
+
+class ChenWeakEntity {
+	shape ChenEntityShape { 
+		name into EntityText
+	}
+	behavior {
+		create into elements palette "ChenElements"
+	}
+}
+
+class ChenWeakRelationship {
+	shape ChenWeakRelationshipShape {
+		name into RelationshipText
+		description into RelationshipDescription
+	}
+	behavior {
+		create into elements palette "ChenElements"
+	}
+}
+
+class ChenWeakAttribute {
+	shape ChenAttributeShape {
+		name into AttributeText
+	}
+	references {
+		parent : connection alias ChenWeakAttributeConnection 
+	}
+	behavior {
+		create into elements palette "ChenAttributes";
+	}
+}
+
+class ChenWeakAttribute alias ChenWeakMultivalAttribute {
+	shape ChenMultivalAttributeShape {
+		name into AttributeText
+	}
+	behavior {
+		create into elements palette "ChenAttributes";
+	}
+}
+
+class ChenWeakAttribute alias ChenWeakKeyAttribute {
+	shape ChenWeakKeyAttributeShape {
+		name into AttributeText
+	}
+	behavior {
+		create into elements palette "ChenAttributes";
+	}
+}
+
+class ChenWeakConnection {
+	connection ChenWeakConnectionShape {
+		from fromEntity to toRelationship
+	}
+	behavior {
+	    create into elements palette "ChenConnections" 
+	}
+}
+
+/////////////////////////////////////////////////////////////////
+/////////////////// ISO, kr‰henfuﬂ, uml, sonstiges //////////////
+/////////////////////////////////////////////////////////////////

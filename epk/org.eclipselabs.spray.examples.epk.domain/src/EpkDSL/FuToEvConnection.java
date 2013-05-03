@@ -20,7 +20,7 @@ package EpkDSL;
  * @model
  * @generated
  */
-public interface FuToEvConnection extends Connection {
+public interface FuToEvConnection extends DefaultConnection {
 	/**
 	 * Returns the value of the '<em><b>Start</b></em>' reference.
 	 * <!-- begin-user-doc -->

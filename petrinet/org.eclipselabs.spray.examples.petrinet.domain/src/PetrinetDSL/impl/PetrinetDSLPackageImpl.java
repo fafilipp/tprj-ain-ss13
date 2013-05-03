@@ -208,7 +208,7 @@ public class PetrinetDSLPackageImpl extends EPackageImpl implements PetrinetDSLP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getPetrinet_Models() {
+	public EReference getPetrinet_Mapelements() {
 		return (EReference)petrinetEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -441,7 +441,7 @@ public class PetrinetDSLPackageImpl extends EPackageImpl implements PetrinetDSLP
 		petrinetEClass = createEClass(PETRINET);
 		createEAttribute(petrinetEClass, PETRINET__NAME);
 		createEAttribute(petrinetEClass, PETRINET__DESCRIPTION);
-		createEReference(petrinetEClass, PETRINET__MODELS);
+		createEReference(petrinetEClass, PETRINET__MAPELEMENTS);
 
 		nodeEClass = createEClass(NODE);
 
@@ -521,7 +521,7 @@ public class PetrinetDSLPackageImpl extends EPackageImpl implements PetrinetDSLP
 		initEClass(petrinetEClass, Petrinet.class, "Petrinet", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getPetrinet_Name(), ecorePackage.getEString(), "name", null, 0, 1, Petrinet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPetrinet_Description(), ecorePackage.getEString(), "description", null, 0, 1, Petrinet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getPetrinet_Models(), this.getPetrinet(), null, "models", null, 0, -1, Petrinet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPetrinet_Mapelements(), this.getPetrinet(), null, "mapelements", null, 0, -1, Petrinet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(nodeEClass, Node.class, "Node", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

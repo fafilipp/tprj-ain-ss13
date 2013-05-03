@@ -2,25 +2,24 @@
  */
 package ErdiagramDSL;
 
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Element</b></em>'.
+ * A representation of the model object '<em><b>Chen Weak Element</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link ErdiagramDSL.Element#getName <em>Name</em>}</li>
+ *   <li>{@link ErdiagramDSL.ChenWeakElement#getName <em>Name</em>}</li>
  * </ul>
  * </p>
  *
- * @see ErdiagramDSL.ErdiagramDSLPackage#getElement()
+ * @see ErdiagramDSL.ErdiagramDSLPackage#getChenWeakElement()
  * @model
  * @generated
  */
-public interface Element extends EObject {
+public interface ChenWeakElement extends DiagramElement {
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -31,14 +30,14 @@ public interface Element extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
-	 * @see ErdiagramDSL.ErdiagramDSLPackage#getElement_Name()
+	 * @see ErdiagramDSL.ErdiagramDSLPackage#getChenWeakElement_Name()
 	 * @model required="true"
 	 * @generated
 	 */
 	String getName();
 
 	/**
-	 * Sets the value of the '{@link ErdiagramDSL.Element#getName <em>Name</em>}' attribute.
+	 * Sets the value of the '{@link ErdiagramDSL.ChenWeakElement#getName <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Name</em>' attribute.
@@ -47,4 +46,4 @@ public interface Element extends EObject {
 	 */
 	void setName(String value);
 
-} // Element
+} // ChenWeakElement

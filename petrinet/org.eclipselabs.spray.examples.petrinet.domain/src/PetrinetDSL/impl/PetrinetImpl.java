@@ -30,7 +30,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link PetrinetDSL.impl.PetrinetImpl#getName <em>Name</em>}</li>
  *   <li>{@link PetrinetDSL.impl.PetrinetImpl#getDescription <em>Description</em>}</li>
- *   <li>{@link PetrinetDSL.impl.PetrinetImpl#getModels <em>Models</em>}</li>
+ *   <li>{@link PetrinetDSL.impl.PetrinetImpl#getMapelements <em>Mapelements</em>}</li>
  * </ul>
  * </p>
  *
@@ -78,14 +78,14 @@ public class PetrinetImpl extends EObjectImpl implements Petrinet {
 	protected String description = DESCRIPTION_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getModels() <em>Models</em>}' containment reference list.
+	 * The cached value of the '{@link #getMapelements() <em>Mapelements</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getModels()
+	 * @see #getMapelements()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Petrinet> models;
+	protected EList<Petrinet> mapelements;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -153,11 +153,11 @@ public class PetrinetImpl extends EObjectImpl implements Petrinet {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Petrinet> getModels() {
-		if (models == null) {
-			models = new EObjectContainmentEList<Petrinet>(Petrinet.class, this, PetrinetDSLPackage.PETRINET__MODELS);
+	public EList<Petrinet> getMapelements() {
+		if (mapelements == null) {
+			mapelements = new EObjectContainmentEList<Petrinet>(Petrinet.class, this, PetrinetDSLPackage.PETRINET__MAPELEMENTS);
 		}
-		return models;
+		return mapelements;
 	}
 
 	/**
@@ -168,8 +168,8 @@ public class PetrinetImpl extends EObjectImpl implements Petrinet {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case PetrinetDSLPackage.PETRINET__MODELS:
-				return ((InternalEList<?>)getModels()).basicRemove(otherEnd, msgs);
+			case PetrinetDSLPackage.PETRINET__MAPELEMENTS:
+				return ((InternalEList<?>)getMapelements()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -186,8 +186,8 @@ public class PetrinetImpl extends EObjectImpl implements Petrinet {
 				return getName();
 			case PetrinetDSLPackage.PETRINET__DESCRIPTION:
 				return getDescription();
-			case PetrinetDSLPackage.PETRINET__MODELS:
-				return getModels();
+			case PetrinetDSLPackage.PETRINET__MAPELEMENTS:
+				return getMapelements();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -207,9 +207,9 @@ public class PetrinetImpl extends EObjectImpl implements Petrinet {
 			case PetrinetDSLPackage.PETRINET__DESCRIPTION:
 				setDescription((String)newValue);
 				return;
-			case PetrinetDSLPackage.PETRINET__MODELS:
-				getModels().clear();
-				getModels().addAll((Collection<? extends Petrinet>)newValue);
+			case PetrinetDSLPackage.PETRINET__MAPELEMENTS:
+				getMapelements().clear();
+				getMapelements().addAll((Collection<? extends Petrinet>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -229,8 +229,8 @@ public class PetrinetImpl extends EObjectImpl implements Petrinet {
 			case PetrinetDSLPackage.PETRINET__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
 				return;
-			case PetrinetDSLPackage.PETRINET__MODELS:
-				getModels().clear();
+			case PetrinetDSLPackage.PETRINET__MAPELEMENTS:
+				getMapelements().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -248,8 +248,8 @@ public class PetrinetImpl extends EObjectImpl implements Petrinet {
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case PetrinetDSLPackage.PETRINET__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
-			case PetrinetDSLPackage.PETRINET__MODELS:
-				return models != null && !models.isEmpty();
+			case PetrinetDSLPackage.PETRINET__MAPELEMENTS:
+				return mapelements != null && !mapelements.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

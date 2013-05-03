@@ -57,7 +57,7 @@ public interface Epk extends NamedElement {
 
 	/**
 	 * Returns the value of the '<em><b>Connections</b></em>' containment reference list.
-	 * The list contents are of type {@link EpkDSL.Connection}.
+	 * The list contents are of type {@link EpkDSL.DefaultConnection}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Connections</em>' containment reference list isn't clear,
@@ -69,6 +69,6 @@ public interface Epk extends NamedElement {
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Connection> getConnections();
+	EList<DefaultConnection> getConnections();
 
 } // Epk

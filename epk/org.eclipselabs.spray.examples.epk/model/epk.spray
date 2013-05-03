@@ -7,7 +7,7 @@
  *
  * See also epk.properties to configure generator properties.
  *************************************************************************************/
-import EpkDSL.* 
+import EpkDSL.*  
 
 diagram epk for Epk style EpkDefaultStyle
 

@@ -72,36 +72,92 @@ public class ErdiagramDSLSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ErdiagramDSLPackage.ELEMENT: {
-				Element element = (Element)theEObject;
-				T result = caseElement(element);
+			case ErdiagramDSLPackage.DIAGRAM_ELEMENT: {
+				DiagramElement diagramElement = (DiagramElement)theEObject;
+				T result = caseDiagramElement(diagramElement);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ErdiagramDSLPackage.ENTITY: {
-				Entity entity = (Entity)theEObject;
-				T result = caseEntity(entity);
-				if (result == null) result = caseElement(entity);
+			case ErdiagramDSLPackage.CHEN_ELEMENT: {
+				ChenElement chenElement = (ChenElement)theEObject;
+				T result = caseChenElement(chenElement);
+				if (result == null) result = caseDiagramElement(chenElement);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ErdiagramDSLPackage.RELATIONSHIP: {
-				Relationship relationship = (Relationship)theEObject;
-				T result = caseRelationship(relationship);
-				if (result == null) result = caseElement(relationship);
+			case ErdiagramDSLPackage.CHEN_ENTITY: {
+				ChenEntity chenEntity = (ChenEntity)theEObject;
+				T result = caseChenEntity(chenEntity);
+				if (result == null) result = caseChenElement(chenEntity);
+				if (result == null) result = caseDiagramElement(chenEntity);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ErdiagramDSLPackage.ATTRIBUTE: {
-				Attribute attribute = (Attribute)theEObject;
-				T result = caseAttribute(attribute);
-				if (result == null) result = caseElement(attribute);
+			case ErdiagramDSLPackage.CHEN_RELATIONSHIP: {
+				ChenRelationship chenRelationship = (ChenRelationship)theEObject;
+				T result = caseChenRelationship(chenRelationship);
+				if (result == null) result = caseChenElement(chenRelationship);
+				if (result == null) result = caseDiagramElement(chenRelationship);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ErdiagramDSLPackage.ER_CONNECTION: {
-				ERConnection erConnection = (ERConnection)theEObject;
-				T result = caseERConnection(erConnection);
+			case ErdiagramDSLPackage.CHEN_ATTRIBUTE: {
+				ChenAttribute chenAttribute = (ChenAttribute)theEObject;
+				T result = caseChenAttribute(chenAttribute);
+				if (result == null) result = caseChenElement(chenAttribute);
+				if (result == null) result = caseDiagramElement(chenAttribute);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ErdiagramDSLPackage.CHEN_CONNECTION: {
+				ChenConnection chenConnection = (ChenConnection)theEObject;
+				T result = caseChenConnection(chenConnection);
+				if (result == null) result = caseDiagramElement(chenConnection);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ErdiagramDSLPackage.CHEN_NORMAL_TO_WEAK_CONNECTION: {
+				ChenNormalToWeakConnection chenNormalToWeakConnection = (ChenNormalToWeakConnection)theEObject;
+				T result = caseChenNormalToWeakConnection(chenNormalToWeakConnection);
+				if (result == null) result = caseDiagramElement(chenNormalToWeakConnection);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ErdiagramDSLPackage.CHEN_WEAK_ELEMENT: {
+				ChenWeakElement chenWeakElement = (ChenWeakElement)theEObject;
+				T result = caseChenWeakElement(chenWeakElement);
+				if (result == null) result = caseDiagramElement(chenWeakElement);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ErdiagramDSLPackage.CHEN_WEAK_ENTITY: {
+				ChenWeakEntity chenWeakEntity = (ChenWeakEntity)theEObject;
+				T result = caseChenWeakEntity(chenWeakEntity);
+				if (result == null) result = caseChenWeakElement(chenWeakEntity);
+				if (result == null) result = caseDiagramElement(chenWeakEntity);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ErdiagramDSLPackage.CHEN_WEAK_RELATIONSHIP: {
+				ChenWeakRelationship chenWeakRelationship = (ChenWeakRelationship)theEObject;
+				T result = caseChenWeakRelationship(chenWeakRelationship);
+				if (result == null) result = caseChenWeakElement(chenWeakRelationship);
+				if (result == null) result = caseDiagramElement(chenWeakRelationship);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ErdiagramDSLPackage.CHEN_WEAK_ATTRIBUTE: {
+				ChenWeakAttribute chenWeakAttribute = (ChenWeakAttribute)theEObject;
+				T result = caseChenWeakAttribute(chenWeakAttribute);
+				if (result == null) result = caseChenWeakElement(chenWeakAttribute);
+				if (result == null) result = caseDiagramElement(chenWeakAttribute);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ErdiagramDSLPackage.CHEN_WEAK_CONNECTION: {
+				ChenWeakConnection chenWeakConnection = (ChenWeakConnection)theEObject;
+				T result = caseChenWeakConnection(chenWeakConnection);
+				if (result == null) result = caseDiagramElement(chenWeakConnection);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -125,77 +181,182 @@ public class ErdiagramDSLSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Element</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Diagram Element</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Element</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Diagram Element</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseElement(Element object) {
+	public T caseDiagramElement(DiagramElement object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Entity</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Chen Element</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Entity</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Chen Element</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseEntity(Entity object) {
+	public T caseChenElement(ChenElement object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Relationship</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Chen Entity</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Relationship</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Chen Entity</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseRelationship(Relationship object) {
+	public T caseChenEntity(ChenEntity object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Attribute</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Chen Relationship</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Attribute</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Chen Relationship</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseAttribute(Attribute object) {
+	public T caseChenRelationship(ChenRelationship object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>ER Connection</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Chen Attribute</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>ER Connection</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Chen Attribute</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseERConnection(ERConnection object) {
+	public T caseChenAttribute(ChenAttribute object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Chen Connection</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Chen Connection</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseChenConnection(ChenConnection object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Chen Normal To Weak Connection</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Chen Normal To Weak Connection</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseChenNormalToWeakConnection(ChenNormalToWeakConnection object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Chen Weak Element</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Chen Weak Element</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseChenWeakElement(ChenWeakElement object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Chen Weak Entity</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Chen Weak Entity</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseChenWeakEntity(ChenWeakEntity object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Chen Weak Relationship</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Chen Weak Relationship</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseChenWeakRelationship(ChenWeakRelationship object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Chen Weak Attribute</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Chen Weak Attribute</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseChenWeakAttribute(ChenWeakAttribute object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Chen Weak Connection</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Chen Weak Connection</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseChenWeakConnection(ChenWeakConnection object) {
 		return null;
 	}
 

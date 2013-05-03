@@ -116,8 +116,8 @@ public class EpkDSLAdapterFactory extends AdapterFactoryImpl {
 				return createFConnectorAdapter();
 			}
 			@Override
-			public Adapter caseConnection(Connection object) {
-				return createConnectionAdapter();
+			public Adapter caseDefaultConnection(DefaultConnection object) {
+				return createDefaultConnectionAdapter();
 			}
 			@Override
 			public Adapter caseEvToFuConnection(EvToFuConnection object) {
@@ -348,16 +348,16 @@ public class EpkDSLAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link EpkDSL.Connection <em>Connection</em>}'.
+	 * Creates a new adapter for an object of class '{@link EpkDSL.DefaultConnection <em>Default Connection</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see EpkDSL.Connection
+	 * @see EpkDSL.DefaultConnection
 	 * @generated
 	 */
-	public Adapter createConnectionAdapter() {
+	public Adapter createDefaultConnectionAdapter() {
 		return null;
 	}
 

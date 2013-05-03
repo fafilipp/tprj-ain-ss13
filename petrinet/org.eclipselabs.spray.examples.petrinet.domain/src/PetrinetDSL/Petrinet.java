@@ -16,7 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link PetrinetDSL.Petrinet#getName <em>Name</em>}</li>
  *   <li>{@link PetrinetDSL.Petrinet#getDescription <em>Description</em>}</li>
- *   <li>{@link PetrinetDSL.Petrinet#getModels <em>Models</em>}</li>
+ *   <li>{@link PetrinetDSL.Petrinet#getMapelements <em>Mapelements</em>}</li>
  * </ul>
  * </p>
  *
@@ -78,19 +78,19 @@ public interface Petrinet extends EObject {
 	void setDescription(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Models</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Mapelements</b></em>' containment reference list.
 	 * The list contents are of type {@link PetrinetDSL.Petrinet}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Models</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Mapelements</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Models</em>' containment reference list.
-	 * @see PetrinetDSL.PetrinetDSLPackage#getPetrinet_Models()
+	 * @return the value of the '<em>Mapelements</em>' containment reference list.
+	 * @see PetrinetDSL.PetrinetDSLPackage#getPetrinet_Mapelements()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Petrinet> getModels();
+	EList<Petrinet> getMapelements();
 
 } // Petrinet
