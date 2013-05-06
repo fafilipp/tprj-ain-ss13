@@ -37,7 +37,7 @@ public interface ConceptMapDSLPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "http://spray.eclipselabs.org/examples/Mindmap";
+	String eNS_URI = "http://spray.eclipselabs.org/examples/Conceptmap";
 
 	/**
 	 * The package namespace name.

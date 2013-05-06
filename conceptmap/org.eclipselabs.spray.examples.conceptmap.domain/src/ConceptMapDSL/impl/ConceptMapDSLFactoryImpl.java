@@ -27,7 +27,7 @@ public class ConceptMapDSLFactoryImpl extends EFactoryImpl implements ConceptMap
 	 */
 	public static ConceptMapDSLFactory init() {
 		try {
-			ConceptMapDSLFactory theConceptMapDSLFactory = (ConceptMapDSLFactory)EPackage.Registry.INSTANCE.getEFactory("http://spray.eclipselabs.org/examples/Mindmap"); 
+			ConceptMapDSLFactory theConceptMapDSLFactory = (ConceptMapDSLFactory)EPackage.Registry.INSTANCE.getEFactory("http://spray.eclipselabs.org/examples/Conceptmap"); 
 			if (theConceptMapDSLFactory != null) {
 				return theConceptMapDSLFactory;
 			}
