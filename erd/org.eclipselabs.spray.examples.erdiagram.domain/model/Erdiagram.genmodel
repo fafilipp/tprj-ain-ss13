@@ -7,22 +7,42 @@
   <genPackages prefix="ErdiagramDSL" disposableProviderFactory="true" ecorePackage="Erdiagram.ecore#/">
     <genClasses ecoreClass="Erdiagram.ecore#//Erdiagram">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Erdiagram.ecore#//Erdiagram/elements"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Erdiagram.ecore#//Erdiagram/connections"/>
     </genClasses>
-    <genClasses ecoreClass="Erdiagram.ecore#//Element">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Erdiagram.ecore#//Element/name"/>
+    <genClasses ecoreClass="Erdiagram.ecore#//DiagramElement"/>
+    <genClasses ecoreClass="Erdiagram.ecore#//ChenElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Erdiagram.ecore#//ChenElement/name"/>
     </genClasses>
-    <genClasses ecoreClass="Erdiagram.ecore#//Entity"/>
-    <genClasses ecoreClass="Erdiagram.ecore#//Relationship">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Erdiagram.ecore#//Relationship/description"/>
+    <genClasses ecoreClass="Erdiagram.ecore#//ChenEntity"/>
+    <genClasses ecoreClass="Erdiagram.ecore#//ChenRelationship">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Erdiagram.ecore#//ChenRelationship/description"/>
     </genClasses>
-    <genClasses ecoreClass="Erdiagram.ecore#//Attribute">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Erdiagram.ecore#//Attribute/parent"/>
+    <genClasses ecoreClass="Erdiagram.ecore#//ChenAttribute">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Erdiagram.ecore#//ChenAttribute/parent"/>
     </genClasses>
-    <genClasses ecoreClass="Erdiagram.ecore#//ERConnection">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Erdiagram.ecore#//ERConnection/fromEntity"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Erdiagram.ecore#//ERConnection/toRelationship"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Erdiagram.ecore#//ERConnection/value"/>
+    <genClasses ecoreClass="Erdiagram.ecore#//ChenConnection">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Erdiagram.ecore#//ChenConnection/fromEntity"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Erdiagram.ecore#//ChenConnection/toRelationship"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Erdiagram.ecore#//ChenConnection/value"/>
+    </genClasses>
+    <genClasses ecoreClass="Erdiagram.ecore#//ChenNormalToWeakConnection">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Erdiagram.ecore#//ChenNormalToWeakConnection/fromEntity"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Erdiagram.ecore#//ChenNormalToWeakConnection/toRelationship"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Erdiagram.ecore#//ChenNormalToWeakConnection/value"/>
+    </genClasses>
+    <genClasses ecoreClass="Erdiagram.ecore#//ChenWeakElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Erdiagram.ecore#//ChenWeakElement/name"/>
+    </genClasses>
+    <genClasses ecoreClass="Erdiagram.ecore#//ChenWeakEntity"/>
+    <genClasses ecoreClass="Erdiagram.ecore#//ChenWeakRelationship">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Erdiagram.ecore#//ChenWeakRelationship/description"/>
+    </genClasses>
+    <genClasses ecoreClass="Erdiagram.ecore#//ChenWeakAttribute">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Erdiagram.ecore#//ChenWeakAttribute/parent"/>
+    </genClasses>
+    <genClasses ecoreClass="Erdiagram.ecore#//ChenWeakConnection">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Erdiagram.ecore#//ChenWeakConnection/fromEntity"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Erdiagram.ecore#//ChenWeakConnection/toRelationship"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Erdiagram.ecore#//ChenWeakConnection/value"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>
