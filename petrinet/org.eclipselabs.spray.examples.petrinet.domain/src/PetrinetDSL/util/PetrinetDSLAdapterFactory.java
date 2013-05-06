@@ -100,22 +100,6 @@ public class PetrinetDSLAdapterFactory extends AdapterFactoryImpl {
 				return createTPEdgeAdapter();
 			}
 			@Override
-			public Adapter caseStartElement(StartElement object) {
-				return createStartElementAdapter();
-			}
-			@Override
-			public Adapter caseEndElement(EndElement object) {
-				return createEndElementAdapter();
-			}
-			@Override
-			public Adapter caseStartEdge(StartEdge object) {
-				return createStartEdgeAdapter();
-			}
-			@Override
-			public Adapter caseEndEdge(EndEdge object) {
-				return createEndEdgeAdapter();
-			}
-			@Override
 			public Adapter defaultCase(EObject object) {
 				return createEObjectAdapter();
 			}
@@ -244,62 +228,6 @@ public class PetrinetDSLAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createTPEdgeAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link PetrinetDSL.StartElement <em>Start Element</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see PetrinetDSL.StartElement
-	 * @generated
-	 */
-	public Adapter createStartElementAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link PetrinetDSL.EndElement <em>End Element</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see PetrinetDSL.EndElement
-	 * @generated
-	 */
-	public Adapter createEndElementAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link PetrinetDSL.StartEdge <em>Start Edge</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see PetrinetDSL.StartEdge
-	 * @generated
-	 */
-	public Adapter createStartEdgeAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link PetrinetDSL.EndEdge <em>End Edge</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see PetrinetDSL.EndEdge
-	 * @generated
-	 */
-	public Adapter createEndEdgeAdapter() {
 		return null;
 	}
 

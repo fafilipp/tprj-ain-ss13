@@ -126,38 +126,6 @@ public class PetrinetDSLSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case PetrinetDSLPackage.START_ELEMENT: {
-				StartElement startElement = (StartElement)theEObject;
-				T result = caseStartElement(startElement);
-				if (result == null) result = caseNode(startElement);
-				if (result == null) result = casePetrinet(startElement);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case PetrinetDSLPackage.END_ELEMENT: {
-				EndElement endElement = (EndElement)theEObject;
-				T result = caseEndElement(endElement);
-				if (result == null) result = caseNode(endElement);
-				if (result == null) result = casePetrinet(endElement);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case PetrinetDSLPackage.START_EDGE: {
-				StartEdge startEdge = (StartEdge)theEObject;
-				T result = caseStartEdge(startEdge);
-				if (result == null) result = caseEdge(startEdge);
-				if (result == null) result = casePetrinet(startEdge);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case PetrinetDSLPackage.END_EDGE: {
-				EndEdge endEdge = (EndEdge)theEObject;
-				T result = caseEndEdge(endEdge);
-				if (result == null) result = caseEdge(endEdge);
-				if (result == null) result = casePetrinet(endEdge);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -279,66 +247,6 @@ public class PetrinetDSLSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseTPEdge(TPEdge object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Start Element</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Start Element</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseStartElement(StartElement object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>End Element</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>End Element</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseEndElement(EndElement object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Start Edge</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Start Edge</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseStartEdge(StartEdge object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>End Edge</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>End Edge</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseEndEdge(EndEdge object) {
 		return null;
 	}
 

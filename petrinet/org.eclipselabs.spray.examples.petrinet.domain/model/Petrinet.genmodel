@@ -8,7 +8,7 @@
     <genClasses ecoreClass="Petrinet.ecore#//Petrinet">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Petrinet.ecore#//Petrinet/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Petrinet.ecore#//Petrinet/description"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Petrinet.ecore#//Petrinet/models"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Petrinet.ecore#//Petrinet/mapelements"/>
     </genClasses>
     <genClasses ecoreClass="Petrinet.ecore#//Node"/>
     <genClasses ecoreClass="Petrinet.ecore#//Edge"/>
@@ -20,6 +20,10 @@
     <genClasses ecoreClass="Petrinet.ecore#//PTEdge">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Petrinet.ecore#//PTEdge/fromPlace"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Petrinet.ecore#//PTEdge/toTransition"/>
+    </genClasses>
+    <genClasses ecoreClass="Petrinet.ecore#//TPEdge">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Petrinet.ecore#//TPEdge/fromTransition"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Petrinet.ecore#//TPEdge/toPlace"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

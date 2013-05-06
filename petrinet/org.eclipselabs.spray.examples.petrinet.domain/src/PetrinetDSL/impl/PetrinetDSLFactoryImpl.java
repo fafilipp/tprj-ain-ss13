@@ -64,10 +64,6 @@ public class PetrinetDSLFactoryImpl extends EFactoryImpl implements PetrinetDSLF
 			case PetrinetDSLPackage.PLACE: return createPlace();
 			case PetrinetDSLPackage.PT_EDGE: return createPTEdge();
 			case PetrinetDSLPackage.TP_EDGE: return createTPEdge();
-			case PetrinetDSLPackage.START_ELEMENT: return createStartElement();
-			case PetrinetDSLPackage.END_ELEMENT: return createEndElement();
-			case PetrinetDSLPackage.START_EDGE: return createStartEdge();
-			case PetrinetDSLPackage.END_EDGE: return createEndEdge();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -151,46 +147,6 @@ public class PetrinetDSLFactoryImpl extends EFactoryImpl implements PetrinetDSLF
 	public TPEdge createTPEdge() {
 		TPEdgeImpl tpEdge = new TPEdgeImpl();
 		return tpEdge;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public StartElement createStartElement() {
-		StartElementImpl startElement = new StartElementImpl();
-		return startElement;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EndElement createEndElement() {
-		EndElementImpl endElement = new EndElementImpl();
-		return endElement;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public StartEdge createStartEdge() {
-		StartEdgeImpl startEdge = new StartEdgeImpl();
-		return startEdge;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EndEdge createEndEdge() {
-		EndEdgeImpl endEdge = new EndEdgeImpl();
-		return endEdge;
 	}
 
 	/**
