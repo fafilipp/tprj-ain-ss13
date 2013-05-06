@@ -29,47 +29,47 @@ class Function {
 	}
 }
 
-class EConnector alias EvAndConnector {
-	shape AndConnectorShape
-		behavior {
-	    create into nodes palette "Connectors" 
-	}
-}
-
-class EConnector alias EvOrConnector {
-	shape OrConnectorShape
-		behavior {
-	    create into nodes palette "Connectors" 
-	}
-}
-
-class EConnector alias EvXORConnector {
-	shape XOrConnectorShape
-	behavior {
-	    create into nodes palette "Connectors" 
-	}
-}
-
-class FConnector alias FuAndConnector {
-	shape AndConnectorShape
-		behavior {
-	    create into nodes palette "Connectors" 
-	}
-}
-
-class FConnector alias FuOrConnector {
-	shape OrConnectorShape
-		behavior {
-	    create into nodes palette "Connectors" 
-	}
-}
-
-class FConnector alias FuXORConnector {
-	shape XOrConnectorShape
-	behavior {
-	    create into nodes palette "Connectors" 
-	}
-}
+//class EConnector alias EvAndConnector {
+//	shape AndConnectorShape
+//		behavior {
+//	    create into nodes palette "Connectors" 
+//	}
+//}
+//
+//class EConnector alias EvOrConnector {
+//	shape OrConnectorShape
+//		behavior {
+//	    create into nodes palette "Connectors" 
+//	}
+//}
+//
+//class EConnector alias EvXORConnector {
+//	shape XOrConnectorShape
+//	behavior {
+//	    create into nodes palette "Connectors" 
+//	}
+//}
+//
+//class FConnector alias FuAndConnector {
+//	shape AndConnectorShape
+//		behavior {
+//	    create into nodes palette "Connectors" 
+//	}
+//}
+//
+//class FConnector alias FuOrConnector {
+//	shape OrConnectorShape
+//		behavior {
+//	    create into nodes palette "Connectors" 
+//	}
+//}
+//
+//class FConnector alias FuXORConnector {
+//	shape XOrConnectorShape
+//	behavior {
+//	    create into nodes palette "Connectors" 
+//	}
+//}
 
 class OrgUnit alias OrganizationalUnit {
 	shape OrganizationUnitShape {
