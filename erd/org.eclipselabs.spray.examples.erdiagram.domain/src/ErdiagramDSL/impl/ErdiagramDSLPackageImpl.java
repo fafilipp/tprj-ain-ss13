@@ -17,6 +17,11 @@ import ErdiagramDSL.DiagramElement;
 import ErdiagramDSL.Erdiagram;
 import ErdiagramDSL.ErdiagramDSLFactory;
 import ErdiagramDSL.ErdiagramDSLPackage;
+import ErdiagramDSL.MartinConnection;
+import ErdiagramDSL.MartinElement;
+import ErdiagramDSL.MartinEntity;
+import ErdiagramDSL.MinmaxConnection;
+import ErdiagramDSL.MinmaxEntity;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -122,6 +127,41 @@ public class ErdiagramDSLPackageImpl extends EPackageImpl implements ErdiagramDS
 	 * @generated
 	 */
 	private EClass chenWeakConnectionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass martinElementEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass martinEntityEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass martinConnectionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass minmaxEntityEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass minmaxConnectionEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -450,6 +490,141 @@ public class ErdiagramDSLPackageImpl extends EPackageImpl implements ErdiagramDS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getMartinElement() {
+		return martinElementEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMartinElement_Name() {
+		return (EAttribute)martinElementEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getMartinEntity() {
+		return martinEntityEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getMartinConnection() {
+		return martinConnectionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMartinConnection_FromText() {
+		return (EAttribute)martinConnectionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMartinConnection_ToText() {
+		return (EAttribute)martinConnectionEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMartinConnection_Start() {
+		return (EReference)martinConnectionEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMartinConnection_End() {
+		return (EReference)martinConnectionEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getMinmaxEntity() {
+		return minmaxEntityEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMinmaxEntity_Name() {
+		return (EAttribute)minmaxEntityEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getMinmaxConnection() {
+		return minmaxConnectionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMinmaxConnection_FromText() {
+		return (EAttribute)minmaxConnectionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMinmaxConnection_ToText() {
+		return (EAttribute)minmaxConnectionEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMinmaxConnection_Start() {
+		return (EReference)minmaxConnectionEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMinmaxConnection_End() {
+		return (EReference)minmaxConnectionEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public ErdiagramDSLFactory getErdiagramDSLFactory() {
 		return (ErdiagramDSLFactory)getEFactoryInstance();
 	}
@@ -514,6 +689,26 @@ public class ErdiagramDSLPackageImpl extends EPackageImpl implements ErdiagramDS
 		createEReference(chenWeakConnectionEClass, CHEN_WEAK_CONNECTION__FROM_ENTITY);
 		createEReference(chenWeakConnectionEClass, CHEN_WEAK_CONNECTION__TO_RELATIONSHIP);
 		createEAttribute(chenWeakConnectionEClass, CHEN_WEAK_CONNECTION__VALUE);
+
+		martinElementEClass = createEClass(MARTIN_ELEMENT);
+		createEAttribute(martinElementEClass, MARTIN_ELEMENT__NAME);
+
+		martinEntityEClass = createEClass(MARTIN_ENTITY);
+
+		martinConnectionEClass = createEClass(MARTIN_CONNECTION);
+		createEAttribute(martinConnectionEClass, MARTIN_CONNECTION__FROM_TEXT);
+		createEAttribute(martinConnectionEClass, MARTIN_CONNECTION__TO_TEXT);
+		createEReference(martinConnectionEClass, MARTIN_CONNECTION__START);
+		createEReference(martinConnectionEClass, MARTIN_CONNECTION__END);
+
+		minmaxEntityEClass = createEClass(MINMAX_ENTITY);
+		createEAttribute(minmaxEntityEClass, MINMAX_ENTITY__NAME);
+
+		minmaxConnectionEClass = createEClass(MINMAX_CONNECTION);
+		createEAttribute(minmaxConnectionEClass, MINMAX_CONNECTION__FROM_TEXT);
+		createEAttribute(minmaxConnectionEClass, MINMAX_CONNECTION__TO_TEXT);
+		createEReference(minmaxConnectionEClass, MINMAX_CONNECTION__START);
+		createEReference(minmaxConnectionEClass, MINMAX_CONNECTION__END);
 	}
 
 	/**
@@ -555,6 +750,11 @@ public class ErdiagramDSLPackageImpl extends EPackageImpl implements ErdiagramDS
 		chenWeakRelationshipEClass.getESuperTypes().add(this.getChenWeakElement());
 		chenWeakAttributeEClass.getESuperTypes().add(this.getChenWeakElement());
 		chenWeakConnectionEClass.getESuperTypes().add(this.getDiagramElement());
+		martinElementEClass.getESuperTypes().add(this.getDiagramElement());
+		martinEntityEClass.getESuperTypes().add(this.getMartinElement());
+		martinConnectionEClass.getESuperTypes().add(this.getDiagramElement());
+		minmaxEntityEClass.getESuperTypes().add(this.getDiagramElement());
+		minmaxConnectionEClass.getESuperTypes().add(this.getDiagramElement());
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(erdiagramEClass, Erdiagram.class, "Erdiagram", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -598,6 +798,26 @@ public class ErdiagramDSLPackageImpl extends EPackageImpl implements ErdiagramDS
 		initEReference(getChenWeakConnection_FromEntity(), this.getChenWeakEntity(), null, "fromEntity", null, 1, 1, ChenWeakConnection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getChenWeakConnection_ToRelationship(), this.getChenWeakRelationship(), null, "toRelationship", null, 1, 1, ChenWeakConnection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getChenWeakConnection_Value(), ecorePackage.getEString(), "value", null, 0, 1, ChenWeakConnection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(martinElementEClass, MartinElement.class, "MartinElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getMartinElement_Name(), ecorePackage.getEString(), "name", null, 1, 1, MartinElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(martinEntityEClass, MartinEntity.class, "MartinEntity", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(martinConnectionEClass, MartinConnection.class, "MartinConnection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getMartinConnection_FromText(), ecorePackage.getEString(), "fromText", null, 1, 1, MartinConnection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMartinConnection_ToText(), ecorePackage.getEString(), "toText", null, 1, 1, MartinConnection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMartinConnection_Start(), this.getMartinEntity(), null, "start", null, 1, 1, MartinConnection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMartinConnection_End(), this.getMartinEntity(), null, "end", null, 1, 1, MartinConnection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(minmaxEntityEClass, MinmaxEntity.class, "MinmaxEntity", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getMinmaxEntity_Name(), ecorePackage.getEString(), "name", null, 1, 1, MinmaxEntity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(minmaxConnectionEClass, MinmaxConnection.class, "MinmaxConnection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getMinmaxConnection_FromText(), ecorePackage.getEString(), "fromText", null, 1, 1, MinmaxConnection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMinmaxConnection_ToText(), ecorePackage.getEString(), "toText", null, 1, 1, MinmaxConnection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMinmaxConnection_Start(), this.getMinmaxEntity(), null, "start", null, 1, 1, MinmaxConnection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMinmaxConnection_End(), this.getMinmaxEntity(), null, "end", null, 1, 1, MinmaxConnection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

@@ -69,6 +69,11 @@ public class ErdiagramDSLFactoryImpl extends EFactoryImpl implements ErdiagramDS
 			case ErdiagramDSLPackage.CHEN_WEAK_RELATIONSHIP: return createChenWeakRelationship();
 			case ErdiagramDSLPackage.CHEN_WEAK_ATTRIBUTE: return createChenWeakAttribute();
 			case ErdiagramDSLPackage.CHEN_WEAK_CONNECTION: return createChenWeakConnection();
+			case ErdiagramDSLPackage.MARTIN_ELEMENT: return createMartinElement();
+			case ErdiagramDSLPackage.MARTIN_ENTITY: return createMartinEntity();
+			case ErdiagramDSLPackage.MARTIN_CONNECTION: return createMartinConnection();
+			case ErdiagramDSLPackage.MINMAX_ENTITY: return createMinmaxEntity();
+			case ErdiagramDSLPackage.MINMAX_CONNECTION: return createMinmaxConnection();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -202,6 +207,56 @@ public class ErdiagramDSLFactoryImpl extends EFactoryImpl implements ErdiagramDS
 	public ChenWeakConnection createChenWeakConnection() {
 		ChenWeakConnectionImpl chenWeakConnection = new ChenWeakConnectionImpl();
 		return chenWeakConnection;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MartinElement createMartinElement() {
+		MartinElementImpl martinElement = new MartinElementImpl();
+		return martinElement;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MartinEntity createMartinEntity() {
+		MartinEntityImpl martinEntity = new MartinEntityImpl();
+		return martinEntity;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MartinConnection createMartinConnection() {
+		MartinConnectionImpl martinConnection = new MartinConnectionImpl();
+		return martinConnection;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MinmaxEntity createMinmaxEntity() {
+		MinmaxEntityImpl minmaxEntity = new MinmaxEntityImpl();
+		return minmaxEntity;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MinmaxConnection createMinmaxConnection() {
+		MinmaxConnectionImpl minmaxConnection = new MinmaxConnectionImpl();
+		return minmaxConnection;
 	}
 
 	/**

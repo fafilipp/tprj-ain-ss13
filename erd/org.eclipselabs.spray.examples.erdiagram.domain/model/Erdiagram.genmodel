@@ -44,5 +44,24 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Erdiagram.ecore#//ChenWeakConnection/toRelationship"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Erdiagram.ecore#//ChenWeakConnection/value"/>
     </genClasses>
+    <genClasses ecoreClass="Erdiagram.ecore#//MartinElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Erdiagram.ecore#//MartinElement/name"/>
+    </genClasses>
+    <genClasses ecoreClass="Erdiagram.ecore#//MartinEntity"/>
+    <genClasses ecoreClass="Erdiagram.ecore#//MartinConnection">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Erdiagram.ecore#//MartinConnection/fromText"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Erdiagram.ecore#//MartinConnection/toText"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Erdiagram.ecore#//MartinConnection/start"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Erdiagram.ecore#//MartinConnection/end"/>
+    </genClasses>
+    <genClasses ecoreClass="Erdiagram.ecore#//MinmaxEntity">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Erdiagram.ecore#//MinmaxEntity/name"/>
+    </genClasses>
+    <genClasses ecoreClass="Erdiagram.ecore#//MinmaxConnection">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Erdiagram.ecore#//MinmaxConnection/fromText"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Erdiagram.ecore#//MinmaxConnection/toText"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Erdiagram.ecore#//MinmaxConnection/start"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Erdiagram.ecore#//MinmaxConnection/end"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

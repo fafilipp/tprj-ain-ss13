@@ -139,6 +139,51 @@ public interface ErdiagramDSLFactory extends EFactory {
 	ChenWeakConnection createChenWeakConnection();
 
 	/**
+	 * Returns a new object of class '<em>Martin Element</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Martin Element</em>'.
+	 * @generated
+	 */
+	MartinElement createMartinElement();
+
+	/**
+	 * Returns a new object of class '<em>Martin Entity</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Martin Entity</em>'.
+	 * @generated
+	 */
+	MartinEntity createMartinEntity();
+
+	/**
+	 * Returns a new object of class '<em>Martin Connection</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Martin Connection</em>'.
+	 * @generated
+	 */
+	MartinConnection createMartinConnection();
+
+	/**
+	 * Returns a new object of class '<em>Minmax Entity</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Minmax Entity</em>'.
+	 * @generated
+	 */
+	MinmaxEntity createMinmaxEntity();
+
+	/**
+	 * Returns a new object of class '<em>Minmax Connection</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Minmax Connection</em>'.
+	 * @generated
+	 */
+	MinmaxConnection createMinmaxConnection();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

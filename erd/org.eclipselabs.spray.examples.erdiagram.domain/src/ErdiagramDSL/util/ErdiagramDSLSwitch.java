@@ -161,6 +161,42 @@ public class ErdiagramDSLSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case ErdiagramDSLPackage.MARTIN_ELEMENT: {
+				MartinElement martinElement = (MartinElement)theEObject;
+				T result = caseMartinElement(martinElement);
+				if (result == null) result = caseDiagramElement(martinElement);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ErdiagramDSLPackage.MARTIN_ENTITY: {
+				MartinEntity martinEntity = (MartinEntity)theEObject;
+				T result = caseMartinEntity(martinEntity);
+				if (result == null) result = caseMartinElement(martinEntity);
+				if (result == null) result = caseDiagramElement(martinEntity);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ErdiagramDSLPackage.MARTIN_CONNECTION: {
+				MartinConnection martinConnection = (MartinConnection)theEObject;
+				T result = caseMartinConnection(martinConnection);
+				if (result == null) result = caseDiagramElement(martinConnection);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ErdiagramDSLPackage.MINMAX_ENTITY: {
+				MinmaxEntity minmaxEntity = (MinmaxEntity)theEObject;
+				T result = caseMinmaxEntity(minmaxEntity);
+				if (result == null) result = caseDiagramElement(minmaxEntity);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ErdiagramDSLPackage.MINMAX_CONNECTION: {
+				MinmaxConnection minmaxConnection = (MinmaxConnection)theEObject;
+				T result = caseMinmaxConnection(minmaxConnection);
+				if (result == null) result = caseDiagramElement(minmaxConnection);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -357,6 +393,81 @@ public class ErdiagramDSLSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseChenWeakConnection(ChenWeakConnection object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Martin Element</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Martin Element</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMartinElement(MartinElement object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Martin Entity</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Martin Entity</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMartinEntity(MartinEntity object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Martin Connection</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Martin Connection</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMartinConnection(MartinConnection object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Minmax Entity</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Minmax Entity</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMinmaxEntity(MinmaxEntity object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Minmax Connection</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Minmax Connection</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMinmaxConnection(MinmaxConnection object) {
 		return null;
 	}
 

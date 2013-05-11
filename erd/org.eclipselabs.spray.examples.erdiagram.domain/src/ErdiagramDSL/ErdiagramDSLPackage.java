@@ -500,6 +500,200 @@ public interface ErdiagramDSLPackage extends EPackage {
 	 */
 	int CHEN_WEAK_CONNECTION_FEATURE_COUNT = DIAGRAM_ELEMENT_FEATURE_COUNT + 3;
 
+	/**
+	 * The meta object id for the '{@link ErdiagramDSL.impl.MartinElementImpl <em>Martin Element</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ErdiagramDSL.impl.MartinElementImpl
+	 * @see ErdiagramDSL.impl.ErdiagramDSLPackageImpl#getMartinElement()
+	 * @generated
+	 */
+	int MARTIN_ELEMENT = 13;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MARTIN_ELEMENT__NAME = DIAGRAM_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Martin Element</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MARTIN_ELEMENT_FEATURE_COUNT = DIAGRAM_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The meta object id for the '{@link ErdiagramDSL.impl.MartinEntityImpl <em>Martin Entity</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ErdiagramDSL.impl.MartinEntityImpl
+	 * @see ErdiagramDSL.impl.ErdiagramDSLPackageImpl#getMartinEntity()
+	 * @generated
+	 */
+	int MARTIN_ENTITY = 14;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MARTIN_ENTITY__NAME = MARTIN_ELEMENT__NAME;
+
+	/**
+	 * The number of structural features of the '<em>Martin Entity</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MARTIN_ENTITY_FEATURE_COUNT = MARTIN_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link ErdiagramDSL.impl.MartinConnectionImpl <em>Martin Connection</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ErdiagramDSL.impl.MartinConnectionImpl
+	 * @see ErdiagramDSL.impl.ErdiagramDSLPackageImpl#getMartinConnection()
+	 * @generated
+	 */
+	int MARTIN_CONNECTION = 15;
+
+	/**
+	 * The feature id for the '<em><b>From Text</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MARTIN_CONNECTION__FROM_TEXT = DIAGRAM_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>To Text</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MARTIN_CONNECTION__TO_TEXT = DIAGRAM_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Start</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MARTIN_CONNECTION__START = DIAGRAM_ELEMENT_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>End</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MARTIN_CONNECTION__END = DIAGRAM_ELEMENT_FEATURE_COUNT + 3;
+
+	/**
+	 * The number of structural features of the '<em>Martin Connection</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MARTIN_CONNECTION_FEATURE_COUNT = DIAGRAM_ELEMENT_FEATURE_COUNT + 4;
+
+	/**
+	 * The meta object id for the '{@link ErdiagramDSL.impl.MinmaxEntityImpl <em>Minmax Entity</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ErdiagramDSL.impl.MinmaxEntityImpl
+	 * @see ErdiagramDSL.impl.ErdiagramDSLPackageImpl#getMinmaxEntity()
+	 * @generated
+	 */
+	int MINMAX_ENTITY = 16;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MINMAX_ENTITY__NAME = DIAGRAM_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Minmax Entity</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MINMAX_ENTITY_FEATURE_COUNT = DIAGRAM_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The meta object id for the '{@link ErdiagramDSL.impl.MinmaxConnectionImpl <em>Minmax Connection</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see ErdiagramDSL.impl.MinmaxConnectionImpl
+	 * @see ErdiagramDSL.impl.ErdiagramDSLPackageImpl#getMinmaxConnection()
+	 * @generated
+	 */
+	int MINMAX_CONNECTION = 17;
+
+	/**
+	 * The feature id for the '<em><b>From Text</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MINMAX_CONNECTION__FROM_TEXT = DIAGRAM_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>To Text</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MINMAX_CONNECTION__TO_TEXT = DIAGRAM_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Start</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MINMAX_CONNECTION__START = DIAGRAM_ELEMENT_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>End</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MINMAX_CONNECTION__END = DIAGRAM_ELEMENT_FEATURE_COUNT + 3;
+
+	/**
+	 * The number of structural features of the '<em>Minmax Connection</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MINMAX_CONNECTION_FEATURE_COUNT = DIAGRAM_ELEMENT_FEATURE_COUNT + 4;
+
 
 	/**
 	 * Returns the meta object for class '{@link ErdiagramDSL.Erdiagram <em>Erdiagram</em>}'.
@@ -808,6 +1002,166 @@ public interface ErdiagramDSLPackage extends EPackage {
 	EAttribute getChenWeakConnection_Value();
 
 	/**
+	 * Returns the meta object for class '{@link ErdiagramDSL.MartinElement <em>Martin Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Martin Element</em>'.
+	 * @see ErdiagramDSL.MartinElement
+	 * @generated
+	 */
+	EClass getMartinElement();
+
+	/**
+	 * Returns the meta object for the attribute '{@link ErdiagramDSL.MartinElement#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see ErdiagramDSL.MartinElement#getName()
+	 * @see #getMartinElement()
+	 * @generated
+	 */
+	EAttribute getMartinElement_Name();
+
+	/**
+	 * Returns the meta object for class '{@link ErdiagramDSL.MartinEntity <em>Martin Entity</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Martin Entity</em>'.
+	 * @see ErdiagramDSL.MartinEntity
+	 * @generated
+	 */
+	EClass getMartinEntity();
+
+	/**
+	 * Returns the meta object for class '{@link ErdiagramDSL.MartinConnection <em>Martin Connection</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Martin Connection</em>'.
+	 * @see ErdiagramDSL.MartinConnection
+	 * @generated
+	 */
+	EClass getMartinConnection();
+
+	/**
+	 * Returns the meta object for the attribute '{@link ErdiagramDSL.MartinConnection#getFromText <em>From Text</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>From Text</em>'.
+	 * @see ErdiagramDSL.MartinConnection#getFromText()
+	 * @see #getMartinConnection()
+	 * @generated
+	 */
+	EAttribute getMartinConnection_FromText();
+
+	/**
+	 * Returns the meta object for the attribute '{@link ErdiagramDSL.MartinConnection#getToText <em>To Text</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>To Text</em>'.
+	 * @see ErdiagramDSL.MartinConnection#getToText()
+	 * @see #getMartinConnection()
+	 * @generated
+	 */
+	EAttribute getMartinConnection_ToText();
+
+	/**
+	 * Returns the meta object for the reference '{@link ErdiagramDSL.MartinConnection#getStart <em>Start</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Start</em>'.
+	 * @see ErdiagramDSL.MartinConnection#getStart()
+	 * @see #getMartinConnection()
+	 * @generated
+	 */
+	EReference getMartinConnection_Start();
+
+	/**
+	 * Returns the meta object for the reference '{@link ErdiagramDSL.MartinConnection#getEnd <em>End</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>End</em>'.
+	 * @see ErdiagramDSL.MartinConnection#getEnd()
+	 * @see #getMartinConnection()
+	 * @generated
+	 */
+	EReference getMartinConnection_End();
+
+	/**
+	 * Returns the meta object for class '{@link ErdiagramDSL.MinmaxEntity <em>Minmax Entity</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Minmax Entity</em>'.
+	 * @see ErdiagramDSL.MinmaxEntity
+	 * @generated
+	 */
+	EClass getMinmaxEntity();
+
+	/**
+	 * Returns the meta object for the attribute '{@link ErdiagramDSL.MinmaxEntity#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see ErdiagramDSL.MinmaxEntity#getName()
+	 * @see #getMinmaxEntity()
+	 * @generated
+	 */
+	EAttribute getMinmaxEntity_Name();
+
+	/**
+	 * Returns the meta object for class '{@link ErdiagramDSL.MinmaxConnection <em>Minmax Connection</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Minmax Connection</em>'.
+	 * @see ErdiagramDSL.MinmaxConnection
+	 * @generated
+	 */
+	EClass getMinmaxConnection();
+
+	/**
+	 * Returns the meta object for the attribute '{@link ErdiagramDSL.MinmaxConnection#getFromText <em>From Text</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>From Text</em>'.
+	 * @see ErdiagramDSL.MinmaxConnection#getFromText()
+	 * @see #getMinmaxConnection()
+	 * @generated
+	 */
+	EAttribute getMinmaxConnection_FromText();
+
+	/**
+	 * Returns the meta object for the attribute '{@link ErdiagramDSL.MinmaxConnection#getToText <em>To Text</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>To Text</em>'.
+	 * @see ErdiagramDSL.MinmaxConnection#getToText()
+	 * @see #getMinmaxConnection()
+	 * @generated
+	 */
+	EAttribute getMinmaxConnection_ToText();
+
+	/**
+	 * Returns the meta object for the reference '{@link ErdiagramDSL.MinmaxConnection#getStart <em>Start</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Start</em>'.
+	 * @see ErdiagramDSL.MinmaxConnection#getStart()
+	 * @see #getMinmaxConnection()
+	 * @generated
+	 */
+	EReference getMinmaxConnection_Start();
+
+	/**
+	 * Returns the meta object for the reference '{@link ErdiagramDSL.MinmaxConnection#getEnd <em>End</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>End</em>'.
+	 * @see ErdiagramDSL.MinmaxConnection#getEnd()
+	 * @see #getMinmaxConnection()
+	 * @generated
+	 */
+	EReference getMinmaxConnection_End();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1086,6 +1440,136 @@ public interface ErdiagramDSLPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute CHEN_WEAK_CONNECTION__VALUE = eINSTANCE.getChenWeakConnection_Value();
+
+		/**
+		 * The meta object literal for the '{@link ErdiagramDSL.impl.MartinElementImpl <em>Martin Element</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see ErdiagramDSL.impl.MartinElementImpl
+		 * @see ErdiagramDSL.impl.ErdiagramDSLPackageImpl#getMartinElement()
+		 * @generated
+		 */
+		EClass MARTIN_ELEMENT = eINSTANCE.getMartinElement();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MARTIN_ELEMENT__NAME = eINSTANCE.getMartinElement_Name();
+
+		/**
+		 * The meta object literal for the '{@link ErdiagramDSL.impl.MartinEntityImpl <em>Martin Entity</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see ErdiagramDSL.impl.MartinEntityImpl
+		 * @see ErdiagramDSL.impl.ErdiagramDSLPackageImpl#getMartinEntity()
+		 * @generated
+		 */
+		EClass MARTIN_ENTITY = eINSTANCE.getMartinEntity();
+
+		/**
+		 * The meta object literal for the '{@link ErdiagramDSL.impl.MartinConnectionImpl <em>Martin Connection</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see ErdiagramDSL.impl.MartinConnectionImpl
+		 * @see ErdiagramDSL.impl.ErdiagramDSLPackageImpl#getMartinConnection()
+		 * @generated
+		 */
+		EClass MARTIN_CONNECTION = eINSTANCE.getMartinConnection();
+
+		/**
+		 * The meta object literal for the '<em><b>From Text</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MARTIN_CONNECTION__FROM_TEXT = eINSTANCE.getMartinConnection_FromText();
+
+		/**
+		 * The meta object literal for the '<em><b>To Text</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MARTIN_CONNECTION__TO_TEXT = eINSTANCE.getMartinConnection_ToText();
+
+		/**
+		 * The meta object literal for the '<em><b>Start</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MARTIN_CONNECTION__START = eINSTANCE.getMartinConnection_Start();
+
+		/**
+		 * The meta object literal for the '<em><b>End</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MARTIN_CONNECTION__END = eINSTANCE.getMartinConnection_End();
+
+		/**
+		 * The meta object literal for the '{@link ErdiagramDSL.impl.MinmaxEntityImpl <em>Minmax Entity</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see ErdiagramDSL.impl.MinmaxEntityImpl
+		 * @see ErdiagramDSL.impl.ErdiagramDSLPackageImpl#getMinmaxEntity()
+		 * @generated
+		 */
+		EClass MINMAX_ENTITY = eINSTANCE.getMinmaxEntity();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MINMAX_ENTITY__NAME = eINSTANCE.getMinmaxEntity_Name();
+
+		/**
+		 * The meta object literal for the '{@link ErdiagramDSL.impl.MinmaxConnectionImpl <em>Minmax Connection</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see ErdiagramDSL.impl.MinmaxConnectionImpl
+		 * @see ErdiagramDSL.impl.ErdiagramDSLPackageImpl#getMinmaxConnection()
+		 * @generated
+		 */
+		EClass MINMAX_CONNECTION = eINSTANCE.getMinmaxConnection();
+
+		/**
+		 * The meta object literal for the '<em><b>From Text</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MINMAX_CONNECTION__FROM_TEXT = eINSTANCE.getMinmaxConnection_FromText();
+
+		/**
+		 * The meta object literal for the '<em><b>To Text</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MINMAX_CONNECTION__TO_TEXT = eINSTANCE.getMinmaxConnection_ToText();
+
+		/**
+		 * The meta object literal for the '<em><b>Start</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MINMAX_CONNECTION__START = eINSTANCE.getMinmaxConnection_Start();
+
+		/**
+		 * The meta object literal for the '<em><b>End</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MINMAX_CONNECTION__END = eINSTANCE.getMinmaxConnection_End();
 
 	}
 

@@ -163,5 +163,560 @@ connection ChenWeakConnectionShape {
 }
 
 /////////////////////////////////////////////////////////////////
-/////////////////// ISO, kr‰henfuﬂ, uml, sonstiges //////////////
+////////////// Martin-Notation / crow's foot notation ///////////
 /////////////////////////////////////////////////////////////////
+
+shape MartinEntityShape {
+	rectangle {
+		size(width=150, height=80)
+	}
+	text {
+		size(width=110,height=20)
+		position(x=10,y=25)
+		id=EntityText
+	}
+}
+
+connection Martin_11_11_Shape {
+	//start of the connection
+	placing {
+		position(offset=0.0)
+		polyline {
+			point(x=5, y=-5)
+			point(x=5, y=5)
+			
+			point(x=5, y=0)
+			point(x=10, y=0)
+			
+			point(x=10,y=-5)
+			point(x=10,y=5)
+		}		
+	}
+	placing {
+		position(offset=0.0)
+		text {
+			position(x=10, y=-20)
+			size(width=20, height=10)
+			id=startText
+		}
+	}
+	
+	//end of the connection
+	placing {
+		position(offset=1.0)
+		polyline {			
+			point(x=-5, y=-5)
+			point(x=-5, y=5)
+			
+			point(x=-5, y=0)
+			point(x=-10, y=0)
+			
+			point(x=-10,y=-5)
+			point(x=-10,y=5)
+		}		
+	}
+	placing {
+		position(offset=1.0)
+		text {
+			position(x=-30, y=-20)
+			size(width=20, height=10)
+			id=endText
+		}
+	}
+}
+
+connection Martin_11_1n_Shape {
+	//start of the connection
+	placing {
+		position(offset=0.0)
+		polyline {
+			point(x=5, y=-5)
+			point(x=5, y=5)
+			
+			point(x=5, y=0)
+			point(x=10, y=0)
+			
+			point(x=10,y=-5)
+			point(x=10,y=5)
+		}		
+	}
+	placing {
+		position(offset=0.0)
+		text {
+			position(x=10, y=-20)
+			size(width=20, height=10)
+			id=startText
+		}
+	}
+	
+	//end of the connection
+	placing {
+		position(offset=1.0)
+		polyline {
+			point(x=0,y=-5)
+			point(x=-5,y=0)
+			
+			point(x=0,y=5)
+			point(x=-5,y=0)
+			
+			point(x=-5,y=-5)
+			point(x=-5,y=5)
+		}
+	}
+	placing {
+		position(offset=1.0)
+		text {
+			position(x=-30, y=-20)
+			size(width=20, height=10)
+			id=endText
+		}
+	}
+}
+
+connection Martin_11_01_Shape {
+	//start of the connection
+	placing {
+		position(offset=0.0)
+		polyline {
+			point(x=5, y=-5)
+			point(x=5, y=5)
+			
+			point(x=5, y=0)
+			point(x=10, y=0)
+			
+			point(x=10,y=-5)
+			point(x=10,y=5)
+		}		
+	}
+	placing {
+		position(offset=0.0)
+		text {
+			position(x=10, y=-20)
+			size(width=20, height=10)
+			id=startText
+		}
+	}
+	
+	//end of the connection
+	placing{
+		position(offset=1.0)
+		line{
+			point(x=-5,y=-5)
+			point(x=-5,y=5)
+		}
+	}
+	placing {
+		position(offset=1.0)
+		ellipse {
+			position(x=-12,y=-5)
+			size(width=3, height=10)
+		}
+	}
+	
+	placing {
+		position(offset=1.0)
+		text {
+			position(x=-30, y=-20)
+			size(width=20, height=10)
+			id=endText
+		}
+	}
+}
+
+connection Martin_11_0n_Shape {
+	//start of the connection
+	placing {
+		position(offset=0.0)
+		polyline {
+			point(x=5, y=-5)
+			point(x=5, y=5)
+			
+			point(x=5, y=0)
+			point(x=10, y=0)
+			
+			point(x=10,y=-5)
+			point(x=10,y=5)
+		}		
+	}
+	placing {
+		position(offset=0.0)
+		text {
+			position(x=10, y=-20)
+			size(width=20, height=10)
+			id=startText
+		}
+	}
+	
+	//end of the connection
+	placing{
+		position(offset=1.0)
+		polyline{
+			point(x=0,y=-5)
+			point(x=-9,y=0)
+			point(x=0,y=5)
+		}
+	}
+	placing {
+		position(offset=1.0)
+		ellipse {
+			position(x=-12,y=-5)
+			size(width=3, height=10)
+		}
+	}
+	
+	placing {
+		position(offset=1.0)
+		text {
+			position(x=-30, y=-20)
+			size(width=20, height=10)
+			id=endText
+		}
+	}
+}
+
+connection Martin_1n_1n_Shape {
+	//start of the connection
+	placing {
+		position(offset=0.0)
+		polyline {
+			point(x=0,y=-5)
+			point(x=5,y=0)
+			
+			point(x=0,y=5)
+			point(x=5,y=0)
+			
+			point(x=5,y=-5)
+			point(x=5,y=5)
+		}
+	}	
+	
+	placing {
+		position(offset=0.0)
+		text {
+			position(x=10, y=-20)
+			size(width=20, height=10)
+			id=startText
+		}
+	}
+	
+	//end of the connection
+	placing {
+		position(offset=1.0)
+		polyline {
+			point(x=0,y=-5)
+			point(x=-5,y=0)
+			
+			point(x=0,y=5)
+			point(x=-5,y=0)
+			
+			point(x=-5,y=-5)
+			point(x=-5,y=5)
+		}
+	}
+	
+	placing {
+		position(offset=1.0)
+		text {
+			position(x=-30, y=-20)
+			size(width=20, height=10)
+			id=endText
+		}
+	}
+}
+
+connection Martin_1n_01_Shape {
+	//start of the connection
+	placing {
+		position(offset=0.0)
+		polyline {
+			point(x=0,y=-5)
+			point(x=5,y=0)
+			
+			point(x=0,y=5)
+			point(x=5,y=0)
+			
+			point(x=5,y=-5)
+			point(x=5,y=5)
+		}
+	}	
+	
+	placing {
+		position(offset=0.0)
+		text {
+			position(x=10, y=-20)
+			size(width=20, height=10)
+			id=startText
+		}
+	}
+	
+	//end of the connection
+	placing{
+		position(offset=1.0)
+		line{
+			point(x=-5,y=-5)
+			point(x=-5,y=5)
+		}
+	}
+	placing {
+		position(offset=1.0)
+		ellipse {
+			position(x=-12,y=-5)
+			size(width=3, height=10)
+		}
+	}
+	
+	placing {
+		position(offset=1.0)
+		text {
+			position(x=-30, y=-20)
+			size(width=20, height=10)
+			id=endText
+		}
+	}
+}
+
+connection Martin_1n_0n_Shape {
+	//start of the connection
+	placing {
+		position(offset=0.0)
+		polyline {
+			point(x=0,y=-5)
+			point(x=5,y=0)
+			
+			point(x=0,y=5)
+			point(x=5,y=0)
+			
+			point(x=5,y=-5)
+			point(x=5,y=5)
+		}
+	}	
+	
+	placing {
+		position(offset=0.0)
+		text {
+			position(x=10, y=-20)
+			size(width=20, height=10)
+			id=startText
+		}
+	}
+	
+	//end of the connection
+	placing{
+		position(offset=1.0)
+		polyline{
+			point(x=0,y=-5)
+			point(x=-9,y=0)
+			point(x=0,y=5)
+		}
+	}
+	placing {
+		position(offset=1.0)
+		ellipse {
+			position(x=-12,y=-5)
+			size(width=3, height=10)
+		}
+	}
+	
+	placing {
+		position(offset=1.0)
+		text {
+			position(x=-30, y=-20)
+			size(width=20, height=10)
+			id=endText
+		}
+	}
+}
+
+connection Martin_01_0n_Shape {
+	//start of the connection
+	placing{
+		position(offset=0.0)
+		line{
+			point(x=5,y=-5)
+			point(x=5,y=5)
+		}
+	}
+	placing {
+		position(offset=0.0)
+		ellipse {
+			position(x=9,y=-5)
+			size(width=3, height=10)
+		}
+	}
+	
+	placing {
+		position(offset=0.0)
+		text {
+			position(x=10, y=-20)
+			size(width=20, height=10)
+			id=startText
+		}
+	}
+	
+	//end of the connection
+	placing{
+		position(offset=1.0)
+		polyline{
+			point(x=0,y=-5)
+			point(x=-9,y=0)
+			point(x=0,y=5)
+		}
+	}
+	placing {
+		position(offset=1.0)
+		ellipse {
+			position(x=-12,y=-5)
+			size(width=3, height=10)
+		}
+	}
+	
+	placing {
+		position(offset=1.0)
+		text {
+			position(x=-30, y=-20)
+			size(width=20, height=10)
+			id=endText
+		}
+	}
+}
+
+connection Martin_01_01_Shape {
+	//start of the connection
+	placing{
+		position(offset=0.0)
+		line{
+			point(x=5,y=-5)
+			point(x=5,y=5)
+		}
+	}
+	placing {
+		position(offset=0.0)
+		ellipse {
+			position(x=9,y=-5)
+			size(width=3, height=10)
+		}
+	}
+	
+	placing {
+		position(offset=0.0)
+		text {
+			position(x=10, y=-20)
+			size(width=20, height=10)
+			id=startText
+		}
+	}
+	
+	//end of the connection
+	placing{
+		position(offset=1.0)
+		line{
+			point(x=-5,y=-5)
+			point(x=-5,y=5)
+		}
+	}
+	placing {
+		position(offset=1.0)
+		ellipse {
+			position(x=-12,y=-5)
+			size(width=3, height=10)
+		}
+	}
+	
+	placing {
+		position(offset=1.0)
+		text {
+			position(x=-30, y=-20)
+			size(width=20, height=10)
+			id=endText
+		}
+	}
+}
+
+connection Martin_0n_0n_Shape {
+	//start of the connection
+	placing{
+		position(offset=0.0)
+		polyline{
+			point(x=0,y=-5)
+			point(x=9,y=0)
+			point(x=0,y=5)
+		}
+	}
+	placing {
+		position(offset=0.0)
+		ellipse {
+			position(x=9,y=-5)
+			size(width=3, height=10)
+		}
+	}
+	
+	placing {
+		position(offset=0.0)
+		text {
+			position(x=10, y=-20)
+			size(width=20, height=10)
+			id=startText
+		}
+	}
+	
+	//end of the connection
+	placing{
+		position(offset=1.0)
+		polyline{
+			point(x=0,y=-5)
+			point(x=-9,y=0)
+			point(x=0,y=5)
+		}
+	}
+	placing {
+		position(offset=1.0)
+		ellipse {
+			position(x=-12,y=-5)
+			size(width=3, height=10)
+		}
+	}
+	
+	placing {
+		position(offset=1.0)
+		text {
+			position(x=-30, y=-20)
+			size(width=20, height=10)
+			id=endText
+		}
+	}
+}
+
+/////////////////////////////////////////////////////////////////
+/////////////////// Min-Max notation ////////////////////////////
+/////////////////////////////////////////////////////////////////
+
+shape MinmaxEntityShape {
+	rectangle {
+		size(width=150, height=80)
+	}
+	text {
+		size(width=110,height=20)
+		position(x=10,y=25)
+		id=EntityText
+	}
+}
+
+connection MinmaxConnection {
+	placing {
+		position(offset=0.0)
+		text {
+			position(x=0, y=-15)
+			size(width=30,height=10)
+			id=startText
+		}
+	}
+	
+	placing {
+		position(offset=1.0)
+		text {
+			position(x=-30, y=-15)
+			size(width=30,height=10)
+			id=endText
+		}
+	}
+}

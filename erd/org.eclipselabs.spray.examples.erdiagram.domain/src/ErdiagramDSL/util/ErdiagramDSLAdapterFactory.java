@@ -120,6 +120,26 @@ public class ErdiagramDSLAdapterFactory extends AdapterFactoryImpl {
 				return createChenWeakConnectionAdapter();
 			}
 			@Override
+			public Adapter caseMartinElement(MartinElement object) {
+				return createMartinElementAdapter();
+			}
+			@Override
+			public Adapter caseMartinEntity(MartinEntity object) {
+				return createMartinEntityAdapter();
+			}
+			@Override
+			public Adapter caseMartinConnection(MartinConnection object) {
+				return createMartinConnectionAdapter();
+			}
+			@Override
+			public Adapter caseMinmaxEntity(MinmaxEntity object) {
+				return createMinmaxEntityAdapter();
+			}
+			@Override
+			public Adapter caseMinmaxConnection(MinmaxConnection object) {
+				return createMinmaxConnectionAdapter();
+			}
+			@Override
 			public Adapter defaultCase(EObject object) {
 				return createEObjectAdapter();
 			}
@@ -318,6 +338,76 @@ public class ErdiagramDSLAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createChenWeakConnectionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ErdiagramDSL.MartinElement <em>Martin Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ErdiagramDSL.MartinElement
+	 * @generated
+	 */
+	public Adapter createMartinElementAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ErdiagramDSL.MartinEntity <em>Martin Entity</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ErdiagramDSL.MartinEntity
+	 * @generated
+	 */
+	public Adapter createMartinEntityAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ErdiagramDSL.MartinConnection <em>Martin Connection</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ErdiagramDSL.MartinConnection
+	 * @generated
+	 */
+	public Adapter createMartinConnectionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ErdiagramDSL.MinmaxEntity <em>Minmax Entity</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ErdiagramDSL.MinmaxEntity
+	 * @generated
+	 */
+	public Adapter createMinmaxEntityAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link ErdiagramDSL.MinmaxConnection <em>Minmax Connection</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see ErdiagramDSL.MinmaxConnection
+	 * @generated
+	 */
+	public Adapter createMinmaxConnectionAdapter() {
 		return null;
 	}
 
