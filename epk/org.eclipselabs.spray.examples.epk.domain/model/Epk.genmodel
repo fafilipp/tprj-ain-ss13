@@ -64,5 +64,23 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Epk.ecore#//PpToNodeConnection/start"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Epk.ecore#//PpToNodeConnection/end"/>
     </genClasses>
+    <genClasses ecoreClass="Epk.ecore#//StartEvent"/>
+    <genClasses ecoreClass="Epk.ecore#//EndEvent"/>
+    <genClasses ecoreClass="Epk.ecore#//StartEvToFuConnection">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Epk.ecore#//StartEvToFuConnection/start"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Epk.ecore#//StartEvToFuConnection/end"/>
+    </genClasses>
+    <genClasses ecoreClass="Epk.ecore#//StartEvToEConConnection">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Epk.ecore#//StartEvToEConConnection/start"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Epk.ecore#//StartEvToEConConnection/end"/>
+    </genClasses>
+    <genClasses ecoreClass="Epk.ecore#//FuToEndEvConnection">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Epk.ecore#//FuToEndEvConnection/start"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Epk.ecore#//FuToEndEvConnection/end"/>
+    </genClasses>
+    <genClasses ecoreClass="Epk.ecore#//FConToEndEvConnection">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Epk.ecore#//FConToEndEvConnection/start"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Epk.ecore#//FConToEndEvConnection/end"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

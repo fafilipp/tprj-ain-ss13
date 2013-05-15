@@ -79,6 +79,12 @@ public class EpkDSLFactoryImpl extends EFactoryImpl implements EpkDSLFactory {
 			case EpkDSLPackage.IO_TO_FU_CONNECTION: return createIoToFuConnection();
 			case EpkDSLPackage.NODE_TO_PP_CONNECTION: return createNodeToPpConnection();
 			case EpkDSLPackage.PP_TO_NODE_CONNECTION: return createPpToNodeConnection();
+			case EpkDSLPackage.START_EVENT: return createStartEvent();
+			case EpkDSLPackage.END_EVENT: return createEndEvent();
+			case EpkDSLPackage.START_EV_TO_FU_CONNECTION: return createStartEvToFuConnection();
+			case EpkDSLPackage.START_EV_TO_ECON_CONNECTION: return createStartEvToEConConnection();
+			case EpkDSLPackage.FU_TO_END_EV_CONNECTION: return createFuToEndEvConnection();
+			case EpkDSLPackage.FCON_TO_END_EV_CONNECTION: return createFConToEndEvConnection();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -312,6 +318,66 @@ public class EpkDSLFactoryImpl extends EFactoryImpl implements EpkDSLFactory {
 	public PpToNodeConnection createPpToNodeConnection() {
 		PpToNodeConnectionImpl ppToNodeConnection = new PpToNodeConnectionImpl();
 		return ppToNodeConnection;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public StartEvent createStartEvent() {
+		StartEventImpl startEvent = new StartEventImpl();
+		return startEvent;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EndEvent createEndEvent() {
+		EndEventImpl endEvent = new EndEventImpl();
+		return endEvent;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public StartEvToFuConnection createStartEvToFuConnection() {
+		StartEvToFuConnectionImpl startEvToFuConnection = new StartEvToFuConnectionImpl();
+		return startEvToFuConnection;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public StartEvToEConConnection createStartEvToEConConnection() {
+		StartEvToEConConnectionImpl startEvToEConConnection = new StartEvToEConConnectionImpl();
+		return startEvToEConConnection;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public FuToEndEvConnection createFuToEndEvConnection() {
+		FuToEndEvConnectionImpl fuToEndEvConnection = new FuToEndEvConnectionImpl();
+		return fuToEndEvConnection;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public FConToEndEvConnection createFConToEndEvConnection() {
+		FConToEndEvConnectionImpl fConToEndEvConnection = new FConToEndEvConnectionImpl();
+		return fConToEndEvConnection;
 	}
 
 	/**

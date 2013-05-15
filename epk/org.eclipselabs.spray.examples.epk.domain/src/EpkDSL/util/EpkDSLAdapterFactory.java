@@ -160,6 +160,30 @@ public class EpkDSLAdapterFactory extends AdapterFactoryImpl {
 				return createPpToNodeConnectionAdapter();
 			}
 			@Override
+			public Adapter caseStartEvent(StartEvent object) {
+				return createStartEventAdapter();
+			}
+			@Override
+			public Adapter caseEndEvent(EndEvent object) {
+				return createEndEventAdapter();
+			}
+			@Override
+			public Adapter caseStartEvToFuConnection(StartEvToFuConnection object) {
+				return createStartEvToFuConnectionAdapter();
+			}
+			@Override
+			public Adapter caseStartEvToEConConnection(StartEvToEConConnection object) {
+				return createStartEvToEConConnectionAdapter();
+			}
+			@Override
+			public Adapter caseFuToEndEvConnection(FuToEndEvConnection object) {
+				return createFuToEndEvConnectionAdapter();
+			}
+			@Override
+			public Adapter caseFConToEndEvConnection(FConToEndEvConnection object) {
+				return createFConToEndEvConnectionAdapter();
+			}
+			@Override
 			public Adapter defaultCase(EObject object) {
 				return createEObjectAdapter();
 			}
@@ -498,6 +522,90 @@ public class EpkDSLAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createPpToNodeConnectionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link EpkDSL.StartEvent <em>Start Event</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see EpkDSL.StartEvent
+	 * @generated
+	 */
+	public Adapter createStartEventAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link EpkDSL.EndEvent <em>End Event</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see EpkDSL.EndEvent
+	 * @generated
+	 */
+	public Adapter createEndEventAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link EpkDSL.StartEvToFuConnection <em>Start Ev To Fu Connection</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see EpkDSL.StartEvToFuConnection
+	 * @generated
+	 */
+	public Adapter createStartEvToFuConnectionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link EpkDSL.StartEvToEConConnection <em>Start Ev To ECon Connection</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see EpkDSL.StartEvToEConConnection
+	 * @generated
+	 */
+	public Adapter createStartEvToEConConnectionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link EpkDSL.FuToEndEvConnection <em>Fu To End Ev Connection</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see EpkDSL.FuToEndEvConnection
+	 * @generated
+	 */
+	public Adapter createFuToEndEvConnectionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link EpkDSL.FConToEndEvConnection <em>FCon To End Ev Connection</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see EpkDSL.FConToEndEvConnection
+	 * @generated
+	 */
+	public Adapter createFConToEndEvConnectionAdapter() {
 		return null;
 	}
 

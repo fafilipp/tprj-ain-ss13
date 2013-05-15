@@ -245,6 +245,52 @@ public class EpkDSLSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case EpkDSLPackage.START_EVENT: {
+				StartEvent startEvent = (StartEvent)theEObject;
+				T result = caseStartEvent(startEvent);
+				if (result == null) result = caseNode(startEvent);
+				if (result == null) result = caseEpk(startEvent);
+				if (result == null) result = caseNamedElement(startEvent);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case EpkDSLPackage.END_EVENT: {
+				EndEvent endEvent = (EndEvent)theEObject;
+				T result = caseEndEvent(endEvent);
+				if (result == null) result = caseNode(endEvent);
+				if (result == null) result = caseEpk(endEvent);
+				if (result == null) result = caseNamedElement(endEvent);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case EpkDSLPackage.START_EV_TO_FU_CONNECTION: {
+				StartEvToFuConnection startEvToFuConnection = (StartEvToFuConnection)theEObject;
+				T result = caseStartEvToFuConnection(startEvToFuConnection);
+				if (result == null) result = caseDefaultConnection(startEvToFuConnection);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case EpkDSLPackage.START_EV_TO_ECON_CONNECTION: {
+				StartEvToEConConnection startEvToEConConnection = (StartEvToEConConnection)theEObject;
+				T result = caseStartEvToEConConnection(startEvToEConConnection);
+				if (result == null) result = caseDefaultConnection(startEvToEConConnection);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case EpkDSLPackage.FU_TO_END_EV_CONNECTION: {
+				FuToEndEvConnection fuToEndEvConnection = (FuToEndEvConnection)theEObject;
+				T result = caseFuToEndEvConnection(fuToEndEvConnection);
+				if (result == null) result = caseDefaultConnection(fuToEndEvConnection);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case EpkDSLPackage.FCON_TO_END_EV_CONNECTION: {
+				FConToEndEvConnection fConToEndEvConnection = (FConToEndEvConnection)theEObject;
+				T result = caseFConToEndEvConnection(fConToEndEvConnection);
+				if (result == null) result = caseDefaultConnection(fConToEndEvConnection);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -591,6 +637,96 @@ public class EpkDSLSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T casePpToNodeConnection(PpToNodeConnection object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Start Event</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Start Event</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseStartEvent(StartEvent object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>End Event</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>End Event</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseEndEvent(EndEvent object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Start Ev To Fu Connection</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Start Ev To Fu Connection</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseStartEvToFuConnection(StartEvToFuConnection object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Start Ev To ECon Connection</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Start Ev To ECon Connection</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseStartEvToEConConnection(StartEvToEConConnection object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Fu To End Ev Connection</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Fu To End Ev Connection</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseFuToEndEvConnection(FuToEndEvConnection object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>FCon To End Ev Connection</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>FCon To End Ev Connection</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseFConToEndEvConnection(FConToEndEvConnection object) {
 		return null;
 	}
 

@@ -229,6 +229,60 @@ public interface EpkDSLFactory extends EFactory {
 	PpToNodeConnection createPpToNodeConnection();
 
 	/**
+	 * Returns a new object of class '<em>Start Event</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Start Event</em>'.
+	 * @generated
+	 */
+	StartEvent createStartEvent();
+
+	/**
+	 * Returns a new object of class '<em>End Event</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>End Event</em>'.
+	 * @generated
+	 */
+	EndEvent createEndEvent();
+
+	/**
+	 * Returns a new object of class '<em>Start Ev To Fu Connection</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Start Ev To Fu Connection</em>'.
+	 * @generated
+	 */
+	StartEvToFuConnection createStartEvToFuConnection();
+
+	/**
+	 * Returns a new object of class '<em>Start Ev To ECon Connection</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Start Ev To ECon Connection</em>'.
+	 * @generated
+	 */
+	StartEvToEConConnection createStartEvToEConConnection();
+
+	/**
+	 * Returns a new object of class '<em>Fu To End Ev Connection</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Fu To End Ev Connection</em>'.
+	 * @generated
+	 */
+	FuToEndEvConnection createFuToEndEvConnection();
+
+	/**
+	 * Returns a new object of class '<em>FCon To End Ev Connection</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>FCon To End Ev Connection</em>'.
+	 * @generated
+	 */
+	FConToEndEvConnection createFConToEndEvConnection();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

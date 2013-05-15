@@ -20,6 +20,24 @@ class Event {
 	}
 }
 
+class StartEvent {
+	shape EventShape {
+		name into eventText
+	}
+	behavior {
+		create into nodes palette "Nodes"
+	}
+}
+
+class EndEvent {
+	shape EventShape {
+		name into eventText
+	}
+	behavior {
+		create into nodes palette "Nodes"
+	}
+}
+
 class Function {
 	shape FunctionShape {
 		name into functionText
@@ -108,7 +126,7 @@ class ProcPath alias ProcessPath {
 }
 
 class EvToFuConnection {
-	connection ArrowConnection {
+	connection ArrowConnectionShape {
 		from start
 		to end
 	}
@@ -118,7 +136,7 @@ class EvToFuConnection {
 }
 
 class FuToEvConnection {
-	connection ArrowConnection {
+	connection ArrowConnectionShape {
 		from start
 		to end
 	}
@@ -128,7 +146,7 @@ class FuToEvConnection {
 }
 
 class EvToEConConnection {
-	connection ArrowConnection {
+	connection ArrowConnectionShape {
 		from start
 		to end
 	}
@@ -138,7 +156,7 @@ class EvToEConConnection {
 }
 
 class EConToFuConnection {
-	connection ArrowConnection {
+	connection ArrowConnectionShape {
 		from start
 		to end
 	}
@@ -148,7 +166,7 @@ class EConToFuConnection {
 }
 
 class FuToFConConnection {
-	connection ArrowConnection {
+	connection ArrowConnectionShape {
 		from start
 		to end
 	}
@@ -158,7 +176,7 @@ class FuToFConConnection {
 }
 
 class FConToEvConnection {
-	connection ArrowConnection {
+	connection ArrowConnectionShape {
 		from start
 		to end
 	}
@@ -168,7 +186,7 @@ class FConToEvConnection {
 }
 
 class OuToFuConnection {
-	connection ArrowConnection {
+	connection ArrowConnectionShape {
 		from start
 		to end
 	}
@@ -178,7 +196,7 @@ class OuToFuConnection {
 }
 
 class IoToFuConnection {
-	connection ArrowConnection {
+	connection ArrowConnectionShape {
 		from start
 		to end
 	}
@@ -188,7 +206,7 @@ class IoToFuConnection {
 }
 
 class NodeToPpConnection {
-	connection ArrowConnection {
+	connection ArrowConnectionShape {
 		from start
 		to end
 	}
@@ -198,7 +216,47 @@ class NodeToPpConnection {
 }
 
 class PpToNodeConnection {
-	connection ArrowConnection {
+	connection ArrowConnectionShape {
+		from start
+		to end
+	}
+	behavior {
+		create into connections palette "Connections"
+	}
+}
+
+class StartEvToFuConnection {
+	connection ArrowConnectionShape {
+		from start
+		to end
+	}
+	behavior {
+		create into connections palette "Connections"
+	}
+}
+
+class StartEvToEConConnection {
+	connection ArrowConnectionShape {
+		from start
+		to end
+	}
+	behavior {
+		create into connections palette "Connections"
+	}
+}
+
+class FuToEndEvConnection {
+	connection ArrowConnectionShape {
+		from start
+		to end
+	}
+	behavior {
+		create into connections palette "Connections"
+	}
+}
+
+class FConToEndEvConnection {
+	connection ArrowConnectionShape {
 		from start
 		to end
 	}

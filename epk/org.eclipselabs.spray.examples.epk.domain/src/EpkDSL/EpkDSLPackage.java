@@ -1077,6 +1077,264 @@ public interface EpkDSLPackage extends EPackage {
 	 */
 	int PP_TO_NODE_CONNECTION_FEATURE_COUNT = DEFAULT_CONNECTION_FEATURE_COUNT + 2;
 
+	/**
+	 * The meta object id for the '{@link EpkDSL.impl.StartEventImpl <em>Start Event</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see EpkDSL.impl.StartEventImpl
+	 * @see EpkDSL.impl.EpkDSLPackageImpl#getStartEvent()
+	 * @generated
+	 */
+	int START_EVENT = 23;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int START_EVENT__NAME = NODE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Nodes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int START_EVENT__NODES = NODE__NODES;
+
+	/**
+	 * The feature id for the '<em><b>Edges</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int START_EVENT__EDGES = NODE__EDGES;
+
+	/**
+	 * The feature id for the '<em><b>Connections</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int START_EVENT__CONNECTIONS = NODE__CONNECTIONS;
+
+	/**
+	 * The number of structural features of the '<em>Start Event</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int START_EVENT_FEATURE_COUNT = NODE_FEATURE_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link EpkDSL.impl.EndEventImpl <em>End Event</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see EpkDSL.impl.EndEventImpl
+	 * @see EpkDSL.impl.EpkDSLPackageImpl#getEndEvent()
+	 * @generated
+	 */
+	int END_EVENT = 24;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int END_EVENT__NAME = NODE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Nodes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int END_EVENT__NODES = NODE__NODES;
+
+	/**
+	 * The feature id for the '<em><b>Edges</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int END_EVENT__EDGES = NODE__EDGES;
+
+	/**
+	 * The feature id for the '<em><b>Connections</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int END_EVENT__CONNECTIONS = NODE__CONNECTIONS;
+
+	/**
+	 * The number of structural features of the '<em>End Event</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int END_EVENT_FEATURE_COUNT = NODE_FEATURE_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link EpkDSL.impl.StartEvToFuConnectionImpl <em>Start Ev To Fu Connection</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see EpkDSL.impl.StartEvToFuConnectionImpl
+	 * @see EpkDSL.impl.EpkDSLPackageImpl#getStartEvToFuConnection()
+	 * @generated
+	 */
+	int START_EV_TO_FU_CONNECTION = 25;
+
+	/**
+	 * The feature id for the '<em><b>Start</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int START_EV_TO_FU_CONNECTION__START = DEFAULT_CONNECTION_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>End</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int START_EV_TO_FU_CONNECTION__END = DEFAULT_CONNECTION_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Start Ev To Fu Connection</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int START_EV_TO_FU_CONNECTION_FEATURE_COUNT = DEFAULT_CONNECTION_FEATURE_COUNT + 2;
+
+	/**
+	 * The meta object id for the '{@link EpkDSL.impl.StartEvToEConConnectionImpl <em>Start Ev To ECon Connection</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see EpkDSL.impl.StartEvToEConConnectionImpl
+	 * @see EpkDSL.impl.EpkDSLPackageImpl#getStartEvToEConConnection()
+	 * @generated
+	 */
+	int START_EV_TO_ECON_CONNECTION = 26;
+
+	/**
+	 * The feature id for the '<em><b>Start</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int START_EV_TO_ECON_CONNECTION__START = DEFAULT_CONNECTION_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>End</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int START_EV_TO_ECON_CONNECTION__END = DEFAULT_CONNECTION_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Start Ev To ECon Connection</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int START_EV_TO_ECON_CONNECTION_FEATURE_COUNT = DEFAULT_CONNECTION_FEATURE_COUNT + 2;
+
+	/**
+	 * The meta object id for the '{@link EpkDSL.impl.FuToEndEvConnectionImpl <em>Fu To End Ev Connection</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see EpkDSL.impl.FuToEndEvConnectionImpl
+	 * @see EpkDSL.impl.EpkDSLPackageImpl#getFuToEndEvConnection()
+	 * @generated
+	 */
+	int FU_TO_END_EV_CONNECTION = 27;
+
+	/**
+	 * The feature id for the '<em><b>Start</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FU_TO_END_EV_CONNECTION__START = DEFAULT_CONNECTION_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>End</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FU_TO_END_EV_CONNECTION__END = DEFAULT_CONNECTION_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Fu To End Ev Connection</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FU_TO_END_EV_CONNECTION_FEATURE_COUNT = DEFAULT_CONNECTION_FEATURE_COUNT + 2;
+
+	/**
+	 * The meta object id for the '{@link EpkDSL.impl.FConToEndEvConnectionImpl <em>FCon To End Ev Connection</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see EpkDSL.impl.FConToEndEvConnectionImpl
+	 * @see EpkDSL.impl.EpkDSLPackageImpl#getFConToEndEvConnection()
+	 * @generated
+	 */
+	int FCON_TO_END_EV_CONNECTION = 28;
+
+	/**
+	 * The feature id for the '<em><b>Start</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FCON_TO_END_EV_CONNECTION__START = DEFAULT_CONNECTION_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>End</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FCON_TO_END_EV_CONNECTION__END = DEFAULT_CONNECTION_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>FCon To End Ev Connection</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FCON_TO_END_EV_CONNECTION_FEATURE_COUNT = DEFAULT_CONNECTION_FEATURE_COUNT + 2;
+
 
 	/**
 	 * Returns the meta object for class '{@link EpkDSL.NamedElement <em>Named Element</em>}'.
@@ -1573,6 +1831,154 @@ public interface EpkDSLPackage extends EPackage {
 	EReference getPpToNodeConnection_End();
 
 	/**
+	 * Returns the meta object for class '{@link EpkDSL.StartEvent <em>Start Event</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Start Event</em>'.
+	 * @see EpkDSL.StartEvent
+	 * @generated
+	 */
+	EClass getStartEvent();
+
+	/**
+	 * Returns the meta object for class '{@link EpkDSL.EndEvent <em>End Event</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>End Event</em>'.
+	 * @see EpkDSL.EndEvent
+	 * @generated
+	 */
+	EClass getEndEvent();
+
+	/**
+	 * Returns the meta object for class '{@link EpkDSL.StartEvToFuConnection <em>Start Ev To Fu Connection</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Start Ev To Fu Connection</em>'.
+	 * @see EpkDSL.StartEvToFuConnection
+	 * @generated
+	 */
+	EClass getStartEvToFuConnection();
+
+	/**
+	 * Returns the meta object for the reference '{@link EpkDSL.StartEvToFuConnection#getStart <em>Start</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Start</em>'.
+	 * @see EpkDSL.StartEvToFuConnection#getStart()
+	 * @see #getStartEvToFuConnection()
+	 * @generated
+	 */
+	EReference getStartEvToFuConnection_Start();
+
+	/**
+	 * Returns the meta object for the reference '{@link EpkDSL.StartEvToFuConnection#getEnd <em>End</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>End</em>'.
+	 * @see EpkDSL.StartEvToFuConnection#getEnd()
+	 * @see #getStartEvToFuConnection()
+	 * @generated
+	 */
+	EReference getStartEvToFuConnection_End();
+
+	/**
+	 * Returns the meta object for class '{@link EpkDSL.StartEvToEConConnection <em>Start Ev To ECon Connection</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Start Ev To ECon Connection</em>'.
+	 * @see EpkDSL.StartEvToEConConnection
+	 * @generated
+	 */
+	EClass getStartEvToEConConnection();
+
+	/**
+	 * Returns the meta object for the reference '{@link EpkDSL.StartEvToEConConnection#getStart <em>Start</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Start</em>'.
+	 * @see EpkDSL.StartEvToEConConnection#getStart()
+	 * @see #getStartEvToEConConnection()
+	 * @generated
+	 */
+	EReference getStartEvToEConConnection_Start();
+
+	/**
+	 * Returns the meta object for the reference '{@link EpkDSL.StartEvToEConConnection#getEnd <em>End</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>End</em>'.
+	 * @see EpkDSL.StartEvToEConConnection#getEnd()
+	 * @see #getStartEvToEConConnection()
+	 * @generated
+	 */
+	EReference getStartEvToEConConnection_End();
+
+	/**
+	 * Returns the meta object for class '{@link EpkDSL.FuToEndEvConnection <em>Fu To End Ev Connection</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Fu To End Ev Connection</em>'.
+	 * @see EpkDSL.FuToEndEvConnection
+	 * @generated
+	 */
+	EClass getFuToEndEvConnection();
+
+	/**
+	 * Returns the meta object for the reference '{@link EpkDSL.FuToEndEvConnection#getStart <em>Start</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Start</em>'.
+	 * @see EpkDSL.FuToEndEvConnection#getStart()
+	 * @see #getFuToEndEvConnection()
+	 * @generated
+	 */
+	EReference getFuToEndEvConnection_Start();
+
+	/**
+	 * Returns the meta object for the reference '{@link EpkDSL.FuToEndEvConnection#getEnd <em>End</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>End</em>'.
+	 * @see EpkDSL.FuToEndEvConnection#getEnd()
+	 * @see #getFuToEndEvConnection()
+	 * @generated
+	 */
+	EReference getFuToEndEvConnection_End();
+
+	/**
+	 * Returns the meta object for class '{@link EpkDSL.FConToEndEvConnection <em>FCon To End Ev Connection</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>FCon To End Ev Connection</em>'.
+	 * @see EpkDSL.FConToEndEvConnection
+	 * @generated
+	 */
+	EClass getFConToEndEvConnection();
+
+	/**
+	 * Returns the meta object for the reference '{@link EpkDSL.FConToEndEvConnection#getStart <em>Start</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Start</em>'.
+	 * @see EpkDSL.FConToEndEvConnection#getStart()
+	 * @see #getFConToEndEvConnection()
+	 * @generated
+	 */
+	EReference getFConToEndEvConnection_Start();
+
+	/**
+	 * Returns the meta object for the reference '{@link EpkDSL.FConToEndEvConnection#getEnd <em>End</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>End</em>'.
+	 * @see EpkDSL.FConToEndEvConnection#getEnd()
+	 * @see #getFConToEndEvConnection()
+	 * @generated
+	 */
+	EReference getFConToEndEvConnection_End();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2015,6 +2421,130 @@ public interface EpkDSLPackage extends EPackage {
 		 * @generated
 		 */
 		EReference PP_TO_NODE_CONNECTION__END = eINSTANCE.getPpToNodeConnection_End();
+
+		/**
+		 * The meta object literal for the '{@link EpkDSL.impl.StartEventImpl <em>Start Event</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see EpkDSL.impl.StartEventImpl
+		 * @see EpkDSL.impl.EpkDSLPackageImpl#getStartEvent()
+		 * @generated
+		 */
+		EClass START_EVENT = eINSTANCE.getStartEvent();
+
+		/**
+		 * The meta object literal for the '{@link EpkDSL.impl.EndEventImpl <em>End Event</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see EpkDSL.impl.EndEventImpl
+		 * @see EpkDSL.impl.EpkDSLPackageImpl#getEndEvent()
+		 * @generated
+		 */
+		EClass END_EVENT = eINSTANCE.getEndEvent();
+
+		/**
+		 * The meta object literal for the '{@link EpkDSL.impl.StartEvToFuConnectionImpl <em>Start Ev To Fu Connection</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see EpkDSL.impl.StartEvToFuConnectionImpl
+		 * @see EpkDSL.impl.EpkDSLPackageImpl#getStartEvToFuConnection()
+		 * @generated
+		 */
+		EClass START_EV_TO_FU_CONNECTION = eINSTANCE.getStartEvToFuConnection();
+
+		/**
+		 * The meta object literal for the '<em><b>Start</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference START_EV_TO_FU_CONNECTION__START = eINSTANCE.getStartEvToFuConnection_Start();
+
+		/**
+		 * The meta object literal for the '<em><b>End</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference START_EV_TO_FU_CONNECTION__END = eINSTANCE.getStartEvToFuConnection_End();
+
+		/**
+		 * The meta object literal for the '{@link EpkDSL.impl.StartEvToEConConnectionImpl <em>Start Ev To ECon Connection</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see EpkDSL.impl.StartEvToEConConnectionImpl
+		 * @see EpkDSL.impl.EpkDSLPackageImpl#getStartEvToEConConnection()
+		 * @generated
+		 */
+		EClass START_EV_TO_ECON_CONNECTION = eINSTANCE.getStartEvToEConConnection();
+
+		/**
+		 * The meta object literal for the '<em><b>Start</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference START_EV_TO_ECON_CONNECTION__START = eINSTANCE.getStartEvToEConConnection_Start();
+
+		/**
+		 * The meta object literal for the '<em><b>End</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference START_EV_TO_ECON_CONNECTION__END = eINSTANCE.getStartEvToEConConnection_End();
+
+		/**
+		 * The meta object literal for the '{@link EpkDSL.impl.FuToEndEvConnectionImpl <em>Fu To End Ev Connection</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see EpkDSL.impl.FuToEndEvConnectionImpl
+		 * @see EpkDSL.impl.EpkDSLPackageImpl#getFuToEndEvConnection()
+		 * @generated
+		 */
+		EClass FU_TO_END_EV_CONNECTION = eINSTANCE.getFuToEndEvConnection();
+
+		/**
+		 * The meta object literal for the '<em><b>Start</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference FU_TO_END_EV_CONNECTION__START = eINSTANCE.getFuToEndEvConnection_Start();
+
+		/**
+		 * The meta object literal for the '<em><b>End</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference FU_TO_END_EV_CONNECTION__END = eINSTANCE.getFuToEndEvConnection_End();
+
+		/**
+		 * The meta object literal for the '{@link EpkDSL.impl.FConToEndEvConnectionImpl <em>FCon To End Ev Connection</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see EpkDSL.impl.FConToEndEvConnectionImpl
+		 * @see EpkDSL.impl.EpkDSLPackageImpl#getFConToEndEvConnection()
+		 * @generated
+		 */
+		EClass FCON_TO_END_EV_CONNECTION = eINSTANCE.getFConToEndEvConnection();
+
+		/**
+		 * The meta object literal for the '<em><b>Start</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference FCON_TO_END_EV_CONNECTION__START = eINSTANCE.getFConToEndEvConnection_Start();
+
+		/**
+		 * The meta object literal for the '<em><b>End</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference FCON_TO_END_EV_CONNECTION__END = eINSTANCE.getFConToEndEvConnection_End();
 
 	}
 

@@ -70,7 +70,7 @@ class ChenAttribute {
 	}
 }
 
-class ChenAttribute alias MultivalAttribute {
+class ChenAttribute alias ChenMultivalAttribute {
 	shape ChenMultivalAttributeShape {
 		name into AttributeText
 	}
@@ -79,7 +79,7 @@ class ChenAttribute alias MultivalAttribute {
 	}
 }
 
-class ChenAttribute alias KeyAttribute {
+class ChenAttribute alias ChenKeyAttribute {
 	shape ChenKeyAttributeShape {
 		name into AttributeText
 	}
@@ -285,7 +285,7 @@ class MinmaxEntity {
 		name into EntityText
 	}
 	behavior {
-		create into elements palette "Min-Max"
+		create into elements palette "MinMax"
 	}
 }
 
@@ -295,6 +295,6 @@ class MinmaxConnection {
 		to end
 	}
 	behavior {
-		create into elements palette "Min-Max"
+		create into elements palette "MinMax"
 	}
 }
