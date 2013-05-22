@@ -1,9 +1,9 @@
 /*************************************************************************************
  *
- * Generated on Wed May 22 09:12:13 CEST 2013 by Spray AddConnectionFromDslFeature.xtend
- *
- * This file contains generated and should not be changed.
- * Use the extension point class (the direct subclass of this class) to add manual code
+ * Generated on Wed May 22 17:38:21 CEST 2013 by Spray AddConnectionFromDslFeature.xtend
+ * 
+ * This file is an extension point: copy to "src" folder to manually add code to this
+ * extension point.
  *
  *************************************************************************************/
 package org.eclipselabs.spray.examples.conceptmap.features;
@@ -20,43 +20,19 @@ import org.eclipse.graphiti.mm.pictograms.ConnectionDecorator;
 import org.eclipse.graphiti.mm.pictograms.FreeFormConnection;
 import org.eclipse.graphiti.mm.pictograms.PictogramElement;
 import org.eclipse.graphiti.services.Graphiti;
-import org.eclipse.graphiti.services.IGaService;
-import org.eclipselabs.spray.examples.conceptmap.Activator;
 import org.eclipselabs.spray.examples.conceptmap.shapes.ArrowConnectionShapeConnection;
 import org.eclipselabs.spray.examples.conceptmap.styles.ConceptmapDefaultStyle;
-import org.eclipselabs.spray.runtime.graphiti.features.AbstractAddConnectionFeature;
 import org.eclipselabs.spray.runtime.graphiti.shape.ISprayConnection;
 import org.eclipselabs.spray.runtime.graphiti.styles.ISprayStyle;
 
 import ConceptMapDSL.ArrowConnection;
 import ConceptMapDSL.ConceptMapDSLPackage;
 
-/*
- * update 22.05.2013
- * 		rendering of connections
- * 		lines 72-73, 88-214 
- */
-@SuppressWarnings("unused")
-public abstract class MyconceptmapAddArrowConnectionFeatureBase extends AbstractAddConnectionFeature {
-
-    public MyconceptmapAddArrowConnectionFeatureBase(final IFeatureProvider fp) {
+public class MyconceptmapAddArrowConnectionFeature extends MyconceptmapAddArrowConnectionFeatureBase {
+    public MyconceptmapAddArrowConnectionFeature(IFeatureProvider fp) {
         super(fp);
-        gaService = Activator.get(IGaService.class);
     }
-
-    /**
-     * {@inheritDoc}
-     * 
-     * @return <code>true</code> if given business object is an {@link ArrowConnection} and context is of type {@link IAddConnectionContext}
-     */
-    @Override
-    public boolean canAdd(IAddContext context) {
-        if (context instanceof IAddConnectionContext && context.getNewObject() instanceof ArrowConnection) {
-            return true;
-        }
-        return false;
-    }
-
+    
     /**
      * {@inheritDoc}
      */
@@ -212,5 +188,4 @@ public abstract class MyconceptmapAddArrowConnectionFeatureBase extends Abstract
     	
     	return Graphiti.getGaCreateService().createPoint(bendx, bendy);
     }
-
 }
