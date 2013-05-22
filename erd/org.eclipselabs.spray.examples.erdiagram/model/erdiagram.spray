@@ -12,7 +12,6 @@ import ErdiagramDSL.*
 
 diagram erdiagram for Erdiagram style ErdiagramDefaultStyle
 
-
 // Add class mappings here. Refer to EClasses here. Don't forget to configure a
 // dependency to the plugin defining the EMF metamodel in META-INF/MANIFEST.MF.
 // It is required to have a genmodel for the metamodel.
@@ -39,6 +38,7 @@ diagram erdiagram for Erdiagram style ErdiagramDefaultStyle
 ////////////////// CHEN ////////////////////////////////////////
 //////////////////////////////////////////////////////////////// 
 
+
 class ChenEntity {
 	shape ChenEntityShape {
 		name into EntityText
@@ -63,7 +63,7 @@ class ChenAttribute {
 		name into AttributeText
 	}
 	references {
-		parent : connection alias ChenAttributeConnection 
+		parent : connection alias ChenAttributeConnection
 	}
 	behavior {
 		create into elements palette "ChenAttributes";
@@ -90,10 +90,13 @@ class ChenAttribute alias ChenKeyAttribute {
 
 class ChenConnection {
 	connection ChenConnectionShape {
+		value into connectionText
+	}
+	{
 		from fromEntity to toRelationship
 	}
 	behavior {
-	    create into elements palette "ChenConnections" 
+		create into elements palette "ChenConnections"
 	}
 }
 
@@ -102,12 +105,12 @@ class ChenNormalToWeakConnection {
 		from fromEntity to toRelationship
 	}
 	behavior {
-		create into elements palette "ChenConnections"
+		create into elements palette "Chen-Connections"
 	}
 }
 
 class ChenWeakEntity {
-	shape ChenEntityShape { 
+	shape ChenEntityShape {
 		name into EntityText
 	}
 	behavior {
@@ -130,7 +133,7 @@ class ChenWeakAttribute {
 		name into AttributeText
 	}
 	references {
-		parent : connection alias ChenWeakAttributeConnection 
+		parent : connection alias ChenWeakAttributeConnection
 	}
 	behavior {
 		create into elements palette "ChenAttributes";
@@ -160,13 +163,15 @@ class ChenWeakConnection {
 		from fromEntity to toRelationship
 	}
 	behavior {
-	    create into elements palette "ChenConnections" 
+		create into elements palette "ChenConnections"
 	}
 }
 
 /////////////////////////////////////////////////////////////////
 ////////////// Martin-Notation / crow's foot notation ///////////
 /////////////////////////////////////////////////////////////////
+
+
 class MartinEntity {
 	shape MartinEntityShape {
 		name into EntityText
@@ -177,108 +182,99 @@ class MartinEntity {
 }
 
 class MartinConnection alias Martin_11_11_Connection {
-    connection Martin_11_11_Shape {
-        from start
-        to   end
-    }
-    behavior {
-        create into elements palette "Martin"
-    }   
+	connection Martin_11_11_Shape {
+		from start to end
+	}
+	behavior {
+		create into elements palette "Martin"
+	}
 }
 
 class MartinConnection alias Martin_11_1n_Connection {
-    connection Martin_11_1n_Shape {
-        from start
-        to   end
-    }
-    behavior {
-        create into elements palette "Martin"
-    }   
+	connection Martin_11_1n_Shape {
+		from start to end
+	}
+	behavior {
+		create into elements palette "Martin"
+	}
 }
 
 class MartinConnection alias Martin_11_01_Connection {
-    connection Martin_11_01_Shape {
-        from start
-        to   end
-    }
-    behavior {
-        create into elements palette "Martin"
-    }   
+	connection Martin_11_01_Shape {
+		from start to end
+	}
+	behavior {
+		create into elements palette "Martin"
+	}
 }
 
 class MartinConnection alias Martin_11_0n_Connection {
-    connection Martin_11_0n_Shape {
-        from start
-        to   end
-    }
-    behavior {
-        create into elements palette "Martin"
-    }   
+	connection Martin_11_0n_Shape {
+		from start to end
+	}
+	behavior {
+		create into elements palette "Martin"
+	}
 }
 
 class MartinConnection alias Martin_1n_1n_Connection {
-    connection Martin_11_11_Shape {
-        from start
-        to   end
-    }
-    behavior {
-        create into elements palette "Martin"
-    }   
+	connection Martin_11_11_Shape {
+		from start to end
+	}
+	behavior {
+		create into elements palette "Martin"
+	}
 }
 
 class MartinConnection alias Martin_1n_01_Connection {
-    connection Martin_1n_01_Shape {
-        from start
-        to   end
-    }
-    behavior {
-        create into elements palette "Martin"
-    }   
+	connection Martin_1n_01_Shape {
+		from start to end
+	}
+	behavior {
+		create into elements palette "Martin"
+	}
 }
 
 class MartinConnection alias Martin_1n_0n_Connection {
-    connection Martin_1n_0n_Shape {
-        from start
-        to   end
-    }
-    behavior {
-        create into elements palette "Martin"
-    }   
+	connection Martin_1n_0n_Shape {
+		from start to end
+	}
+	behavior {
+		create into elements palette "Martin"
+	}
 }
 
 class MartinConnection alias Martin_01_01_Connection {
-    connection Martin_01_01_Shape {
-        from start
-        to   end
-    }
-    behavior {
-        create into elements palette "Martin"
-    }   
+	connection Martin_01_01_Shape {
+		from start to end
+	}
+	behavior {
+		create into elements palette "Martin"
+	}
 }
 
 class MartinConnection alias Martin_01_0n_Connection {
-    connection Martin_01_0n_Shape {
-        from start
-        to   end
-    }
-    behavior {
-        create into elements palette "Martin"
-    }   
+	connection Martin_01_0n_Shape {
+		from start to end
+	}
+	behavior {
+		create into elements palette "Martin"
+	}
 }
 
 class MartinConnection alias Martin_0n_0n_Connection {
-    connection Martin_0n_0n_Shape {
-        from start
-        to   end
-    }
-    behavior {
-        create into elements palette "Martin"
-    }   
+	connection Martin_0n_0n_Shape {
+		from start to end
+	}
+	behavior {
+		create into elements palette "Martin"
+	}
 }
 
 /////////////////////////////////////////////////////////////////
 /////////////////// Min-Max notation ////////////////////////////
 /////////////////////////////////////////////////////////////////
+
 
 class MinmaxEntity {
 	shape MinmaxEntityShape {
@@ -291,8 +287,7 @@ class MinmaxEntity {
 
 class MinmaxConnection {
 	connection MinmaxConnection {
-		from start
-		to end
+		from start to end
 	}
 	behavior {
 		create into elements palette "MinMax"
