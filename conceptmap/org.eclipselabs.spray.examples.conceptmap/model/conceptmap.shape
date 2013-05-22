@@ -56,8 +56,8 @@ connection DoubleArrowConnectionShape {
 		line-color=black
 		line-style=solid
 	)
-    placing {
-        position (offset=1.0)
+	placing {
+        position (offset=0.0)
         polygon {
             point (x=-10, y=-5)
             point (x=0, y=0)
@@ -66,7 +66,7 @@ connection DoubleArrowConnectionShape {
         }
     }
     placing {
-        position (offset=0.0)
+        position (offset=1.0)
         polygon {
             point (x=-10, y=-5)
             point (x=0, y=0)
