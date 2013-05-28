@@ -116,10 +116,14 @@ shape ChenKeyAttributeShape {
 		size(width=150, height=80)
 	}
 	text { 
-		style(line-style=solid)
 		size(width=110,height=20)
 		position(x=10,y=25)
 		id=AttributeText
+	}
+	line {
+		point(x=10,y=47)
+		point(x=140,y=47)
+		style(line-style=solid)
 	}
 }
 
@@ -128,10 +132,14 @@ shape ChenWeakKeyAttributeShape {
 		size(width=150, height=80)
 	}
 	text {
-		style(line-style=dot)
 		size(width=110,height=20)
 		position(x=10,y=25)
 		id=AttributeText
+	}
+	line {
+		point(x=10,y=47)
+		point(x=140,y=47)
+		style(line-style=dash)
 	}
 }
 
