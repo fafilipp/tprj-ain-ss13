@@ -13,7 +13,12 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.graphiti.features.IFeatureProvider;
 import org.eclipse.graphiti.features.context.IAddConnectionContext;
 import org.eclipse.graphiti.features.context.IAddContext;
+import org.eclipse.graphiti.mm.MmFactory;
+import org.eclipse.graphiti.mm.Property;
+import org.eclipse.graphiti.mm.PropertyContainer;
 import org.eclipse.graphiti.mm.algorithms.styles.Point;
+import org.eclipse.graphiti.mm.impl.MmFactoryImpl;
+import org.eclipse.graphiti.mm.impl.PropertyImpl;
 import org.eclipse.graphiti.mm.pictograms.Anchor;
 import org.eclipse.graphiti.mm.pictograms.Connection;
 import org.eclipse.graphiti.mm.pictograms.ConnectionDecorator;
@@ -29,6 +34,8 @@ import ConceptMapDSL.ArrowConnection;
 import ConceptMapDSL.ConceptMapDSLPackage;
 
 public class MyconceptmapAddArrowConnectionFeature extends MyconceptmapAddArrowConnectionFeatureBase {
+	private static final String MULTI_RENDERING_KEY = "spray.multirendering.key";
+	
     public MyconceptmapAddArrowConnectionFeature(IFeatureProvider fp) {
         super(fp);
     }
@@ -111,8 +118,23 @@ public class MyconceptmapAddArrowConnectionFeature extends MyconceptmapAddArrowC
     	//		therefore for the connection with index i we use the formula: MOVEMENT_FACTOR * ((i/2) + 1)
     	if(equalConnections.size() > 1) {
     		for(int i = 0; i < equalConnections.size(); i++) {
+    			if(!(equalConnections.get(i) instanceof FreeFormConnection)) {
+    				//we can not add bendpoints to manhattan-connections
+    				continue;
+    			}
     			FreeFormConnection connection = (FreeFormConnection) equalConnections.get(i);
-    			connection.getBendpoints().clear();
+    			
+    			// delete our bendpoint if the connection has this property.
+    			Property theProperty;
+    			for(int j = 0; j < connection.getProperties().size(); j++) {
+    				Property p = connection.getProperties().get(j);
+    				if(p.getKey().equals(MULTI_RENDERING_KEY)) {
+    					connection.getProperties().remove(p);
+    					//remove from index 0, since our bendpoint was moved there
+    					connection.getBendpoints().remove(0);
+    					break;
+    				}
+    			}
     			
     			int orthx, orthy, move;
     			if(i % 2 == 0) {
@@ -126,13 +148,21 @@ public class MyconceptmapAddArrowConnectionFeature extends MyconceptmapAddArrowC
     			Point bendpoint = getBendPoint(centerX, centerY, orthx, orthy, move);
     			
     			connection.getBendpoints().add(bendpoint);
+    			//move to index 0 to be able to delete it afterwards.
+    			connection.getBendpoints().move(0, bendpoint);
+    			
+    			Property bendProperty = MmFactoryImpl.eINSTANCE.createProperty();
+    			bendProperty.setKey(MULTI_RENDERING_KEY);
+    			bendProperty.setValue("true");
+    			
+    			connection.getProperties().add(bendProperty);
     		}
     	}	
     }
     
     
     /**
-     * Computes the connections which have startAnchor at one side and endAnchor at the other
+     * Computes the connections which have startAnchor at one side and endAnchor at the other.
      */
     private static EList<Connection> getEqualConnections(Anchor startAnchor, Anchor endAnchor) {
     	EList<Connection> equalConnections = new BasicEList<Connection>();

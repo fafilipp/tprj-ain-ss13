@@ -42,9 +42,11 @@ public class MyconceptmapMoveElementFeature extends MyconceptmapMoveElementFeatu
             mgr.layout();
             mgr.layout();
             
-            /* ************* update all connections ********************************/
-            for(Connection connection : diagram.getConnections()) {
-            	MyconceptmapAddArrowConnectionFeature.updateConnections(connection.getStart(), connection.getEnd());
+            /* ************* update all connections of the moved element ********************************/
+            for(Connection connection : this.getDiagram().getConnections()) {
+            	if(connection.getStart().getParent().equals(sourceShape) || connection.getEnd().getParent().equals(sourceShape)) {
+            		MyconceptmapAddArrowConnectionFeature.updateConnections(connection.getStart(), connection.getEnd());
+            	}            	
             }
 
             return;
