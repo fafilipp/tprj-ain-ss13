@@ -8,7 +8,7 @@
 
 shape ElementShape {
 	rounded-rectangle {
-		style (background-color=light-green)
+		style (background-color=light-green)		
 		curve (width=15, height=15)
 		position (x=0,y=0)
 		size(width=100, height=50)
@@ -49,6 +49,7 @@ connection ArrowConnectionShape {
     		id = ArrowText
     	}
     }
+    
 }
 
 connection DoubleArrowConnectionShape {

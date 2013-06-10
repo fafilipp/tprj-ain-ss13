@@ -12,12 +12,12 @@ import ConceptMapDSL.*
 
 diagram Myconceptmap for ConceptMap style ConceptmapDefaultStyle
 
-class Element {
-	shape ElementShape {
+class Element {	
+	shape ElementShape {	
 		name into ElementText
 	}
 	behavior {
-	    create into mapelements palette "Elements" askFor name
+	    create into mapelements palette "Elements" askFor name 
 	}	
 }
 

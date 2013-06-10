@@ -13,13 +13,9 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.graphiti.features.IFeatureProvider;
 import org.eclipse.graphiti.features.context.IAddConnectionContext;
 import org.eclipse.graphiti.features.context.IAddContext;
-import org.eclipse.graphiti.mm.MmFactory;
-import org.eclipse.graphiti.mm.Property;
-import org.eclipse.graphiti.mm.PropertyContainer;
 import org.eclipse.graphiti.mm.algorithms.styles.Point;
-import org.eclipse.graphiti.mm.impl.MmFactoryImpl;
-import org.eclipse.graphiti.mm.impl.PropertyImpl;
 import org.eclipse.graphiti.mm.pictograms.Anchor;
+import org.eclipse.graphiti.mm.pictograms.BoxRelativeAnchor;
 import org.eclipse.graphiti.mm.pictograms.Connection;
 import org.eclipse.graphiti.mm.pictograms.ConnectionDecorator;
 import org.eclipse.graphiti.mm.pictograms.FreeFormConnection;
@@ -35,6 +31,8 @@ import ConceptMapDSL.ConceptMapDSLPackage;
 
 public class MyconceptmapAddArrowConnectionFeature extends MyconceptmapAddArrowConnectionFeatureBase {
 	private static final String MULTI_RENDERING_KEY = "spray.multirendering.key";
+	private static final String MULTI_RENDERING_X = "spray.multirendering.x";
+	private static final String MULTI_RENDERING_Y = "spray.multirendering.y";
 	
     public MyconceptmapAddArrowConnectionFeature(IFeatureProvider fp) {
         super(fp);
@@ -88,11 +86,32 @@ public class MyconceptmapAddArrowConnectionFeature extends MyconceptmapAddArrowC
     	final int MOVEMENT_FACTOR = 10;
     	
     	/* ***************** 1 *****************************************/
+    	// define the offset for the standard anchorpoint
+    	int startAnchorXOffset = startAnchor.getParent().getGraphicsAlgorithm().getWidth() / 2;
+		int startAnchorYOffset = startAnchor.getParent().getGraphicsAlgorithm().getHeight() / 2;
+		int endAnchorXOffset = endAnchor.getParent().getGraphicsAlgorithm().getWidth() / 2;
+		int endAnchorYOffset = endAnchor.getParent().getGraphicsAlgorithm().getHeight() / 2;
+		
+		// startanchor is an user-defined anchor
+    	if(startAnchor.getGraphicsAlgorithm() != null) {
+    		BoxRelativeAnchor anchor = (BoxRelativeAnchor) startAnchor.getGraphicsAlgorithm().eContainer();
+    		
+    		startAnchorXOffset = (int) ((double) startAnchor.getParent().getGraphicsAlgorithm().getWidth() * anchor.getRelativeWidth());
+    		startAnchorYOffset = (int) ((double) startAnchor.getParent().getGraphicsAlgorithm().getHeight() * anchor.getRelativeHeight());
+    	}
+    	//same for endanchor
+    	if(endAnchor.getGraphicsAlgorithm() != null) {
+    		BoxRelativeAnchor anchor = (BoxRelativeAnchor) endAnchor.getGraphicsAlgorithm().eContainer();
+    		
+    		endAnchorXOffset = (int) ((double) endAnchor.getParent().getGraphicsAlgorithm().getWidth() * anchor.getRelativeWidth());
+    		endAnchorYOffset = (int) ((double) endAnchor.getParent().getGraphicsAlgorithm().getHeight() * anchor.getRelativeHeight());
+    	}
+    	
     	// we need to include width and height to the computation since we get x and y from the top left corner of the element, which is connected to this anchor
-    	int startAnchorX = startAnchor.getParent().getGraphicsAlgorithm().getX() + startAnchor.getParent().getGraphicsAlgorithm().getWidth() / 2;
-    	int startAnchorY = startAnchor.getParent().getGraphicsAlgorithm().getY() + startAnchor.getParent().getGraphicsAlgorithm().getHeight() / 2;
-    	int endAnchorX = endAnchor.getParent().getGraphicsAlgorithm().getX() + endAnchor.getParent().getGraphicsAlgorithm().getWidth() / 2;
-    	int endAnchorY = endAnchor.getParent().getGraphicsAlgorithm().getY() + endAnchor.getParent().getGraphicsAlgorithm().getHeight() / 2;
+    	int startAnchorX = startAnchor.getParent().getGraphicsAlgorithm().getX() + startAnchorXOffset;
+    	int startAnchorY = startAnchor.getParent().getGraphicsAlgorithm().getY() + startAnchorYOffset;
+    	int endAnchorX = endAnchor.getParent().getGraphicsAlgorithm().getX() + endAnchorXOffset;
+    	int endAnchorY = endAnchor.getParent().getGraphicsAlgorithm().getY() + endAnchorYOffset;
     	
     	int centerX = (startAnchorX + endAnchorX) / 2;
     	int centerY = (startAnchorY + endAnchorY) / 2;
@@ -117,45 +136,57 @@ public class MyconceptmapAddArrowConnectionFeature extends MyconceptmapAddArrowC
     	// if there are more than 2 connections we need to move the 3. and 4. MOVEMENT_FACTOR * 2 pixles, the 5. and 6. MOVEMENT_FACTOR * 3 pixles and so on.
     	//		therefore for the connection with index i we use the formula: MOVEMENT_FACTOR * ((i/2) + 1)
     	if(equalConnections.size() > 1) {
-    		for(int i = 0; i < equalConnections.size(); i++) {
-    			if(!(equalConnections.get(i) instanceof FreeFormConnection)) {
+    		//this index is needed, cause we also get connections we may not move in the equalConnections-List. the standard index would destroy the rendering.
+    		int qualifiedListIndex = 0;
+    		
+    		for(Connection currC : equalConnections) {
+    			if(!(currC instanceof FreeFormConnection)) {
     				//we can not add bendpoints to manhattan-connections
     				continue;
     			}
-    			FreeFormConnection connection = (FreeFormConnection) equalConnections.get(i);
+    			FreeFormConnection connection = (FreeFormConnection) currC;    			
     			
     			// delete our bendpoint if the connection has this property.
-    			Property theProperty;
-    			for(int j = 0; j < connection.getProperties().size(); j++) {
-    				Property p = connection.getProperties().get(j);
-    				if(p.getKey().equals(MULTI_RENDERING_KEY)) {
-    					connection.getProperties().remove(p);
-    					//remove from index 0, since our bendpoint was moved there
-    					connection.getBendpoints().remove(0);
-    					break;
-    				}
+    			if(Graphiti.getPeService().removeProperty(connection, MULTI_RENDERING_KEY)) {
+    				// if there is only our own bendpoint -> remove
+    				// if the user added his own bendpoint to the connection -> only remove the property
+    				if(connection.getBendpoints().size() == 1) {
+    					//if the user did move the bendpoint -> do not remove it
+    					Point bendpoint = connection.getBendpoints().get(0);
+    					int oldx = Integer.parseInt(Graphiti.getPeService().getPropertyValue(connection, MULTI_RENDERING_X));
+    					int oldy = Integer.parseInt(Graphiti.getPeService().getPropertyValue(connection, MULTI_RENDERING_Y));
+    					if(oldx == bendpoint.getX() && oldy == bendpoint.getY()) {
+    						connection.getBendpoints().remove(0);
+    					}
+    					Graphiti.getPeService().removeProperty(connection, MULTI_RENDERING_X);
+    					Graphiti.getPeService().removeProperty(connection, MULTI_RENDERING_Y);
+    				}	
+    			}    			
+    			// check if there are any bendpoints left on this connection -> do not add own bendpoint
+    			if(connection.getBendpoints().size() > 0) {
+    				continue;
     			}
-    			
+
     			int orthx, orthy, move;
-    			if(i % 2 == 0) {
+    			if(qualifiedListIndex % 2 == 0) {
     				orthx = orthogonalVectorX;
     				orthy = orthogonalVectorY;
     			} else {
     				orthx = -orthogonalVectorX;
     				orthy = -orthogonalVectorY;
     			}
-    			move = MOVEMENT_FACTOR * ((i/2) + 1);
+    			move = MOVEMENT_FACTOR * ((qualifiedListIndex/2) + 1);
     			Point bendpoint = getBendPoint(centerX, centerY, orthx, orthy, move);
     			
     			connection.getBendpoints().add(bendpoint);
     			//move to index 0 to be able to delete it afterwards.
     			connection.getBendpoints().move(0, bendpoint);
     			
-    			Property bendProperty = MmFactoryImpl.eINSTANCE.createProperty();
-    			bendProperty.setKey(MULTI_RENDERING_KEY);
-    			bendProperty.setValue("true");
-    			
-    			connection.getProperties().add(bendProperty);
+    			//add our property to the connection
+    			Graphiti.getPeService().setPropertyValue(connection, MULTI_RENDERING_KEY, "true");
+    			Graphiti.getPeService().setPropertyValue(connection, MULTI_RENDERING_X, ""+bendpoint.getX());
+    			Graphiti.getPeService().setPropertyValue(connection, MULTI_RENDERING_Y, ""+bendpoint.getY());
+    			qualifiedListIndex++;
     		}
     	}	
     }
