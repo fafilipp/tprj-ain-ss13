@@ -18,6 +18,7 @@ import org.eclipse.graphiti.mm.pictograms.Anchor;
 import org.eclipse.graphiti.mm.pictograms.BoxRelativeAnchor;
 import org.eclipse.graphiti.mm.pictograms.Connection;
 import org.eclipse.graphiti.mm.pictograms.ConnectionDecorator;
+import org.eclipse.graphiti.mm.pictograms.FixPointAnchor;
 import org.eclipse.graphiti.mm.pictograms.FreeFormConnection;
 import org.eclipse.graphiti.mm.pictograms.PictogramElement;
 import org.eclipse.graphiti.services.Graphiti;
@@ -94,17 +95,33 @@ public class MyconceptmapAddArrowConnectionFeature extends MyconceptmapAddArrowC
 		
 		// startanchor is an user-defined anchor
     	if(startAnchor.getGraphicsAlgorithm() != null) {
-    		BoxRelativeAnchor anchor = (BoxRelativeAnchor) startAnchor.getGraphicsAlgorithm().eContainer();
+    		if(startAnchor instanceof FixPointAnchor) {
+    			FixPointAnchor anchor = (FixPointAnchor) startAnchor;
+
+    			startAnchorXOffset = anchor.getLocation().getX();
+    			startAnchorYOffset = anchor.getLocation().getY();
+    			
+    		} else {
+    			BoxRelativeAnchor anchor = (BoxRelativeAnchor) startAnchor;
     		
-    		startAnchorXOffset = (int) ((double) startAnchor.getParent().getGraphicsAlgorithm().getWidth() * anchor.getRelativeWidth());
-    		startAnchorYOffset = (int) ((double) startAnchor.getParent().getGraphicsAlgorithm().getHeight() * anchor.getRelativeHeight());
+    			startAnchorXOffset = (int) ((double) startAnchor.getParent().getGraphicsAlgorithm().getWidth() * anchor.getRelativeWidth());
+    			startAnchorYOffset = (int) ((double) startAnchor.getParent().getGraphicsAlgorithm().getHeight() * anchor.getRelativeHeight());
+    		}
     	}
     	//same for endanchor
     	if(endAnchor.getGraphicsAlgorithm() != null) {
-    		BoxRelativeAnchor anchor = (BoxRelativeAnchor) endAnchor.getGraphicsAlgorithm().eContainer();
+    		if(endAnchor instanceof FixPointAnchor) {
+    			FixPointAnchor anchor = (FixPointAnchor) endAnchor;
+
+    			startAnchorXOffset = anchor.getLocation().getX();
+    			startAnchorYOffset = anchor.getLocation().getY();
+    			
+    		} else {
+    			BoxRelativeAnchor anchor = (BoxRelativeAnchor) endAnchor;
     		
-    		endAnchorXOffset = (int) ((double) endAnchor.getParent().getGraphicsAlgorithm().getWidth() * anchor.getRelativeWidth());
-    		endAnchorYOffset = (int) ((double) endAnchor.getParent().getGraphicsAlgorithm().getHeight() * anchor.getRelativeHeight());
+    			endAnchorXOffset = (int) ((double) endAnchor.getParent().getGraphicsAlgorithm().getWidth() * anchor.getRelativeWidth());
+    			endAnchorYOffset = (int) ((double) endAnchor.getParent().getGraphicsAlgorithm().getHeight() * anchor.getRelativeHeight());
+    		}
     	}
     	
     	// we need to include width and height to the computation since we get x and y from the top left corner of the element, which is connected to this anchor
